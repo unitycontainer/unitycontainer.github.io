@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Unity.Lifetime
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Unity.Lifetime
+   ">
+    <meta name="generator" content="docfx 2.27.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Unity.Lifetime">
+  
+  <h1 id="Unity_Lifetime" data-uid="Unity.Lifetime" class="text-break">Namespace Unity.Lifetime
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a></h4>
+      <section><p>A <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> that holds onto the instance given to it.
+When the <a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a> is disposed,
+the instance is disposed with it.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.ExternallyControlledLifetimeManager.html">ExternallyControlledLifetimeManager</a></h4>
+      <section><p>A <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> that holds a weak reference to
+it&apos;s managed instance.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.HierarchicalLifetimeManager.html">HierarchicalLifetimeManager</a></h4>
+      <section><p>A special lifetime manager which works like <a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a>,
+except that in the presence of child containers, each child gets it&apos;s own instance
+of the object, instead of sharing one in the common parent.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a></h4>
+      <section><p>Base class for Lifetime managers - classes that control how
+and when instances are created by the Unity container.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.LifetimeManagerFactory.html">LifetimeManagerFactory</a></h4>
+      <section><p>An implementation of <a class="xref" href="Unity.Lifetime.ILifetimeFactoryPolicy.html">ILifetimeFactoryPolicy</a> that
+creates instances of the type of the given Lifetime Manager
+by resolving them through the container.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.PerResolveLifetimeManager.html">PerResolveLifetimeManager</a></h4>
+      <section><p>This is a custom lifetime manager that acts like <a class="xref" href="Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a>,
+but also provides a signal to the default build plan, marking the type so that
+instances are reused across the build up object graph.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.PerThreadLifetimeManager.html">PerThreadLifetimeManager</a></h4>
+      <section><p>A <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> that holds the instances given to it, 
+keeping one instance per thread.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html">SynchronizedLifetimeManager</a></h4>
+      <section><p>Base class for Lifetime managers which need to synchronize calls to
+<a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_">GetValue(ILifetimeContainer)</a>.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a></h4>
+      <section><p>An <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> implementation that does nothing,
+thus ensuring that instances are created new every time.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Unity.Lifetime.IContainerLifetimePolicy.html">IContainerLifetimePolicy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Lifetime.IHierarchicalLifetimePolicy.html">IHierarchicalLifetimePolicy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></h4>
+      <section><p>Represents a lifetime container.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.ILifetimeFactoryPolicy.html">ILifetimeFactoryPolicy</a></h4>
+      <section><p>A builder policy used to create lifetime policy instances.
+Used by the LifetimeStrategy when instantiating open
+generic types.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.ILifetimePolicy.html">ILifetimePolicy</a></h4>
+      <section><p>A <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a> that controls how instances are
+persisted and recovered from an external store. Used to implement
+things like singletons and per-http-request lifetime.</p>
+</section>
+      <h4><a class="xref" href="Unity.Lifetime.ISingletonLifetimePolicy.html">ISingletonLifetimePolicy</a></h4>
+      <section><p>This interface marks globally unique singleton lifetime </p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

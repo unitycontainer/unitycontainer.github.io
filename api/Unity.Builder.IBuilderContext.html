@@ -1,0 +1,681 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IBuilderContext
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IBuilderContext
+   ">
+    <meta name="generator" content="docfx 2.27.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Unity.Builder.IBuilderContext">
+  
+  
+  <h1 id="Unity_Builder_IBuilderContext" data-uid="Unity.Builder.IBuilderContext" class="text-break">Interface IBuilderContext
+  </h1>
+  <div class="markdown level0 summary"><p>Represents the context in which a build-up or tear-down operation runs.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Builder.html">Unity.Builder</a></h6>
+  <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
+  <h5 id="Unity_Builder_IBuilderContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IBuilderContext</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_BuildComplete.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.BuildComplete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L93">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_BuildComplete_" data-uid="Unity.Builder.IBuilderContext.BuildComplete*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_BuildComplete" data-uid="Unity.Builder.IBuilderContext.BuildComplete">BuildComplete</h4>
+  <div class="markdown level1 summary"><p>Flag indicating if the build operation should continue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool BuildComplete { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true means that building should not call any more
+strategies, false means continue to the next strategy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_BuildKey.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.BuildKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L54">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_BuildKey_" data-uid="Unity.Builder.IBuilderContext.BuildKey*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_BuildKey" data-uid="Unity.Builder.IBuilderContext.BuildKey">BuildKey</h4>
+  <div class="markdown level1 summary"><p>GetOrDefault the current build key for the current build operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NamedTypeBuildKey BuildKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Builder.NamedTypeBuildKey.html">NamedTypeBuildKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_ChildContext.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.ChildContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L104">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_ChildContext_" data-uid="Unity.Builder.IBuilderContext.ChildContext*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_ChildContext" data-uid="Unity.Builder.IBuilderContext.ChildContext">ChildContext</h4>
+  <div class="markdown level1 summary"><p>The build context used to resolve a dependency during the build operation represented by this context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBuilderContext ChildContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Builder.IBuilderContext.html">IBuilderContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_Container.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.Container%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L24">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_Container_" data-uid="Unity.Builder.IBuilderContext.Container*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_Container" data-uid="Unity.Builder.IBuilderContext.Container">Container</h4>
+  <div class="markdown level1 summary"><p>Gets Reference to container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IUnityContainer Container { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
+        <td><p>Interface for the hosting container</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_CurrentOperation.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.CurrentOperation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L99">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_CurrentOperation_" data-uid="Unity.Builder.IBuilderContext.CurrentOperation*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_CurrentOperation" data-uid="Unity.Builder.IBuilderContext.CurrentOperation">CurrentOperation</h4>
+  <div class="markdown level1 summary"><p>An object representing what is currently being done in the
+build chain. Used to report back errors if there&apos;s a failure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object CurrentOperation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_Existing.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.Existing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L86">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_Existing_" data-uid="Unity.Builder.IBuilderContext.Existing*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_Existing" data-uid="Unity.Builder.IBuilderContext.Existing">Existing</h4>
+  <div class="markdown level1 summary"><p>The current object being built up or torn down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object Existing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The current object being manipulated by the build operation. May
+be null if the object hasn&apos;t been created yet.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_Lifetime.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.Lifetime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L41">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_Lifetime_" data-uid="Unity.Builder.IBuilderContext.Lifetime*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_Lifetime" data-uid="Unity.Builder.IBuilderContext.Lifetime">Lifetime</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a> associated with the build.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ILifetimeContainer Lifetime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
+        <td><p>The <a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a> associated with the build.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_OriginalBuildKey.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.OriginalBuildKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L49">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_OriginalBuildKey_" data-uid="Unity.Builder.IBuilderContext.OriginalBuildKey*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_OriginalBuildKey" data-uid="Unity.Builder.IBuilderContext.OriginalBuildKey">OriginalBuildKey</h4>
+  <div class="markdown level1 summary"><p>Gets the original build key for the build operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NamedTypeBuildKey OriginalBuildKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Builder.NamedTypeBuildKey.html">NamedTypeBuildKey</a></td>
+        <td><p>The original build key for the build operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_PersistentPolicies.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.PersistentPolicies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L62">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_PersistentPolicies_" data-uid="Unity.Builder.IBuilderContext.PersistentPolicies*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_PersistentPolicies" data-uid="Unity.Builder.IBuilderContext.PersistentPolicies">PersistentPolicies</h4>
+  <div class="markdown level1 summary"><p>The set of policies that were passed into this context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPolicyList PersistentPolicies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Policy.IPolicyList.html">IPolicyList</a></td>
+        <td><p>The persistent policies for the current context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_Builder_IBuilderContext_PersistentPolicies_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This returns the policies passed into the context.
+Policies added here will remain after buildup completes.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_Policies.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.Policies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L72">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_Policies_" data-uid="Unity.Builder.IBuilderContext.Policies*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_Policies" data-uid="Unity.Builder.IBuilderContext.Policies">Policies</h4>
+  <div class="markdown level1 summary"><p>Gets the policies for the current context. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPolicyList Policies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Policy.IPolicyList.html">IPolicyList</a></td>
+        <td><p>The policies for the current context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_Builder_IBuilderContext_Policies_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Any policies added to this object are transient
+and will be erased at the end of the buildup.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_RecoveryStack.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.RecoveryStack%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L78">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_RecoveryStack_" data-uid="Unity.Builder.IBuilderContext.RecoveryStack*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_RecoveryStack" data-uid="Unity.Builder.IBuilderContext.RecoveryStack">RecoveryStack</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of <a class="xref" href="Unity.Exceptions.IRequiresRecovery.html">IRequiresRecovery</a> objects
+that need to execute in event of an exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRecoveryStack RecoveryStack { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Exceptions.IRecoveryStack.html">IRecoveryStack</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_Strategies.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.Strategies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L33">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_Strategies_" data-uid="Unity.Builder.IBuilderContext.Strategies*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_Strategies" data-uid="Unity.Builder.IBuilderContext.Strategies">Strategies</h4>
+  <div class="markdown level1 summary"><p>Gets the head of the strategy chain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IStrategyChain Strategies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Strategy.IStrategyChain.html">IStrategyChain</a></td>
+        <td><p>The strategy that&apos;s first in the chain; returns null if there are no
+strategies in the chain.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_AddResolverOverrides_System_Collections_Generic_IEnumerable_Unity_Resolution_ResolverOverride__.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.AddResolverOverrides(System.Collections.Generic.IEnumerable%7BUnity.Resolution.ResolverOverride%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L110">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_AddResolverOverrides_" data-uid="Unity.Builder.IBuilderContext.AddResolverOverrides*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_AddResolverOverrides_System_Collections_Generic_IEnumerable_Unity_Resolution_ResolverOverride__" data-uid="Unity.Builder.IBuilderContext.AddResolverOverrides(System.Collections.Generic.IEnumerable{Unity.Resolution.ResolverOverride})">AddResolverOverrides(IEnumerable&lt;ResolverOverride&gt;)</h4>
+  <div class="markdown level1 summary"><p>Add a new set of resolver override objects to the current build operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddResolverOverrides(IEnumerable&lt;ResolverOverride&gt; newOverrides)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a>&gt;</td>
+        <td><span class="parametername">newOverrides</span></td>
+        <td><p><a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a> objects to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_GetOverriddenResolver_System_Type_.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.GetOverriddenResolver(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L118">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_GetOverriddenResolver_" data-uid="Unity.Builder.IBuilderContext.GetOverriddenResolver*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_GetOverriddenResolver_System_Type_" data-uid="Unity.Builder.IBuilderContext.GetOverriddenResolver(System.Type)">GetOverriddenResolver(Type)</h4>
+  <div class="markdown level1 summary"><p>GetOrDefault a <a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a> object for the given <code data-dev-comment-type="paramref" class="paramref">dependencyType</code>
+or null if that dependency hasn&apos;t been overridden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDependencyResolverPolicy GetOverriddenResolver(Type dependencyType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">dependencyType</span></td>
+        <td><p>Type of the dependency.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a></td>
+        <td><p>Resolver to use, or null if no override matches for the current operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext_NewBuildUp_Unity_Builder_NamedTypeBuildKey_System_Action_Unity_Builder_IBuilderContext__.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext.NewBuildUp(Unity.Builder.NamedTypeBuildKey%2CSystem.Action%7BUnity.Builder.IBuilderContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L130">View Source</a>
+  </span>
+  <a id="Unity_Builder_IBuilderContext_NewBuildUp_" data-uid="Unity.Builder.IBuilderContext.NewBuildUp*"></a>
+  <h4 id="Unity_Builder_IBuilderContext_NewBuildUp_Unity_Builder_NamedTypeBuildKey_System_Action_Unity_Builder_IBuilderContext__" data-uid="Unity.Builder.IBuilderContext.NewBuildUp(Unity.Builder.NamedTypeBuildKey,System.Action{Unity.Builder.IBuilderContext})">NewBuildUp(NamedTypeBuildKey, Action&lt;IBuilderContext&gt;)</h4>
+  <div class="markdown level1 summary"><p>A convenience method to do a new buildup operation on an existing context. This
+overload allows you to specify extra policies which will be in effect for the duration
+of the build.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object NewBuildUp(NamedTypeBuildKey newBuildKey, Action&lt;IBuilderContext&gt; childCustomizationBlock = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Builder.NamedTypeBuildKey.html">NamedTypeBuildKey</a></td>
+        <td><span class="parametername">newBuildKey</span></td>
+        <td><p>Key defining what to build up.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Unity.Builder.IBuilderContext.html">IBuilderContext</a>&gt;</td>
+        <td><span class="parametername">childCustomizationBlock</span></td>
+        <td><p>A delegate that takes a <a class="xref" href="Unity.Builder.IBuilderContext.html">IBuilderContext</a>. This
+is invoked with the new child context before the build up process starts. This gives callers
+the opportunity to customize the context for the build process.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Created object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Builder.BuilderContextExtensions.html#Unity_Builder_BuilderContextExtensions_NewBuildUp__1_Unity_Builder_IBuilderContext_">BuilderContextExtensions.NewBuildUp&lt;TResult&gt;(IBuilderContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Builder.BuilderContextExtensions.html#Unity_Builder_BuilderContextExtensions_NewBuildUp__1_Unity_Builder_IBuilderContext_System_String_">BuilderContextExtensions.NewBuildUp&lt;TResult&gt;(IBuilderContext, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Builder.BuilderContextExtensions.html#Unity_Builder_BuilderContextExtensions_AddResolverOverrides_Unity_Builder_IBuilderContext_Unity_Resolution_ResolverOverride___">BuilderContextExtensions.AddResolverOverrides(IBuilderContext, ResolverOverride[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Builder.BuilderContextExtensions.html#Unity_Builder_BuilderContextExtensions_SetPerBuildSingleton_Unity_Builder_IBuilderContext_">BuilderContextExtensions.SetPerBuildSingleton(IBuilderContext)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_IBuilderContext.md&amp;value=---%0Auid%3A%20Unity.Builder.IBuilderContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/IBuilderContext.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
