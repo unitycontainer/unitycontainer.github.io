@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PolicyListExtensions
    ">
-    <meta name="generator" content="docfx 2.27.0.0">
+    <meta name="generator" content="docfx 2.28.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -895,18 +895,18 @@ not found.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_PolicyListExtensions_GetPolicy_Unity_Policy_IPolicyList_System_Type_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Policy.PolicyListExtensions.GetPolicy(Unity.Policy.IPolicyList%2CSystem.Type%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_PolicyListExtensions_GetPolicy__1_Unity_Policy_IPolicyList_Unity_Builder_NamedTypeBuildKey_Unity_Policy_IPolicyList__.md&amp;value=---%0Auid%3A%20Unity.Policy.PolicyListExtensions.GetPolicy%60%601(Unity.Policy.IPolicyList%2CUnity.Builder.NamedTypeBuildKey%2CUnity.Policy.IPolicyList%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Utility/PolicyListExtensions.cs/#L228">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Utility/PolicyListExtensions.cs/#L227">View Source</a>
   </span>
   <a id="Unity_Policy_PolicyListExtensions_GetPolicy_" data-uid="Unity.Policy.PolicyListExtensions.GetPolicy*"></a>
-  <h4 id="Unity_Policy_PolicyListExtensions_GetPolicy_Unity_Policy_IPolicyList_System_Type_System_Object_" data-uid="Unity.Policy.PolicyListExtensions.GetPolicy(Unity.Policy.IPolicyList,System.Type,System.Object)">GetPolicy(IPolicyList, Type, Object)</h4>
+  <h4 id="Unity_Policy_PolicyListExtensions_GetPolicy__1_Unity_Policy_IPolicyList_Unity_Builder_NamedTypeBuildKey_Unity_Policy_IPolicyList__" data-uid="Unity.Policy.PolicyListExtensions.GetPolicy``1(Unity.Policy.IPolicyList,Unity.Builder.NamedTypeBuildKey,Unity.Policy.IPolicyList@)">GetPolicy&lt;TPolicyInterface&gt;(IPolicyList, NamedTypeBuildKey, out IPolicyList)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IBuilderPolicy GetPolicy(this IPolicyList list, Type policyInterface, object buildKey)</code></pre>
+    <pre><code class="lang-csharp hljs">public static TPolicyInterface GetPolicy&lt;TPolicyInterface&gt;(this IPolicyList list, NamedTypeBuildKey buildKey, out IPolicyList containingPolicyList)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -924,13 +924,13 @@ not found.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">policyInterface</span></td>
+        <td><a class="xref" href="Unity.Builder.NamedTypeBuildKey.html">NamedTypeBuildKey</a></td>
+        <td><span class="parametername">buildKey</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">buildKey</span></td>
+        <td><a class="xref" href="Unity.Policy.IPolicyList.html">IPolicyList</a></td>
+        <td><span class="parametername">containingPolicyList</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -945,7 +945,22 @@ not found.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a></td>
+        <td><span class="xref">TPolicyInterface</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPolicyInterface</span></td>
         <td></td>
       </tr>
     </tbody>

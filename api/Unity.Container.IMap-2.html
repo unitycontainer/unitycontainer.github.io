@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IBuildPlanCreatorPolicy
+    <title>Interface IMap&lt;TKey, TValue&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IBuildPlanCreatorPolicy
+    <meta name="title" content="Interface IMap&lt;TKey, TValue&gt;
    ">
     <meta name="generator" content="docfx 2.28.1.0">
     
@@ -68,38 +68,54 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Unity.Policy.IBuildPlanCreatorPolicy">
+            <article class="content wrap" id="_content" data-uid="Unity.Container.IMap`2">
   
   
-  <h1 id="Unity_Policy_IBuildPlanCreatorPolicy" data-uid="Unity.Policy.IBuildPlanCreatorPolicy" class="text-break">Interface IBuildPlanCreatorPolicy
+  <h1 id="Unity_Container_IMap_2" data-uid="Unity.Container.IMap`2" class="text-break">Interface IMap&lt;TKey, TValue&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a> that can create and return an <a class="xref" href="Unity.Policy.IBuildPlanPolicy.html">IBuildPlanPolicy</a>
-for the given build key.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Policy.html">Unity.Policy</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Container.html">Unity.Container</a></h6>
   <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
-  <h5 id="Unity_Policy_IBuildPlanCreatorPolicy_syntax">Syntax</h5>
+  <h5 id="Unity_Container_IMap_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IBuildPlanCreatorPolicy : IBuilderPolicy</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IMap&lt;in TKey, TValue&gt;</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IBuildPlanCreatorPolicy_CreatePlan_Unity_Builder_IBuilderContext_Unity_Builder_NamedTypeBuildKey_.md&amp;value=---%0Auid%3A%20Unity.Policy.IBuildPlanCreatorPolicy.CreatePlan(Unity.Builder.IBuilderContext%2CUnity.Builder.NamedTypeBuildKey)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Container_IMap_2_Item__0_.md&amp;value=---%0Auid%3A%20Unity.Container.IMap%602.Item(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IBuildPlanCreatorPolicy.cs/#L19">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Container/IMap.cs/#L5">View Source</a>
   </span>
-  <a id="Unity_Policy_IBuildPlanCreatorPolicy_CreatePlan_" data-uid="Unity.Policy.IBuildPlanCreatorPolicy.CreatePlan*"></a>
-  <h4 id="Unity_Policy_IBuildPlanCreatorPolicy_CreatePlan_Unity_Builder_IBuilderContext_Unity_Builder_NamedTypeBuildKey_" data-uid="Unity.Policy.IBuildPlanCreatorPolicy.CreatePlan(Unity.Builder.IBuilderContext,Unity.Builder.NamedTypeBuildKey)">CreatePlan(IBuilderContext, NamedTypeBuildKey)</h4>
-  <div class="markdown level1 summary"><p>Create a build plan using the given context and build key.</p>
-</div>
+  <a id="Unity_Container_IMap_2_Item_" data-uid="Unity.Container.IMap`2.Item*"></a>
+  <h4 id="Unity_Container_IMap_2_Item__0_" data-uid="Unity.Container.IMap`2.Item(`0)">Item[TKey]</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IBuildPlanPolicy CreatePlan(IBuilderContext context, NamedTypeBuildKey buildKey)</code></pre>
+    <pre><code class="lang-csharp hljs">TValue this[TKey index] { get; set; }</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -112,20 +128,13 @@ for the given build key.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Builder.IBuilderContext.html">IBuilderContext</a></td>
-        <td><span class="parametername">context</span></td>
-        <td><p>Current build context.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Unity.Builder.NamedTypeBuildKey.html">NamedTypeBuildKey</a></td>
-        <td><span class="parametername">buildKey</span></td>
-        <td><p>Current build key.</p>
-</td>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -135,9 +144,8 @@ for the given build key.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Policy.IBuildPlanPolicy.html">IBuildPlanPolicy</a></td>
-        <td><p>The build plan.</p>
-</td>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -149,10 +157,10 @@ for the given build key.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IBuildPlanCreatorPolicy.md&amp;value=---%0Auid%3A%20Unity.Policy.IBuildPlanCreatorPolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Container_IMap_2.md&amp;value=---%0Auid%3A%20Unity.Container.IMap%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IBuildPlanCreatorPolicy.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Container/IMap.cs/#L3" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
