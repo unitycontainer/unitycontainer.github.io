@@ -1,0 +1,1159 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MemberProcessor&lt;TMemberInfo, TData&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MemberProcessor&lt;TMemberInfo, TData&gt;
+   ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Unity.Processors.MemberProcessor`2">
+  
+  
+  <h1 id="Unity_Processors_MemberProcessor_2" data-uid="Unity.Processors.MemberProcessor`2" class="text-break">Class MemberProcessor&lt;TMemberInfo, TData&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Unity.Processors.MemberProcessor.html">MemberProcessor</a></div>
+    <div class="level2"><span class="xref">MemberProcessor&lt;TMemberInfo, TData&gt;</span></div>
+      <div class="level3"><a class="xref" href="Unity.Processors.FieldProcessor.html">FieldProcessor</a></div>
+      <div class="level3"><a class="xref" href="Unity.Processors.ParametersProcessor-1.html">ParametersProcessor&lt;TMemberInfo&gt;</a></div>
+      <div class="level3"><a class="xref" href="Unity.Processors.PropertyProcessor.html">PropertyProcessor</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Unity.Policy.ISelect-1.html">ISelect</a>&lt;TMemberInfo&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Unity.Processors.MemberProcessor.html#Unity_Processors_MemberProcessor_StringFormat">MemberProcessor.StringFormat</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Processors.MemberProcessor.html#Unity_Processors_MemberProcessor_InvalidRegistrationExpression">MemberProcessor.InvalidRegistrationExpression</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Processors.MemberProcessor.html#Unity_Processors_MemberProcessor_NewGuid">MemberProcessor.NewGuid</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Processors.MemberProcessor.html#Unity_Processors_MemberProcessor_DataProperty">MemberProcessor.DataProperty</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Processors.MemberProcessor.html#Unity_Processors_MemberProcessor_AddMethod">MemberProcessor.AddMethod</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Processors.html">Unity.Processors</a></h6>
+  <h6><strong>Assembly</strong>: Unity.Container.dll</h6>
+  <h5 id="Unity_Processors_MemberProcessor_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class MemberProcessor&lt;TMemberInfo, TData&gt; : MemberProcessor, ISelect&lt;TMemberInfo&gt; where TMemberInfo : MemberInfo</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMemberInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2__ctor_Unity_Policy_IPolicySet_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.%23ctor(Unity.Policy.IPolicySet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L96">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2__ctor_" data-uid="Unity.Processors.MemberProcessor`2.#ctor*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2__ctor_Unity_Policy_IPolicySet_" data-uid="Unity.Processors.MemberProcessor`2.#ctor(Unity.Policy.IPolicySet)">MemberProcessor(IPolicySet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MemberProcessor(IPolicySet policySet)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Policy.IPolicySet.html">IPolicySet</a></td>
+        <td><span class="parametername">policySet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2__ctor_Unity_Policy_IPolicySet_System_Type_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.%23ctor(Unity.Policy.IPolicySet%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L108">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2__ctor_" data-uid="Unity.Processors.MemberProcessor`2.#ctor*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2__ctor_Unity_Policy_IPolicySet_System_Type_" data-uid="Unity.Processors.MemberProcessor`2.#ctor(Unity.Policy.IPolicySet,System.Type)">MemberProcessor(IPolicySet, Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MemberProcessor(IPolicySet policySet, Type attribute)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Policy.IPolicySet.html">IPolicySet</a></td>
+        <td><span class="parametername">policySet</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">attribute</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_AttributeFactories.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.AttributeFactories%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L89">View Source</a>
+  </span>
+  <h4 id="Unity_Processors_MemberProcessor_2_AttributeFactories" data-uid="Unity.Processors.MemberProcessor`2.AttributeFactories">AttributeFactories</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MemberProcessor&lt;TMemberInfo, TData&gt;.AttributeFactoryNode[] AttributeFactories</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Processors.MemberProcessor-2.AttributeFactoryNode.html">MemberProcessor.AttributeFactoryNode</a>&lt;&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_Add_System_Type_Unity_Processors_AttributeResolverFactory_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.Add(System.Type%2CUnity.Processors.AttributeResolverFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L125">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_Add_" data-uid="Unity.Processors.MemberProcessor`2.Add*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_Add_System_Type_Unity_Processors_AttributeResolverFactory_" data-uid="Unity.Processors.MemberProcessor`2.Add(System.Type,Unity.Processors.AttributeResolverFactory)">Add(Type, AttributeResolverFactory)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(Type type, AttributeResolverFactory resolutionFactory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Processors.AttributeResolverFactory.html">AttributeResolverFactory</a></td>
+        <td><span class="parametername">resolutionFactory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_DeclaredMembers_System_Type_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.DeclaredMembers(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L217">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_DeclaredMembers_" data-uid="Unity.Processors.MemberProcessor`2.DeclaredMembers*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_DeclaredMembers_System_Type_" data-uid="Unity.Processors.MemberProcessor`2.DeclaredMembers(System.Type)">DeclaredMembers(Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IEnumerable&lt;TMemberInfo&gt; DeclaredMembers(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TMemberInfo&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_DependencyResolverFactory_System_Attribute_System_Object_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.DependencyResolverFactory(System.Attribute%2CSystem.Object%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L270">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_DependencyResolverFactory_" data-uid="Unity.Processors.MemberProcessor`2.DependencyResolverFactory*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_DependencyResolverFactory_System_Attribute_System_Object_System_Object_" data-uid="Unity.Processors.MemberProcessor`2.DependencyResolverFactory(System.Attribute,System.Object,System.Object)">DependencyResolverFactory(Attribute, Object, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ResolveDelegate&lt;BuilderContext&gt; DependencyResolverFactory(Attribute attribute, object info, object value = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Attribute</span></td>
+        <td><span class="parametername">attribute</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Resolution.ResolveDelegate-1.html">ResolveDelegate</a>&lt;<a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_ExpressionsFromSelection_System_Type_System_Collections_Generic_IEnumerable_System_Object__.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.ExpressionsFromSelection(System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Object%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberExpression.cs/#L13">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_ExpressionsFromSelection_" data-uid="Unity.Processors.MemberProcessor`2.ExpressionsFromSelection*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_ExpressionsFromSelection_System_Type_System_Collections_Generic_IEnumerable_System_Object__" data-uid="Unity.Processors.MemberProcessor`2.ExpressionsFromSelection(System.Type,System.Collections.Generic.IEnumerable{System.Object})">ExpressionsFromSelection(Type, IEnumerable&lt;Object&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;Expression&gt; ExpressionsFromSelection(Type type, IEnumerable&lt;object&gt; members)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">members</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Linq.Expressions.Expression</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_GetCustomAttribute__0_System_Type_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.GetCustomAttribute(%600%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L239">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_GetCustomAttribute_" data-uid="Unity.Processors.MemberProcessor`2.GetCustomAttribute*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_GetCustomAttribute__0_System_Type_" data-uid="Unity.Processors.MemberProcessor`2.GetCustomAttribute(`0,System.Type)">GetCustomAttribute(TMemberInfo, Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Attribute GetCustomAttribute(TMemberInfo info, Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMemberInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Attribute</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_GetExpressions_System_Type_Unity_Policy_IPolicySet_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.GetExpressions(System.Type%2CUnity.Policy.IPolicySet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L147">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_GetExpressions_" data-uid="Unity.Processors.MemberProcessor`2.GetExpressions*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_GetExpressions_System_Type_Unity_Policy_IPolicySet_" data-uid="Unity.Processors.MemberProcessor`2.GetExpressions(System.Type,Unity.Policy.IPolicySet)">GetExpressions(Type, IPolicySet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Expression&gt; GetExpressions(Type type, IPolicySet registration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Policy.IPolicySet.html">IPolicySet</a></td>
+        <td><span class="parametername">registration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Linq.Expressions.Expression</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unity.Processors.MemberProcessor.html#Unity_Processors_MemberProcessor_GetExpressions_System_Type_Unity_Policy_IPolicySet_">MemberProcessor.GetExpressions(Type, IPolicySet)</a></div>
+  <h5 id="Unity_Processors_MemberProcessor_2_GetExpressions_System_Type_Unity_Policy_IPolicySet__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Call hierarchy:
+<a class="xref" href="Unity.Processors.MemberProcessor.html#Unity_Processors_MemberProcessor_GetExpressions_System_Type_Unity_Policy_IPolicySet_">GetExpressions(Type, IPolicySet)</a>  </p>
+<ul>
+<li><see cref="!:SelectMembers"></see><ul>
+<li><see cref="!:ExpressionsFromSelected"></see><ul>
+<li><see cref="!:BuildMemberExpression"></see><ul>
+<li><see cref="!:GetResolverExpression"></see></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_GetPolicy__1_Unity_Policy_IPolicySet_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.GetPolicy%60%601(Unity.Policy.IPolicySet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L259">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_GetPolicy_" data-uid="Unity.Processors.MemberProcessor`2.GetPolicy*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_GetPolicy__1_Unity_Policy_IPolicySet_" data-uid="Unity.Processors.MemberProcessor`2.GetPolicy``1(Unity.Policy.IPolicySet)">GetPolicy&lt;TPolicyInterface&gt;(IPolicySet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TPolicyInterface GetPolicy&lt;TPolicyInterface&gt;(IPolicySet registration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Policy.IPolicySet.html">IPolicySet</a></td>
+        <td><span class="parametername">registration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TPolicyInterface</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPolicyInterface</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_GetResolver_System_Type_Unity_Policy_IPolicySet_Unity_Resolution_ResolveDelegate_Unity_Builder_BuilderContext__.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.GetResolver(System.Type%2CUnity.Policy.IPolicySet%2CUnity.Resolution.ResolveDelegate%7BUnity.Builder.BuilderContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L156">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_GetResolver_" data-uid="Unity.Processors.MemberProcessor`2.GetResolver*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_GetResolver_System_Type_Unity_Policy_IPolicySet_Unity_Resolution_ResolveDelegate_Unity_Builder_BuilderContext__" data-uid="Unity.Processors.MemberProcessor`2.GetResolver(System.Type,Unity.Policy.IPolicySet,Unity.Resolution.ResolveDelegate{Unity.Builder.BuilderContext})">GetResolver(Type, IPolicySet, ResolveDelegate&lt;BuilderContext&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ResolveDelegate&lt;BuilderContext&gt; GetResolver(Type type, IPolicySet registration, ResolveDelegate&lt;BuilderContext&gt; seed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Policy.IPolicySet.html">IPolicySet</a></td>
+        <td><span class="parametername">registration</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Resolution.ResolveDelegate-1.html">ResolveDelegate</a>&lt;<a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a>&gt;</td>
+        <td><span class="parametername">seed</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Resolution.ResolveDelegate-1.html">ResolveDelegate</a>&lt;<a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unity.Processors.MemberProcessor.html#Unity_Processors_MemberProcessor_GetResolver_System_Type_Unity_Policy_IPolicySet_Unity_Resolution_ResolveDelegate_Unity_Builder_BuilderContext__">MemberProcessor.GetResolver(Type, IPolicySet, ResolveDelegate&lt;BuilderContext&gt;)</a></div>
+  <h5 id="Unity_Processors_MemberProcessor_2_GetResolver_System_Type_Unity_Policy_IPolicySet_Unity_Resolution_ResolveDelegate_Unity_Builder_BuilderContext___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Call hierarchy:
+<a class="xref" href="Unity.Processors.MemberProcessor.html#Unity_Processors_MemberProcessor_GetResolver_System_Type_Unity_Policy_IPolicySet_Unity_Resolution_ResolveDelegate_Unity_Builder_BuilderContext__">GetResolver(Type, IPolicySet, ResolveDelegate&lt;BuilderContext&gt;)</a></p>
+<ul>
+<li><see cref="!:SelectMembers"></see><ul>
+<li><see cref="!:ResolversFromSelected"></see><ul>
+<li><see cref="!:BuildMemberResolver"></see><ul>
+<li><see cref="!:GetResolverDelegate"></see></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_GetResolverDelegate__0_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.GetResolverDelegate(%600%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberResolution.cs/#L53">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_GetResolverDelegate_" data-uid="Unity.Processors.MemberProcessor`2.GetResolverDelegate*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_GetResolverDelegate__0_System_Object_" data-uid="Unity.Processors.MemberProcessor`2.GetResolverDelegate(`0,System.Object)">GetResolverDelegate(TMemberInfo, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract ResolveDelegate&lt;BuilderContext&gt; GetResolverDelegate(TMemberInfo info, object resolver)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMemberInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">resolver</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Resolution.ResolveDelegate-1.html">ResolveDelegate</a>&lt;<a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_GetResolverExpression__0_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.GetResolverExpression(%600%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberExpression.cs/#L55">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_GetResolverExpression_" data-uid="Unity.Processors.MemberProcessor`2.GetResolverExpression*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_GetResolverExpression__0_System_Object_" data-uid="Unity.Processors.MemberProcessor`2.GetResolverExpression(`0,System.Object)">GetResolverExpression(TMemberInfo, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Expression GetResolverExpression(TMemberInfo info, object resolver)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMemberInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">resolver</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.Expressions.Expression</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_MemberType__0_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.MemberType(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L215">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_MemberType_" data-uid="Unity.Processors.MemberProcessor`2.MemberType*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_MemberType__0_" data-uid="Unity.Processors.MemberProcessor`2.MemberType(`0)">MemberType(TMemberInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Type MemberType(TMemberInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMemberInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_OptionalDependencyResolverFactory_System_Attribute_System_Object_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.OptionalDependencyResolverFactory(System.Attribute%2CSystem.Object%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L276">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_OptionalDependencyResolverFactory_" data-uid="Unity.Processors.MemberProcessor`2.OptionalDependencyResolverFactory*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_OptionalDependencyResolverFactory_System_Attribute_System_Object_System_Object_" data-uid="Unity.Processors.MemberProcessor`2.OptionalDependencyResolverFactory(System.Attribute,System.Object,System.Object)">OptionalDependencyResolverFactory(Attribute, Object, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ResolveDelegate&lt;BuilderContext&gt; OptionalDependencyResolverFactory(Attribute attribute, object info, object value = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Attribute</span></td>
+        <td><span class="parametername">attribute</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Resolution.ResolveDelegate-1.html">ResolveDelegate</a>&lt;<a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_PreProcessResolver__0_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.PreProcessResolver(%600%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L221">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_PreProcessResolver_" data-uid="Unity.Processors.MemberProcessor`2.PreProcessResolver*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_PreProcessResolver__0_System_Object_" data-uid="Unity.Processors.MemberProcessor`2.PreProcessResolver(`0,System.Object)">PreProcessResolver(TMemberInfo, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object PreProcessResolver(TMemberInfo info, object resolver)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMemberInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">resolver</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_ResolversFromSelection_System_Type_System_Collections_Generic_IEnumerable_System_Object__.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.ResolversFromSelection(System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Object%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberResolution.cs/#L15">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_ResolversFromSelection_" data-uid="Unity.Processors.MemberProcessor`2.ResolversFromSelection*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_ResolversFromSelection_System_Type_System_Collections_Generic_IEnumerable_System_Object__" data-uid="Unity.Processors.MemberProcessor`2.ResolversFromSelection(System.Type,System.Collections.Generic.IEnumerable{System.Object})">ResolversFromSelection(Type, IEnumerable&lt;Object&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;ResolveDelegate&lt;BuilderContext&gt;&gt; ResolversFromSelection(Type type, IEnumerable&lt;object&gt; members)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">members</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Unity.Resolution.ResolveDelegate-1.html">ResolveDelegate</a>&lt;<a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_Select_System_Type_Unity_Policy_IPolicySet_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.Select(System.Type%2CUnity.Policy.IPolicySet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L175">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_Select_" data-uid="Unity.Processors.MemberProcessor`2.Select*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_Select_System_Type_Unity_Policy_IPolicySet_" data-uid="Unity.Processors.MemberProcessor`2.Select(System.Type,Unity.Policy.IPolicySet)">Select(Type, IPolicySet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;object&gt; Select(Type type, IPolicySet registration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Policy.IPolicySet.html">IPolicySet</a></td>
+        <td><span class="parametername">registration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2_ValidateMember__0_.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602.ValidateMember(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberProcessor.cs/#L219">View Source</a>
+  </span>
+  <a id="Unity_Processors_MemberProcessor_2_ValidateMember_" data-uid="Unity.Processors.MemberProcessor`2.ValidateMember*"></a>
+  <h4 id="Unity_Processors_MemberProcessor_2_ValidateMember__0_" data-uid="Unity.Processors.MemberProcessor`2.ValidateMember(`0)">ValidateMember(TMemberInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ValidateMember(TMemberInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TMemberInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Unity.Policy.ISelect-1.html">ISelect&lt;TMemberInfo&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Processors_MemberProcessor_2.md&amp;value=---%0Auid%3A%20Unity.Processors.MemberProcessor%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Processors/Abstracts/MemberResolution.cs/#L11" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

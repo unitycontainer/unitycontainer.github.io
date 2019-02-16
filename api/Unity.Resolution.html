@@ -77,12 +77,6 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="Unity.Resolution.CompositeResolverOverride.html">CompositeResolverOverride</a></h4>
-      <section><p>A <a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a> that composites other
-ResolverOverride objects. The GetResolver operation then
-returns the resolver from the first child override that
-matches the current context and request.</p>
-</section>
       <h4><a class="xref" href="Unity.Resolution.DependencyOverride.html">DependencyOverride</a></h4>
       <section><p>A <a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a> class that overrides
 the value injected whenever there is a dependency of the
@@ -92,16 +86,12 @@ given type, regardless of where it appears in the object graph.</p>
       <section><p>A convenience version of <a class="xref" href="Unity.Resolution.DependencyOverride.html">DependencyOverride</a> that lets you
 specify the dependency type using generic syntax.</p>
 </section>
-      <h4><a class="xref" href="Unity.Resolution.DependencyOverrides.html">DependencyOverrides</a></h4>
-      <section><p>A convenience form of <a class="xref" href="Unity.Resolution.DependencyOverride.html">DependencyOverride</a> that lets you
-specify multiple parameter overrides in one shot rather than having
-to construct multiple objects.</p>
+      <h4><a class="xref" href="Unity.Resolution.FieldOverride.html">FieldOverride</a></h4>
+      <section><p>A <a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a> that lets you override
+the value for a specified field.</p>
 </section>
-      <h4><a class="xref" href="Unity.Resolution.OverrideCollection-3.html">OverrideCollection&lt;TOverride, TKey, TValue&gt;</a></h4>
-      <section><p>Base helper class for creating collections of <a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a> objects
-for use in passing a bunch of them to the resolve call. This base class provides
-the mechanics needed to allow you to use the C# collection initializer syntax.</p>
-</section>
+      <h4><a class="xref" href="Unity.Resolution.IResolveContextExpression-1.html">IResolveContextExpression&lt;TContext&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Unity.Resolution.ParameterOverride.html">ParameterOverride</a></h4>
       <section><p>A <a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a> class that lets you
 override a named parameter passed to a constructor.</p>
@@ -114,11 +104,6 @@ to construct multiple objects.</p>
       <h4><a class="xref" href="Unity.Resolution.PropertyOverride.html">PropertyOverride</a></h4>
       <section><p>A <a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a> that lets you override
 the value for a specified property.</p>
-</section>
-      <h4><a class="xref" href="Unity.Resolution.PropertyOverrides.html">PropertyOverrides</a></h4>
-      <section><p>A convenience form of <a class="xref" href="Unity.Resolution.PropertyOverride.html">PropertyOverride</a> that lets you
-specify multiple property overrides in one shot rather than having
-to construct multiple objects.</p>
 </section>
       <h4><a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a></h4>
       <section><p>Base class for all override objects passed in the
@@ -134,6 +119,22 @@ right one before checking the inner <a class="xref" href="Unity.Resolution.Resol
       <section><p>A convenience version of <a class="xref" href="Unity.Resolution.TypeBasedOverride.html">TypeBasedOverride</a> that lets you
 specify the type to construct via generics syntax.</p>
 </section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Unity.Resolution.IResolve.html">IResolve</a></h4>
+      <section><p>A strategy that is used at build plan execution time
+to resolve a dependent value.</p>
+</section>
+      <h4><a class="xref" href="Unity.Resolution.IResolveContext.html">IResolveContext</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Resolution.IResolverFactory-1.html">IResolverFactory&lt;TMemberInfo&gt;</a></h4>
+      <section></section>
+    <h3 id="delegates">Delegates
+  </h3>
+      <h4><a class="xref" href="Unity.Resolution.ResolveDelegate-1.html">ResolveDelegate&lt;TContext&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Resolution.ResolverFactory-1.html">ResolverFactory&lt;TContext&gt;</a></h4>
+      <section></section>
 </article>
           </div>
           

@@ -86,25 +86,27 @@ right one before checking the inner <a class="xref" href="Unity.Resolution.Resol
     <div class="level2"><span class="xref">TypeBasedOverride</span></div>
       <div class="level3"><a class="xref" href="Unity.Resolution.TypeBasedOverride-1.html">TypeBasedOverride&lt;T&gt;</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<span class="xref">System.Reflection.ParameterInfo</span>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<span class="xref">System.Reflection.PropertyInfo</span>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Name">ResolverOverride.Name</a>
+      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Target">ResolverOverride.Target</a>
     </div>
     <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Value">ResolverOverride.Value</a>
+      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Type">ResolverOverride.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Name">ResolverOverride.Name</a>
     </div>
     <div>
       <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_OnType__1">ResolverOverride.OnType&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_OnType_System_Type_">ResolverOverride.OnType(Type)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_GetHashCode">ResolverOverride.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Equals_System_Object_">ResolverOverride.Equals(Object)</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
@@ -123,19 +125,20 @@ right one before checking the inner <a class="xref" href="Unity.Resolution.Resol
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Resolution.html">Unity.Resolution</a></h6>
-  <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
+  <h6><strong>Assembly</strong>: Unity.Container.dll</h6>
   <h5 id="Unity_Resolution_TypeBasedOverride_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TypeBasedOverride : ResolverOverride</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This type has been deprecated as degrading performance. Use DependencyOverride instead.&quot;, false)]
+public class TypeBasedOverride : ResolverOverride, IEquatable&lt;ParameterInfo&gt;, IEquatable&lt;PropertyInfo&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride__ctor_System_Type_Unity_Resolution_ResolverOverride_.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride.%23ctor(System.Type%2CUnity.Resolution.ResolverOverride)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride__ctor_System_Type_Unity_Resolution_ResolverOverride_.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride.%23ctor(System.Type%2CUnity.Resolution.ResolverOverride)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Resolution/TypeBasedOverride.cs/#L25">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/TypeBasedOverride.cs/#L32">View Source</a>
   </span>
   <a id="Unity_Resolution_TypeBasedOverride__ctor_" data-uid="Unity.Resolution.TypeBasedOverride.#ctor*"></a>
   <h4 id="Unity_Resolution_TypeBasedOverride__ctor_System_Type_Unity_Resolution_ResolverOverride_" data-uid="Unity.Resolution.TypeBasedOverride.#ctor(System.Type,Unity.Resolution.ResolverOverride)">TypeBasedOverride(Type, ResolverOverride)</h4>
@@ -174,20 +177,18 @@ right one before checking the inner <a class="xref" href="Unity.Resolution.Resol
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride_GetResolver_Unity_Builder_IBuilderContext_System_Type_.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride.GetResolver(Unity.Builder.IBuilderContext%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Resolution/TypeBasedOverride.cs/#L38">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/TypeBasedOverride.cs/#L59">View Source</a>
   </span>
-  <a id="Unity_Resolution_TypeBasedOverride_GetResolver_" data-uid="Unity.Resolution.TypeBasedOverride.GetResolver*"></a>
-  <h4 id="Unity_Resolution_TypeBasedOverride_GetResolver_Unity_Builder_IBuilderContext_System_Type_" data-uid="Unity.Resolution.TypeBasedOverride.GetResolver(Unity.Builder.IBuilderContext,System.Type)">GetResolver(IBuilderContext, Type)</h4>
-  <div class="markdown level1 summary"><p>Return a <a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a> that can be used to give a value
-for the given desired dependency.</p>
-</div>
+  <a id="Unity_Resolution_TypeBasedOverride_Equals_" data-uid="Unity.Resolution.TypeBasedOverride.Equals*"></a>
+  <h4 id="Unity_Resolution_TypeBasedOverride_Equals_System_Object_" data-uid="Unity.Resolution.TypeBasedOverride.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IDependencyResolverPolicy GetResolver(IBuilderContext builderContext, Type dependencyType)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,16 +201,9 @@ for the given desired dependency.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Builder.IBuilderContext.html">IBuilderContext</a></td>
-        <td><span class="parametername">builderContext</span></td>
-        <td><p>Current build context.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">dependencyType</span></td>
-        <td><p>Type of dependency desired.</p>
-</td>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -223,14 +217,218 @@ for the given desired dependency.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a></td>
-        <td><p>a <a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a> object if this override applies, null if not.</p>
-</td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_GetResolver_Unity_Builder_IBuilderContext_System_Type_">ResolverOverride.GetResolver(IBuilderContext, Type)</a></div>
+  <div><a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Equals_System_Object_">ResolverOverride.Equals(Object)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride_Equals_System_Reflection_ParameterInfo_.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride.Equals(System.Reflection.ParameterInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/TypeBasedOverride.cs/#L70">View Source</a>
+  </span>
+  <a id="Unity_Resolution_TypeBasedOverride_Equals_" data-uid="Unity.Resolution.TypeBasedOverride.Equals*"></a>
+  <h4 id="Unity_Resolution_TypeBasedOverride_Equals_System_Reflection_ParameterInfo_" data-uid="Unity.Resolution.TypeBasedOverride.Equals(System.Reflection.ParameterInfo)">Equals(ParameterInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ParameterInfo other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Reflection.ParameterInfo</span></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride_Equals_System_Reflection_PropertyInfo_.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride.Equals(System.Reflection.PropertyInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/TypeBasedOverride.cs/#L64">View Source</a>
+  </span>
+  <a id="Unity_Resolution_TypeBasedOverride_Equals_" data-uid="Unity.Resolution.TypeBasedOverride.Equals*"></a>
+  <h4 id="Unity_Resolution_TypeBasedOverride_Equals_System_Reflection_PropertyInfo_" data-uid="Unity.Resolution.TypeBasedOverride.Equals(System.Reflection.PropertyInfo)">Equals(PropertyInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(PropertyInfo other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride_GetHashCode.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/TypeBasedOverride.cs/#L54">View Source</a>
+  </span>
+  <a id="Unity_Resolution_TypeBasedOverride_GetHashCode_" data-uid="Unity.Resolution.TypeBasedOverride.GetHashCode*"></a>
+  <h4 id="Unity_Resolution_TypeBasedOverride_GetHashCode" data-uid="Unity.Resolution.TypeBasedOverride.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_GetHashCode">ResolverOverride.GetHashCode()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride_GetResolver__1_System_Type_.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride.GetResolver%60%601(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/TypeBasedOverride.cs/#L44">View Source</a>
+  </span>
+  <a id="Unity_Resolution_TypeBasedOverride_GetResolver_" data-uid="Unity.Resolution.TypeBasedOverride.GetResolver*"></a>
+  <h4 id="Unity_Resolution_TypeBasedOverride_GetResolver__1_System_Type_" data-uid="Unity.Resolution.TypeBasedOverride.GetResolver``1(System.Type)">GetResolver&lt;TContext&gt;(Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ResolveDelegate&lt;TContext&gt; GetResolver&lt;TContext&gt;(Type type)
+    where TContext : IResolveContext</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Resolution.ResolveDelegate-1.html">ResolveDelegate</a>&lt;TContext&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_GetResolver__1_System_Type_">ResolverOverride.GetResolver&lt;TContext&gt;(Type)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
+  </div>
 </article>
           </div>
           
@@ -239,10 +437,10 @@ for the given desired dependency.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Resolution/TypeBasedOverride.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/TypeBasedOverride.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

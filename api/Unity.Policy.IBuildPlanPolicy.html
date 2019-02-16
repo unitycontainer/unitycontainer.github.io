@@ -73,35 +73,31 @@
   
   <h1 id="Unity_Policy_IBuildPlanPolicy" data-uid="Unity.Policy.IBuildPlanPolicy" class="text-break">Interface IBuildPlanPolicy
   </h1>
-  <div class="markdown level0 summary"><p>A build plan is an object that, when invoked, will create a new object
-or fill in a given existing one. It encapsulates all the information
-gathered by the strategies to construct a particular object.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Policy.html">Unity.Policy</a></h6>
-  <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
+  <h6><strong>Assembly</strong>: Unity.Container.dll</h6>
   <h5 id="Unity_Policy_IBuildPlanPolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IBuildPlanPolicy : IBuilderPolicy</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;IBuildPlanPolicy has been deprecated, please use ResolveDelegateFactory instead&quot;, true)]
+public interface IBuildPlanPolicy</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IBuildPlanPolicy_BuildUp_Unity_Builder_IBuilderContext_.md&amp;value=---%0Auid%3A%20Unity.Policy.IBuildPlanPolicy.BuildUp(Unity.Builder.IBuilderContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Policy_IBuildPlanPolicy_BuildUp_Unity_Builder_BuilderContext__.md&amp;value=---%0Auid%3A%20Unity.Policy.IBuildPlanPolicy.BuildUp(Unity.Builder.BuilderContext%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IBuildPlanPolicy.cs/#L21">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/IBuildPlanPolicy.cs/#L9">View Source</a>
   </span>
   <a id="Unity_Policy_IBuildPlanPolicy_BuildUp_" data-uid="Unity.Policy.IBuildPlanPolicy.BuildUp*"></a>
-  <h4 id="Unity_Policy_IBuildPlanPolicy_BuildUp_Unity_Builder_IBuilderContext_" data-uid="Unity.Policy.IBuildPlanPolicy.BuildUp(Unity.Builder.IBuilderContext)">BuildUp(IBuilderContext)</h4>
-  <div class="markdown level1 summary"><p>Creates an instance of this build plan&apos;s type, or fills
-in the existing type if passed in.</p>
-</div>
+  <h4 id="Unity_Policy_IBuildPlanPolicy_BuildUp_Unity_Builder_BuilderContext__" data-uid="Unity.Policy.IBuildPlanPolicy.BuildUp(Unity.Builder.BuilderContext@)">BuildUp(ref BuilderContext)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void BuildUp(IBuilderContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">void BuildUp(ref BuilderContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -114,16 +110,18 @@ in the existing type if passed in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Builder.IBuilderContext.html">IBuilderContext</a></td>
+        <td><a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a></td>
         <td><span class="parametername">context</span></td>
-        <td><p>Context used to build up the object.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="Unity.Policy.BuildPlanPolicyExtensions.html#Unity_Policy_BuildPlanPolicyExtensions_ExecuteBuildUp_Unity_Policy_IBuildPlanPolicy_Unity_Builder_IBuilderContext_">BuildPlanPolicyExtensions.ExecuteBuildUp(IBuildPlanPolicy, IBuilderContext)</a>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
   </div>
 </article>
           </div>
@@ -133,10 +131,10 @@ in the existing type if passed in.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IBuildPlanPolicy.md&amp;value=---%0Auid%3A%20Unity.Policy.IBuildPlanPolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Policy_IBuildPlanPolicy.md&amp;value=---%0Auid%3A%20Unity.Policy.IBuildPlanPolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IBuildPlanPolicy.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/IBuildPlanPolicy.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

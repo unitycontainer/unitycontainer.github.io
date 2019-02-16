@@ -84,25 +84,6 @@
       <section><p>The exception thrown when injection is attempted on a method
 that is an open generic or has out or ref params.</p>
 </section>
-      <h4><a class="xref" href="Unity.Exceptions.ResolutionFailedException.html">ResolutionFailedException</a></h4>
-      <section><p>The exception thrown by the Unity container when
-an attempt to resolve a dependency fails.</p>
-</section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="Unity.Exceptions.IRecoveryStack.html">IRecoveryStack</a></h4>
-      <section><p>Data structure that stores the set of <a class="xref" href="Unity.Exceptions.IRequiresRecovery.html">IRequiresRecovery</a>
-objects and executes them when requested.</p>
-</section>
-      <h4><a class="xref" href="Unity.Exceptions.IRequiresRecovery.html">IRequiresRecovery</a></h4>
-      <section><p>This interface provides a hook for the builder context to
-implement error recovery when a builder strategy throws
-an exception. Since we can&apos;t get try/finally blocks onto
-the call stack for later stages in the chain, we instead
-add these objects to the context. If there&apos;s an exception,
-all the current IRequiresRecovery instances will have
-their Recover methods called.</p>
-</section>
 </article>
           </div>
           

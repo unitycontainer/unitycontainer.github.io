@@ -77,20 +77,22 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="Unity.Injection.DelegateInjectionFactory.html">DelegateInjectionFactory</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Unity.Injection.GenericParameter.html">GenericParameter</a></h4>
-      <section><p>A <a class="xref" href="Unity.Injection.InjectionParameterValue.html">InjectionParameterValue</a> that lets you specify that
-an instance of a generic type parameter should be resolved.</p>
+      <h4><a class="xref" href="Unity.Injection.GenericBase.html">GenericBase</a></h4>
+      <section><p>Base class for generic type parameters.</p>
 </section>
-      <h4><a class="xref" href="Unity.Injection.GenericParameterBase.html">GenericParameterBase</a></h4>
-      <section><p>Base class for <a class="xref" href="Unity.Injection.InjectionParameterValue.html">InjectionParameterValue</a> subclasses that let you specify that
+      <h4><a class="xref" href="Unity.Injection.GenericParameter.html">GenericParameter</a></h4>
+      <section><p>A <a class="xref" href="Unity.Injection.ParameterValue.html">ParameterValue</a> that lets you specify that
 an instance of a generic type parameter should be resolved.</p>
 </section>
       <h4><a class="xref" href="Unity.Injection.GenericResolvedArrayParameter.html">GenericResolvedArrayParameter</a></h4>
-      <section><p>A <a class="xref" href="Unity.Injection.InjectionParameterValue.html">InjectionParameterValue</a> that lets you specify that
+      <section><p>A <a class="xref" href="Unity.Injection.ParameterValue.html">ParameterValue</a> that lets you specify that
 an array containing the registered instances of a generic type parameter 
 should be resolved.</p>
+</section>
+      <h4><a class="xref" href="Unity.Injection.Injection_ParameterValue.html">Injection_ParameterValue</a></h4>
+      <section><p>Base type for objects that are used to configure parameters for
+constructor or method injection, or for getting the value to
+be injected into a property.</p>
 </section>
       <h4><a class="xref" href="Unity.Injection.InjectionConstructor.html">InjectionConstructor</a></h4>
       <section><p>A class that holds the collection of information
@@ -101,41 +103,59 @@ be configured to call this constructor.</p>
       <section><p>A class that lets you specify a factory method the container
 will use to create the object.</p>
 </section>
+      <h4><a class="xref" href="Unity.Injection.InjectionField.html">InjectionField</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Injection.InjectionMatching.html">InjectionMatching</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Injection.InjectionMember.html">InjectionMember</a></h4>
+      <section><p>Base class for objects that can be used to configure what
+class members get injected by the container.</p>
+</section>
+      <h4><a class="xref" href="Unity.Injection.InjectionMember-2.html">InjectionMember&lt;TMemberInfo, TData&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Unity.Injection.InjectionMethod.html">InjectionMethod</a></h4>
-      <section><p>An <a class="xref" href="Unity.Registration.InjectionMember.html">InjectionMember</a> that configures the
+      <section><p>An <a class="xref" href="Unity.Injection.InjectionMember.html">InjectionMember</a> that configures the
 container to call a method as part of buildup.</p>
 </section>
       <h4><a class="xref" href="Unity.Injection.InjectionParameter.html">InjectionParameter</a></h4>
       <section><p>A class that holds on to the given value and provides
-the required <a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a>
+the required <a class="xref" href="Unity.Resolution.IResolve.html">IResolve</a>
 when the container is configured.</p>
 </section>
       <h4><a class="xref" href="Unity.Injection.InjectionParameter-1.html">InjectionParameter&lt;TParameter&gt;</a></h4>
       <section><p>A generic version of <a class="xref" href="Unity.Injection.InjectionParameter.html">InjectionParameter</a> that makes it a
 little easier to specify the type of the parameter.</p>
 </section>
-      <h4><a class="xref" href="Unity.Injection.InjectionParameterValue.html">InjectionParameterValue</a></h4>
-      <section><p>Base type for objects that are used to configure parameters for
-constructor or method injection, or for getting the value to
-be injected into a property.</p>
-</section>
       <h4><a class="xref" href="Unity.Injection.InjectionProperty.html">InjectionProperty</a></h4>
       <section><p>This class stores information about which properties to inject,
 and will configure the container accordingly.</p>
 </section>
+      <h4><a class="xref" href="Unity.Injection.MemberInfoBase-1.html">MemberInfoBase&lt;TMemberInfo&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Injection.MethodBase-1.html">MethodBase&lt;TMemberInfo&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Unity.Injection.OptionalGenericParameter.html">OptionalGenericParameter</a></h4>
-      <section><p>A <a class="xref" href="Unity.Injection.InjectionParameterValue.html">InjectionParameterValue</a> that lets you specify that
+      <section><p>A <a class="xref" href="Unity.Injection.ParameterValue.html">ParameterValue</a> that lets you specify that
 an instance of a generic type parameter should be resolved, providing the <span class="xref">null</span>
 value if resolving fails.</p>
 </section>
       <h4><a class="xref" href="Unity.Injection.OptionalParameter.html">OptionalParameter</a></h4>
-      <section><p>A <a class="xref" href="Unity.Injection.InjectionParameterValue.html">InjectionParameterValue</a> that can be passed to
-<a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_LifetimeManager_Unity_Registration_InjectionMember___">RegisterType(Type, Type, String, LifetimeManager, InjectionMember[])</a> to configure a
+      <section><p>A <a class="xref" href="Unity.Injection.ParameterValue.html">ParameterValue</a> that can be passed to
+<a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___">RegisterType(Type, Type, String, ITypeLifetimeManager, InjectionMember[])</a> to configure a
 parameter or property as an optional dependency.</p>
 </section>
       <h4><a class="xref" href="Unity.Injection.OptionalParameter-1.html">OptionalParameter&lt;T&gt;</a></h4>
       <section><p>A generic version of <a class="xref" href="Unity.Injection.OptionalParameter.html">OptionalParameter</a> that lets you
 specify the type of the dependency using generics syntax.</p>
+</section>
+      <h4><a class="xref" href="Unity.Injection.ParameterBase.html">ParameterBase</a></h4>
+      <section><p>A base class for implementing <a class="xref" href="Unity.Injection.ParameterValue.html">ParameterValue</a> classes
+that deal in explicit types.</p>
+</section>
+      <h4><a class="xref" href="Unity.Injection.ParameterValue.html">ParameterValue</a></h4>
+      <section><p>Base type for objects that are used to configure parameters for
+constructor or method injection, or for getting the value to
+be injected into a property.</p>
 </section>
       <h4><a class="xref" href="Unity.Injection.ResolvedArrayParameter.html">ResolvedArrayParameter</a></h4>
       <section><p>A class that stores a type, and generates a 
@@ -155,10 +175,12 @@ container.</p>
       <section><p>A generic version of <a class="xref" href="Unity.Injection.ResolvedParameter.html">ResolvedParameter</a> for convenience
 when creating them by hand.</p>
 </section>
-      <h4><a class="xref" href="Unity.Injection.TypedInjectionValue.html">TypedInjectionValue</a></h4>
-      <section><p>A base class for implementing <a class="xref" href="Unity.Injection.InjectionParameterValue.html">InjectionParameterValue</a> classes
+      <h4><a class="xref" href="Unity.Injection.Typed_InjectionValue.html">Typed_InjectionValue</a></h4>
+      <section><p>A base class for implementing <a class="xref" href="Unity.Injection.ParameterValue.html">ParameterValue</a> classes
 that deal in explicit types.</p>
 </section>
+      <h4><a class="xref" href="Unity.Injection.Validating.html">Validating</a></h4>
+      <section></section>
 </article>
           </div>
           

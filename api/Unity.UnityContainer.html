@@ -114,7 +114,8 @@
   <h6><strong>Assembly</strong>: Unity.Container.dll</h6>
   <h5 id="Unity_UnityContainer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UnityContainer : IUnityContainer, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">[CLSCompliant(true)]
+public class UnityContainer : IUnityContainer, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -123,7 +124,7 @@
     <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer__ctor.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L33">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.Public.cs/#L22">View Source</a>
   </span>
   <a id="Unity_UnityContainer__ctor_" data-uid="Unity.UnityContainer.#ctor*"></a>
   <h4 id="Unity_UnityContainer__ctor" data-uid="Unity.UnityContainer.#ctor">UnityContainer()</h4>
@@ -134,25 +135,23 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public UnityContainer()</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Parent.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_All.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.All%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L327">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.Registration.cs/#L17">View Source</a>
   </span>
-  <a id="Unity_UnityContainer_Parent_" data-uid="Unity.UnityContainer.Parent*"></a>
-  <h4 id="Unity_UnityContainer_Parent" data-uid="Unity.UnityContainer.Parent">Parent</h4>
-  <div class="markdown level1 summary"><p>The parent of this container.</p>
-</div>
+  <h4 id="Unity_UnityContainer_All" data-uid="Unity.UnityContainer.All">All</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IUnityContainer Parent { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public const string All = &quot;ALL&quot;</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -162,40 +161,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
-        <td><p>The parent container, or null if this container doesn&apos;type have one.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Registrations.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Registrations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L383">View Source</a>
-  </span>
-  <a id="Unity_UnityContainer_Registrations_" data-uid="Unity.UnityContainer.Registrations*"></a>
-  <h4 id="Unity_UnityContainer_Registrations" data-uid="Unity.UnityContainer.Registrations">Registrations</h4>
-  <div class="markdown level1 summary"><p>GetOrDefault a sequence of <a class="xref" href="Unity.Container.Registration.ContainerRegistration.html">ContainerRegistration</a> that describe the current state
-of the container.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IContainerRegistration&gt; Registrations { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Unity.Registration.IContainerRegistration.html">IContainerRegistration</a>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -204,19 +170,19 @@ of the container.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_AddExtension_Unity_Extension_UnityContainerExtension_.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.AddExtension(Unity.Extension.UnityContainerExtension)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_AddExtension_Unity_Extension_IUnityContainerExtensionConfigurator_.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.AddExtension(Unity.Extension.IUnityContainerExtensionConfigurator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L241">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.Public.cs/#L93">View Source</a>
   </span>
   <a id="Unity_UnityContainer_AddExtension_" data-uid="Unity.UnityContainer.AddExtension*"></a>
-  <h4 id="Unity_UnityContainer_AddExtension_Unity_Extension_UnityContainerExtension_" data-uid="Unity.UnityContainer.AddExtension(Unity.Extension.UnityContainerExtension)">AddExtension(UnityContainerExtension)</h4>
-  <div class="markdown level1 summary"><p>Add an extension object to the container.</p>
+  <h4 id="Unity_UnityContainer_AddExtension_Unity_Extension_IUnityContainerExtensionConfigurator_" data-uid="Unity.UnityContainer.AddExtension(Unity.Extension.IUnityContainerExtensionConfigurator)">AddExtension(IUnityContainerExtensionConfigurator)</h4>
+  <div class="markdown level1 summary"><p>Add an extension to the container.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IUnityContainer AddExtension(UnityContainerExtension extension)</code></pre>
+    <pre><code class="lang-csharp hljs">public IUnityContainer AddExtension(IUnityContainerExtensionConfigurator extension)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,7 +195,7 @@ of the container.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Extension.UnityContainerExtension.html">UnityContainerExtension</a></td>
+        <td><a class="xref" href="Unity.Extension.IUnityContainerExtensionConfigurator.html">IUnityContainerExtensionConfigurator</a></td>
         <td><span class="parametername">extension</span></td>
         <td><p><a class="xref" href="Unity.Extension.UnityContainerExtension.html">UnityContainerExtension</a> to add.</p>
 </td>
@@ -247,97 +213,21 @@ of the container.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
-        <td><p>The <a class="xref" href="Unity.UnityContainer.html">UnityContainer</a> object that this method was called on (this in C#, Me in Visual Basic).</p>
+        <td><p>The <a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a> object that this method was called on (this in C#, Me in Visual Basic).</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_BuildUp_System_Type_System_Object_System_String_Unity_Resolution_ResolverOverride___.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.BuildUp(System.Type%2CSystem.Object%2CSystem.String%2CUnity.Resolution.ResolverOverride%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L199">View Source</a>
-  </span>
-  <a id="Unity_UnityContainer_BuildUp_" data-uid="Unity.UnityContainer.BuildUp*"></a>
-  <h4 id="Unity_UnityContainer_BuildUp_System_Type_System_Object_System_String_Unity_Resolution_ResolverOverride___" data-uid="Unity.UnityContainer.BuildUp(System.Type,System.Object,System.String,Unity.Resolution.ResolverOverride[])">BuildUp(Type, Object, String, ResolverOverride[])</h4>
-  <div class="markdown level1 summary"><p>Run an existing object through the container and perform injection on it.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object BuildUp(Type typeToBuild, object existing, string name, params ResolverOverride[] resolverOverrides)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">typeToBuild</span></td>
-        <td><p><span class="xref">System.Type</span> of object to perform injection on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">existing</span></td>
-        <td><p>Instance to build up.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>name to use when looking up the typemappings and other configurations.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a>[]</td>
-        <td><span class="parametername">resolverOverrides</span></td>
-        <td><p>Any overrides for the buildup.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><p>The resulting object. By default, this will be <code data-dev-comment-type="paramref" class="paramref">existing</code>, but
-container extensions may add things like automatic proxy creation which would
-cause this to return a different object (but still type compatible with <code data-dev-comment-type="paramref" class="paramref">typeToBuild</code>).</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Unity_UnityContainer_BuildUp_System_Type_System_Object_System_String_Unity_Resolution_ResolverOverride____remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>
-This method is useful when you don&apos;type control the construction of an
-instance (ASP.NET pages or objects created via XAML, for instance)
-but you still want properties and other injection performed.
-</p></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Configure_System_Type_.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Configure(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L258">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.Public.cs/#L116">View Source</a>
   </span>
   <a id="Unity_UnityContainer_Configure_" data-uid="Unity.UnityContainer.Configure*"></a>
   <h4 id="Unity_UnityContainer_Configure_System_Type_" data-uid="Unity.UnityContainer.Configure(System.Type)">Configure(Type)</h4>
-  <div class="markdown level1 summary"><p>GetOrDefault access to a configuration interface exposed by an extension.</p>
+  <div class="markdown level1 summary"><p>Resolve access to a configuration interface exposed by an extension.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -385,46 +275,10 @@ added extensions and returns the first one that implements the requested type.</
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_CreateChildContainer.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.CreateChildContainer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L315">View Source</a>
-  </span>
-  <a id="Unity_UnityContainer_CreateChildContainer_" data-uid="Unity.UnityContainer.CreateChildContainer*"></a>
-  <h4 id="Unity_UnityContainer_CreateChildContainer" data-uid="Unity.UnityContainer.CreateChildContainer">CreateChildContainer()</h4>
-  <div class="markdown level1 summary"><p>Create a child container.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IUnityContainer CreateChildContainer()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
-        <td><p>The new child container.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Unity_UnityContainer_CreateChildContainer_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>A child container shares the parent&apos;s configuration, but can be configured with different
-settings or lifetime.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Dispose.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L342">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.Public.cs/#L140">View Source</a>
   </span>
   <a id="Unity_UnityContainer_Dispose_" data-uid="Unity.UnityContainer.Dispose*"></a>
   <h4 id="Unity_UnityContainer_Dispose" data-uid="Unity.UnityContainer.Dispose">Dispose()</h4>
@@ -445,7 +299,7 @@ by the container.</p>
     <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L355">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.Implementation.cs/#L331">View Source</a>
   </span>
   <a id="Unity_UnityContainer_Dispose_" data-uid="Unity.UnityContainer.Dispose*"></a>
   <h4 id="Unity_UnityContainer_Dispose_System_Boolean_" data-uid="Unity.UnityContainer.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -476,38 +330,22 @@ method, false if being called typeFrom a finalizer.</p>
     </tbody>
   </table>
   <h5 id="Unity_UnityContainer_Dispose_System_Boolean__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This class doesn&apos;type have a finalizer, so <code data-dev-comment-type="paramref" class="paramref">disposing</code> will always be true.</p>
+  <div class="markdown level1 remarks"><p>This class doesn&apos;t have a finalizer, so <code data-dev-comment-type="paramref" class="paramref">disposing</code> will always be true.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_InitializeStrategies.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.InitializeStrategies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_IsTypeTypeExplicitlyRegisteredRecurcive_System_Type_.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.IsTypeTypeExplicitlyRegisteredRecurcive(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.Implementation.cs/#L73">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.Registration.cs/#L77">View Source</a>
   </span>
-  <a id="Unity_UnityContainer_InitializeStrategies_" data-uid="Unity.UnityContainer.InitializeStrategies*"></a>
-  <h4 id="Unity_UnityContainer_InitializeStrategies" data-uid="Unity.UnityContainer.InitializeStrategies">InitializeStrategies()</h4>
+  <a id="Unity_UnityContainer_IsTypeTypeExplicitlyRegisteredRecurcive_" data-uid="Unity.UnityContainer.IsTypeTypeExplicitlyRegisteredRecurcive*"></a>
+  <h4 id="Unity_UnityContainer_IsTypeTypeExplicitlyRegisteredRecurcive_System_Type_" data-uid="Unity.UnityContainer.IsTypeTypeExplicitlyRegisteredRecurcive(System.Type)">IsTypeTypeExplicitlyRegisteredRecurcive(Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void InitializeStrategies()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_LifetimeManager_.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.RegisterInstance(System.Type%2CSystem.String%2CSystem.Object%2CUnity.Lifetime.LifetimeManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L138">View Source</a>
-  </span>
-  <a id="Unity_UnityContainer_RegisterInstance_" data-uid="Unity.UnityContainer.RegisterInstance*"></a>
-  <h4 id="Unity_UnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_LifetimeManager_" data-uid="Unity.UnityContainer.RegisterInstance(System.Type,System.String,System.Object,Unity.Lifetime.LifetimeManager)">RegisterInstance(Type, String, Object, LifetimeManager)</h4>
-  <div class="markdown level1 summary"><p>RegisterType an instance with the container.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IUnityContainer RegisterInstance(Type toType, string name, object instance, LifetimeManager manager)</code></pre>
+    <pre><code class="lang-csharp hljs">protected bool IsTypeTypeExplicitlyRegisteredRecurcive(Type type)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -521,30 +359,70 @@ method, false if being called typeFrom a finalizer.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">toType</span></td>
-        <td><p>Type of instance to register (may be an implemented interface instead of the full type).</p>
-</td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_RegisterFactory_System_Type_System_String_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.RegisterFactory(System.Type%2CSystem.String%2CSystem.Func%7BUnity.IUnityContainer%2CSystem.Type%2CSystem.String%2CSystem.Object%7D%2CUnity.Lifetime.IFactoryLifetimeManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.IUnityContainer.cs/#L163">View Source</a>
+  </span>
+  <a id="Unity_UnityContainer_RegisterFactory_" data-uid="Unity.UnityContainer.RegisterFactory*"></a>
+  <h4 id="Unity_UnityContainer_RegisterFactory_System_Type_System_String_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_" data-uid="Unity.UnityContainer.RegisterFactory(System.Type,System.String,System.Func{Unity.IUnityContainer,System.Type,System.String,System.Object},Unity.Lifetime.IFactoryLifetimeManager)">RegisterFactory(Type, String, Func&lt;IUnityContainer, Type, String, Object&gt;, IFactoryLifetimeManager)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IUnityContainer RegisterFactory(Type type, string name, Func&lt;IUnityContainer, Type, string, object&gt; factory, IFactoryLifetimeManager lifetimeManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
-        <td><p>Name for registration.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">instance</span></td>
-        <td><p>Object to returned.</p>
-</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a>, <span class="xref">System.Type</span>, <span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">factory</span></td>
+        <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a></td>
-        <td><span class="parametername">manager</span></td>
-        <td><p>If true, the container will take over the lifetime of the instance,
-calling Dispose on it (if it&apos;s <span class="xref">System.IDisposable</span>) when the container is Disposed.</p>
-<p>
- If false, container will not maintain a strong reference to <code data-dev-comment-type="paramref" class="paramref">instance</code>. User is responsible
-for disposing instance, and for keeping the instance typeFrom being garbage collected.</p></td>
+        <td><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></td>
+        <td><span class="parametername">lifetimeManager</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -559,12 +437,284 @@ for disposing instance, and for keeping the instance typeFrom being garbage coll
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
-        <td><p>The <a class="xref" href="Unity.UnityContainer.html">UnityContainer</a> object that this method was called on (this in C#, Me in Visual Basic).</p>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Unity_IUnityContainer_BuildUp_System_Type_System_Object_System_String_Unity_Resolution_ResolverOverride___.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Unity%23IUnityContainer%23BuildUp(System.Type%2CSystem.Object%2CSystem.String%2CUnity.Resolution.ResolverOverride%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.IUnityContainer.cs/#L254">View Source</a>
+  </span>
+  <a id="Unity_UnityContainer_Unity_IUnityContainer_BuildUp_" data-uid="Unity.UnityContainer.Unity#IUnityContainer#BuildUp*"></a>
+  <h4 id="Unity_UnityContainer_Unity_IUnityContainer_BuildUp_System_Type_System_Object_System_String_Unity_Resolution_ResolverOverride___" data-uid="Unity.UnityContainer.Unity#IUnityContainer#BuildUp(System.Type,System.Object,System.String,Unity.Resolution.ResolverOverride[])">IUnityContainer.BuildUp(Type, Object, String, ResolverOverride[])</h4>
+  <div class="markdown level1 summary"><p>Run an existing object through the container&apos;s build pipeline and perform injections on it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IUnityContainer.BuildUp(Type type, object existing, string name, params ResolverOverride[] overrides)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p><span class="xref">System.Type</span> of object to perform injection on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">existing</span></td>
+        <td><p>Instance to the object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>name to use when looking up the registration and other configurations.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a>[]</td>
+        <td><span class="parametername">overrides</span></td>
+        <td><p>Any overrides for the resolve calls.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Unity_UnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_LifetimeManager__remarks">Remarks</h5>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The resulting object. By default, this will be <code data-dev-comment-type="paramref" class="paramref">existing</code>, but
+container extensions may add things like automatic proxy creation which would
+cause this to return a different object (but still type compatible with <code data-dev-comment-type="paramref" class="paramref">type</code>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_UnityContainer_Unity_IUnityContainer_BuildUp_System_Type_System_Object_System_String_Unity_Resolution_ResolverOverride____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is useful when you don&apos;t control the construction of an
+instance (ASP.NET pages or objects created via XAML, for instance)
+but you still want properties and other injections performed.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Unity_IUnityContainer_CreateChildContainer.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Unity%23IUnityContainer%23CreateChildContainer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.IUnityContainer.cs/#L286">View Source</a>
+  </span>
+  <a id="Unity_UnityContainer_Unity_IUnityContainer_CreateChildContainer_" data-uid="Unity.UnityContainer.Unity#IUnityContainer#CreateChildContainer*"></a>
+  <h4 id="Unity_UnityContainer_Unity_IUnityContainer_CreateChildContainer" data-uid="Unity.UnityContainer.Unity#IUnityContainer#CreateChildContainer">IUnityContainer.CreateChildContainer()</h4>
+  <div class="markdown level1 summary"><p>Create a child container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IUnityContainer IUnityContainer.CreateChildContainer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
+        <td><p>The new child container.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_UnityContainer_Unity_IUnityContainer_CreateChildContainer_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A child container shares the parent&apos;s configuration, but can be configured with different
+settings or lifetime.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Unity_IUnityContainer_IsRegistered_System_Type_System_String_.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Unity%23IUnityContainer%23IsRegistered(System.Type%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.IUnityContainer.cs/#L214">View Source</a>
+  </span>
+  <a id="Unity_UnityContainer_Unity_IUnityContainer_IsRegistered_" data-uid="Unity.UnityContainer.Unity#IUnityContainer#IsRegistered*"></a>
+  <h4 id="Unity_UnityContainer_Unity_IUnityContainer_IsRegistered_System_Type_System_String_" data-uid="Unity.UnityContainer.Unity#IUnityContainer#IsRegistered(System.Type,System.String)">IUnityContainer.IsRegistered(Type, String)</h4>
+  <div class="markdown level1 summary"><p>This is a fast way to check if type is registered with container</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IUnityContainer.IsRegistered(Type type, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p><span class="xref">System.Type</span> to look for</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the registration</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_UnityContainer_Unity_IUnityContainer_IsRegistered_System_Type_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is quite fast. Although it is not free in terms of time spent, 
+it uses the same algorithm the container employs to obtain registrations and wastes very little time.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Unity_IUnityContainer_Parent.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Unity%23IUnityContainer%23Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.IUnityContainer.cs/#L294">View Source</a>
+  </span>
+  <a id="Unity_UnityContainer_Unity_IUnityContainer_Parent_" data-uid="Unity.UnityContainer.Unity#IUnityContainer#Parent*"></a>
+  <h4 id="Unity_UnityContainer_Unity_IUnityContainer_Parent" data-uid="Unity.UnityContainer.Unity#IUnityContainer#Parent">IUnityContainer.Parent</h4>
+  <div class="markdown level1 summary"><p>The parent of this container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IUnityContainer IUnityContainer.Parent { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
+        <td><p>The parent container, or null if this container doesn&apos;t have one.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Unity%23IUnityContainer%23RegisterInstance(System.Type%2CSystem.String%2CSystem.Object%2CUnity.Lifetime.IInstanceLifetimeManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.IUnityContainer.cs/#L103">View Source</a>
+  </span>
+  <a id="Unity_UnityContainer_Unity_IUnityContainer_RegisterInstance_" data-uid="Unity.UnityContainer.Unity#IUnityContainer#RegisterInstance*"></a>
+  <h4 id="Unity_UnityContainer_Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_" data-uid="Unity.UnityContainer.Unity#IUnityContainer#RegisterInstance(System.Type,System.String,System.Object,Unity.Lifetime.IInstanceLifetimeManager)">IUnityContainer.RegisterInstance(Type, String, Object, IInstanceLifetimeManager)</h4>
+  <div class="markdown level1 summary"><p>Register an instance with the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IUnityContainer IUnityContainer.RegisterInstance(Type type, string name, object instance, IInstanceLifetimeManager lifetimeManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p><span class="xref">System.Type</span> of instance to register (may be an implemented interface instead of the actual type).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name for registration</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>Object to be registered</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.IInstanceLifetimeManager.html">IInstanceLifetimeManager</a></td>
+        <td><span class="parametername">lifetimeManager</span></td>
+        <td><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> manager that controls how this instance will be managed by the container.
+Following are the only valid options: <a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a>, <a class="xref" href="Unity.Lifetime.SingletonLifetimeManager.html">SingletonLifetimeManager</a>, <a class="xref" href="Unity.Lifetime.ExternallyControlledLifetimeManager.html">ExternallyControlledLifetimeManager</a>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
+        <td><p>The <a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a> object that this method was called on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_UnityContainer_Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
 Instance registration is much like setting a type as a singleton, except that instead
 of the container creating the instance the first time it is requested, the user
@@ -573,20 +723,20 @@ creates the instance ahead of type and adds that instance to the container.
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_LifetimeManager_Unity_Registration_InjectionMember___.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.RegisterType(System.Type%2CSystem.Type%2CSystem.String%2CUnity.Lifetime.LifetimeManager%2CUnity.Registration.InjectionMember%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Unity%23IUnityContainer%23RegisterType(System.Type%2CSystem.Type%2CSystem.String%2CUnity.Lifetime.ITypeLifetimeManager%2CUnity.Injection.InjectionMember%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L54">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.IUnityContainer.cs/#L27">View Source</a>
   </span>
-  <a id="Unity_UnityContainer_RegisterType_" data-uid="Unity.UnityContainer.RegisterType*"></a>
-  <h4 id="Unity_UnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_LifetimeManager_Unity_Registration_InjectionMember___" data-uid="Unity.UnityContainer.RegisterType(System.Type,System.Type,System.String,Unity.Lifetime.LifetimeManager,Unity.Registration.InjectionMember[])">RegisterType(Type, Type, String, LifetimeManager, InjectionMember[])</h4>
-  <div class="markdown level1 summary"><p>RegisterType a type mapping with the container, where the created instances will use
+  <a id="Unity_UnityContainer_Unity_IUnityContainer_RegisterType_" data-uid="Unity.UnityContainer.Unity#IUnityContainer#RegisterType*"></a>
+  <h4 id="Unity_UnityContainer_Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___" data-uid="Unity.UnityContainer.Unity#IUnityContainer#RegisterType(System.Type,System.Type,System.String,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])">IUnityContainer.RegisterType(Type, Type, String, ITypeLifetimeManager, InjectionMember[])</h4>
+  <div class="markdown level1 summary"><p>Register a type mapping with the container, where the created instances will use
 the given <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IUnityContainer RegisterType(Type typeFrom, Type typeTo, string name, LifetimeManager lifetimeManager, InjectionMember[] injectionMembers)</code></pre>
+    <pre><code class="lang-csharp hljs">IUnityContainer IUnityContainer.RegisterType(Type typeFrom, Type typeTo, string name, ITypeLifetimeManager lifetimeManager, InjectionMember[] injectionMembers)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -601,32 +751,32 @@ the given <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeMan
       <tr>
         <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">typeFrom</span></td>
-        <td><p><span class="xref">System.Type</span> that will be requested.</p>
+        <td><p><span class="xref">System.Type</span> that will be requested when resolving. Sometime it is called a ServiceType</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">typeTo</span></td>
-        <td><p><span class="xref">System.Type</span> that will actually be returned.</p>
+        <td><p><span class="xref">System.Type</span> that will actually be returned. This type is also called ImplementationType.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
-        <td><p>Name to use for registration, null if a default registration.</p>
+        <td><p>Name to use for registration</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a></td>
+        <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
         <td><span class="parametername">lifetimeManager</span></td>
         <td><p>The <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> that controls the lifetime
 of the returned instance.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Unity.Registration.InjectionMember.html">InjectionMember</a>[]</td>
+        <td><a class="xref" href="Unity.Injection.InjectionMember.html">InjectionMember</a>[]</td>
         <td><span class="parametername">injectionMembers</span></td>
-        <td><p>Injection configuration objects.</p>
+        <td><p>Injection configuration objects. Can be null.</p>
 </td>
       </tr>
     </tbody>
@@ -642,26 +792,32 @@ of the returned instance.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
-        <td><p>The <a class="xref" href="Unity.UnityContainer.html">UnityContainer</a> object that this method was called on (this in C#, Me in Visual Basic).</p>
+        <td><p>The <a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a> object that this method was called on.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Unity_UnityContainer_Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Container will store registrations by <code data-dev-comment-type="paramref" class="paramref">typeFrom</code> type. Type <code data-dev-comment-type="paramref" class="paramref">typeTo</code> will not be registered 
+with the container and only used to build the requested instance.
+If type provided in <code data-dev-comment-type="paramref" class="paramref">typeTo</code> is already registered with container, registration creates mapping to the existing
+registration and instead will use registration for <code data-dev-comment-type="paramref" class="paramref">typeTo</code> type to create object.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_RemoveAllExtensions.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.RemoveAllExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Unity_IUnityContainer_Registrations.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Unity%23IUnityContainer%23Registrations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L280">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.IUnityContainer.cs/#L217">View Source</a>
   </span>
-  <a id="Unity_UnityContainer_RemoveAllExtensions_" data-uid="Unity.UnityContainer.RemoveAllExtensions*"></a>
-  <h4 id="Unity_UnityContainer_RemoveAllExtensions" data-uid="Unity.UnityContainer.RemoveAllExtensions">RemoveAllExtensions()</h4>
-  <div class="markdown level1 summary"><p>Remove all installed extensions typeFrom this container.</p>
+  <a id="Unity_UnityContainer_Unity_IUnityContainer_Registrations_" data-uid="Unity.UnityContainer.Unity#IUnityContainer#Registrations*"></a>
+  <h4 id="Unity_UnityContainer_Unity_IUnityContainer_Registrations" data-uid="Unity.UnityContainer.Unity#IUnityContainer#Registrations">IUnityContainer.Registrations</h4>
+  <div class="markdown level1 summary"><p>Lists all registrations available at this container.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IUnityContainer RemoveAllExtensions()</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IContainerRegistration&gt; IUnityContainer.Registrations { get; }</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -673,39 +829,33 @@ of the returned instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
-        <td><p>The <a class="xref" href="Unity.UnityContainer.html">UnityContainer</a> object that this method was called on (this in C#, Me in Visual Basic).</p>
-</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Unity.IContainerRegistration.html">IContainerRegistration</a>&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Unity_UnityContainer_RemoveAllExtensions_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>
-This method removes all extensions typeFrom the container, including the default ones
-that implement the out-of-the-box behavior. After this method, if you want to use
-the container again you will need to either read the default extensions or replace
-them with your own.
-</p>
-<p>
-The registered instances and singletons that have already been set up in this container
-do not get removed.
-</p>
+  <h5 id="Unity_UnityContainer_Unity_IUnityContainer_Registrations_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This collection contains all registrations from this container as well
+as from all predecessor containers if this is a child container. Registrations
+from child containers override registrations with same type and name from
+parent containers.
+The sort order of returned registrations is not guaranteed in any way.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Resolve_System_Type_System_String_Unity_Resolution_ResolverOverride___.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Resolve(System.Type%2CSystem.String%2CUnity.Resolution.ResolverOverride%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer_Unity_IUnityContainer_Resolve_System_Type_System_String_Unity_Resolution_ResolverOverride___.md&amp;value=---%0Auid%3A%20Unity.UnityContainer.Unity%23IUnityContainer%23Resolve(System.Type%2CSystem.String%2CUnity.Resolution.ResolverOverride%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.cs/#L173">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.IUnityContainer.cs/#L225">View Source</a>
   </span>
-  <a id="Unity_UnityContainer_Resolve_" data-uid="Unity.UnityContainer.Resolve*"></a>
-  <h4 id="Unity_UnityContainer_Resolve_System_Type_System_String_Unity_Resolution_ResolverOverride___" data-uid="Unity.UnityContainer.Resolve(System.Type,System.String,Unity.Resolution.ResolverOverride[])">Resolve(Type, String, ResolverOverride[])</h4>
-  <div class="markdown level1 summary"><p>GetOrDefault an instance of the requested type with the given name typeFrom the container.</p>
+  <a id="Unity_UnityContainer_Unity_IUnityContainer_Resolve_" data-uid="Unity.UnityContainer.Unity#IUnityContainer#Resolve*"></a>
+  <h4 id="Unity_UnityContainer_Unity_IUnityContainer_Resolve_System_Type_System_String_Unity_Resolution_ResolverOverride___" data-uid="Unity.UnityContainer.Unity#IUnityContainer#Resolve(System.Type,System.String,Unity.Resolution.ResolverOverride[])">IUnityContainer.Resolve(Type, String, ResolverOverride[])</h4>
+  <div class="markdown level1 summary"><p>Resolve an instance of the requested type from the container.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object Resolve(Type type, string name, params ResolverOverride[] resolverOverrides)</code></pre>
+    <pre><code class="lang-csharp hljs">object IUnityContainer.Resolve(Type type, string name, params ResolverOverride[] overrides)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -731,7 +881,7 @@ do not get removed.
       </tr>
       <tr>
         <td><a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a>[]</td>
-        <td><span class="parametername">resolverOverrides</span></td>
+        <td><span class="parametername">overrides</span></td>
         <td><p>Any overrides for the resolve call.</p>
 </td>
       </tr>
@@ -760,6 +910,28 @@ do not get removed.
   <div>
       <span class="xref">System.IDisposable</span>
   </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.DiagnosticExtensions.html#Unity_DiagnosticExtensions_EnableDiagnostic_Unity_UnityContainer_">DiagnosticExtensions.EnableDiagnostic(UnityContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.ExtensionExtensions.html#Unity_ExtensionExtensions_AddExtension_Unity_IUnityContainer_Unity_Extension_IUnityContainerExtensionConfigurator_">ExtensionExtensions.AddExtension(IUnityContainer, IUnityContainerExtensionConfigurator)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.ExtensionExtensions.html#Unity_ExtensionExtensions_Configure_Unity_IUnityContainer_System_Type_">ExtensionExtensions.Configure(IUnityContainer, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.ExtensionExtensions.html#Unity_ExtensionExtensions_AddNewExtension__1_Unity_IUnityContainer_">ExtensionExtensions.AddNewExtension&lt;TExtension&gt;(IUnityContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.ExtensionExtensions.html#Unity_ExtensionExtensions_Configure__1_Unity_IUnityContainer_">ExtensionExtensions.Configure&lt;TConfigurator&gt;(IUnityContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
+  </div>
 </article>
           </div>
           
@@ -771,7 +943,7 @@ do not get removed.
                     <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_UnityContainer.md&amp;value=---%0Auid%3A%20Unity.UnityContainer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.Implementation.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/UnityContainer.Resolution.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

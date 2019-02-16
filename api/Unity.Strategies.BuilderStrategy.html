@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BuilderStrategy
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BuilderStrategy
+   ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Unity.Strategies.BuilderStrategy">
+  
+  
+  <h1 id="Unity_Strategies_BuilderStrategy" data-uid="Unity.Strategies.BuilderStrategy" class="text-break">Class BuilderStrategy
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a strategy in the chain of responsibility.
+Strategies are required to support both BuildUp and TearDown.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BuilderStrategy</span></div>
+      <div class="level2"><a class="xref" href="Unity.Strategies.ArrayResolveStrategy.html">ArrayResolveStrategy</a></div>
+      <div class="level2"><a class="xref" href="Unity.Strategies.BuildKeyMappingStrategy.html">BuildKeyMappingStrategy</a></div>
+      <div class="level2"><a class="xref" href="Unity.Strategies.BuildPlanStrategy.html">BuildPlanStrategy</a></div>
+      <div class="level2"><a class="xref" href="Unity.Strategies.EnumerableResolveStrategy.html">EnumerableResolveStrategy</a></div>
+      <div class="level2"><a class="xref" href="Unity.Strategies.LifetimeStrategy.html">LifetimeStrategy</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Strategies.html">Unity.Strategies</a></h6>
+  <h6><strong>Assembly</strong>: Unity.Container.dll</h6>
+  <h5 id="Unity_Strategies_BuilderStrategy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BuilderStrategy</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Strategies_BuilderStrategy_GetPolicy__1_Unity_Builder_BuilderContext__.md&amp;value=---%0Auid%3A%20Unity.Strategies.BuilderStrategy.GetPolicy%60%601(Unity.Builder.BuilderContext%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Strategies/BuilderStrategy.cs/#L72">View Source</a>
+  </span>
+  <a id="Unity_Strategies_BuilderStrategy_GetPolicy_" data-uid="Unity.Strategies.BuilderStrategy.GetPolicy*"></a>
+  <h4 id="Unity_Strategies_BuilderStrategy_GetPolicy__1_Unity_Builder_BuilderContext__" data-uid="Unity.Strategies.BuilderStrategy.GetPolicy``1(Unity.Builder.BuilderContext@)">GetPolicy&lt;TPolicyInterface&gt;(ref BuilderContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TPolicyInterface GetPolicy&lt;TPolicyInterface&gt;(ref BuilderContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TPolicyInterface</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPolicyInterface</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Strategies_BuilderStrategy_PostBuildUp_Unity_Builder_BuilderContext__.md&amp;value=---%0Auid%3A%20Unity.Strategies.BuilderStrategy.PostBuildUp(Unity.Builder.BuilderContext%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Strategies/BuilderStrategy.cs/#L34">View Source</a>
+  </span>
+  <a id="Unity_Strategies_BuilderStrategy_PostBuildUp_" data-uid="Unity.Strategies.BuilderStrategy.PostBuildUp*"></a>
+  <h4 id="Unity_Strategies_BuilderStrategy_PostBuildUp_Unity_Builder_BuilderContext__" data-uid="Unity.Strategies.BuilderStrategy.PostBuildUp(Unity.Builder.BuilderContext@)">PostBuildUp(ref BuilderContext)</h4>
+  <div class="markdown level1 summary"><p>Called during the chain of responsibility for a build operation. The
+PostBuildUp method is called when the chain has finished the PreBuildUp
+phase and executes in reverse order from the PreBuildUp calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PostBuildUp(ref BuilderContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Context of the build operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Strategies_BuilderStrategy_PreBuildUp_Unity_Builder_BuilderContext__.md&amp;value=---%0Auid%3A%20Unity.Strategies.BuilderStrategy.PreBuildUp(Unity.Builder.BuilderContext%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Strategies/BuilderStrategy.cs/#L24">View Source</a>
+  </span>
+  <a id="Unity_Strategies_BuilderStrategy_PreBuildUp_" data-uid="Unity.Strategies.BuilderStrategy.PreBuildUp*"></a>
+  <h4 id="Unity_Strategies_BuilderStrategy_PreBuildUp_Unity_Builder_BuilderContext__" data-uid="Unity.Strategies.BuilderStrategy.PreBuildUp(Unity.Builder.BuilderContext@)">PreBuildUp(ref BuilderContext)</h4>
+  <div class="markdown level1 summary"><p>Called during the chain of responsibility for a build operation. The
+PreBuildUp method is called when the chain is being executed in the
+forward direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PreBuildUp(ref BuilderContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Context of the build operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Strategies_BuilderStrategy_RequiredToBuildType_Unity_IUnityContainer_System_Type_Unity_Registration_InternalRegistration_Unity_Injection_InjectionMember___.md&amp;value=---%0Auid%3A%20Unity.Strategies.BuilderStrategy.RequiredToBuildType(Unity.IUnityContainer%2CSystem.Type%2CUnity.Registration.InternalRegistration%2CUnity.Injection.InjectionMember%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Strategies/BuilderStrategy.cs/#L51">View Source</a>
+  </span>
+  <a id="Unity_Strategies_BuilderStrategy_RequiredToBuildType_" data-uid="Unity.Strategies.BuilderStrategy.RequiredToBuildType*"></a>
+  <h4 id="Unity_Strategies_BuilderStrategy_RequiredToBuildType_Unity_IUnityContainer_System_Type_Unity_Registration_InternalRegistration_Unity_Injection_InjectionMember___" data-uid="Unity.Strategies.BuilderStrategy.RequiredToBuildType(Unity.IUnityContainer,System.Type,Unity.Registration.InternalRegistration,Unity.Injection.InjectionMember[])">RequiredToBuildType(IUnityContainer, Type, InternalRegistration, InjectionMember[])</h4>
+  <div class="markdown level1 summary"><p>Analyze registered type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool RequiredToBuildType(IUnityContainer container, Type type, InternalRegistration registration, params InjectionMember[] injectionMembers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td><p>Reference to hosting container</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Registration.InternalRegistration.html">InternalRegistration</a></td>
+        <td><span class="parametername">registration</span></td>
+        <td><p>Reference to registration</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Injection.InjectionMember.html">InjectionMember</a>[]</td>
+        <td><span class="parametername">injectionMembers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Returns true if this strategy will participate in building of registered type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Strategies_BuilderStrategy_RequiredToResolveInstance_Unity_IUnityContainer_Unity_Registration_InternalRegistration_.md&amp;value=---%0Auid%3A%20Unity.Strategies.BuilderStrategy.RequiredToResolveInstance(Unity.IUnityContainer%2CUnity.Registration.InternalRegistration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Strategies/BuilderStrategy.cs/#L62">View Source</a>
+  </span>
+  <a id="Unity_Strategies_BuilderStrategy_RequiredToResolveInstance_" data-uid="Unity.Strategies.BuilderStrategy.RequiredToResolveInstance*"></a>
+  <h4 id="Unity_Strategies_BuilderStrategy_RequiredToResolveInstance_Unity_IUnityContainer_Unity_Registration_InternalRegistration_" data-uid="Unity.Strategies.BuilderStrategy.RequiredToResolveInstance(Unity.IUnityContainer,Unity.Registration.InternalRegistration)">RequiredToResolveInstance(IUnityContainer, InternalRegistration)</h4>
+  <div class="markdown level1 summary"><p>Analyzes registered type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool RequiredToResolveInstance(IUnityContainer container, InternalRegistration registration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td><p>Reference to hosting container</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Registration.InternalRegistration.html">InternalRegistration</a></td>
+        <td><span class="parametername">registration</span></td>
+        <td><p>Reference to registration</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Returns true if this strategy will participate in building of registered type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Strategies_BuilderStrategy.md&amp;value=---%0Auid%3A%20Unity.Strategies.BuilderStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Strategies/BuilderStrategy.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

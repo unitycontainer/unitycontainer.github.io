@@ -77,56 +77,35 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="Unity.Policy.BuildPlanPolicyExtensions.html">BuildPlanPolicyExtensions</a></h4>
+      <h4><a class="xref" href="Unity.Policy.PolicySetExtensions.html">PolicySetExtensions</a></h4>
       <section></section>
-      <h4><a class="xref" href="Unity.Policy.PolicyListExtensions.html">PolicyListExtensions</a></h4>
-      <section><p>Extension methods on <a class="xref" href="Unity.Policy.IPolicyList.html">IPolicyList</a> to provide convenience
-overloads (generic versions, mostly).</p>
-</section>
     <h3 id="interfaces">Interfaces
   </h3>
-      <h4><a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a></h4>
-      <section><p>Represents a builder policy interface. Since there are no fixed requirements
-for policies, it acts as a marker interface from which to derive all other
-policy interfaces.</p>
-</section>
-      <h4><a class="xref" href="Unity.Policy.IBuildKeyMappingPolicy.html">IBuildKeyMappingPolicy</a></h4>
-      <section><p>Represents a builder policy for mapping build keys.</p>
-</section>
       <h4><a class="xref" href="Unity.Policy.IBuildPlanCreatorPolicy.html">IBuildPlanCreatorPolicy</a></h4>
-      <section><p>A <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a> that can create and return an <a class="xref" href="Unity.Policy.IBuildPlanPolicy.html">IBuildPlanPolicy</a>
-for the given build key.</p>
-</section>
-      <h4><a class="xref" href="Unity.Policy.IBuildPlanPolicy.html">IBuildPlanPolicy</a></h4>
-      <section><p>A build plan is an object that, when invoked, will create a new object
-or fill in a given existing one. It encapsulates all the information
-gathered by the strategies to construct a particular object.</p>
-</section>
-      <h4><a class="xref" href="Unity.Policy.IConstructorSelectorPolicy.html">IConstructorSelectorPolicy</a></h4>
-      <section><p>A <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a> that, when implemented,
-will determine which constructor to call from the build plan.</p>
-</section>
-      <h4><a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a></h4>
-      <section><p>A strategy that is used at build plan execution time
-to resolve a dependent value.</p>
-</section>
-      <h4><a class="xref" href="Unity.Policy.IMethodSelectorPolicy.html">IMethodSelectorPolicy</a></h4>
-      <section><p>An <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a> that will examine the given
-types and return a sequence of <span class="xref">System.Reflection.MethodInfo</span> objects
-that should be called as part of building the object.</p>
-</section>
-      <h4><a class="xref" href="Unity.Policy.IPolicyList.html">IPolicyList</a></h4>
-      <section><p>A custom collection over <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a> objects.</p>
-</section>
-      <h4><a class="xref" href="Unity.Policy.IPropertySelectorPolicy.html">IPropertySelectorPolicy</a></h4>
-      <section><p>An <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a> that returns a sequence
-of properties that should be injected for the given type.</p>
-</section>
-      <h4><a class="xref" href="Unity.Policy.IRequireBuildUpPolicy.html">IRequireBuildUpPolicy</a></h4>
       <section></section>
-      <h4><a class="xref" href="Unity.Policy.IResolverPolicy.html">IResolverPolicy</a></h4>
-      <section><p>A strategy that resolves a value.</p>
+      <h4><a class="xref" href="Unity.Policy.IBuildPlanPolicy.html">IBuildPlanPolicy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Policy.IConstructorSelectorPolicy.html">IConstructorSelectorPolicy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Policy.IMethodSelectorPolicy.html">IMethodSelectorPolicy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Policy.IPolicyList.html">IPolicyList</a></h4>
+      <section><p>A custom collection over <span class="xref">System.Object</span> objects.</p>
 </section>
+      <h4><a class="xref" href="Unity.Policy.IPolicySet.html">IPolicySet</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Policy.IPropertySelectorPolicy.html">IPropertySelectorPolicy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Policy.IResolveDelegateFactory.html">IResolveDelegateFactory</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Policy.ISelect-1.html">ISelect&lt;TMemberInfo&gt;</a></h4>
+      <section></section>
+    <h3 id="delegates">Delegates
+  </h3>
+      <h4><a class="xref" href="Unity.Policy.Converter-2.html">Converter&lt;TInput, TOutput&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Policy.ResolveDelegateFactory.html">ResolveDelegateFactory</a></h4>
+      <section></section>
 </article>
           </div>
           

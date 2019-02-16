@@ -83,10 +83,6 @@ you can new up a key using generic syntax.</p>
     <div class="level1"><a class="xref" href="Unity.Builder.NamedTypeBuildKey.html">NamedTypeBuildKey</a></div>
     <div class="level2"><span class="xref">NamedTypeBuildKey&lt;T&gt;</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Unity.Builder.IBuildKey.html">IBuildKey</a></div>
-  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -124,10 +120,10 @@ you can new up a key using generic syntax.</p>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Builder.html">Unity.Builder</a></h6>
-  <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
+  <h6><strong>Assembly</strong>: Unity.Container.dll</h6>
   <h5 id="Unity_Builder_NamedTypeBuildKey_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NamedTypeBuildKey&lt;T&gt; : NamedTypeBuildKey, IBuildKey</code></pre>
+    <pre><code class="lang-csharp hljs">public class NamedTypeBuildKey&lt;T&gt; : NamedTypeBuildKey</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,10 +145,10 @@ you can new up a key using generic syntax.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_NamedTypeBuildKey_1__ctor.md&amp;value=---%0Auid%3A%20Unity.Builder.NamedTypeBuildKey%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Builder_NamedTypeBuildKey_1__ctor.md&amp;value=---%0Auid%3A%20Unity.Builder.NamedTypeBuildKey%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/NamedTypeBuildKey.cs/#L145">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/NamedTypeBuildKey.cs/#L144">View Source</a>
   </span>
   <a id="Unity_Builder_NamedTypeBuildKey_1__ctor_" data-uid="Unity.Builder.NamedTypeBuildKey`1.#ctor*"></a>
   <h4 id="Unity_Builder_NamedTypeBuildKey_1__ctor" data-uid="Unity.Builder.NamedTypeBuildKey`1.#ctor">NamedTypeBuildKey()</h4>
@@ -166,10 +162,10 @@ specifies the given type.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_NamedTypeBuildKey_1__ctor_System_String_.md&amp;value=---%0Auid%3A%20Unity.Builder.NamedTypeBuildKey%601.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Builder_NamedTypeBuildKey_1__ctor_System_String_.md&amp;value=---%0Auid%3A%20Unity.Builder.NamedTypeBuildKey%601.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/NamedTypeBuildKey.cs/#L155">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/NamedTypeBuildKey.cs/#L154">View Source</a>
   </span>
   <a id="Unity_Builder_NamedTypeBuildKey_1__ctor_" data-uid="Unity.Builder.NamedTypeBuildKey`1.#ctor*"></a>
   <h4 id="Unity_Builder_NamedTypeBuildKey_1__ctor_System_String_" data-uid="Unity.Builder.NamedTypeBuildKey`1.#ctor(System.String)">NamedTypeBuildKey(String)</h4>
@@ -199,9 +195,12 @@ specifies the given type and name.</p>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
+  <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="Unity.Builder.IBuildKey.html">IBuildKey</a>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
   </div>
 </article>
           </div>
@@ -211,10 +210,10 @@ specifies the given type and name.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Builder_NamedTypeBuildKey_1.md&amp;value=---%0Auid%3A%20Unity.Builder.NamedTypeBuildKey%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Builder_NamedTypeBuildKey_1.md&amp;value=---%0Auid%3A%20Unity.Builder.NamedTypeBuildKey%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Builder/NamedTypeBuildKey.cs/#L139" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/NamedTypeBuildKey.cs/#L138" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

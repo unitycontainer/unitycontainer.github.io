@@ -77,6 +77,53 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Unity.DependencyAttribute.html">DependencyAttribute</a></h4>
+      <section><p>This attribute is used to mark properties and parameters as targets for injection.</p>
+</section>
+      <h4><a class="xref" href="Unity.DependencyResolutionAttribute.html">DependencyResolutionAttribute</a></h4>
+      <section><p>Base class for attributes that can be placed on parameters
+or properties to specify how to resolve the value for
+that parameter or property.</p>
+</section>
+      <h4><a class="xref" href="Unity.Diagnostic.html">Diagnostic</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.DiagnosticExtensions.html">DiagnosticExtensions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.ExtensionExtensions.html">ExtensionExtensions</a></h4>
+      <section><p>Extension class that adds a set of convenience overloads to the
+<a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a> interface.</p>
+</section>
+      <h4><a class="xref" href="Unity.FactoryLifetime.html">FactoryLifetime</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Inject.html">Inject</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.InjectionConstructorAttribute.html">InjectionConstructorAttribute</a></h4>
+      <section><p>This attribute is used to indicate which constructor to choose when
+the container attempts to build a type.</p>
+</section>
+      <h4><a class="xref" href="Unity.InjectionMethodAttribute.html">InjectionMethodAttribute</a></h4>
+      <section><p>This attribute is used to mark methods that should be called when
+the container is building an object.</p>
+</section>
+      <h4><a class="xref" href="Unity.InstanceLifetime.html">InstanceLifetime</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Invoke.html">Invoke</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.OptionalDependencyAttribute.html">OptionalDependencyAttribute</a></h4>
+      <section><p>An <a class="xref" href="Unity.DependencyResolutionAttribute.html">DependencyResolutionAttribute</a> used to mark a dependency
+as optional - the container will try to resolve it, and return null
+if the resolution fails rather than throw.</p>
+</section>
+      <h4><a class="xref" href="Unity.Override.html">Override</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.ResolutionFailedException.html">ResolutionFailedException</a></h4>
+      <section><p>The exception thrown by the Unity container when
+an attempt to resolve a dependency fails.</p>
+</section>
+      <h4><a class="xref" href="Unity.Resolve.html">Resolve</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.TypeLifetime.html">TypeLifetime</a></h4>
+      <section></section>
       <h4><a class="xref" href="Unity.UnityContainer.html">UnityContainer</a></h4>
       <section><p>A simple, extensible dependency injection container.</p>
 </section>
@@ -86,7 +133,13 @@
 </section>
     <h3 id="interfaces">Interfaces
   </h3>
+      <h4><a class="xref" href="Unity.IContainerRegistration.html">IContainerRegistration</a></h4>
+      <section><p>Information about the types registered in a container.</p>
+</section>
       <h4><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></h4>
+      <section><p>Interface defining the behavior of the Unity dependency injection container.</p>
+</section>
+      <h4><a class="xref" href="Unity.IUnityContainerAsync.html">IUnityContainerAsync</a></h4>
       <section><p>Interface defining the behavior of the Unity dependency injection container.</p>
 </section>
 </article>

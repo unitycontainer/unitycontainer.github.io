@@ -107,7 +107,7 @@ to manipulate the internal state of the <a class="xref" href="Unity.IUnityContai
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Extension.html">Unity.Extension</a></h6>
-  <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
+  <h6><strong>Assembly</strong>: Unity.Container.dll</h6>
   <h5 id="Unity_Extension_ExtensionContext_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class ExtensionContext</code></pre>
@@ -116,10 +116,10 @@ to manipulate the internal state of the <a class="xref" href="Unity.IUnityContai
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Extension_ExtensionContext_BuildPlanStrategies.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.BuildPlanStrategies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Extension_ExtensionContext_BuildPlanStrategies.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.BuildPlanStrategies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extension/ExtensionContext.cs/#L35">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Extension/ExtensionContext.cs/#L49">View Source</a>
   </span>
   <a id="Unity_Extension_ExtensionContext_BuildPlanStrategies_" data-uid="Unity.Extension.ExtensionContext.BuildPlanStrategies*"></a>
   <h4 id="Unity_Extension_ExtensionContext_BuildPlanStrategies" data-uid="Unity.Extension.ExtensionContext.BuildPlanStrategies">BuildPlanStrategies</h4>
@@ -128,7 +128,7 @@ to manipulate the internal state of the <a class="xref" href="Unity.IUnityContai
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IStagedStrategyChain&lt;UnityBuildStage&gt; BuildPlanStrategies { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract IStagedStrategyChain&lt;MemberProcessor, BuilderStage&gt; BuildPlanStrategies { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,8 +140,8 @@ to manipulate the internal state of the <a class="xref" href="Unity.IUnityContai
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Strategy.IStagedStrategyChain-1.html">IStagedStrategyChain</a>&lt;<a class="xref" href="Unity.Builder.UnityBuildStage.html">UnityBuildStage</a>&gt;</td>
-        <td><p>The <a class="xref" href="Unity.Strategy.IStagedStrategyChain-1.html">IStagedStrategyChain&lt;TStageEnum&gt;</a> that this container uses when creating
+        <td><a class="xref" href="Unity.Storage.IStagedStrategyChain-2.html">IStagedStrategyChain</a>&lt;<a class="xref" href="Unity.Processors.MemberProcessor.html">MemberProcessor</a>, <a class="xref" href="Unity.Builder.BuilderStage.html">BuilderStage</a>&gt;</td>
+        <td><p>The <a class="xref" href="Unity.Storage.IStagedStrategyChain-2.html">IStagedStrategyChain&lt;TStrategyType, TStageEnum&gt;</a> that this container uses when creating
 build plans.</p>
 </td>
       </tr>
@@ -149,10 +149,10 @@ build plans.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Extension_ExtensionContext_Container.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.Container%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Extension_ExtensionContext_Container.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.Container%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extension/ExtensionContext.cs/#L22">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Extension/ExtensionContext.cs/#L25">View Source</a>
   </span>
   <a id="Unity_Extension_ExtensionContext_Container_" data-uid="Unity.Extension.ExtensionContext.Container*"></a>
   <h4 id="Unity_Extension_ExtensionContext_Container" data-uid="Unity.Extension.ExtensionContext.Container">Container</h4>
@@ -181,14 +181,14 @@ build plans.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Extension_ExtensionContext_Lifetime.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.Lifetime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Extension_ExtensionContext_Lifetime.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.Lifetime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extension/ExtensionContext.cs/#L47">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Extension/ExtensionContext.cs/#L31">View Source</a>
   </span>
   <a id="Unity_Extension_ExtensionContext_Lifetime_" data-uid="Unity.Extension.ExtensionContext.Lifetime*"></a>
   <h4 id="Unity_Extension_ExtensionContext_Lifetime" data-uid="Unity.Extension.ExtensionContext.Lifetime">Lifetime</h4>
-  <div class="markdown level1 summary"><p>The <a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a> that this container uses.</p>
+  <div class="markdown level1 summary"><p>The <see cref="!:Unity.WithLifetime.ILifetimeContainer"></see> that this container uses.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -206,17 +206,17 @@ build plans.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
-        <td><p>The <a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a> is used to manage <span class="xref">System.IDisposable</span> objects that the container is managing.</p>
+        <td><p>The <see cref="!:Unity.WithLifetime.ILifetimeContainer"></see> is used to manage <span class="xref">System.IDisposable</span> objects that the container is managing.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Extension_ExtensionContext_Policies.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.Policies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Extension_ExtensionContext_Policies.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.Policies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extension/ExtensionContext.cs/#L41">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Extension/ExtensionContext.cs/#L60">View Source</a>
   </span>
   <a id="Unity_Extension_ExtensionContext_Policies_" data-uid="Unity.Extension.ExtensionContext.Policies*"></a>
   <h4 id="Unity_Extension_ExtensionContext_Policies" data-uid="Unity.Extension.ExtensionContext.Policies">Policies</h4>
@@ -247,10 +247,10 @@ build plans.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Extension_ExtensionContext_Strategies.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.Strategies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Extension_ExtensionContext_Strategies.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.Strategies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extension/ExtensionContext.cs/#L28">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Extension/ExtensionContext.cs/#L42">View Source</a>
   </span>
   <a id="Unity_Extension_ExtensionContext_Strategies_" data-uid="Unity.Extension.ExtensionContext.Strategies*"></a>
   <h4 id="Unity_Extension_ExtensionContext_Strategies" data-uid="Unity.Extension.ExtensionContext.Strategies">Strategies</h4>
@@ -259,7 +259,7 @@ build plans.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IStagedStrategyChain&lt;UnityBuildStage&gt; Strategies { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract IStagedStrategyChain&lt;BuilderStrategy, UnityBuildStage&gt; Strategies { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,8 +271,8 @@ build plans.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Strategy.IStagedStrategyChain-1.html">IStagedStrategyChain</a>&lt;<a class="xref" href="Unity.Builder.UnityBuildStage.html">UnityBuildStage</a>&gt;</td>
-        <td><p>The <a class="xref" href="Unity.Strategy.IStagedStrategyChain-1.html">IStagedStrategyChain&lt;TStageEnum&gt;</a> that the container uses to build objects.</p>
+        <td><a class="xref" href="Unity.Storage.IStagedStrategyChain-2.html">IStagedStrategyChain</a>&lt;<a class="xref" href="Unity.Strategies.BuilderStrategy.html">BuilderStrategy</a>, <a class="xref" href="Unity.Builder.UnityBuildStage.html">UnityBuildStage</a>&gt;</td>
+        <td><p>The <a class="xref" href="Unity.Storage.IStagedStrategyChain-2.html">IStagedStrategyChain&lt;TStrategyType, TStageEnum&gt;</a> that the container uses to build objects.</p>
 </td>
       </tr>
     </tbody>
@@ -281,10 +281,10 @@ build plans.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Extension_ExtensionContext_ChildContainerCreated.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.ChildContainerCreated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Extension_ExtensionContext_ChildContainerCreated.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.ChildContainerCreated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extension/ExtensionContext.cs/#L65">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Extension/ExtensionContext.cs/#L84">View Source</a>
   </span>
   <h4 id="Unity_Extension_ExtensionContext_ChildContainerCreated" data-uid="Unity.Extension.ExtensionContext.ChildContainerCreated">ChildContainerCreated</h4>
   <div class="markdown level1 summary"><p>This event is raised when the <a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_CreateChildContainer">CreateChildContainer()</a> method is called, providing 
@@ -312,14 +312,15 @@ the newly created child container to extensions to act on as they see fit.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Extension_ExtensionContext_Registering.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.Registering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Extension_ExtensionContext_Registering.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.Registering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extension/ExtensionContext.cs/#L53">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Extension/ExtensionContext.cs/#L72">View Source</a>
   </span>
   <h4 id="Unity_Extension_ExtensionContext_Registering" data-uid="Unity.Extension.ExtensionContext.Registering">Registering</h4>
-  <div class="markdown level1 summary"><p>This event is raised when the <a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_LifetimeManager_Unity_Registration_InjectionMember___">RegisterType(Type, Type, String, LifetimeManager, InjectionMember[])</a> method,
-or one of its overloads, is called.</p>
+  <div class="markdown level1 summary"><p>This event is raised when the 
+<see cref="!:IUnityContainer.RegisterType(Type,Type,string,LifetimeManager, InjectionMember[])"></see> 
+method, or one of its overloads, is called.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -343,13 +344,13 @@ or one of its overloads, is called.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Extension_ExtensionContext_RegisteringInstance.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.RegisteringInstance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Extension_ExtensionContext_RegisteringInstance.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext.RegisteringInstance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extension/ExtensionContext.cs/#L59">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Extension/ExtensionContext.cs/#L78">View Source</a>
   </span>
   <h4 id="Unity_Extension_ExtensionContext_RegisteringInstance" data-uid="Unity.Extension.ExtensionContext.RegisteringInstance">RegisteringInstance</h4>
-  <div class="markdown level1 summary"><p>This event is raised when the <a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_LifetimeManager_">RegisterInstance(Type, String, Object, LifetimeManager)</a> method,
+  <div class="markdown level1 summary"><p>This event is raised when the <see cref="!:IUnityContainer.RegisterInstance(Type,string,object,LifetimeManager)"></see> method,
 or one of its overloads, is called.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -372,6 +373,13 @@ or one of its overloads, is called.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
+  </div>
 </article>
           </div>
           
@@ -380,10 +388,10 @@ or one of its overloads, is called.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Extension_ExtensionContext.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Extension_ExtensionContext.md&amp;value=---%0Auid%3A%20Unity.Extension.ExtensionContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extension/ExtensionContext.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Extension/ExtensionContext.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

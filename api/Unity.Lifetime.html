@@ -82,6 +82,11 @@
 When the <a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a> is disposed,
 the instance is disposed with it.</p>
 </section>
+      <h4><a class="xref" href="Unity.Lifetime.ContainerControlledTransientManager.html">ContainerControlledTransientManager</a></h4>
+      <section><p>A special lifetime manager which works like <see cref="!:TransienLifetimeManager"></see>,
+except container remembers all Disposable objects it created. Once container
+is disposed all these objects are disposed as well.</p>
+</section>
       <h4><a class="xref" href="Unity.Lifetime.ExternallyControlledLifetimeManager.html">ExternallyControlledLifetimeManager</a></h4>
       <section><p>A <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> that holds a weak reference to
 it&apos;s managed instance.</p>
@@ -91,14 +96,12 @@ it&apos;s managed instance.</p>
 except that in the presence of child containers, each child gets it&apos;s own instance
 of the object, instead of sharing one in the common parent.</p>
 </section>
-      <h4><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a></h4>
-      <section><p>Base class for Lifetime managers - classes that control how
-and when instances are created by the Unity container.</p>
+      <h4><a class="xref" href="Unity.Lifetime.LifetimeContainer.html">LifetimeContainer</a></h4>
+      <section><p>Represents a lifetime container.</p>
 </section>
-      <h4><a class="xref" href="Unity.Lifetime.LifetimeManagerFactory.html">LifetimeManagerFactory</a></h4>
-      <section><p>An implementation of <a class="xref" href="Unity.Lifetime.ILifetimeFactoryPolicy.html">ILifetimeFactoryPolicy</a> that
-creates instances of the type of the given Lifetime Manager
-by resolving them through the container.</p>
+      <h4><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a></h4>
+      <section><p>Base class for WithLifetime managers - classes that control how
+and when instances are created by the Unity container.</p>
 </section>
       <h4><a class="xref" href="Unity.Lifetime.PerResolveLifetimeManager.html">PerResolveLifetimeManager</a></h4>
       <section><p>This is a custom lifetime manager that acts like <a class="xref" href="Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a>,
@@ -109,9 +112,14 @@ instances are reused across the build up object graph.</p>
       <section><p>A <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> that holds the instances given to it, 
 keeping one instance per thread.</p>
 </section>
+      <h4><a class="xref" href="Unity.Lifetime.SingletonLifetimeManager.html">SingletonLifetimeManager</a></h4>
+      <section><p>A <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> that is unique for all the children containers.
+When the <a class="xref" href="Unity.Lifetime.SingletonLifetimeManager.html">SingletonLifetimeManager</a> is disposed,
+the instance is disposed with it.</p>
+</section>
       <h4><a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html">SynchronizedLifetimeManager</a></h4>
-      <section><p>Base class for Lifetime managers which need to synchronize calls to
-<a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_GetValue">GetValue()</a>.</p>
+      <section><p>Base class for WithLifetime managers which need to synchronize calls to
+<a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_">GetValue(ILifetimeContainer)</a>.</p>
 </section>
       <h4><a class="xref" href="Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a></h4>
       <section><p>An <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> implementation that does nothing,
@@ -119,22 +127,14 @@ thus ensuring that instances are created new every time.</p>
 </section>
     <h3 id="interfaces">Interfaces
   </h3>
-      <h4><a class="xref" href="Unity.Lifetime.IHierarchicalLifetimePolicy.html">IHierarchicalLifetimePolicy</a></h4>
+      <h4><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Unity.Lifetime.IInstanceLifetimeManager.html">IInstanceLifetimeManager</a></h4>
       <section></section>
       <h4><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></h4>
       <section><p>Represents a lifetime container.</p>
 </section>
-      <h4><a class="xref" href="Unity.Lifetime.ILifetimeFactoryPolicy.html">ILifetimeFactoryPolicy</a></h4>
-      <section><p>A builder policy used to create lifetime policy instances.
-Used by the LifetimeStrategy when instantiating open
-generic types.</p>
-</section>
-      <h4><a class="xref" href="Unity.Lifetime.ILifetimePolicy.html">ILifetimePolicy</a></h4>
-      <section><p>A <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a> that controls how instances are
-persisted and recovered from an external store. Used to implement
-things like singletons and per-http-request lifetime.</p>
-</section>
-      <h4><a class="xref" href="Unity.Lifetime.ISingletonLifetimePolicy.html">ISingletonLifetimePolicy</a></h4>
+      <h4><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></h4>
       <section></section>
 </article>
           </div>

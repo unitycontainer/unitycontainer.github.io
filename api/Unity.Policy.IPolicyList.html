@@ -73,7 +73,7 @@
   
   <h1 id="Unity_Policy_IPolicyList" data-uid="Unity.Policy.IPolicyList" class="text-break">Interface IPolicyList
   </h1>
-  <div class="markdown level0 summary"><p>A custom collection over <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a> objects.</p>
+  <div class="markdown level0 summary"><p>A custom collection over <span class="xref">System.Object</span> objects.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Policy.html">Unity.Policy</a></h6>
@@ -86,19 +86,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IPolicyList_Clear_System_Type_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Policy.IPolicyList.Clear(System.Type%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IPolicyList_Clear_System_Type_System_String_System_Type_.md&amp;value=---%0Auid%3A%20Unity.Policy.IPolicyList.Clear(System.Type%2CSystem.String%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IPolicyList.cs/#L34">View Source</a>
   </span>
   <a id="Unity_Policy_IPolicyList_Clear_" data-uid="Unity.Policy.IPolicyList.Clear*"></a>
-  <h4 id="Unity_Policy_IPolicyList_Clear_System_Type_System_Object_" data-uid="Unity.Policy.IPolicyList.Clear(System.Type,System.Object)">Clear(Type, Object)</h4>
-  <div class="markdown level1 summary"><p>Removes an individual policy type for a build key.</p>
+  <h4 id="Unity_Policy_IPolicyList_Clear_System_Type_System_String_System_Type_" data-uid="Unity.Policy.IPolicyList.Clear(System.Type,System.String,System.Type)">Clear(Type, String, Type)</h4>
+  <div class="markdown level1 summary"><p>Remove specific policy from the list</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Clear(Type policyInterface, object buildKey)</code></pre>
+    <pre><code class="lang-csharp hljs">void Clear(Type type, string name, Type policyInterface)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -112,49 +112,39 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">policyInterface</span></td>
-        <td><p>The type of policy to remove.</p>
+        <td><span class="parametername">type</span></td>
+        <td><p>Type of the registration</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">buildKey</span></td>
-        <td><p>The key the policy applies.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the registration</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">policyInterface</span></td>
+        <td><p>Type of policy to be removed</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IPolicyList_ClearAll.md&amp;value=---%0Auid%3A%20Unity.Policy.IPolicyList.ClearAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IPolicyList_Get_System_Type_System_String_System_Type_.md&amp;value=---%0Auid%3A%20Unity.Policy.IPolicyList.Get(System.Type%2CSystem.String%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IPolicyList.cs/#L39">View Source</a>
-  </span>
-  <a id="Unity_Policy_IPolicyList_ClearAll_" data-uid="Unity.Policy.IPolicyList.ClearAll*"></a>
-  <h4 id="Unity_Policy_IPolicyList_ClearAll" data-uid="Unity.Policy.IPolicyList.ClearAll">ClearAll()</h4>
-  <div class="markdown level1 summary"><p>Removes all policies from the list.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void ClearAll()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IPolicyList_Get_System_Type_System_Object_Unity_Policy_IPolicyList__.md&amp;value=---%0Auid%3A%20Unity.Policy.IPolicyList.Get(System.Type%2CSystem.Object%2CUnity.Policy.IPolicyList%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IPolicyList.cs/#L20">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IPolicyList.cs/#L17">View Source</a>
   </span>
   <a id="Unity_Policy_IPolicyList_Get_" data-uid="Unity.Policy.IPolicyList.Get*"></a>
-  <h4 id="Unity_Policy_IPolicyList_Get_System_Type_System_Object_Unity_Policy_IPolicyList__" data-uid="Unity.Policy.IPolicyList.Get(System.Type,System.Object,Unity.Policy.IPolicyList@)">Get(Type, Object, out IPolicyList)</h4>
-  <div class="markdown level1 summary"><p>GetOrDefault the non default policy.</p>
+  <h4 id="Unity_Policy_IPolicyList_Get_System_Type_System_String_System_Type_" data-uid="Unity.Policy.IPolicyList.Get(System.Type,System.String,System.Type)">Get(Type, String, Type)</h4>
+  <div class="markdown level1 summary"><p>Get policy</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IBuilderPolicy Get(Type policyInterface, object buildKey, out IPolicyList containingPolicyList)</code></pre>
+    <pre><code class="lang-csharp hljs">object Get(Type type, string name, Type policyInterface)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,21 +158,20 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Type of the registration</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the registration</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">policyInterface</span></td>
-        <td><p>The interface the policy is registered under.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">buildKey</span></td>
-        <td><p>The key the policy applies to.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Unity.Policy.IPolicyList.html">IPolicyList</a></td>
-        <td><span class="parametername">containingPolicyList</span></td>
-        <td><p>The policy list in the chain that the searched for policy was found in, null if the policy was
-not found.</p>
+        <td><p>Type of policy to retrieve</p>
 </td>
       </tr>
     </tbody>
@@ -197,27 +186,27 @@ not found.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a></td>
-        <td><p>The policy in the list if present; returns null otherwise.</p>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Instance of the policy or null if none found</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IPolicyList_Set_System_Type_Unity_Policy_IBuilderPolicy_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Policy.IPolicyList.Set(System.Type%2CUnity.Policy.IBuilderPolicy%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IPolicyList_Set_System_Type_System_String_System_Type_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Policy.IPolicyList.Set(System.Type%2CSystem.String%2CSystem.Type%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IPolicyList.cs/#L28">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IPolicyList.cs/#L26">View Source</a>
   </span>
   <a id="Unity_Policy_IPolicyList_Set_" data-uid="Unity.Policy.IPolicyList.Set*"></a>
-  <h4 id="Unity_Policy_IPolicyList_Set_System_Type_Unity_Policy_IBuilderPolicy_System_Object_" data-uid="Unity.Policy.IPolicyList.Set(System.Type,Unity.Policy.IBuilderPolicy,System.Object)">Set(Type, IBuilderPolicy, Object)</h4>
-  <div class="markdown level1 summary"><p>Sets an individual policy.</p>
+  <h4 id="Unity_Policy_IPolicyList_Set_System_Type_System_String_System_Type_System_Object_" data-uid="Unity.Policy.IPolicyList.Set(System.Type,System.String,System.Type,System.Object)">Set(Type, String, Type, Object)</h4>
+  <div class="markdown level1 summary"><p>Set policy</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Set(Type policyInterface, IBuilderPolicy policy, object buildKey = null)</code></pre>
+    <pre><code class="lang-csharp hljs">void Set(Type type, string name, Type policyInterface, object policy)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,69 +220,36 @@ not found.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">policyInterface</span></td>
-        <td><p>The <span class="xref">System.Type</span> of the policy.</p>
+        <td><span class="parametername">type</span></td>
+        <td><p>Type of the registration</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a></td>
-        <td><span class="parametername">policy</span></td>
-        <td><p>The policy to be registered.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the registration</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">policyInterface</span></td>
+        <td><p>Type of policy to be set</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">buildKey</span></td>
-        <td><p>The key the policy applies.</p>
+        <td><span class="parametername">policy</span></td>
+        <td><p>Policy instance to be set</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_Clear__1_Unity_Policy_IPolicyList_System_Object_">PolicyListExtensions.Clear&lt;TPolicyInterface&gt;(IPolicyList, Object)</a>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
   </div>
   <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_ClearDefault__1_Unity_Policy_IPolicyList_">PolicyListExtensions.ClearDefault&lt;TPolicyInterface&gt;(IPolicyList)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_ClearDefault_Unity_Policy_IPolicyList_System_Type_">PolicyListExtensions.ClearDefault(IPolicyList, Type)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_Get__1_Unity_Policy_IPolicyList_System_Object_">PolicyListExtensions.Get&lt;TPolicyInterface&gt;(IPolicyList, Object)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_Get__1_Unity_Policy_IPolicyList_System_Object_Unity_Policy_IPolicyList__">PolicyListExtensions.Get&lt;TPolicyInterface&gt;(IPolicyList, Object, out IPolicyList)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_Get_Unity_Policy_IPolicyList_System_Type_System_Object_">PolicyListExtensions.Get(IPolicyList, Type, Object)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_Get_Unity_Policy_IPolicyList_System_Type_System_Object_Unity_Policy_IPolicyList__">PolicyListExtensions.Get(IPolicyList, Type, Object, out IPolicyList)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_Get_Unity_Policy_IPolicyList_System_Type_System_Object_System_Boolean_">PolicyListExtensions.Get(IPolicyList, Type, Object, Boolean)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_GetNoDefault__1_Unity_Policy_IPolicyList_System_Object_">PolicyListExtensions.GetNoDefault&lt;TPolicyInterface&gt;(IPolicyList, Object)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_GetNoDefault__1_Unity_Policy_IPolicyList_System_Object_System_Boolean_Unity_Policy_IPolicyList__">PolicyListExtensions.GetNoDefault&lt;TPolicyInterface&gt;(IPolicyList, Object, Boolean, out IPolicyList)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_GetNoDefault_Unity_Policy_IPolicyList_System_Type_System_Object_">PolicyListExtensions.GetNoDefault(IPolicyList, Type, Object)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_Set__1_Unity_Policy_IPolicyList___0_System_Object_">PolicyListExtensions.Set&lt;TPolicyInterface&gt;(IPolicyList, TPolicyInterface, Object)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_SetDefault_Unity_Policy_IPolicyList_System_Type_Unity_Policy_IBuilderPolicy_">PolicyListExtensions.SetDefault(IPolicyList, Type, IBuilderPolicy)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_SetDefault__1_Unity_Policy_IPolicyList___0_">PolicyListExtensions.SetDefault&lt;TPolicyInterface&gt;(IPolicyList, TPolicyInterface)</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.PolicyListExtensions.html#Unity_Policy_PolicyListExtensions_GetOrDefault_Unity_Policy_IPolicyList_System_Type_System_Object_Unity_Policy_IPolicyList__">PolicyListExtensions.GetOrDefault(IPolicyList, Type, Object, out IPolicyList)</a>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
   </div>
 </article>
           </div>
@@ -306,7 +262,7 @@ not found.</p>
                     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IPolicyList.md&amp;value=---%0Auid%3A%20Unity.Policy.IPolicyList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IPolicyList.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IPolicyList.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

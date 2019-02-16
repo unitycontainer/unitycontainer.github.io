@@ -73,7 +73,7 @@
   
   <h1 id="Unity_Injection_OptionalGenericParameter" data-uid="Unity.Injection.OptionalGenericParameter" class="text-break">Class OptionalGenericParameter
   </h1>
-  <div class="markdown level0 summary"><p>A <a class="xref" href="Unity.Injection.InjectionParameterValue.html">InjectionParameterValue</a> that lets you specify that
+  <div class="markdown level0 summary"><p>A <a class="xref" href="Unity.Injection.ParameterValue.html">ParameterValue</a> that lets you specify that
 an instance of a generic type parameter should be resolved, providing the <span class="xref">null</span>
 value if resolving fails.</p>
 </div>
@@ -81,29 +81,29 @@ value if resolving fails.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Unity.Injection.InjectionParameterValue.html">InjectionParameterValue</a></div>
-    <div class="level2"><a class="xref" href="Unity.Injection.GenericParameterBase.html">GenericParameterBase</a></div>
+    <div class="level1"><a class="xref" href="Unity.Injection.ParameterValue.html">ParameterValue</a></div>
+    <div class="level2"><a class="xref" href="Unity.Injection.GenericBase.html">GenericBase</a></div>
     <div class="level3"><span class="xref">OptionalGenericParameter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<span class="xref">System.Type</span>&gt;</div>
+    <div><a class="xref" href="Unity.Resolution.IResolverFactory-1.html">IResolverFactory</a>&lt;<span class="xref">System.Type</span>&gt;</div>
+    <div><a class="xref" href="Unity.Resolution.IResolverFactory-1.html">IResolverFactory</a>&lt;<span class="xref">System.Reflection.ParameterInfo</span>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Unity.Injection.GenericParameterBase.html#Unity_Injection_GenericParameterBase_ParameterTypeName">GenericParameterBase.ParameterTypeName</a>
+      <a class="xref" href="Unity.Injection.GenericBase.html#Unity_Injection_GenericBase_ParameterTypeName">GenericBase.ParameterTypeName</a>
     </div>
     <div>
-      <a class="xref" href="Unity.Injection.GenericParameterBase.html#Unity_Injection_GenericParameterBase_MatchesType_System_Type_">GenericParameterBase.MatchesType(Type)</a>
+      <a class="xref" href="Unity.Injection.GenericBase.html#Unity_Injection_GenericBase_Equals_System_Type_">GenericBase.Equals(Type)</a>
     </div>
     <div>
-      <a class="xref" href="Unity.Injection.GenericParameterBase.html#Unity_Injection_GenericParameterBase_GetResolverPolicy_System_Type_">GenericParameterBase.GetResolverPolicy(Type)</a>
+      <a class="xref" href="Unity.Injection.GenericBase.html#Unity_Injection_GenericBase_GetResolver__1_System_Type_">GenericBase.GetResolver&lt;TContext&gt;(Type)</a>
     </div>
     <div>
-      <a class="xref" href="Unity.Injection.InjectionParameterValue.html#Unity_Injection_InjectionParameterValue_Value">InjectionParameterValue.Value</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Injection.InjectionParameterValue.html#Unity_Injection_InjectionParameterValue_ToParameters_System_Object___">InjectionParameterValue.ToParameters(Object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Injection.InjectionParameterValue.html#Unity_Injection_InjectionParameterValue_ToParameter_System_Object_">InjectionParameterValue.ToParameter(Object)</a>
+      <a class="xref" href="Unity.Injection.GenericBase.html#Unity_Injection_GenericBase_GetResolver__1_System_Reflection_ParameterInfo_">GenericBase.GetResolver&lt;TContext&gt;(ParameterInfo)</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -131,7 +131,7 @@ value if resolving fails.</p>
   <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
   <h5 id="Unity_Injection_OptionalGenericParameter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OptionalGenericParameter : GenericParameterBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class OptionalGenericParameter : GenericBase, IEquatable&lt;Type&gt;, IResolverFactory&lt;Type&gt;, IResolverFactory&lt;ParameterInfo&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -140,7 +140,7 @@ value if resolving fails.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Injection_OptionalGenericParameter__ctor_System_String_.md&amp;value=---%0Auid%3A%20Unity.Injection.OptionalGenericParameter.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Injection/OptionalGenericParameter.cs/#L21">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Injection/Parameters/OptionalGenericParameter.cs/#L21">View Source</a>
   </span>
   <a id="Unity_Injection_OptionalGenericParameter__ctor_" data-uid="Unity.Injection.OptionalGenericParameter.#ctor*"></a>
   <h4 id="Unity_Injection_OptionalGenericParameter__ctor_System_String_" data-uid="Unity.Injection.OptionalGenericParameter.#ctor(System.String)">OptionalGenericParameter(String)</h4>
@@ -175,7 +175,7 @@ that the given named generic parameter should be resolved.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Injection_OptionalGenericParameter__ctor_System_String_System_String_.md&amp;value=---%0Auid%3A%20Unity.Injection.OptionalGenericParameter.%23ctor(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Injection/OptionalGenericParameter.cs/#L31">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Injection/Parameters/OptionalGenericParameter.cs/#L31">View Source</a>
   </span>
   <a id="Unity_Injection_OptionalGenericParameter__ctor_" data-uid="Unity.Injection.OptionalGenericParameter.#ctor*"></a>
   <h4 id="Unity_Injection_OptionalGenericParameter__ctor_System_String_System_String_" data-uid="Unity.Injection.OptionalGenericParameter.#ctor(System.String,System.String)">OptionalGenericParameter(String, String)</h4>
@@ -185,7 +185,7 @@ that the given named generic parameter should be resolved.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OptionalGenericParameter(string genericParameterName, string resolutionKey)</code></pre>
+    <pre><code class="lang-csharp hljs">public OptionalGenericParameter(string genericParameterName, string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,8 +205,8 @@ that the given named generic parameter should be resolved.</p>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">resolutionKey</span></td>
-        <td><p>name to use when looking up in the container.</p>
+        <td><span class="parametername">name</span></td>
+        <td><p>Registration name to use when looking up in the container.</p>
 </td>
       </tr>
     </tbody>
@@ -215,20 +215,19 @@ that the given named generic parameter should be resolved.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Injection_OptionalGenericParameter_DoGetResolverPolicy_System_Type_System_String_.md&amp;value=---%0Auid%3A%20Unity.Injection.OptionalGenericParameter.DoGetResolverPolicy(System.Type%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Injection_OptionalGenericParameter_GetResolver__1_System_Type_System_String_.md&amp;value=---%0Auid%3A%20Unity.Injection.OptionalGenericParameter.GetResolver%60%601(System.Type%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Injection/OptionalGenericParameter.cs/#L42">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Injection/Parameters/OptionalGenericParameter.cs/#L40">View Source</a>
   </span>
-  <a id="Unity_Injection_OptionalGenericParameter_DoGetResolverPolicy_" data-uid="Unity.Injection.OptionalGenericParameter.DoGetResolverPolicy*"></a>
-  <h4 id="Unity_Injection_OptionalGenericParameter_DoGetResolverPolicy_System_Type_System_String_" data-uid="Unity.Injection.OptionalGenericParameter.DoGetResolverPolicy(System.Type,System.String)">DoGetResolverPolicy(Type, String)</h4>
-  <div class="markdown level1 summary"><p>Return a <a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a> instance that will
-return this types value for the parameter.</p>
-</div>
+  <a id="Unity_Injection_OptionalGenericParameter_GetResolver_" data-uid="Unity.Injection.OptionalGenericParameter.GetResolver*"></a>
+  <h4 id="Unity_Injection_OptionalGenericParameter_GetResolver__1_System_Type_System_String_" data-uid="Unity.Injection.OptionalGenericParameter.GetResolver``1(System.Type,System.String)">GetResolver&lt;TContext&gt;(Type, String)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override IDependencyResolverPolicy DoGetResolverPolicy(Type typeToResolve, string resolutionKey)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override ResolveDelegate&lt;TContext&gt; GetResolver&lt;TContext&gt;(Type type, string name)
+    where TContext : IResolveContext</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,15 +241,13 @@ return this types value for the parameter.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">typeToResolve</span></td>
-        <td><p>The actual type to resolve.</p>
-</td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">resolutionKey</span></td>
-        <td><p>The resolution key.</p>
-</td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -264,14 +261,45 @@ return this types value for the parameter.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a></td>
-        <td><p>The <a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a>.</p>
-</td>
+        <td><a class="xref" href="Unity.Resolution.ResolveDelegate-1.html">ResolveDelegate</a>&lt;TContext&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TContext</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Unity.Injection.GenericParameterBase.html#Unity_Injection_GenericParameterBase_DoGetResolverPolicy_System_Type_System_String_">GenericParameterBase.DoGetResolverPolicy(Type, String)</a></div>
+  <div><a class="xref" href="Unity.Injection.GenericBase.html#Unity_Injection_GenericBase_GetResolver__1_System_Type_System_String_">GenericBase.GetResolver&lt;TContext&gt;(Type, String)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Resolution.IResolverFactory-1.html">IResolverFactory&lt;TMemberInfo&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Resolution.IResolverFactory-1.html">IResolverFactory&lt;TMemberInfo&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
+  </div>
 </article>
           </div>
           
@@ -283,7 +311,7 @@ return this types value for the parameter.</p>
                     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Injection_OptionalGenericParameter.md&amp;value=---%0Auid%3A%20Unity.Injection.OptionalGenericParameter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Injection/OptionalGenericParameter.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Injection/Parameters/OptionalGenericParameter.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

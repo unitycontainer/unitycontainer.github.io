@@ -85,13 +85,21 @@ given type, regardless of where it appears in the object graph.</p>
     <div class="level2"><span class="xref">DependencyOverride</span></div>
       <div class="level3"><a class="xref" href="Unity.Resolution.DependencyOverride-1.html">DependencyOverride&lt;T&gt;</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Type</span>, <span class="xref">System.String</span>&gt;&gt;</div>
+    <div><a class="xref" href="Unity.Resolution.IResolve.html">IResolve</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Name">ResolverOverride.Name</a>
+      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Target">ResolverOverride.Target</a>
     </div>
     <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Value">ResolverOverride.Value</a>
+      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Type">ResolverOverride.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Name">ResolverOverride.Name</a>
     </div>
     <div>
       <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_OnType__1">ResolverOverride.OnType&lt;T&gt;()</a>
@@ -100,10 +108,7 @@ given type, regardless of where it appears in the object graph.</p>
       <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_OnType_System_Type_">ResolverOverride.OnType(Type)</a>
     </div>
     <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_GetHashCode">ResolverOverride.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Equals_System_Object_">ResolverOverride.Equals(Object)</a>
+      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_GetResolver__1_System_Type_">ResolverOverride.GetResolver&lt;TContext&gt;(Type)</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
@@ -125,16 +130,53 @@ given type, regardless of where it appears in the object graph.</p>
   <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
   <h5 id="Unity_Resolution_DependencyOverride_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DependencyOverride : ResolverOverride</code></pre>
+    <pre><code class="lang-csharp hljs">public class DependencyOverride : ResolverOverride, IEquatable&lt;(Type, string)&gt;, IResolve</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride__ctor_System_String_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride.%23ctor(System.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L35">View Source</a>
+  </span>
+  <a id="Unity_Resolution_DependencyOverride__ctor_" data-uid="Unity.Resolution.DependencyOverride.#ctor*"></a>
+  <h4 id="Unity_Resolution_DependencyOverride__ctor_System_String_System_Object_" data-uid="Unity.Resolution.DependencyOverride.#ctor(System.String,System.Object)">DependencyOverride(String, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DependencyOverride(string name, object dependencyValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">dependencyValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride__ctor_System_Type_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride.%23ctor(System.Type%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Resolution/DependencyOverride.cs/#L25">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L29">View Source</a>
   </span>
   <a id="Unity_Resolution_DependencyOverride__ctor_" data-uid="Unity.Resolution.DependencyOverride.#ctor*"></a>
   <h4 id="Unity_Resolution_DependencyOverride__ctor_System_Type_System_Object_" data-uid="Unity.Resolution.DependencyOverride.#ctor(System.Type,System.Object)">DependencyOverride(Type, Object)</h4>
@@ -165,29 +207,25 @@ the given type with the given value.</p>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">dependencyValue</span></td>
-        <td><p>Value to use.</p>
+        <td><p>InjectionParameterValue to use.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride_GetResolver_Unity_Builder_IBuilderContext_System_Type_.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride.GetResolver(Unity.Builder.IBuilderContext%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride__ctor_System_Type_System_String_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride.%23ctor(System.Type%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Resolution/DependencyOverride.cs/#L38">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L41">View Source</a>
   </span>
-  <a id="Unity_Resolution_DependencyOverride_GetResolver_" data-uid="Unity.Resolution.DependencyOverride.GetResolver*"></a>
-  <h4 id="Unity_Resolution_DependencyOverride_GetResolver_Unity_Builder_IBuilderContext_System_Type_" data-uid="Unity.Resolution.DependencyOverride.GetResolver(Unity.Builder.IBuilderContext,System.Type)">GetResolver(IBuilderContext, Type)</h4>
-  <div class="markdown level1 summary"><p>Return a <a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a> that can be used to give a value
-for the given desired dependency.</p>
-</div>
+  <a id="Unity_Resolution_DependencyOverride__ctor_" data-uid="Unity.Resolution.DependencyOverride.#ctor*"></a>
+  <h4 id="Unity_Resolution_DependencyOverride__ctor_System_Type_System_String_System_Object_" data-uid="Unity.Resolution.DependencyOverride.#ctor(System.Type,System.String,System.Object)">DependencyOverride(Type, String, Object)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IDependencyResolverPolicy GetResolver(IBuilderContext context, Type dependencyType)</code></pre>
+    <pre><code class="lang-csharp hljs">public DependencyOverride(Type type, string name, object value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,16 +238,131 @@ for the given desired dependency.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Builder.IBuilderContext.html">IBuilderContext</a></td>
-        <td><span class="parametername">context</span></td>
-        <td><p>Current build context.</p>
-</td>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride__ctor_System_Type_System_Type_System_String_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride.%23ctor(System.Type%2CSystem.Type%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L47">View Source</a>
+  </span>
+  <a id="Unity_Resolution_DependencyOverride__ctor_" data-uid="Unity.Resolution.DependencyOverride.#ctor*"></a>
+  <h4 id="Unity_Resolution_DependencyOverride__ctor_System_Type_System_Type_System_String_System_Object_" data-uid="Unity.Resolution.DependencyOverride.#ctor(System.Type,System.Type,System.String,System.Object)">DependencyOverride(Type, Type, String, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DependencyOverride(Type target, Type type, string name, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">dependencyType</span></td>
-        <td><p>Type of dependency desired.</p>
-</td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride_Value.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L16">View Source</a>
+  </span>
+  <h4 id="Unity_Resolution_DependencyOverride_Value" data-uid="Unity.Resolution.DependencyOverride.Value">Value</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly object Value</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L63">View Source</a>
+  </span>
+  <a id="Unity_Resolution_DependencyOverride_Equals_" data-uid="Unity.Resolution.DependencyOverride.Equals*"></a>
+  <h4 id="Unity_Resolution_DependencyOverride_Equals_System_Object_" data-uid="Unity.Resolution.DependencyOverride.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -223,14 +376,169 @@ for the given desired dependency.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a></td>
-        <td><p>a <a class="xref" href="Unity.Policy.IDependencyResolverPolicy.html">IDependencyResolverPolicy</a> object if this override applies, null if not.</p>
-</td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_GetResolver_Unity_Builder_IBuilderContext_System_Type_">ResolverOverride.GetResolver(IBuilderContext, Type)</a></div>
+  <div><a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Equals_System_Object_">ResolverOverride.Equals(Object)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride_Equals_System_ValueTuple_System_Type_System_String__.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride.Equals(System.ValueTuple%7BSystem.Type%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L68">View Source</a>
+  </span>
+  <a id="Unity_Resolution_DependencyOverride_Equals_" data-uid="Unity.Resolution.DependencyOverride.Equals*"></a>
+  <h4 id="Unity_Resolution_DependencyOverride_Equals_System_ValueTuple_System_Type_System_String__" data-uid="Unity.Resolution.DependencyOverride.Equals(System.ValueTuple{System.Type,System.String})">Equals((Type, String))</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals((Type, string)other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Type</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride_GetHashCode.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L58">View Source</a>
+  </span>
+  <a id="Unity_Resolution_DependencyOverride_GetHashCode_" data-uid="Unity.Resolution.DependencyOverride.GetHashCode*"></a>
+  <h4 id="Unity_Resolution_DependencyOverride_GetHashCode" data-uid="Unity.Resolution.DependencyOverride.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_GetHashCode">ResolverOverride.GetHashCode()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride_Resolve__1___0__.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride.Resolve%60%601(%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L79">View Source</a>
+  </span>
+  <a id="Unity_Resolution_DependencyOverride_Resolve_" data-uid="Unity.Resolution.DependencyOverride.Resolve*"></a>
+  <h4 id="Unity_Resolution_DependencyOverride_Resolve__1___0__" data-uid="Unity.Resolution.DependencyOverride.Resolve``1(``0@)">Resolve&lt;TContext&gt;(ref TContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Resolve&lt;TContext&gt;(ref TContext context)
+    where TContext : IResolveContext</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Resolution.IResolve.html">IResolve</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
+  </div>
 </article>
           </div>
           
@@ -242,7 +550,7 @@ for the given desired dependency.</p>
                     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Resolution/DependencyOverride.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

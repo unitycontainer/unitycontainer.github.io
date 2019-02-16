@@ -84,28 +84,42 @@ specify the type to construct via generics syntax.</p>
     <div class="level2"><a class="xref" href="Unity.Resolution.TypeBasedOverride.html">TypeBasedOverride</a></div>
     <div class="level3"><span class="xref">TypeBasedOverride&lt;T&gt;</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<span class="xref">System.Reflection.ParameterInfo</span>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<span class="xref">System.Reflection.PropertyInfo</span>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Unity.Resolution.TypeBasedOverride.html#Unity_Resolution_TypeBasedOverride_GetResolver_Unity_Builder_IBuilderContext_System_Type_">TypeBasedOverride.GetResolver(IBuilderContext, Type)</a>
+      <a class="xref" href="Unity.Resolution.TypeBasedOverride.html#Unity_Resolution_TypeBasedOverride_GetResolver__1_System_Type_">TypeBasedOverride.GetResolver&lt;TContext&gt;(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Resolution.TypeBasedOverride.html#Unity_Resolution_TypeBasedOverride_GetHashCode">TypeBasedOverride.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Resolution.TypeBasedOverride.html#Unity_Resolution_TypeBasedOverride_Equals_System_Object_">TypeBasedOverride.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Resolution.TypeBasedOverride.html#Unity_Resolution_TypeBasedOverride_Equals_System_Reflection_PropertyInfo_">TypeBasedOverride.Equals(PropertyInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Resolution.TypeBasedOverride.html#Unity_Resolution_TypeBasedOverride_Equals_System_Reflection_ParameterInfo_">TypeBasedOverride.Equals(ParameterInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Target">ResolverOverride.Target</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Type">ResolverOverride.Type</a>
     </div>
     <div>
       <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Name">ResolverOverride.Name</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Value">ResolverOverride.Value</a>
     </div>
     <div>
       <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_OnType__1">ResolverOverride.OnType&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_OnType_System_Type_">ResolverOverride.OnType(Type)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_GetHashCode">ResolverOverride.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Resolution.ResolverOverride.html#Unity_Resolution_ResolverOverride_Equals_System_Object_">ResolverOverride.Equals(Object)</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
@@ -124,10 +138,11 @@ specify the type to construct via generics syntax.</p>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Resolution.html">Unity.Resolution</a></h6>
-  <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
+  <h6><strong>Assembly</strong>: Unity.Container.dll</h6>
   <h5 id="Unity_Resolution_TypeBasedOverride_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TypeBasedOverride&lt;T&gt; : TypeBasedOverride</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This type has been deprecated as degrading performance. Use DependencyOverride instead.&quot;, false)]
+public class TypeBasedOverride&lt;T&gt; : TypeBasedOverride, IEquatable&lt;ParameterInfo&gt;, IEquatable&lt;PropertyInfo&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,10 +164,10 @@ specify the type to construct via generics syntax.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride_1__ctor_Unity_Resolution_ResolverOverride_.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride%601.%23ctor(Unity.Resolution.ResolverOverride)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride_1__ctor_Unity_Resolution_ResolverOverride_.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride%601.%23ctor(Unity.Resolution.ResolverOverride)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Resolution/TypeBasedOverride.cs/#L63">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/TypeBasedOverride.cs/#L91">View Source</a>
   </span>
   <a id="Unity_Resolution_TypeBasedOverride_1__ctor_" data-uid="Unity.Resolution.TypeBasedOverride`1.#ctor*"></a>
   <h4 id="Unity_Resolution_TypeBasedOverride_1__ctor_Unity_Resolution_ResolverOverride_" data-uid="Unity.Resolution.TypeBasedOverride`1.#ctor(Unity.Resolution.ResolverOverride)">TypeBasedOverride(ResolverOverride)</h4>
@@ -181,6 +196,20 @@ specify the type to construct via generics syntax.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
+  </div>
 </article>
           </div>
           
@@ -189,10 +218,10 @@ specify the type to construct via generics syntax.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride_1.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Resolution_TypeBasedOverride_1.md&amp;value=---%0Auid%3A%20Unity.Resolution.TypeBasedOverride%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Resolution/TypeBasedOverride.cs/#L57" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/TypeBasedOverride.cs/#L84" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -87,35 +87,35 @@ of the object, instead of sharing one in the common parent.</p>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Unity.Exceptions.IRequiresRecovery.html">IRequiresRecovery</a></div>
-    <div><a class="xref" href="Unity.Lifetime.IHierarchicalLifetimePolicy.html">IHierarchicalLifetimePolicy</a></div>
-    <div><a class="xref" href="Unity.Lifetime.ISingletonLifetimePolicy.html">ISingletonLifetimePolicy</a></div>
-    <div><a class="xref" href="Unity.Lifetime.ILifetimePolicy.html">ILifetimePolicy</a></div>
-    <div><a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a></div>
     <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></div>
+    <div><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_Value">SynchronizedLifetimeManager.Value</a>
+      <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_">SynchronizedLifetimeManager.GetValue(ILifetimeContainer)</a>
     </div>
     <div>
-      <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_GetValue">SynchronizedLifetimeManager.GetValue()</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedGetValue">SynchronizedLifetimeManager.SynchronizedGetValue()</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_SetValue_System_Object_">SynchronizedLifetimeManager.SetValue(Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedSetValue_System_Object_">SynchronizedLifetimeManager.SynchronizedSetValue(Object)</a>
+      <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_">SynchronizedLifetimeManager.SetValue(Object, ILifetimeContainer)</a>
     </div>
     <div>
       <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_Recover">SynchronizedLifetimeManager.Recover()</a>
     </div>
     <div>
+      <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_TryExit">SynchronizedLifetimeManager.TryExit()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_Dispose">SynchronizedLifetimeManager.Dispose()</a>
+    </div>
+    <div>
       <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_InUse">LifetimeManager.InUse</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_CreateLifetimePolicy">LifetimeManager.CreateLifetimePolicy()</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_LifetimeType">LifetimeManager.LifetimeType</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -135,70 +135,21 @@ of the object, instead of sharing one in the common parent.</p>
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Lifetime.html">Unity.Lifetime</a></h6>
   <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
   <h5 id="Unity_Lifetime_HierarchicalLifetimeManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HierarchicalLifetimeManager : SynchronizedLifetimeManager, IRequiresRecovery, IHierarchicalLifetimePolicy, ISingletonLifetimePolicy, ILifetimePolicy, IBuilderPolicy, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class HierarchicalLifetimeManager : SynchronizedLifetimeManager, IDisposable, IFactoryLifetimeManager, ITypeLifetimeManager</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_HierarchicalLifetimeManager_CreateScope.md&amp;value=---%0Auid%3A%20Unity.Lifetime.HierarchicalLifetimeManager.CreateScope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/HierarchicalLifetimeManager.cs/#L26">View Source</a>
-  </span>
-  <a id="Unity_Lifetime_HierarchicalLifetimeManager_CreateScope_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.CreateScope*"></a>
-  <h4 id="Unity_Lifetime_HierarchicalLifetimeManager_CreateScope" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.CreateScope">CreateScope()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IBuilderPolicy CreateScope()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_HierarchicalLifetimeManager_Dispose.md&amp;value=---%0Auid%3A%20Unity.Lifetime.HierarchicalLifetimeManager.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/HierarchicalLifetimeManager.cs/#L37">View Source</a>
-  </span>
-  <a id="Unity_Lifetime_HierarchicalLifetimeManager_Dispose_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.Dispose*"></a>
-  <h4 id="Unity_Lifetime_HierarchicalLifetimeManager_Dispose" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_HierarchicalLifetimeManager_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.HierarchicalLifetimeManager.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/HierarchicalLifetimeManager.cs/#L47">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/HierarchicalLifetimeManager.cs/#L79">View Source</a>
   </span>
   <a id="Unity_Lifetime_HierarchicalLifetimeManager_Dispose_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.Dispose*"></a>
   <h4 id="Unity_Lifetime_HierarchicalLifetimeManager_Dispose_System_Boolean_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -207,7 +158,7 @@ of the object, instead of sharing one in the common parent.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,42 +178,226 @@ of the object, instead of sharing one in the common parent.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_Dispose_System_Boolean_">SynchronizedLifetimeManager.Dispose(Boolean)</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_HierarchicalLifetimeManager_RemoveValue.md&amp;value=---%0Auid%3A%20Unity.Lifetime.HierarchicalLifetimeManager.RemoveValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_HierarchicalLifetimeManager_OnCreateLifetimeManager.md&amp;value=---%0Auid%3A%20Unity.Lifetime.HierarchicalLifetimeManager.OnCreateLifetimeManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/HierarchicalLifetimeManager.cs/#L21">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/HierarchicalLifetimeManager.cs/#L67">View Source</a>
+  </span>
+  <a id="Unity_Lifetime_HierarchicalLifetimeManager_OnCreateLifetimeManager_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.OnCreateLifetimeManager*"></a>
+  <h4 id="Unity_Lifetime_HierarchicalLifetimeManager_OnCreateLifetimeManager" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.OnCreateLifetimeManager">OnCreateLifetimeManager()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override LifetimeManager OnCreateLifetimeManager()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_OnCreateLifetimeManager">LifetimeManager.OnCreateLifetimeManager()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_HierarchicalLifetimeManager_RemoveValue_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.HierarchicalLifetimeManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/HierarchicalLifetimeManager.cs/#L55">View Source</a>
   </span>
   <a id="Unity_Lifetime_HierarchicalLifetimeManager_RemoveValue_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.RemoveValue*"></a>
-  <h4 id="Unity_Lifetime_HierarchicalLifetimeManager_RemoveValue" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.RemoveValue">RemoveValue()</h4>
+  <h4 id="Unity_Lifetime_HierarchicalLifetimeManager_RemoveValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)">RemoveValue(ILifetimeContainer)</h4>
   <div class="markdown level1 summary"><p>Remove the given object from backing store.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void RemoveValue()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void RemoveValue(ILifetimeContainer container = null)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_RemoveValue">SynchronizedLifetimeManager.RemoveValue()</a></div>
+  <div><a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_RemoveValue_Unity_Lifetime_ILifetimeContainer_">LifetimeManager.RemoveValue(ILifetimeContainer)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_HierarchicalLifetimeManager_SynchronizedGetValue_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.HierarchicalLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/HierarchicalLifetimeManager.cs/#L32">View Source</a>
+  </span>
+  <a id="Unity_Lifetime_HierarchicalLifetimeManager_SynchronizedGetValue_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.SynchronizedGetValue*"></a>
+  <h4 id="Unity_Lifetime_HierarchicalLifetimeManager_SynchronizedGetValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)">SynchronizedGetValue(ILifetimeContainer)</h4>
+  <div class="markdown level1 summary"><p>Performs the actual retrieval of a value from the backing store associated 
+with this WithLifetime policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override object SynchronizedGetValue(ILifetimeContainer container = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td><p>Container that owns the value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>the object desired, or null if no such object is currently stored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedGetValue_Unity_Lifetime_ILifetimeContainer_">SynchronizedLifetimeManager.SynchronizedGetValue(ILifetimeContainer)</a></div>
+  <h5 id="Unity_Lifetime_HierarchicalLifetimeManager_SynchronizedGetValue_Unity_Lifetime_ILifetimeContainer__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is invoked by <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_">GetValue(ILifetimeContainer)</a>
+after it has acquired its lock.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_HierarchicalLifetimeManager_SynchronizedSetValue_System_Object_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.HierarchicalLifetimeManager.SynchronizedSetValue(System.Object%2CUnity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/HierarchicalLifetimeManager.cs/#L45">View Source</a>
+  </span>
+  <a id="Unity_Lifetime_HierarchicalLifetimeManager_SynchronizedSetValue_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.SynchronizedSetValue*"></a>
+  <h4 id="Unity_Lifetime_HierarchicalLifetimeManager_SynchronizedSetValue_System_Object_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.SynchronizedSetValue(System.Object,Unity.Lifetime.ILifetimeContainer)">SynchronizedSetValue(Object, ILifetimeContainer)</h4>
+  <div class="markdown level1 summary"><p>Performs the actual storage of the given value into backing store for retrieval later.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SynchronizedSetValue(object newValue, ILifetimeContainer container = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">newValue</span></td>
+        <td><p>The object being stored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td><p>Container that owns the value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedSetValue_System_Object_Unity_Lifetime_ILifetimeContainer_">SynchronizedLifetimeManager.SynchronizedSetValue(Object, ILifetimeContainer)</a></div>
+  <h5 id="Unity_Lifetime_HierarchicalLifetimeManager_SynchronizedSetValue_System_Object_Unity_Lifetime_ILifetimeContainer__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is invoked by <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_">SetValue(Object, ILifetimeContainer)</a>
+before releasing its lock.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_HierarchicalLifetimeManager_ToString.md&amp;value=---%0Auid%3A%20Unity.Lifetime.HierarchicalLifetimeManager.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/HierarchicalLifetimeManager.cs/#L104">View Source</a>
+  </span>
+  <a id="Unity_Lifetime_HierarchicalLifetimeManager_ToString_" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.ToString*"></a>
+  <h4 id="Unity_Lifetime_HierarchicalLifetimeManager_ToString" data-uid="Unity.Lifetime.HierarchicalLifetimeManager.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Unity.Exceptions.IRequiresRecovery.html">IRequiresRecovery</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Lifetime.IHierarchicalLifetimePolicy.html">IHierarchicalLifetimePolicy</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Lifetime.ISingletonLifetimePolicy.html">ISingletonLifetimePolicy</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Lifetime.ILifetimePolicy.html">ILifetimePolicy</a>
-  </div>
-  <div>
-      <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a>
-  </div>
-  <div>
       <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
   </div>
 </article>
           </div>
@@ -275,7 +410,7 @@ of the object, instead of sharing one in the common parent.</p>
                     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_HierarchicalLifetimeManager.md&amp;value=---%0Auid%3A%20Unity.Lifetime.HierarchicalLifetimeManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/HierarchicalLifetimeManager.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/HierarchicalLifetimeManager.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

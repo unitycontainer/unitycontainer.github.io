@@ -73,34 +73,37 @@
   
   <h1 id="Unity_Policy_IPropertySelectorPolicy" data-uid="Unity.Policy.IPropertySelectorPolicy" class="text-break">Interface IPropertySelectorPolicy
   </h1>
-  <div class="markdown level0 summary"><p>An <a class="xref" href="Unity.Policy.IBuilderPolicy.html">IBuilderPolicy</a> that returns a sequence
-of properties that should be injected for the given type.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Unity.Policy.ISelect-1.html#Unity_Policy_ISelect_1_Select_System_Type_Unity_Policy_IPolicySet_">ISelect&lt;PropertyInfo&gt;.Select(Type, IPolicySet)</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Policy.html">Unity.Policy</a></h6>
-  <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
+  <h6><strong>Assembly</strong>: Unity.Container.dll</h6>
   <h5 id="Unity_Policy_IPropertySelectorPolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IPropertySelectorPolicy : IBuilderPolicy</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;IPropertySelectorPolicy has been deprecated, please use IPropertySelectorPolicy instead&quot;, true)]
+public interface IPropertySelectorPolicy : ISelect&lt;PropertyInfo&gt;</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IPropertySelectorPolicy_SelectProperties_Unity_Builder_IBuilderContext_Unity_Policy_IPolicyList_.md&amp;value=---%0Auid%3A%20Unity.Policy.IPropertySelectorPolicy.SelectProperties(Unity.Builder.IBuilderContext%2CUnity.Policy.IPolicyList)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Policy_IPropertySelectorPolicy_SelectProperties_Unity_Builder_BuilderContext__.md&amp;value=---%0Auid%3A%20Unity.Policy.IPropertySelectorPolicy.SelectProperties(Unity.Builder.BuilderContext%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IPropertySelectorPolicy.cs/#L25">View Source</a>
+    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/IPropertySelectorPolicy.cs/#L11">View Source</a>
   </span>
   <a id="Unity_Policy_IPropertySelectorPolicy_SelectProperties_" data-uid="Unity.Policy.IPropertySelectorPolicy.SelectProperties*"></a>
-  <h4 id="Unity_Policy_IPropertySelectorPolicy_SelectProperties_Unity_Builder_IBuilderContext_Unity_Policy_IPolicyList_" data-uid="Unity.Policy.IPropertySelectorPolicy.SelectProperties(Unity.Builder.IBuilderContext,Unity.Policy.IPolicyList)">SelectProperties(IBuilderContext, IPolicyList)</h4>
-  <div class="markdown level1 summary"><p>Returns sequence of properties on the given type that
-should be set as part of building that object.</p>
-</div>
+  <h4 id="Unity_Policy_IPropertySelectorPolicy_SelectProperties_Unity_Builder_BuilderContext__" data-uid="Unity.Policy.IPropertySelectorPolicy.SelectProperties(Unity.Builder.BuilderContext@)">SelectProperties(ref BuilderContext)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerable&lt;SelectedProperty&gt; SelectProperties(IBuilderContext context, IPolicyList resolverPolicyDestination)</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;object&gt; SelectProperties(ref BuilderContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -113,17 +116,9 @@ should be set as part of building that object.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.Builder.IBuilderContext.html">IBuilderContext</a></td>
+        <td><a class="xref" href="Unity.Builder.BuilderContext.html">BuilderContext</a></td>
         <td><span class="parametername">context</span></td>
-        <td><p>Current build context.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Unity.Policy.IPolicyList.html">IPolicyList</a></td>
-        <td><span class="parametername">resolverPolicyDestination</span></td>
-        <td><p>The <a class="xref" href="Unity.Policy.IPolicyList.html">IPolicyList</a> to add any
-generated resolver objects into.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -137,13 +132,18 @@ generated resolver objects into.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Unity.Builder.Selection.SelectedProperty.html">SelectedProperty</a>&gt;</td>
-        <td><p>Sequence of <span class="xref">System.Reflection.PropertyInfo</span> objects
-that contain the properties to set.</p>
-</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_MatchesObject_System_Object_System_Type_">InjectionMatching.MatchesObject(Object, Type)</a>
+  </div>
 </article>
           </div>
           
@@ -152,10 +152,10 @@ that contain the properties to set.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Policy_IPropertySelectorPolicy.md&amp;value=---%0Auid%3A%20Unity.Policy.IPropertySelectorPolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/container/new/v5.x/apiSpec/new?filename=Unity_Policy_IPropertySelectorPolicy.md&amp;value=---%0Auid%3A%20Unity.Policy.IPropertySelectorPolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Policy/IPropertySelectorPolicy.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/container/blob/v5.x/src/Legacy/IPropertySelectorPolicy.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
