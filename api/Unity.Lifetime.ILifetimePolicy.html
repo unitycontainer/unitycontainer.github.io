@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface ILifetimePolicy
    ">
-    <meta name="generator" content="docfx 2.28.1.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -88,38 +88,20 @@ things like singletons and per-http-request lifetime.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_ILifetimePolicy_GetValue_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.ILifetimePolicy.GetValue(Unity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_ILifetimePolicy_GetValue.md&amp;value=---%0Auid%3A%20Unity.Lifetime.ILifetimePolicy.GetValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/ILifetimePolicy.cs/#L19">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/ILifetimePolicy.cs/#L18">View Source</a>
   </span>
   <a id="Unity_Lifetime_ILifetimePolicy_GetValue_" data-uid="Unity.Lifetime.ILifetimePolicy.GetValue*"></a>
-  <h4 id="Unity_Lifetime_ILifetimePolicy_GetValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.ILifetimePolicy.GetValue(Unity.Lifetime.ILifetimeContainer)">GetValue(ILifetimeContainer)</h4>
+  <h4 id="Unity_Lifetime_ILifetimePolicy_GetValue" data-uid="Unity.Lifetime.ILifetimePolicy.GetValue">GetValue()</h4>
   <div class="markdown level1 summary"><p>Retrieve a value from the backing store associated with this Lifetime policy.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">object GetValue(ILifetimeContainer container = null)</code></pre>
+    <pre><code class="lang-csharp hljs">object GetValue()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
-        <td><span class="parametername">container</span></td>
-        <td><p>The container this lifetime belongs to</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -138,53 +120,35 @@ things like singletons and per-http-request lifetime.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_ILifetimePolicy_RemoveValue_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.ILifetimePolicy.RemoveValue(Unity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_ILifetimePolicy_RemoveValue.md&amp;value=---%0Auid%3A%20Unity.Lifetime.ILifetimePolicy.RemoveValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/ILifetimePolicy.cs/#L32">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/ILifetimePolicy.cs/#L29">View Source</a>
   </span>
   <a id="Unity_Lifetime_ILifetimePolicy_RemoveValue_" data-uid="Unity.Lifetime.ILifetimePolicy.RemoveValue*"></a>
-  <h4 id="Unity_Lifetime_ILifetimePolicy_RemoveValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.ILifetimePolicy.RemoveValue(Unity.Lifetime.ILifetimeContainer)">RemoveValue(ILifetimeContainer)</h4>
-  <div class="markdown level1 summary"><p>Remove the value this lifetime policy is managing from backing store.
-<param name="container">The container this lifetime belongs to</p>
+  <h4 id="Unity_Lifetime_ILifetimePolicy_RemoveValue" data-uid="Unity.Lifetime.ILifetimePolicy.RemoveValue">RemoveValue()</h4>
+  <div class="markdown level1 summary"><p>Remove the value this lifetime policy is managing from backing store.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void RemoveValue(ILifetimeContainer container = null)</code></pre>
+    <pre><code class="lang-csharp hljs">void RemoveValue()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
-        <td><span class="parametername">container</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_ILifetimePolicy_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.ILifetimePolicy.SetValue(System.Object%2CUnity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_ILifetimePolicy_SetValue_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.ILifetimePolicy.SetValue(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/ILifetimePolicy.cs/#L26">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/ILifetimePolicy.cs/#L24">View Source</a>
   </span>
   <a id="Unity_Lifetime_ILifetimePolicy_SetValue_" data-uid="Unity.Lifetime.ILifetimePolicy.SetValue*"></a>
-  <h4 id="Unity_Lifetime_ILifetimePolicy_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.ILifetimePolicy.SetValue(System.Object,Unity.Lifetime.ILifetimeContainer)">SetValue(Object, ILifetimeContainer)</h4>
+  <h4 id="Unity_Lifetime_ILifetimePolicy_SetValue_System_Object_" data-uid="Unity.Lifetime.ILifetimePolicy.SetValue(System.Object)">SetValue(Object)</h4>
   <div class="markdown level1 summary"><p>Stores the given value into backing store for retrieval later.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void SetValue(object newValue, ILifetimeContainer container = null)</code></pre>
+    <pre><code class="lang-csharp hljs">void SetValue(object newValue)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,12 +164,6 @@ things like singletons and per-http-request lifetime.</p>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">newValue</span></td>
         <td><p>The object to store.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
-        <td><span class="parametername">container</span></td>
-        <td><p>The container this lifetime belongs to</p>
 </td>
       </tr>
     </tbody>
@@ -241,7 +199,7 @@ things like singletons and per-http-request lifetime.</p>
               <a href="#top">Back to top</a>
             </span>
             
-            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+            <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>
