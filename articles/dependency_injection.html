@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Adding Unity to Your Application </title>
+    <title>Dependency Injection with Unity </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Adding Unity to Your Application ">
+    <meta name="title" content="Dependency Injection with Unity ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,19 +67,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="adding-unity-to-your-application">Adding Unity to Your Application</h1>
+<h1 id="dependency-injection-with-unity">Dependency Injection with Unity</h1>
 
-<p>Unity is designed to support a range of common scenarios for resolving instances of objects that, themselves, depend on other objects or services. However, you must first prepare your application to use Unity. The following procedure describes how to include the necessary assemblies and elements in your code.</p>
-<h2 id="to-prepare-your-application">To prepare your application</h2>
-<p>Add a reference to the Unity package. In Visual Studio, right-click your project node in Solution Explorer, and then click Add Reference. Click the Browse tab and find the location of the Microsoft.Practices.Unity.dll assembly. Select the assembly, and then click OK to add the reference.</p>
-<p>(Optional) If you intend to use the configuration types when you create extensions for Unity, use the same procedure to set a reference to the Unity configuration assembly, named Microsoft.Practices.Unity.Configuration.dll.</p>
-<p>(Optional) If you intend to use the interception and policy injection features of Unity, use the same procedure to set a reference to the Unity interception assembly, named Microsoft.Practices.Unity.Interception.dll.</p>
-<p>(Optional) If you intend to use the configuration types for the interception and policy injection features of Unity, use the same procedure to set a reference to the Unity interception configuration assembly, named Microsoft.Practices.Unity.Interception.Configuration.dll.</p>
-<p>(Optional) To use elements from Unity without fully qualifying the element reference, add the following using statements (C#) or Imports statements (Visual Basic) to the top of your source code file as required.</p>
-<pre><code class="lang-C#">using Unity;
-</code></pre>
-<p>(Optional) If you are using the IServiceLocator interface, add a reference to the service location binary Microsoft.Practices.ServiceLocation.dll. Visual Studio may automatically copy this file to your bin directory when it compiles, but you do not need to include it unless you are explicitly using the UnityServiceLocatorAdapter class.</p>
-<p>Add your application code. For more information about how you can use Unity in your own applications, see <a href="what_does_unity_do.html">What Does Unity Do?</a></p>
+<p>Using the Unity dependency injection container provides opportunities for you to more easily decouple components, business objects, and services you use in applications, and can simplify how you organize and architect these applications.</p>
 </article>
           </div>
           
@@ -88,7 +78,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/documentation/blob/master/articles/adding_unity.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/articles/dependency_injection.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

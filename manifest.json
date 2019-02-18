@@ -33,7 +33,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/adding_unity.html",
-          "hash": "Go3SBa/bHzVA5LsNS6WOMA=="
+          "hash": "hh/wnbIXARY/O8ryHB+W/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dependency_injection.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dependency_injection.html",
+          "hash": "o2Ya0UYmMnM6L24A/+QJjw=="
         }
       },
       "is_incremental": false,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "Fq6UEZLC2lSxqESTZbJR2A=="
+          "hash": "havE4jiXtapzDjGmJ1Bgfg=="
         }
       },
       "is_incremental": false,
@@ -93,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/using_unity_in_applications.html",
-          "hash": "6l4XT5LnpaOcBei24uycPg=="
+          "hash": "mu20UoxkZFdXLHZNDZHraA=="
         }
       },
       "is_incremental": false,
@@ -263,7 +275,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 15,
+          "total_file_count": 16,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
