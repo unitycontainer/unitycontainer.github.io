@@ -118,7 +118,7 @@ public interface IUnityContainerAsync : IDisposable</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
-        <td><p>The parent container, or null if this container doesn&apos;t have one.</p>
+        <td><p>The parent container, or null if this container doesn't have one.</p>
 </td>
       </tr>
     </tbody>
@@ -196,7 +196,7 @@ The sort order of returned registrations is not guaranteed in any way.</p>
     </tbody>
   </table>
   <h5 id="Unity_IUnityContainerAsync_CreateChildContainer_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>A child container shares the parent&apos;s configuration, but can be configured with different
+  <div class="markdown level1 remarks"><p>A child container shares the parent's configuration, but can be configured with different
 settings or lifetime.</p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -255,7 +255,7 @@ settings or lifetime.</p>
     </tbody>
   </table>
   <h5 id="Unity_IUnityContainerAsync_IsRegistered_System_Type_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This method is quite fast. Although it is not free in terms of time spent, 
+  <div class="markdown level1 remarks"><p>This method is quite fast. Although it is not free in terms of time spent,
 it uses the same algorithm the container employs to obtain registrations and wastes very little time.</p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -373,8 +373,8 @@ of the returned instance.</p>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.IInstanceLifetimeManager.html">IInstanceLifetimeManager</a></td>
         <td><span class="parametername">lifetimeManager</span></td>
-        <td><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> manager that controls how this instance will be managed by the container.
-Following are the only valid options: <a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a>, <a class="xref" href="Unity.Lifetime.SingletonLifetimeManager.html">SingletonLifetimeManager</a>, <a class="xref" href="Unity.Lifetime.ExternallyControlledLifetimeManager.html">ExternallyControlledLifetimeManager</a>
+        <td><p><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> manager that controls how this instance will be managed by the container.
+Following are the only valid options: <a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a>, <a class="xref" href="Unity.Lifetime.SingletonLifetimeManager.html">SingletonLifetimeManager</a>, <a class="xref" href="Unity.Lifetime.ExternallyControlledLifetimeManager.html">ExternallyControlledLifetimeManager</a></p>
 </td>
       </tr>
     </tbody>
@@ -411,7 +411,7 @@ creates the instance ahead of type and adds that instance to the container.
   </span>
   <a id="Unity_IUnityContainerAsync_RegisterType_" data-uid="Unity.IUnityContainerAsync.RegisterType*"></a>
   <h4 id="Unity_IUnityContainerAsync_RegisterType_System_Collections_Generic_IEnumerable_System_Type__System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___" data-uid="Unity.IUnityContainerAsync.RegisterType(System.Collections.Generic.IEnumerable{System.Type},System.Type,System.String,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])">RegisterType(IEnumerable&lt;Type&gt;, Type, String, ITypeLifetimeManager, InjectionMember[])</h4>
-  <div class="markdown level1 summary"><p>Registers implementation type <param name="injectionMembers"> via provided collection of it&apos;s interfaces.</p>
+  <div class="markdown level1 summary"><p>Registers implementation type <param name="injectionMembers"> via provided collection of it's interfaces.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -449,7 +449,7 @@ creates the instance ahead of type and adds that instance to the container.
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
         <td><span class="parametername">lifetimeManager</span></td>
-        <td><p>WithLifetime manager that will be responsible for managing created object&apos;s lifetime.</p>
+        <td><p>WithLifetime manager that will be responsible for managing created object's lifetime.</p>
 </td>
       </tr>
       <tr>
@@ -477,7 +477,7 @@ creates the instance ahead of type and adds that instance to the container.
   </table>
   <h5 id="Unity_IUnityContainerAsync_RegisterType_System_Collections_Generic_IEnumerable_System_Type__System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember____remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This method allows creation of single registration for multiple interfaces the object of type <param name="type">
-might be exposing. Registrations created with this method are self contained and will never &apos;Map&apos; to other registrations.
+might be exposing. Registrations created with this method are self contained and will never 'Map' to other registrations.
 In other words this registration will always create build plan and resolve new objects through it.</p>
 </div>
   <span class="small pull-right mobile-hide">

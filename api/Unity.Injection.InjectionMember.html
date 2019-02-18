@@ -125,7 +125,7 @@ class members get injected by the container.</p>
   </span>
   <a id="Unity_Injection_InjectionMember_BuildRequired_" data-uid="Unity.Injection.InjectionMember.BuildRequired*"></a>
   <h4 id="Unity_Injection_InjectionMember_BuildRequired" data-uid="Unity.Injection.InjectionMember.BuildRequired">BuildRequired</h4>
-  <div class="markdown level1 summary"><p>This injection member instructs engine, when type mapping is present, 
+  <div class="markdown level1 summary"><p>This injection member instructs engine, when type mapping is present,
 to build type instead of resolving it</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -150,9 +150,10 @@ to build type instead of resolving it</p>
   </table>
   <h5 id="Unity_Injection_InjectionMember_BuildRequired_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>When types registered like this:</p>
-<p>Line 1: container.RegisterType{OtherService}(new ContainerControlledLifetimeManager());<br>Line 2: container.RegisterType{IService, OtherService}();
+<p>Line 1: container.RegisterType{OtherService}(new ContainerControlledLifetimeManager());<br>
+Line 2: container.RegisterType{IService, OtherService}();
 Line 3: container.RegisterType{IOtherService, OtherService}(new InjectionConstructor(container));</p>
-<p>It is expected that IService resolves instance registered on line 1. But when IOtherService is resolved 
+<p>It is expected that IService resolves instance registered on line 1. But when IOtherService is resolved
 it requires different constructor so it should be built instead.</p>
 </div>
   <h3 id="methods">Methods

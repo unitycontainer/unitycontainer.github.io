@@ -173,7 +173,7 @@ the build request which resulted in the call to the GetValue method fails.
   </span>
   <a id="Unity_Lifetime_SynchronizedLifetimeManager_Dispose_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.Dispose*"></a>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_Dispose_System_Boolean_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.Dispose(System.Boolean)">Dispose(Boolean)</h4>
-  <div class="markdown level1 summary"><p>Standard Dispose pattern implementation.        </p>
+  <div class="markdown level1 summary"><p>Standard Dispose pattern implementation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -193,7 +193,7 @@ the build request which resulted in the call to the GetValue method fails.
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">disposing</span></td>
-        <td><p>Always true, since we don&apos;t have a finalizer.</p>
+        <td><p>Always true, since we don't have a finalizer.</p>
 </td>
       </tr>
     </tbody>
@@ -271,7 +271,7 @@ as part of cleaning up after an exception.</p>
     <pre><code class="lang-csharp hljs">public void Recover()</code></pre>
   </div>
   <h5 id="Unity_Lifetime_SynchronizedLifetimeManager_Recover_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Don&apos;t do anything that could throw in this method,
+  <div class="markdown level1 remarks"><p>Don't do anything that could throw in this method,
 it will cause later recover operations to get skipped
 and play real havoc with the stack trace.</p>
 </div>
@@ -318,7 +318,7 @@ and play real havoc with the stack trace.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_">LifetimeManager.SetValue(Object, ILifetimeContainer)</a></div>
   <h5 id="Unity_Lifetime_SynchronizedLifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Setting a value will attempt to release the lock acquired by 
+  <div class="markdown level1 remarks"><p>Setting a value will attempt to release the lock acquired by
 <a class="xref" href="Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_">GetValue(ILifetimeContainer)</a>.</p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -330,7 +330,7 @@ and play real havoc with the stack trace.</p>
   </span>
   <a id="Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedGetValue_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.SynchronizedGetValue*"></a>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedGetValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)">SynchronizedGetValue(ILifetimeContainer)</h4>
-  <div class="markdown level1 summary"><p>Performs the actual retrieval of a value from the backing store associated 
+  <div class="markdown level1 summary"><p>Performs the actual retrieval of a value from the backing store associated
 with this WithLifetime policy.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
