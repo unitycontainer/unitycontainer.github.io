@@ -231,6 +231,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime_managers.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime_managers.html",
+          "hash": "IhTRuQU6GAjBV/MtQwdPiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tutorials/register-instance.md",
       "output": {
         ".html": {
@@ -307,7 +319,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "e8rzSykVCBGYdkZeps9JlQ=="
+          "hash": "GaYeplkA+asUIQB4WgBPog=="
         }
       },
       "is_incremental": false,
@@ -342,7 +354,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 21,
+          "total_file_count": 22,
           "skipped_file_count": 0
         }
       }
