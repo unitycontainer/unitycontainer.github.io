@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Using Unity in Applications </title>
+    <title>Adding Unity to Your Application </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Using Unity in Applications ">
+    <meta name="title" content="Adding Unity to Your Application ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,18 +67,19 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="using-unity-in-applications">Using Unity in Applications</h1>
+<h1 id="adding-unity-to-your-application">Adding Unity to Your Application</h1>
 
-<p>This topic describes how to develop applications using Unity, and how to create and build instances of objects. It assumes that you understand how to configure the Unity container. This section includes the following topics:</p>
-<ul>
-<li><a href="design_concepts.html">Application Design Concepts with Unity</a>. This topic explains how Unity can help you to implement common design patterns and achieve decoupling and coherence in your designs.</li>
-<li><a href="design_of_unity.html">Design of Unity</a>. This topic describes the design goals, the architecture, and the design highlights of Unity.</li>
-<li>Adding Unity to Your Application. This topic describes how to add Unity to your project, and how to reference the appropriate assemblies in your code.</li>
-<li>Resolving Objects. This topic contains a series of sections that describe how you can resolve objects through the Unity container so that it creates the appropriate type and optionally populates any dependencies specified for these types.</li>
-<li>Understanding Lifetime Managers. This topic describes the way that Unity manages the lifetime of objects it creates, and how you can use the lifetime managers included with Unity.</li>
-<li>Using Container Hierarchies. This topic explains how you can use a hierarchy of nested Unity containers to achieve finely grained control over the configuration of Unity and manage this configuration at run time.</li>
-</ul>
-<p>For information on how to configure Unity, see Configuring Unity.</p>
+<p>Unity is designed to support a range of common scenarios for resolving instances of objects that, themselves, depend on other objects or services. However, you must first prepare your application to use Unity. The following procedure describes how to include the necessary assemblies and elements in your code.</p>
+<h2 id="to-prepare-your-application">To prepare your application</h2>
+<p>Add a reference to the Unity package. In Visual Studio, right-click your project node in Solution Explorer, and then click Add Reference. Click the Browse tab and find the location of the Microsoft.Practices.Unity.dll assembly. Select the assembly, and then click OK to add the reference.</p>
+<p>(Optional) If you intend to use the configuration types when you create extensions for Unity, use the same procedure to set a reference to the Unity configuration assembly, named Microsoft.Practices.Unity.Configuration.dll.</p>
+<p>(Optional) If you intend to use the interception and policy injection features of Unity, use the same procedure to set a reference to the Unity interception assembly, named Microsoft.Practices.Unity.Interception.dll.</p>
+<p>(Optional) If you intend to use the configuration types for the interception and policy injection features of Unity, use the same procedure to set a reference to the Unity interception configuration assembly, named Microsoft.Practices.Unity.Interception.Configuration.dll.</p>
+<p>(Optional) To use elements from Unity without fully qualifying the element reference, add the following using statements (C#) or Imports statements (Visual Basic) to the top of your source code file as required.</p>
+<pre><code class="lang-C#">using Unity;
+</code></pre>
+<p>(Optional) If you are using the IServiceLocator interface, add a reference to the service location binary Microsoft.Practices.ServiceLocation.dll. Visual Studio may automatically copy this file to your bin directory when it compiles, but you do not need to include it unless you are explicitly using the UnityServiceLocatorAdapter class.</p>
+<p>Add your application code. For more information about how you can use Unity in your own applications, see What Does Unity Do?</p>
 </article>
           </div>
           
@@ -87,7 +88,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/documentation/blob/master/articles/using_unity_in_applications.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/articles/adding_unity.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

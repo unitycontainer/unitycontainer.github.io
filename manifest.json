@@ -29,11 +29,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/adding_unity.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/adding_unity.html",
+          "hash": "Go3SBa/bHzVA5LsNS6WOMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/design_concepts.md",
       "output": {
         ".html": {
           "relative_path": "articles/design_concepts.html",
           "hash": "Q7MHoZA19FXJD5DwBgc56g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/design_of_unity.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/design_of_unity.html",
+          "hash": "1YqVBUpfUuIcduTgpI+2Ug=="
         }
       },
       "is_incremental": false,
@@ -57,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "shK0ppJCM9TuhEFaNdJcEg=="
+          "hash": "Fq6UEZLC2lSxqESTZbJR2A=="
         }
       },
       "is_incremental": false,
@@ -69,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/using_unity_in_applications.html",
-          "hash": "IhiVRV7IFon9JWOu3Bcokw=="
+          "hash": "6l4XT5LnpaOcBei24uycPg=="
         }
       },
       "is_incremental": false,
@@ -229,17 +253,17 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 13,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 15,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
