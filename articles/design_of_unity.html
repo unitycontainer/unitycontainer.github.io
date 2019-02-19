@@ -84,15 +84,6 @@
 </ul>
 <h2 id="organization">Organization</h2>
 <p>Unity organized into set of two assemblies:</p>
-<ul>
-<li><a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a></li>
-<li><a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></li>
-</ul>
-<p>These assemblies are distributed individually as well as a composite package containing both.</p>
-<ul>
-<li><a href="https://www.nuget.org/packages/Unity/">Unity</a></li>
-</ul>
-<p>This division is created to allow independence between declaration and implementation of container.</p>
 <h4 id="unityabstractions">Unity.Abstractions</h4>
 <p>This assembly contains all public members required to use Unity container in applications. It defines <a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a> interface as well as types and interfaces required to register, configure and resolve types and instances. Abstraction assembly contains following namespaces:</p>
 <ul>
@@ -104,6 +95,7 @@
 </ul>
 <h4 id="unitycontainer">Unity.Container</h4>
 <p>This assembly implements Unity container's engine and exposes public members required to extend the container.</p>
+<p>This division is created to allow independence between declaration and implementation of container.</p>
 </article>
           </div>
           
