@@ -69,7 +69,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="design-of-unity">Design of Unity</h1>
 
-<p>This topic describes the design goals, the architecture, and the design highlights of Unity. You do not have to understand the design to use Unity; however, this topic will help you to understand how it works and how it interacts with the underlying ObjectBuilder subsystem.</p>
+<p>This topic describes the design goals, the architecture, and the design highlights of Unity. You do not have to understand the design to use Unity; however, this topic will help you to understand how it works and how it interacts with the underlying object builder subsystem.</p>
 <h2 id="design-goals">Design Goals</h2>
 <p>Unity was designed to achieve the following goals:</p>
 <ul>
@@ -82,7 +82,25 @@
 <li>Provide extensibility through custom and third-party container extensions.</li>
 <li>Provide the performance required in enterprise-level line of business (LOB) applications.</li>
 </ul>
-<h1 id="operation">Operation</h1>
+<h2 id="organization">Organization</h2>
+<p>Unity organized as a set of two assemblies:</p>
+<ul>
+<li>Unity.Abstractions</li>
+<li>Unity.Container</li>
+</ul>
+<p>This division is created to allow independence between declaration and implementation of container.</p>
+<h3 id="unityabstractions">Unity.Abstractions</h3>
+<p>This assembly contains all public members required to use Unity container in applications. It defines <code>IUnityContainer</code> interface as well as types and interfaces needed to register, configure and resolve types and instances. Abstraction assembly contains following namespaces:</p>
+<ul>
+<li><a class="xref" href="../api/Unity.html">Unity</a></li>
+<li><a class="xref" href="../api/Unity.Injection.html">Unity.Injection</a></li>
+<li><a class="xref" href="../api/Unity.Lifetime.html">Unity.Lifetime</a></li>
+<li><a class="xref" href="../api/Unity.Policy.html">Unity.Policy</a></li>
+<li><a class="xref" href="../api/Unity.Resolution.html">Unity.Resolution</a></li>
+</ul>
+<h3 id="unitycontainer">Unity.Container</h3>
+<p>This assembly implements Unity container's engine and exposes public members required to extend the container.</p>
+<h2 id="operation">Operation</h2>
 <p>The public methods of the UnityContainer that developers use fall into two main categories:</p>
 <ul>
 <li><strong>Methods that register mappings or types</strong>. The methods RegisterType and the RegisterInstance create the appropriate entries within the current container context.</li>
