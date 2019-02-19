@@ -993,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/design_of_unity.html",
-          "hash": "OYwEX9LfqEFk15mvJ/Y5yw=="
+          "hash": "NrkPoCwYeG0MAXQ2b81mKQ=="
         }
       },
       "is_incremental": false,
@@ -1261,16 +1261,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 22,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 76,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 22,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
