@@ -79,7 +79,7 @@
 <p>Normally modular systems have one main application/module with boot-loader responsible for initializing environment, and number of modules loaded by it (<a href="https://prismlibrary.github.io/">Prism library</a> for example). This boot loader is required to reference both <a href="https://www.nuget.org/packages/Unity.Abstractions/">Abstractions</a> and <a href="https://www.nuget.org/packages/Unity.Container/">Container</a> packages.</p>
 <p>In such systems modules are created and distributed by various teams and departments and synchronization between these might be a challenge. This is where Unity comes in.
 As stated elsewhere on this site <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> contains all declarations required by Unity to operate. Because of that modules could only reference one assembly: <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> removing requirement to be recompiled whenever Unity container engine has changed.</p>
-<p>Given that spec changes very infrequently and <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> package stays the same most of the time it provides big benefit in terms of saving development time and money.</p>
+<p>Given that specifications change very infrequently and <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> package stays the same most of the time it provides big benefit in terms of saved development time and money.</p>
 <h2 id="adding-unity-to-project">Adding Unity to project</h2>
 <p>Unity container is distributed via NuGet and could be added to a project with the help of NuGet manager of by executing command:</p>
 <pre><code>Install-Package Unity
@@ -89,10 +89,10 @@ or
 Install-Package Unity.Abstractions
 Install-Package Unity.Container
 </code></pre>
-<p>If you wish to use <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files#floating-versions">Floating version references</a> it is recommended to lock in the minor and major versions and only allow patch version to slide:</p>
+<p>If you wish to use <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files#floating-versions">Floating Version references</a> it is recommended to lock in the minor and major versions and only allow patch version to slide:</p>
 <pre><code>&lt;PackageReference Include=&quot;Unity.Container&quot; Version=&quot;5.9.*&quot; /&gt;
 </code></pre>
-<p>doing so will guarantee that no breaking changes caught you of guard.</p>
+<p>doing so will guarantee that no breaking change caught you of guard.</p>
 </article>
           </div>
           
