@@ -72,14 +72,14 @@
 <p>Unity is a full featured, general-purpose container for use in any type of Microsoft® .NET Framework-based application. It provides all of the features commonly found in dependency injection implementations.</p>
 <p>In addition, Unity is extensible. You can write container extensions that change the behavior of the container, or add new capabilities. For example, the interception feature provided by Unity, which you can use to add policies to objects, is implemented as a container extension.</p>
 <h1 id="what-does-unity-do">What Does Unity Do?</h1>
-<p>By using dependency injection frameworks and inversion of control mechanisms, you can generate and assemble instances of custom classes and objects that can contain dependent object instances and settings. The following sections explain the ways that you can use Unity, and the features it provides:</p>
+<p>Apart from decoupling types, components, services, and separating concerns, Unity crates and manages objects. Think of it as operator <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new-operator">new ...</a> on steroids.</p>
 <ul>
-<li><a href="#registering-types-and-object-instances">The Types of Objects Unity Can Create</a></li>
-<li><a href="xref:intro.md#registering-types-and-object-instances">Registering Existing Types and Object Instances</a></li>
-<li><a href="xref:intro.md#managing-the-lifetime-of-objects">Managing the Lifetime of Objects</a></li>
-<li><a href="xref:intro.md#specifying-values-for-injection">Specifying Values for Injection</a></li>
-<li><a href="xref:intro.md#populating-collections">Populating collections</a></li>
-<li><a href="xref:intro.md#support-for-deferred-resolution">Support for deferred resolution</a></li>
+<li><a href="#the-types-of-objects-unity-can-create">The Types of Objects Unity Can Create</a></li>
+<li><a href="#registering-types-and-object-instances">Registering Existing Types and Object Instances</a></li>
+<li><a href="#managing-the-lifetime-of-objects">Managing the Lifetime of Objects</a></li>
+<li><a href="#specifying-values-for-injection">Specifying Values for Injection</a></li>
+<li><a href="#populating-collections">Populating collections</a></li>
+<li><a href="#support-for-deferred-resolution">Support for deferred resolution</a></li>
 </ul>
 <h2 id="the-types-of-objects-unity-can-create">The Types of Objects Unity Can Create</h2>
 <p>You can use the Unity container to generate instances of any object that has a public constructor (in other words, objects that you can create using the new operator). During object instantiation Unity can:</p>
@@ -91,8 +91,8 @@
 <li>Call any public method on the created object</li>
 </ul>
 <h2 id="registering-types-and-object-instances">Registering Types and Object Instances</h2>
-<p>Unity can resolve any concrete, constructable type without registration. For example calling <code>container.Resolve&lt;object&gt;()</code> will produce an instance immediately.</p>
-<p>Registration of types allows specifying a blueprint of how instance should be created and managed. Unity recognizes three ways of registering types:</p>
+<p>Unity can resolve any concrete, constructable reference type without registration. For example calling <code>container.Resolve&lt;object&gt;()</code> will produce an instance immediately.</p>
+<p>Registrations allow mapping between service types and implementation types. Create a blueprint of how instances instantiated, initialized, and managed. For generic types it creates internal mini factories that used to generate concrete types. Unity supports three ways of registering types:</p>
 <h4 id="instance-registration">Instance registration</h4>
 <p>Unity exposes a method named <a class="xref" href="../api/Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_">RegisterInstance</a> that you can use to register existing instances with the container. The instance could be registered as concrete type, a type of the instance you would get by calling <code>instance.GetType()</code>, or it could be registered as any of the interfaces the instance implements. Lifetime of registered instance could be either controlled by container it is registered with or externally, in which case Unity just keeps weak reference to the object.</p>
 <h4 id="factory-registration">Factory registration</h4>
