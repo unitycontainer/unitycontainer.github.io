@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Design of Unity | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Design of Unity | Unity Container ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="design-of-unity">Design of Unity</h1>
+
+<p>This topic describes the design goals, the architecture, and the design highlights of Unity. You do not have to understand the design to use Unity; however, this topic will help you to understand how it works and how it interacts with the underlying object builder subsystem.</p>
+<h2 id="design-goals">Design Goals</h2>
+<p>Unity was designed to achieve the following goals:</p>
+<ul>
+<li>Promote the principles of modular design through aggressive decoupling.</li>
+<li>Maximize testability when designing applications.</li>
+<li>Provide a fast and lightweight dependency injection platform for creating new as well as managing existing objects.</li>
+<li>Expose a compact and intuitive API for developers to work with.</li>
+<li>Support a wide range of languages, and platforms.</li>
+<li>Allow attribute-driven injection for constructors, properties, fields, and methods.</li>
+<li>Provide extensibility through container extensions.</li>
+<li>Provide stability required in enterprise-level line of business (LOB) applications.</li>
+</ul>
+<h2 id="packaging">Packaging</h2>
+<p>To allow maximum decoupling between declarative part and implementation Unity split into two assemblies: <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> and <a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></p>
+<h4 id="unityabstractions"><a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a></h4>
+<p>This assembly contains all public member declarations required to use Unity container in applications. It defines <a class="xref" href="../../api/Unity.IUnityContainer.html">IUnityContainer</a> interface as well as types and interfaces used to register, configure and resolve types and instances. Abstraction assembly contains following namespaces:</p>
+<ul>
+<li><a class="xref" href="../../api/Unity.html">Unity</a></li>
+<li><a class="xref" href="../../api/Unity.Injection.html">Unity.Injection</a></li>
+<li><a class="xref" href="../../api/Unity.Lifetime.html">Unity.Lifetime</a></li>
+<li><a class="xref" href="../../api/Unity.Policy.html">Unity.Policy</a></li>
+<li><a class="xref" href="../../api/Unity.Resolution.html">Unity.Resolution</a></li>
+</ul>
+<h4 id="unitycontainer"><a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></h4>
+<p>This assembly implements Unity container's engine and exposes public members required to extend the container.</p>
+<h4 id="unity"><a href="https://www.nuget.org/packages/Unity/">Unity</a></h4>
+<p>This is a convenience package containing both <a href="https://www.nuget.org/packages/Unity/">Unity.Abstractions</a> as well as <a href="https://www.nuget.org/packages/Unity/">Unity.Container</a> assemblies. This package is distributed for these who do now wish to separate declarations and implementation.</p>
+<h3 id="more-information">More Information</h3>
+<p>For more information about using packages inside applications see <a href="design_concepts.md">Application Design</a> concepts with Unity.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/articles/unity/unity.design_of_unity.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2009–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
