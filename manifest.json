@@ -1012,15 +1012,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "Z7FmZp4X6s25yWP2Ixp0yQ=="
+          "hash": "WdaAkXxjQ5ZTGn4fTteGAA=="
         }
       },
       "is_incremental": false,
@@ -1028,11 +1025,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/unity/unity.adding_unity.md",
+      "source_relative_path": "articles/unity/adding_unity.md",
       "output": {
         ".html": {
-          "relative_path": "articles/unity/unity.adding_unity.html",
-          "hash": "+0FdrsX8erYSkE7N0RUDrg=="
+          "relative_path": "articles/unity/adding_unity.html",
+          "hash": "Wv8cl9DK8Zv2QeEcpkGtdw=="
         }
       },
       "is_incremental": false,
@@ -1040,38 +1037,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/unity/unity.application_design.md",
+      "source_relative_path": "articles/unity/application_design.md",
       "output": {
         ".html": {
-          "relative_path": "articles/unity/unity.application_design.html",
-          "hash": "spEoOIDCeh/PvhZTCbkM3w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/unity/unity.design_of_unity.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/unity/unity.design_of_unity.html",
-          "hash": "gy0YQ2ElOq4bIF7rwp+riw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/unity/unity.introduction.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/unity/unity.introduction.html",
-          "hash": "hSC+CbGIdj+P5BIMYbHQ5w=="
+          "relative_path": "articles/unity/application_design.html",
+          "hash": "TI33IR60TZYAVAVEerQqRQ=="
         }
       },
       "is_incremental": false,
@@ -1082,11 +1052,38 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "articles/unity/unity.using_unity.md",
+      "source_relative_path": "articles/unity/design_of_unity.md",
       "output": {
         ".html": {
-          "relative_path": "articles/unity/unity.using_unity.html",
-          "hash": "R9vEIWyzQX7njwR699ZsOw=="
+          "relative_path": "articles/unity/design_of_unity.html",
+          "hash": "s2OJd/UZwJkX2Yy5cLbbpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/unity/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/unity/introduction.html",
+          "hash": "Vj9MmZneX6CxUXNHUdE2eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/unity/using_unity.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/unity/using_unity.html",
+          "hash": "NYsevH9MUbkEXgTyuM1tkA=="
         }
       },
       "is_incremental": false,
@@ -1127,15 +1124,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "EKvDA5Pdc8+JJwQUmVk6TA=="
+          "hash": "jNWPmckLVS1KW6zInVr4kw=="
         }
       },
       "is_incremental": false,
@@ -1249,9 +1243,9 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -1262,17 +1256,17 @@
           "total_file_count": 20,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 76,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
