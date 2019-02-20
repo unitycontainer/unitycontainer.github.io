@@ -977,6 +977,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/features/injection.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/features/injection.html",
+          "hash": "U9oPTZIE5gPokHA3JJGufg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/features/lifetime.md",
       "output": {
         ".html": {
@@ -1017,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "5+hc7Gd4ho5yOqgDFUtjug=="
+          "hash": "AzTlyxrcbEAzAwwNaAclEA=="
         }
       },
       "is_incremental": false,
@@ -1243,16 +1255,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 21,
+          "skipped_file_count": 0
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 76,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 20,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
