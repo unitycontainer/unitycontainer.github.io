@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> | Unity Container </title>
+    <title>Lifetime Managers | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" | Unity Container ">
+    <meta name="title" content="Lifetime Managers | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -67,7 +67,22 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="lifetime-managers">Lifetime Managers</h1>
 
+<p>Out of the box Unity supports eight lifetime managers. These managers allow various scenarios of lifetime management for resolved objects and should satisfy most of everyday requirements. As everything with Unity, any of these managers could be extended or new managers could be created to cover specific needs. These are the managers Unity comes with:</p>
+<h2 id="transient"><a class="xref" href="../../api/Unity.Lifetime.TransientLifetimeManager.html">Transient</a></h2>
+<p>This is a default lifetime manager in Unity Container. If you do not specify any lifetime managers during registration, Unity will use this one implicitly. The default behavior of this manager is to create new instance of registered type on every resolution.</p>
+<p>It is recommended to omit this type of managers from registrations and let Unity assume default, it is hardly worth it to create instance of the manager which will be discarded during registration anyway.</p>
+<h2 id="singleton"><a class="xref" href="../../api/Unity.Lifetime.SingletonLifetimeManager.html">Singleton</a></h2>
+<p>This lifetime manager creates globally unique singleton. No matter where it is registered (child or root container) it is always stored with the root container and becomes globally available in entire scope tree.</p>
+<p>Any Unity container tree (parent and all the children) is guaranteed to have only one singleton for the registered type and overriding registration on root or any child container with singleton manager will override it everywhere.</p>
+<p>This lifetime manager could be used on any types of registration, Type, Instance, or Factory. For more information see tutorial.</p>
+<h2 id="per-container">Per Container</h2>
+<h2 id="per-container-transient">Per Container Transient</h2>
+<h2 id="hierarchical">Hierarchical</h2>
+<h2 id="external">External</h2>
+<h2 id="per-thread">Per Thread</h2>
+<h2 id="per-resolve">Per Resolve</h2>
 </article>
           </div>
           
