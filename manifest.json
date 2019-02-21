@@ -1060,15 +1060,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/unity/design_of_unity.md",
       "output": {
         ".html": {
           "relative_path": "articles/unity/design_of_unity.html",
-          "hash": "s2OJd/UZwJkX2Yy5cLbbpw=="
+          "hash": "NH6bPLnF8s9abQ478SE4ow=="
         }
       },
       "is_incremental": false,
@@ -1087,15 +1084,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/unity/using_unity.md",
       "output": {
         ".html": {
           "relative_path": "articles/unity/using_unity.html",
-          "hash": "NYsevH9MUbkEXgTyuM1tkA=="
+          "hash": "7/fe189jqAE7xj+1rXBrvw=="
         }
       },
       "is_incremental": false,
@@ -1255,11 +1249,10 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 76,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
@@ -1268,10 +1261,11 @@
           "total_file_count": 21,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 76,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
