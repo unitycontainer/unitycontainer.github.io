@@ -93,7 +93,7 @@ At the later time, when that <code>Type</code> is requested, Unity uses this blu
 <h2 id="registration-metadata">Registration Metadata</h2>
 <p>Unity registration may contain the following information:</p>
 <h4 id="registered-type-required"><a class="xref" href="../../api/Unity.IContainerRegistration.html#Unity_IContainerRegistration_RegisteredType">Registered Type</a> [Required]</h4>
-<p>A type that will be requested during resolution is called <strong>Registered Type</strong>. In the example below <code>SomeType</code> would be a registered type.</p>
+<p>A <code>Type</code> that will be requested during resolution is called <strong>Registered Type</strong>. In the example below <code>SomeType</code> would be a registered type.</p>
 <pre><code class="lang-cs">container.RegisterType&lt;SomeClass&gt;();
 ...
 var value = container.Resolve&lt;SomeClass&gt;();
