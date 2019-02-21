@@ -1005,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/registration/factory.html",
-          "hash": "HgTWJCLIs4sVupC5WJM8kQ=="
+          "hash": "W2REZTGBJWE50/wxs8PgPA=="
         }
       },
       "is_incremental": false,
@@ -1029,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/registration/instance.html",
-          "hash": "VyCYQ2yJqJxU+gwczaDIDg=="
+          "hash": "P/ZYqFgyy7Pv790KGLYAMw=="
         }
       },
       "is_incremental": false,
@@ -1048,12 +1048,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/registration/registration.md",
       "output": {
         ".html": {
           "relative_path": "articles/registration/registration.html",
-          "hash": "/ONGsQxim4nP1giQ6SVj7g=="
+          "hash": "Tgz4nitejsheMGJPjkB/mg=="
         }
       },
       "is_incremental": false,
@@ -1065,7 +1068,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/registration/type.html",
-          "hash": "JXphnNUMWt9SS9bm4zZR7w=="
+          "hash": "/BmWq5364N8DBaKZDhvHTQ=="
         }
       },
       "is_incremental": false,
@@ -1322,17 +1325,17 @@
           "total_file_count": 26,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 76,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 76,
           "skipped_file_count": 0
         }
       }
