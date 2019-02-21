@@ -76,24 +76,51 @@ Factory
 Type
 Mapping</p>
 <h2 id="container">Container</h2>
-<p>Register interface/type mapping, additionally supported: registering service once, registration update, removing registration.
-Register user-defined delegate factory and register existing instance.
-Register implementation types from provided assemblies with automatically determined service types.
-Register with service key of arbitrary type, or register multiple non-keyed services.
-Register with resolution condition.
-Register with associated metadata object of arbitrary type.
-Resolve and ResolveMany.
-Unknown service resolution:
-Optional automatic concrete types resolution
-Instance lifetime control or Reuse in DryIoc terms:
-Nested disposable scopes with optional names
-Ambient scope context
-Supported out-of-the-box: Transient, Singleton, Scoped in multiple flavors, including scoped to specific service in object graph
-useParentReuse and use useDecorateeReuse option for injected dependencies
-Control reused objects behavior with preventDisposal and weaklyReferenced.
-Extensive Open-generics support: constraints, variance, complex nested, recurring generic definitions
-Constructor, and optional property and field injection.
-Static and Instance factory methods in addition to constructor. Factory method supports parameter injection the same way as constructor!
+<ul>
+<li><p>Register interface</p>
+</li>
+<li><p>type mapping</p>
+</li>
+<li><p>additionally supported:</p>
+<ul>
+<li>registering service once,</li>
+<li>registration update,</li>
+<li>removing registration.</li>
+</ul>
+</li>
+<li><p>Register user-defined delegate factory and register existing instance.</p>
+</li>
+<li><p>Register implementation types from provided assemblies with automatically determined service types.</p>
+</li>
+<li><p>Register with service key of arbitrary type, or register multiple non-keyed services.</p>
+</li>
+<li><p>Register with resolution condition.</p>
+</li>
+<li><p>Register with associated metadata object of arbitrary type.</p>
+</li>
+<li><p>Resolve and ResolveMany.</p>
+<ul>
+<li>Unknown service resolution:</li>
+<li>Optional automatic concrete types resolution</li>
+</ul>
+</li>
+<li><p>Instance lifetime control or Reuse in DryIoc terms:</p>
+<ul>
+<li>Nested disposable scopes with optional names</li>
+<li>Ambient scope context</li>
+</ul>
+</li>
+<li><p>Supported out-of-the-box: Transient, Singleton, Scoped in multiple flavors, including scoped to specific service in object graph</p>
+</li>
+<li><p>useParentReuse and use useDecorateeReuse option for injected dependencies</p>
+</li>
+<li><p>Control reused objects behavior with preventDisposal and weaklyReferenced.</p>
+</li>
+<li><p>Extensive Open-generics support: constraints, variance, complex nested, recurring generic definitions</p>
+</li>
+<li><p>Constructor, and optional property and field injection.</p>
+</li>
+<li><p>Static and Instance factory methods in addition to constructor. Factory method supports parameter injection the same way as constructor!
 Injecting properties and fields into existing object.
 Creating concrete object without registering it in Container but with injecting its parameters, properties, and fields.
 Generic wrappers:
@@ -103,7 +130,9 @@ Currying over constructor (or factory method) arguments: Func&lt;TArg, T&gt;, Fu
 Nested wrappers: e.g. Tuple&lt;SomeMetadata, Func<isomeservice>&gt;[].
 Composite pattern: Composite itself is excluded from result collection.
 Decorator pattern.<p>
-</isomeservice></t></t></t></t></t></article>
+</isomeservice></t></t></t></t></t></li>
+</ul>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
