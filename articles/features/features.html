@@ -75,14 +75,14 @@
 <ul>
 <li>No registration required for simple POCO types</li>
 <li>Registration/updates at any time (no builder required)</li>
-<li>Supports registration metadata</li>
-<li>Supports generic types</li>
+<li>Support registration metadata</li>
+<li>Support generic types</li>
 <li>Register existing objects</li>
 <li>Custom Type factories</li>
 <li>Type mappings
 <ul>
 <li>Register as a <code>Type</code></li>
-<li>Supports <code>Type</code> polymorphism</li>
+<li>Support <code>Type</code> polymorphism</li>
 <li>Register as an implemented interface</li>
 <li>Multiple interfaces of the same <code>Type</code></li>
 </ul>
@@ -107,19 +107,19 @@
 </li>
 </ul>
 </li>
-<li>Initializing properties
+<li>Initializing Properties
 <ul>
 <li>Marked with attribute</li>
 <li>Injected during registration (Injection Member)</li>
 </ul>
 </li>
-<li>Initializing fields
+<li>Initializing Fields
 <ul>
 <li>Marked with attribute</li>
 <li>Injected during registration (Injection Member)</li>
 </ul>
 </li>
-<li>Calling methods on the object
+<li>Calling Methods on the object
 <ul>
 <li>Marked with attribute</li>
 <li>Injected during registration (Injection Member)
@@ -134,10 +134,10 @@
 </ul>
 </li>
 </ul>
-<h3 id="existing-registrations">Existing Registrations</h3>
+<h3 id="registrations-collection">Registrations Collection</h3>
 <ul>
-<li>Lists registrations of the container</li>
-<li>Supports registration hierarchies</li>
+<li>List registrations of the container</li>
+<li>Support registration hierarchies</li>
 </ul>
 <h3 id="check-if-type-is-registered">Check if <code>Type</code> is registered</h3>
 <ul>
@@ -145,20 +145,20 @@
 </ul>
 <h3 id="initialization-of-existing-objects-buildup">Initialization of existing objects (BuildUp)</h3>
 <ul>
-<li>Performs initialization on already created objects</li>
-<li>Follows the same pattern as create (Resolve) object</li>
+<li>Perform initialization on already created objects</li>
+<li>Follow the same pattern as create (Resolve) object</li>
 <li>Compatible with Activator and Compiled pipelines</li>
-<li>Initializes Properties and Fields</li>
-<li>Calls methods and injects parameters</li>
+<li>Initialize Properties and Fields</li>
+<li>Call Methods and inject parameters</li>
 </ul>
 <h3 id="create-instances-resolve">Create Instances (Resolve)</h3>
 <ul>
-<li>Injects constructor with parameters</li>
-<li>Initializes Properties and Fields</li>
-<li>Calls methods and injects parameters</li>
-<li>Supports Activator pipelines</li>
-<li>Creates optimized (compiled) pipelines</li>
-<li>Seamlessly resolves registered instances or creates new objects</li>
+<li>Inject constructor with parameters</li>
+<li>Initialize Properties and Fields</li>
+<li>Call Methods and injects parameters</li>
+<li>Support Activator pipelines</li>
+<li>Create optimized (compiled) pipelines</li>
+<li>Seamlessly resolve registered instances or creates new objects</li>
 <li>Built-in support for deferred resolution
 <ul>
 <li><code>Func&lt;T&gt;</code></li>
@@ -182,7 +182,7 @@
 <li>Supports parameter overrides</li>
 </ul>
 </li>
-<li>Open-generics types
+<li>Open-generic types
 <ul>
 <li>constraints</li>
 <li>variance</li>
@@ -205,7 +205,7 @@
 </ul>
 <h3 id="create-child-scoped-containers">Create child (Scoped) containers</h3>
 <ul>
-<li>Creates disposable child containers (scopes)</li>
+<li>Create disposable child containers (scopes)</li>
 </ul>
 <h3 id="extensible">Extensible</h3>
 <ul>
