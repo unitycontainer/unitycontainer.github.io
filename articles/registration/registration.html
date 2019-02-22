@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Unity Registration | Unity Container </title>
+    <title>Registering Types with Unity | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Unity Registration | Unity Container ">
+    <meta name="title" content="Registering Types with Unity | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -67,7 +67,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="unity-registration">Unity Registration</h1>
+<h1 id="registering-types-with-unity">Registering Types with Unity</h1>
 
 <p>Unity does not require <code>Type</code> to be registered to resolve it.</p>
 <p>Any concrete, constructable <code>Type</code> could be resolved by Unity. It will even create and supply parameters if required. In other words, if you can create a <code>Type</code> with <code>new</code> operator:</p>
@@ -78,11 +78,11 @@
 </code></pre>
 <p>You only need to register a <code>Type</code> if you want to specify:</p>
 <ul>
-<li>Object's lifetime policy</li>
+<li>Object's lifetime policy other than transient</li>
 <li>Nondefault constructor</li>
 <li>Instruct Unity to inject properties or fields</li>
-<li>Call a method on the created object</li>
-<li>To create a mapping between service and implementation types</li>
+<li>Call a method on the created object during initialization</li>
+<li>Create a mapping between service and implementation types</li>
 <li>Or all of the above</li>
 </ul>
 <h2 id="what-is-a-registration-and-how-it-works">What is a Registration and how it works</h2>
@@ -133,6 +133,9 @@ Assert(typeof(Service) == result.GetType())
 <p>For more information see <a href="mapping.html">Type Mapping</a>.</p>
 <h4 id="lifetime-manager-optional"><a class="xref" href="../../api/Unity.IContainerRegistration.html#Unity_IContainerRegistration_LifetimeManager">Lifetime Manager</a> [Optional]</h4>
 <p>This member holds a reference to a lifetime manager that Unity will be using to manage instance(s) of this type. For more information see <a href="../lifetime/lifetime.html">Lifetime Management</a></p>
+<h4 id="injection-instructions-optional"><a href="injection.html">Injection Instructions</a> [Optional]</h4>
+<p>During registration you could instruct Unity on select constructor certain constructor, initialize properties and fields, call methods, and can provide values and instructions for injected parameters.</p>
+<p>For more information see <a href="injection.html">Injection Members</a></p>
 <h2 id="registration-hierarchy">Registration Hierarchy</h2>
 <p>Unity container provides a way to create child containers (other systems refer to it as resolution scopes) and allows building sophisticated scope trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies:</p>
 <ul>
