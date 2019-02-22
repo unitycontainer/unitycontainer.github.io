@@ -134,8 +134,7 @@ Assert(typeof(Service) == result.GetType())
 <h4 id="lifetime-manager-optional"><a class="xref" href="../../api/Unity.IContainerRegistration.html#Unity_IContainerRegistration_LifetimeManager">Lifetime Manager</a> [Optional]</h4>
 <p>This member holds a reference to a lifetime manager that Unity will be using to manage instance(s) of this type. For more information see <a href="../lifetime/lifetime.html">Lifetime Management</a></p>
 <h4 id="injection-instructions-optional"><a href="injection.html">Injection Instructions</a> [Optional]</h4>
-<p>During registration you could instruct Unity on select constructor certain constructor, initialize properties and fields, call methods, and can provide values and instructions for injected parameters.</p>
-<p>For more information see <a href="injection.html">Injection Members</a></p>
+<p>During registration you could instruct the container to select certain constructor, initialize properties and fields, call methods, and inject values and instructions for dependencies. All this is done by passing appropriate <a href="injection.html">Injection Members</a> to the registration. For more information see <a href="injection.html">Injection Members</a></p>
 <h2 id="different-types-of-registrations">Different types of registrations</h2>
 <p>Unity recognizes three different scenarios of how instances and types are created:</p>
 <h4 id="instances-created-outside-of-unity">Instances created outside of Unity</h4>
