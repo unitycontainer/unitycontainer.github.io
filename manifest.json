@@ -953,11 +953,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/lifetime/disposal.md",
+      "source_relative_path": "articles/adding_unity.md",
       "output": {
         ".html": {
-          "relative_path": "articles/lifetime/disposal.html",
-          "hash": "d4qSjwlz6kgF5STTCLgsqA=="
+          "relative_path": "articles/adding_unity.html",
+          "hash": "nNs5NQpoiFfU3IXEQFht0g=="
         }
       },
       "is_incremental": false,
@@ -965,11 +965,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/lifetime/lifetime.md",
+      "source_relative_path": "articles/application_design.md",
       "output": {
         ".html": {
-          "relative_path": "articles/lifetime/lifetime.html",
-          "hash": "Af/z4Gki0DqBYEmoNN90yw=="
+          "relative_path": "articles/application_design.html",
+          "hash": "UGtRwyYhTVNgNMrYGLTvkQ=="
         }
       },
       "is_incremental": false,
@@ -977,11 +977,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/lifetime/managers.md",
+      "source_relative_path": "articles/design_of_unity.md",
       "output": {
         ".html": {
-          "relative_path": "articles/lifetime/managers.html",
-          "hash": "/MHGMNRr6ccanVtNU0iAig=="
+          "relative_path": "articles/design_of_unity.html",
+          "hash": "MCMro+jVHrZkcPu7TlYNLQ=="
         }
       },
       "is_incremental": false,
@@ -989,11 +989,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/registration/factory.md",
+      "source_relative_path": "articles/features.md",
       "output": {
         ".html": {
-          "relative_path": "articles/registration/factory.html",
-          "hash": "W2REZTGBJWE50/wxs8PgPA=="
+          "relative_path": "articles/features.html",
+          "hash": "px5t+1fSLtufAD72xQjwaQ=="
         }
       },
       "is_incremental": false,
@@ -1001,89 +1001,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/registration/injection.md",
+      "source_relative_path": "articles/introduction.md",
       "output": {
         ".html": {
-          "relative_path": "articles/registration/injection.html",
-          "hash": "3GPunlzDrski43mXtwg2ZA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/registration/instance.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/registration/instance.html",
-          "hash": "6k3vTb24a86UU0TdQ+BS9Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/registration/mapping.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/registration/mapping.html",
-          "hash": "yr+ZBYc76qEdh4VjsYgxfQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/registration/metadata.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/registration/metadata.html",
-          "hash": "EN/XtgNlnods+lBFapExkA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/registration/registration.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/registration/registration.html",
-          "hash": "8bus/B27P412kI7YxAx8wg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/registration/type.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/registration/type.html",
-          "hash": "/BmWq5364N8DBaKZDhvHTQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/resolution/resolution.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/resolution/resolution.html",
-          "hash": "e7yjEXkA4s/6i3apw29rDQ=="
+          "relative_path": "articles/introduction.html",
+          "hash": "0rpIcQZavSpIuP1LdVANtQ=="
         }
       },
       "is_incremental": false,
@@ -1095,7 +1017,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "YJl23usA7uppmIFvwv7IOg=="
+          "hash": "GIlUVJC6TOOk59w9HGoP7w=="
         }
       },
       "is_incremental": false,
@@ -1103,71 +1025,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/unity/adding_unity.md",
+      "source_relative_path": "articles/using_unity.md",
       "output": {
         ".html": {
-          "relative_path": "articles/unity/adding_unity.html",
-          "hash": "2bDuDtVSMl3IhhmTPmOfYA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/unity/application_design.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/unity/application_design.html",
-          "hash": "TI33IR60TZYAVAVEerQqRQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/unity/design_of_unity.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/unity/design_of_unity.html",
-          "hash": "NH6bPLnF8s9abQ478SE4ow=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/unity/features.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/unity/features.html",
-          "hash": "IADepZjTOzpnDWJIfwJXvw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/unity/introduction.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/unity/introduction.html",
-          "hash": "Vj9MmZneX6CxUXNHUdE2eQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/unity/using_unity.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/unity/using_unity.html",
-          "hash": "7/fe189jqAE7xj+1rXBrvw=="
+          "relative_path": "articles/using_unity.html",
+          "hash": "6dPOT3ddzbUhBwASPxZL5w=="
         }
       },
       "is_incremental": false,
@@ -1213,7 +1075,43 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "jNWPmckLVS1KW6zInVr4kw=="
+          "hash": "7oewsz7POpW6oWtrPtIZzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/disposal.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/disposal.html",
+          "hash": "azB9YeNbBp1wnBORwqLL+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/lifetime.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/lifetime.html",
+          "hash": "wr7+GuphAmEP+68nJIvN3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/managers.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/managers.html",
+          "hash": "b6TWC7rfPh4f3M0K/OPMnw=="
         }
       },
       "is_incremental": false,
@@ -1233,11 +1131,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/register-instance.md",
+      "source_relative_path": "tutorials/registration/factory.md",
       "output": {
         ".html": {
-          "relative_path": "tutorials/register-instance.html",
-          "hash": "guHMqh75LrxW7EydPPzvUg=="
+          "relative_path": "tutorials/registration/factory.html",
+          "hash": "VDEAk1yyefzE6dHbnTjJuQ=="
         }
       },
       "is_incremental": false,
@@ -1245,11 +1143,26 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/register-type-injection-constructor.md",
+      "source_relative_path": "tutorials/registration/injection.md",
       "output": {
         ".html": {
-          "relative_path": "tutorials/register-type-injection-constructor.html",
-          "hash": "YAz2KRD2sd2guBsoa8l+0g=="
+          "relative_path": "tutorials/registration/injection.html",
+          "hash": "6vslnyjiK7Mtw7bk1VkRAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/instance.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/instance.html",
+          "hash": "ntIhhsMSZGNerfcPyen6Rg=="
         }
       },
       "is_incremental": false,
@@ -1257,11 +1170,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/register-type-injection-property.md",
+      "source_relative_path": "tutorials/registration/mapping.md",
       "output": {
         ".html": {
-          "relative_path": "tutorials/register-type-injection-property.html",
-          "hash": "5L3Guqwk5hAy4QEF9Ft7pQ=="
+          "relative_path": "tutorials/registration/mapping.html",
+          "hash": "kWo1ioNuHmornWvraNZ43Q=="
         }
       },
       "is_incremental": false,
@@ -1269,11 +1182,26 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/register-type-injection.md",
+      "source_relative_path": "tutorials/registration/metadata.md",
       "output": {
         ".html": {
-          "relative_path": "tutorials/register-type-injection.html",
-          "hash": "tLjP5X7PPLh3SpBGxTIiLw=="
+          "relative_path": "tutorials/registration/metadata.html",
+          "hash": "jg16aSlHfsl5k3l2liL+Lg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/registration.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/registration.html",
+          "hash": "jqw8R4CnBmYQaQ9Enneugg=="
         }
       },
       "is_incremental": false,
@@ -1281,11 +1209,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/register-type.md",
+      "source_relative_path": "tutorials/registration/type.md",
       "output": {
         ".html": {
-          "relative_path": "tutorials/register-type.html",
-          "hash": "f/VUulZZlTDYTQMptI3ghg=="
+          "relative_path": "tutorials/registration/type.html",
+          "hash": "hsBDnz11u8RdmknjdQAtvw=="
         }
       },
       "is_incremental": false,
@@ -1293,11 +1221,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/registration.md",
+      "source_relative_path": "tutorials/resolution/resolution.md",
       "output": {
         ".html": {
-          "relative_path": "tutorials/registration.html",
-          "hash": "x0u1BofmAw/XB7gdhEkuMw=="
+          "relative_path": "tutorials/resolution/resolution.html",
+          "hash": "B4jBxbdZ8UrZ7pBDxhHb1w=="
         }
       },
       "is_incremental": false,
@@ -1309,7 +1237,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "780reVG93UJoCCPjsH3EzQ=="
+          "hash": "i+JROiqoVZwqBMI0UlkZug=="
         }
       },
       "is_incremental": false,
@@ -1327,9 +1255,9 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -1337,20 +1265,20 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 27,
+          "total_file_count": 21,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 76,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }

@@ -81,8 +81,8 @@
 As stated elsewhere on this site <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> contains all declarations required by Unity to operate. Because of that modules could only reference one assembly: <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a></p>
 <p>This separation allows updates of patched container's engine without recompiling all the modules used in the system. Given that specifications change very infrequently and <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> package stays the same most of the time it provides big benefit in terms of saved development/testing time and money.</p>
 <h2 id="adding-unity-to-project">Adding Unity to project</h2>
-<p>Unity container is distributed via NuGet and could be added to a project with the help of NuGet manager of by executing command:</p>
-<pre><code>Install-Package Unity
+<p>Unity container is distributed via NuGet and could be added to a project with the help of NuGet manager or by executing command:</p>
+<pre><code class="lang-bash">Install-Package Unity
 
 or
 
