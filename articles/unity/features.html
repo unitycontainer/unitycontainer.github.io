@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dependency Injection with Unity | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Dependency Injection with Unity | Unity Container ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="dependency-injection-with-unity">Dependency Injection with Unity</h1>
+
+<p>Using the Unity dependency injection container provides opportunities for you to more easily decouple components, business objects, and services you use in applications, and can simplify how you organize and architect these applications. This chapter provides overview of how Unity Container is initialized, used and disposed of in applications.</p>
+<h1 id="features">Features</h1>
+<h3 id="registration">Registration</h3>
+<ul>
+<li>No registration required for simple POCO types</li>
+<li>Registration/updates at any time (no builder required)</li>
+<li>Support registration metadata</li>
+<li>Support generic types</li>
+<li>Register existing objects</li>
+<li>Custom Type factories</li>
+<li>Type mappings
+<ul>
+<li>Register as a <code>Type</code></li>
+<li>Support <code>Type</code> polymorphism</li>
+<li>Register as an implemented interface</li>
+<li>Multiple interfaces of the same <code>Type</code></li>
+</ul>
+</li>
+<li>Register Type
+<ul>
+<li>Constructor selection
+<ul>
+<li>Constructor marked by attribute</li>
+<li>'Smart' constructor selection
+<ul>
+<li>Longest constructor Unity can satisfy with parameters (dynamic)</li>
+<li>Legacy longest constructor (Extension)</li>
+</ul>
+</li>
+<li>Specific constructor (Injection Member)
+<ul>
+<li>By types of parameters</li>
+<li>By injected members</li>
+<li>By provided values</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Initializing Properties
+<ul>
+<li>Marked with attribute</li>
+<li>Injected during registration (Injection Member)</li>
+</ul>
+</li>
+<li>Initializing Fields
+<ul>
+<li>Marked with attribute</li>
+<li>Injected during registration (Injection Member)</li>
+</ul>
+</li>
+<li>Calling Methods on the object
+<ul>
+<li>Marked with attribute</li>
+<li>Injected during registration (Injection Member)
+<ul>
+<li>By types of parameters</li>
+<li>By injected members</li>
+<li>By provided values</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="registrations-collection">Registrations Collection</h3>
+<ul>
+<li>List registrations of the container</li>
+<li>Support registration hierarchies</li>
+</ul>
+<h3 id="check-if-type-is-registered">Check if <code>Type</code> is registered</h3>
+<ul>
+<li>Fast and efficient algorithm</li>
+</ul>
+<h3 id="initialization-of-existing-objects-buildup">Initialization of existing objects (BuildUp)</h3>
+<ul>
+<li>Perform initialization on already created objects</li>
+<li>Follow the same pattern as create (Resolve) object</li>
+<li>Compatible with Activator and Compiled pipelines</li>
+<li>Initialize Properties and Fields</li>
+<li>Call Methods and inject parameters</li>
+</ul>
+<h3 id="create-instances-resolve">Create Instances (Resolve)</h3>
+<ul>
+<li>Inject constructor with parameters</li>
+<li>Initialize Properties and Fields</li>
+<li>Call Methods and injects parameters</li>
+<li>Support Activator pipelines</li>
+<li>Create optimized (compiled) pipelines</li>
+<li>Seamlessly resolve registered instances or creates new objects</li>
+<li>Built-in support for deferred resolution
+<ul>
+<li><code>Func&lt;T&gt;</code></li>
+<li><code>Lazy&lt;T&gt;</code></li>
+</ul>
+</li>
+<li>Built-in support for collections
+<ul>
+<li><code>T[]</code></li>
+<li><code>IEnumerable&lt;T&gt;</code></li>
+</ul>
+</li>
+<li>Automatic concrete types resolution</li>
+<li>Dependency injection
+<ul>
+<li>Required</li>
+<li>Optional</li>
+<li>Supports Default parameters</li>
+<li>Injects with resolved parameters</li>
+<li>Injects with registered values</li>
+<li>Supports parameter overrides</li>
+</ul>
+</li>
+<li>Open-generic types
+<ul>
+<li>constraints</li>
+<li>variance</li>
+<li>nested</li>
+<li>recurring generic definitions</li>
+</ul>
+</li>
+</ul>
+<h3 id="manages-lifetime-of-objects">Manages lifetime of objects</h3>
+<ul>
+<li>Transient</li>
+<li>Singleton</li>
+<li>Per Container</li>
+<li>Per Container Transient</li>
+<li>Hierarchical</li>
+<li>External</li>
+<li>Per Thread</li>
+<li>Per Resolve</li>
+<li>Other (Extension)</li>
+</ul>
+<h3 id="create-child-scoped-containers">Create child (Scoped) containers</h3>
+<ul>
+<li>Create disposable child containers (scopes)</li>
+</ul>
+<h3 id="extensible">Extensible</h3>
+<ul>
+<li>Validation</li>
+<li>Legacy behavior</li>
+<li>Configuration</li>
+<li>Interception</li>
+<li>Other</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/articles/unity/features.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2009–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
