@@ -136,6 +136,15 @@ Assert(typeof(Service) == result.GetType())
 <h4 id="injection-instructions-optional"><a href="injection.html">Injection Instructions</a> [Optional]</h4>
 <p>During registration you could instruct Unity on select constructor certain constructor, initialize properties and fields, call methods, and can provide values and instructions for injected parameters.</p>
 <p>For more information see <a href="injection.html">Injection Members</a></p>
+<h2 id="different-types-of-registrations">Different types of registrations</h2>
+<p>Unity recognizes three different scenarios of how instances and types are created:</p>
+<h4 id="instances-created-outside-of-unity">Instances created outside of Unity</h4>
+<p>A lot of times parts of system's infrastructure require to be available to clients and services of the application. These entities are created and managed outside of Unity but should be accessible by consumers of the framework during subsequent resolutions. <br>
+To enable access to these objects Unity provides a way to register instances. For more information see <a href="instance.html">Instance Registration</a>.</p>
+<h4 id="instances-created-by-registered-type-factories">Instances created by registered Type factories</h4>
+<p>Although Unity is quite capable in creating instance of types, sometimes it is more efficient or desireable to use <code>Type</code> factories. Unity satisfies this requirement by providing API to register a special factory delegate. For more information see <a href="factory.html">Factory Registration</a></p>
+<h4 id="instances-created-by-unity">Instances created by Unity</h4>
+<p>This is the most common scenario where objects are created by the container itself. Creation process is controlled by either <code>Type</code> registrations associated with the container or implicit Unity defaults if none registered. For more information how <code>Type</code> can be registered see <a href="type.html">Type Registration</a></p>
 <h2 id="registration-hierarchy">Registration Hierarchy</h2>
 <p>Unity container provides a way to create child containers (other systems refer to it as resolution scopes) and allows building sophisticated scope trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies:</p>
 <ul>
