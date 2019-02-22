@@ -69,7 +69,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="registration-metadata">Registration Metadata</h1>
 
-<p>During registration Unity relies on information you provide to properly register types, instances, and factories. This is a description of metadata that could be passed to Unity to properly declare build instructions:</p>
+<p>During registration Unity relies on information you provide to properly register types, instances, and factories. This is a description of metadata you could provide to properly declare how the <code>Type</code> should be registered and  built:</p>
 <h2 id="registered-type-required"><a class="xref" href="../../api/Unity.IContainerRegistration.html#Unity_IContainerRegistration_RegisteredType">Registered Type</a> [Required]</h2>
 <p>A <code>Type</code> that will be requested during resolution is called <strong>Registered Type</strong>. In the example below <code>SomeType</code> would be a registered type.</p>
 <pre><code class="lang-cs">container.RegisterType&lt;SomeClass&gt;();
@@ -78,9 +78,9 @@ var value = container.Resolve&lt;SomeClass&gt;();
 </code></pre>
 <p>Different container authors call this type by different names, <a href="https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ee650974(v%3dpandp.10)">FromType</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.servicedescriptor.servicetype">ServiceType</a>, etc. The key point to remember is that this is the <code>Type</code> container will be referencing in the internal registry and will be looking for when executing the resolve.</p>
 <h2 id="name-optional"><a class="xref" href="../../api/Unity.IContainerRegistration.html#Unity_IContainerRegistration_Name">Name</a> [Optional]</h2>
-<p>Each registration must be unique within the scope on a container it is registered with. A registration is identified by two pieces of information: <code>Registered Type</code> and <code>Name</code>.
+<p>Each registration must be unique within the scope on a container it is registered with. A registration is identified by two pieces of information: <strong><code>Registered Type</code></strong> and <strong><code>Name</code></strong>.
 Adding the name to registration allows multiple 'instances' of the same type to be registered with the container.</p>
-<p>For example, if you register the same service multiple times, each subsequent registration will override the last because in each case you are registering the same type <code>IService</code> with the same name <code>null</code>:</p>
+<p>For example, if you register the same service with no name multiple times, each subsequent registration will override the last because in each case you are registering the same type <code>IService</code> with the same name <code>null</code>:</p>
 <pre><code class="lang-cs">container.RegisterType&lt;IService, Service1&gt;();
 container.RegisterType&lt;IService, Service2&gt;();
 container.RegisterType&lt;IService, Service3&gt;();
