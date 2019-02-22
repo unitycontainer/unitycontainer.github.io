@@ -93,7 +93,7 @@ container.RegisterInstance(typeof(IService), instance)
 container.RegisterInstance(typeof(IService), &quot;xyz&quot;, instance)
 </code></pre>
 <p>In this example Unity creates two registrations of type <strong>IService</strong>. When either is resolved it returns the instance of the <strong>Service</strong> object we registered with container. For more information see <a href="mapping.html">Type Mapping</a></p>
-<h2 id="lifetime-of-instances-registered-unity">Lifetime of instances registered Unity</h2>
+<h2 id="lifetime">Lifetime</h2>
 <p>Due to the fact that container does not create these instances it only supports limited number of compatible lifetimes:</p>
 <h4 id="per-container"><a class="xref" href="../../api/Unity.InstanceLifetime.html#Unity_InstanceLifetime_PerContainer">Per Container</a></h4>
 <p>By default Unity uses <a class="xref" href="../../api/Unity.InstanceLifetime.html#Unity_InstanceLifetime_PerContainer">Per Container</a> lifetime manager when no manager specified explicitly. So all these examples above will be registered with container scope. Unity will keep these instances referenced and alive until the container is alive. Although it is not necessary to provide container controlled lifetime manager you can still write it like this:</p>

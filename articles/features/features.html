@@ -71,67 +71,149 @@
 
 <p>Using the Unity dependency injection container provides opportunities for you to more easily decouple components, business objects, and services you use in applications, and can simplify how you organize and architect these applications. This chapter provides overview of how Unity Container is initialized, used and disposed of in applications.</p>
 <h1 id="features">Features</h1>
-<p>Instance
-Factory
-Type
-Mapping</p>
-<h2 id="container">Container</h2>
+<h3 id="registration">Registration</h3>
 <ul>
-<li><p>Register interface</p>
-</li>
-<li><p>type mapping</p>
-</li>
-<li><p>additionally supported:</p>
+<li>No registration required for simple POCO types</li>
+<li>Registration/updates at any time (no builder required)</li>
+<li>Supports registration metadata</li>
+<li>Supports generic types</li>
+<li>Register existing objects</li>
+<li>Custom Type factories</li>
+<li>Type mappings
 <ul>
-<li>registering service once,</li>
-<li>registration update,</li>
-<li>removing registration.</li>
+<li>Register as a <code>Type</code></li>
+<li>Supports <code>Type</code> polymorphism</li>
+<li>Register as an implemented interface</li>
+<li>Multiple interfaces of the same <code>Type</code></li>
 </ul>
 </li>
-<li><p>Register user-defined delegate factory and register existing instance.</p>
-</li>
-<li><p>Register implementation types from provided assemblies with automatically determined service types.</p>
+<li>Register Type
 <ul>
-<li>Register with service key of arbitrary type, or register multiple non-keyed services.</li>
+<li>Constructor selection
+<ul>
+<li>Constructor marked by attribute</li>
+<li>'Smart' constructor selection
+<ul>
+<li>Longest constructor Unity can satisfy with parameters (dynamic)</li>
+<li>Legacy longest constructor (Extension)</li>
 </ul>
 </li>
-<li><p>Register with resolution condition.</p>
-</li>
-<li><p>Register with associated metadata object of arbitrary type.</p>
-</li>
-<li><p>Resolve and ResolveMany.</p>
+<li>Specific constructor (Injection Member)
 <ul>
-<li>Unknown service resolution:</li>
-<li>Optional automatic concrete types resolution</li>
+<li>By types of parameters</li>
+<li>By injected members</li>
+<li>By provided values</li>
 </ul>
 </li>
-<li><p>Instance lifetime control or Reuse in DryIoc terms:</p>
-<ul>
-<li>Nested disposable scopes with optional names</li>
-<li>Ambient scope context</li>
 </ul>
 </li>
-<li><p>Supported out-of-the-box: Transient, Singleton, Scoped in multiple flavors, including scoped to specific service in object graph</p>
+<li>Initializing properties
+<ul>
+<li>Marked with attribute</li>
+<li>Injected during registration (Injection Member)</li>
+</ul>
 </li>
-<li><p>useParentReuse and use useDecorateeReuse option for injected dependencies</p>
+<li>Initializing fields
+<ul>
+<li>Marked with attribute</li>
+<li>Injected during registration (Injection Member)</li>
+</ul>
 </li>
-<li><p>Control reused objects behavior with preventDisposal and weaklyReferenced.</p>
+<li>Calling methods on the object
+<ul>
+<li>Marked with attribute</li>
+<li>Injected during registration (Injection Member)
+<ul>
+<li>By types of parameters</li>
+<li>By injected members</li>
+<li>By provided values</li>
+</ul>
 </li>
-<li><p>Extensive Open-generics support: constraints, variance, complex nested, recurring generic definitions</p>
+</ul>
 </li>
-<li><p>Constructor, and optional property and field injection.</p>
+</ul>
 </li>
-<li><p>Static and Instance factory methods in addition to constructor. Factory method supports parameter injection the same way as constructor!
-Injecting properties and fields into existing object.
-Creating concrete object without registering it in Container but with injecting its parameters, properties, and fields.
-Generic wrappers:
-Service collections: T[], IEnumerable<t>, LazyEnumerable<t>, and I(ReadOnly)Collection|List<t>.
-Other: Lazy<t>, Func<t>, Meta&lt;TMetadata, T&gt; or Tuple&lt;TMetadata, T&gt;, KeyValuePair&lt;TKey, T&gt;, and user-defined wrappers.
-Currying over constructor (or factory method) arguments: Func&lt;TArg, T&gt;, Func&lt;TArg1, TArg2, T&gt;, etc.
-Nested wrappers: e.g. Tuple&lt;SomeMetadata, Func<isomeservice>&gt;[].
-Composite pattern: Composite itself is excluded from result collection.
-Decorator pattern.<p>
-</isomeservice></t></t></t></t></t></li>
+</ul>
+<h3 id="existing-registrations">Existing Registrations</h3>
+<ul>
+<li>Lists registrations of the container</li>
+<li>Supports registration hierarchies</li>
+</ul>
+<h3 id="check-if-type-is-registered">Check if <code>Type</code> is registered</h3>
+<ul>
+<li>Fast and efficient algorithm</li>
+</ul>
+<h3 id="initialization-of-existing-objects-buildup">Initialization of existing objects (BuildUp)</h3>
+<ul>
+<li>Performs initialization on already created objects</li>
+<li>Follows the same pattern as create (Resolve) object</li>
+<li>Compatible with Activator and Compiled pipelines</li>
+<li>Initializes Properties and Fields</li>
+<li>Calls methods and injects parameters</li>
+</ul>
+<h3 id="create-instances-resolve">Create Instances (Resolve)</h3>
+<ul>
+<li>Injects constructor with parameters</li>
+<li>Initializes Properties and Fields</li>
+<li>Calls methods and injects parameters</li>
+<li>Supports Activator pipelines</li>
+<li>Creates optimized (compiled) pipelines</li>
+<li>Seamlessly resolves registered instances or creates new objects</li>
+<li>Built-in support for deferred resolution
+<ul>
+<li><code>Func&lt;T&gt;</code></li>
+<li><code>Lazy&lt;T&gt;</code></li>
+</ul>
+</li>
+<li>Built-in support for collections
+<ul>
+<li><code>T[]</code></li>
+<li><code>IEnumerable&lt;T&gt;</code></li>
+</ul>
+</li>
+<li>Automatic concrete types resolution</li>
+<li>Dependency injection
+<ul>
+<li>Required</li>
+<li>Optional</li>
+<li>Supports Default parameters</li>
+<li>Injects with resolved parameters</li>
+<li>Injects with registered values</li>
+<li>Supports parameter overrides</li>
+</ul>
+</li>
+<li>Open-generics types
+<ul>
+<li>constraints</li>
+<li>variance</li>
+<li>nested</li>
+<li>recurring generic definitions</li>
+</ul>
+</li>
+</ul>
+<h3 id="manages-lifetime-of-objects">Manages lifetime of objects</h3>
+<ul>
+<li>Transient</li>
+<li>Singleton</li>
+<li>Per Container</li>
+<li>Per Container Transient</li>
+<li>Hierarchical</li>
+<li>External</li>
+<li>Per Thread</li>
+<li>Per Resolve</li>
+<li>Other (Extension)</li>
+</ul>
+<h3 id="create-child-scoped-containers">Create child (Scoped) containers</h3>
+<ul>
+<li>Creates disposable child containers (scopes)</li>
+</ul>
+<h3 id="extensible">Extensible</h3>
+<ul>
+<li>Validation</li>
+<li>Legacy behavior</li>
+<li>Configuration</li>
+<li>Interception</li>
+<li>Other</li>
 </ul>
 </article>
           </div>
