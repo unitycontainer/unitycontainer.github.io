@@ -1269,18 +1269,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/named_type.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/named_type.html",
-          "hash": "3RI8NJD7pULdk1BhNHpLlw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "tutorials/resolution/override_dependency.md",
       "output": {
         ".html": {
@@ -1340,24 +1328,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/resolution/resolution.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/resolution/resolution.html",
-          "hash": "vxlKac4HG9saLFU/YUsrnw=="
+          "hash": "EAoGqMs8/tX/eQQyoN39fA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/resolution/type.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/resolution/type.html",
-          "hash": "vQuSB990lii1Gf6CU5Q3cQ=="
+          "hash": "jyGmn7UR8VJ4nUqUF5cZCA=="
         }
       },
       "is_incremental": false,
@@ -1369,7 +1363,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "mpmAPBCvruvhhwwcuW3GKA=="
+          "hash": "Xqy22vSftakkfls7IOMhpg=="
         }
       },
       "is_incremental": false,
@@ -1409,7 +1403,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 33,
+          "total_file_count": 32,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
