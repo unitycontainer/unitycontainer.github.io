@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Overriding dependency values during resolution | Unity Container </title>
+    <title> | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Overriding dependency values during resolution | Unity Container ">
+    <meta name="title" content=" | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -67,20 +67,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="overriding-dependency-values-during-resolution">Overriding dependency values during resolution</h1>
 
-<p>The parameter and dependency overrides, ParameterOverride and DependencyOverride, are ResolverOverride implementations that provide support for overriding the registration information for resolving instances of types. When you call the Resolve method, these classes enable you to override values specified when the type was registered, such as by a RegisterType or RegisterInstance statement. In effect, RegisterType supplied values are overridden by Resolve supplied values.</p>
-<p>Use ParameterOverride to override the specified constructor parameter or parameters. The override applies everywhere the parameter appears unless you use OnType to constrain the override to a specified type. Since the purpose of overrides is to affect the resolution of dependencies for all relevant created objects, not just the object requested in the call to Resolve, unconstrained overrides can produce errors if there are unconstrained ParameterOverride parameters that match parameters with the same name but different types on the selected constructors for objects created in a given resolve operation.</p>
-<p>Use PropertyOverride to override the value of the specified property or properties. The override applies everywhere the property appears unless you use OnType to constrain the override to a specified type.</p>
-<p>Use DependencyOverride to override the value injected whenever there is a dependency of the given type. DependencyOverride overrides all instances where the type matches. Both parameter overrides and dependency overrides support generic types and multiple overrides.</p>
-<p>Overrides work with the constructor that is selected for the type, by attribute or configuration. If the constructor to be used is not identified with an attribute or explicit container configuration, then the default behavior is that the constructor with the most parameters will be used.</p>
-<p>A parameter and property override never affects what element gets selected. They only control the value of the specified parameter or property. You do not change which constructor is called with an override, and you do not change which properties get set with an override.</p>
-<ul>
-<li><a href="override_parameter.html">Parameter Overrides</a></li>
-<li><a href="override_property.html">Property Overrides</a></li>
-<li><a href="override_field.html">Field Overrides</a></li>
-<li><a href="override_dependency.html">Dependency Overrides</a></li>
-</ul>
 </article>
           </div>
           
@@ -89,7 +76,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/resolution/overrides.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/resolution/override_field.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

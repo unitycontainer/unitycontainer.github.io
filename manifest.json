@@ -1237,7 +1237,19 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/resolution/collections.html",
-          "hash": "C59oOJIzBS3sXI0H+bDmGA=="
+          "hash": "aeAobtCD8q5gO+0GxkJx1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/resolution/deferred.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/resolution/deferred.html",
+          "hash": "gROnXrH8HipTMdmF2vKFgA=="
         }
       },
       "is_incremental": false,
@@ -1269,11 +1281,59 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tutorials/resolution/override_dependency.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/resolution/override_dependency.html",
+          "hash": "m6+HNh2OKCciNmO9Pht71w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/resolution/override_field.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/resolution/override_field.html",
+          "hash": "O8+50RapQK8sR+jPu8EjJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/resolution/override_parameter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/resolution/override_parameter.html",
+          "hash": "XRCtdsAmB5/8CM0HmzHaYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/resolution/override_property.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/resolution/override_property.html",
+          "hash": "SjWsbTY1SQbMEQOVF4qg8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tutorials/resolution/overrides.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/resolution/overrides.html",
-          "hash": "Z5Ix9lC9+2HVSKjkfprY+Q=="
+          "hash": "0kFUnKOTAfVhfQD9mzC7VA=="
         }
       },
       "is_incremental": false,
@@ -1309,7 +1369,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "pfMEDmN5/vpMBA6GfYqohw=="
+          "hash": "mpmAPBCvruvhhwwcuW3GKA=="
         }
       },
       "is_incremental": false,
@@ -1339,23 +1399,23 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 76,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 28,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 33,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 76,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

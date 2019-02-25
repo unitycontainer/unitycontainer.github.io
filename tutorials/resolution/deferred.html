@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Deferring the Resolution of Objects | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Deferring the Resolution of Objects | Unity Container ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="deferring-the-resolution-of-objects">Deferring the Resolution of Objects</h1>
+
+<p>Unity provides a technique to facilitate holding a reference to an object you need, but do not want to construct right away. You wish to defer resolution of the object. Instead of creating a factory for the type and injecting the factory into your class, then using it to create the type you want you can use the .NET standard type Func<t> (C#) or Func(Of T) (Visual Basic) with the Resolve method. This returns a delegate that, when invoked, calls into the container and returns an instance of the specified type (in this case, T).<p>
+<p>You can even create a delegate in this way without creating a registration or mapping for the specified type in the container if you wish. Because the resolve action only takes place when you invoke the delegate, subsequent registrations added to the container are available when the target object is resolved. This means that you can manipulate the registrations and mappings in the container at any point before you resolve the target object (although you can obviously register the type before you create the delegate if you prefer).</p>
+<p>For example, you can create a delegate for a component named MyClass, and then register a mapping for it and perform deferred resolution when required using the following code.</p>
+<pre><code class="lang-cs">// Create a Unity container
+IUnityContainer myContainer = new UnityContainer();
+
+// Create a delegate for the IMyClass interface type
+var resolver = myContainer.Resolve&lt;Func&lt;IMyClass&gt;&gt;();
+
+// ... other code here...
+
+// Register a mapping for the IMyClass interface to the MyClass type
+myContainer.RegisterType&lt;IMyClass, MyClass&gt;();
+
+// Resolve the mapped target object
+IMyClass myClassInstance = resolver();
+</code></pre>
+<p>You can use this approach when you resolve the type using the Resolve method, or you can specify the delegate when you configure constructor, property setter, or method call injection. You can also use named (non-default) registrations by including the registration name in the call to the Resolve method and the RegisterType method, just as you would when using these methods for non-deferred resolution.</p>
+<p>In addition, you can use this feature to perform deferred resolution of multiple named registrations, as an alternative to using the ResolveAll method. For example, if you have multiple named registrations for the IMyClass interface to suitable concrete types, you can obtain a collection of the resolved types. The following code illustrates this.</p>
+<pre><code class="lang-cs">// Create a Unity container
+IUnityContainer myContainer = new UnityContainer();
+
+// Create an IEnumerable resolver for the IMyClass interface type
+var resolver = myContainer.Resolve&lt;Func&lt;IEnumerable&lt;IMyClass&gt;&gt;&gt;();
+
+// ... other code here...
+
+// Register mappings for the IMyClass interface to appropriate concrete types
+myContainer.RegisterType&lt;IMyClass, FirstClass&gt;(&quot;First&quot;);
+myContainer.RegisterType&lt;IMyClass, SecondClass&gt;(&quot;Second&quot;);
+myContainer.RegisterType&lt;IMyClass, ThidClass&gt;(&quot;Third&quot;);
+
+// Resolve a collection of the mapped target objects
+IEnumerable&lt;IMyClass&gt; myClassInstances = resolver();
+</code></pre>
+<p>You can also use the deferred resolver to resolve instance registrations. For example, the following code shows how you can resolve an IEnumerable collection of string values.</p>
+<pre><code class="lang-cs">// Create a Unity container
+IUnityContainer myContainer = new UnityContainer();
+
+// Create an IEnumerable resolver for string instance registrations
+var resolver = myContainer.Resolve&lt;Func&lt;IEnumerable&lt;string&gt;&gt;&gt;();
+
+// ... other code here...
+
+// Register mappings for the IMyClass interface to appropriate concrete types
+myContainer.RegisterInstance(&quot;one&quot;, &quot;FirstString&quot;);
+myContainer.RegisterInstance(&quot;two&quot;, &quot;SecondString&quot;);
+myContainer.RegisterInstance(&quot;three&quot;, &quot;ThirdString&quot;);
+
+// Resolve a collection of the strings
+IEnumerable&lt;string&gt; myStringInstances = resolver();
+</code></pre>
+</t></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/resolution/deferred.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2009–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
