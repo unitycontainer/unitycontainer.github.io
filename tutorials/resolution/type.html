@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> | Unity Container </title>
+    <title>Resolving an Object by Type | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" | Unity Container ">
+    <meta name="title" content="Resolving an Object by Type | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -67,7 +67,61 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="resolving-an-object-by-type">Resolving an Object by Type</h1>
 
+<p>Unity provides a method named <a class="xref" href="../../api/Unity.IUnityContainer.html#Unity_IUnityContainer_Resolve_System_Type_System_String_Unity_Resolution_ResolverOverride___">Resolve</a> that you can use to resolve an object by type, and optionally by providing a registration name. Registrations that do not specify a name are referred to as default registrations. This topic describes how to use the <a class="xref" href="../../api/Unity.IUnityContainer.html#Unity_IUnityContainer_Resolve_System_Type_System_String_Unity_Resolution_ResolverOverride___">Resolve</a> method to resolve types and mappings registered as default registrations. For information about resolving named registrations, see <a href="named_type.html">Resolving an Object by Type and Registration Name</a>.</p>
+<h2 id="the-resolve-method-overloads-for-default-registrations">The Resolve Method Overloads for Default Registrations</h2>
+<p>The following table describes the overloads of the Resolve method that return instances of objects based on the default registrations and mappings with the container. The API for the Unity container contains both generic and non-generic overloads of this method so that you can use it with languages that do not support the generics syntax.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Resolve&lt;T&gt;()</code></td>
+<td>Returns an instance of the type registered with the default name as the type T.</td>
+</tr>
+<tr>
+<td><code>Resolve(Type t)</code></td>
+<td>Returns an instance of the default type registered with the container as the type t.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-the-resolve-method-with-default-registrations">Using the Resolve Method with Default Registrations</h2>
+<p>The following examples show how you can use the Resolve method to create or obtain a reference to an object defined in the container configuration. Typically you will register a type mapping between an interface and a concrete type that implements it, or between a base class and a concrete type that inherits it. The examples use the run-time methods of the container to register the types it will resolve.</p>
+<h3 id="resolving-types-registered-as-interfaces">Resolving Types Registered as Interfaces</h3>
+<p>The following code registers a mapping for an interface named IService and specifies that the container should return an instance of the CustomerService class (which implements the IService interface). In this case, the type IService identifies the registration type. Code that requests an instance of the type IService receives an instance of the CustomerService class. The following example uses the generic overloads of the container methods.</p>
+<pre><code class="lang-cs">IUnityContainer container = new UnityContainer();
+container.RegisterType&lt;IService, CustomerService&gt;();
+var instance = container.Resolve&lt;IService&gt;();
+</code></pre>
+<p>Alternatively, you can use the non-generic overloads of the methods. The following code achieves the same result.</p>
+<pre><code class="lang-cs">IUnityContainer container = new UnityContainer();
+container.RegisterType&lt;IService, CustomerService&gt;();
+var instance = (IService)container.Resolve(typeof(IMyService));
+</code></pre>
+<h3 id="resolving-types-registered-as-base-classes">Resolving Types Registered as Base Classes</h3>
+<p>When you need to register a mapping for a base class or other object type (instead of an interface), you use the overloads of the RegisterType and Resolve methods that accept object type names. The following examples show the use of the overloads of the RegisterType and Resolve methods that accept object type names as the registration identifier.</p>
+<p>The following code registers a mapping for an object named MyBaseService and specifies that the container should return an instance of the CustomerService class (which inherits from the MyBaseService class). In this case, the type MyBaseService identifies the registration. Code that requests an instance of the type MyBaseService receives an instance of the CustomerService class.</p>
+<pre><code class="lang-cs">IUnityContainer myContainer = new UnityContainer();
+myContainer.RegisterType&lt;MyBaseService, CustomerService&gt;();
+MyBaseService myServiceInstance = myContainer.Resolve&lt;MyBaseService&gt;();
+</code></pre>
+<p>Alternatively, you can use the non-generic overloads of the methods. The following code achieves the same result.</p>
+<pre><code class="lang-cs">IUnityContainer myContainer = new UnityContainer();
+myContainer.RegisterType(typeof(MyBaseService), typeof(CustomerService));
+MyBaseService myServiceInstance = (MyBaseService)myContainer.Resolve(typeof(MyBaseService));
+</code></pre>
+<h3 id="note">Note</h3>
+<p>If the target class or object specifies any dependencies of its own, using constructor, property, or method call injection attributes, the instance returned will have these dependent objects injected automatically.</p>
+<p>By default, the RegisterType method registers a type with a transient lifetime, which means that the container will not hold onto a reference to the objects it creates when you call the Resolve method. Each time you call one of these methods, the container generates a new instance of the specified or mapped type. However, you can use lifetime managers to control the creation, lifetime, and disposal of objects if required.</p>
 </article>
           </div>
           
