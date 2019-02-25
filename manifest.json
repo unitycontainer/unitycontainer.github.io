@@ -1221,11 +1221,59 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tutorials/resolution/collections.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/resolution/collections.html",
+          "hash": "C59oOJIzBS3sXI0H+bDmGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/resolution/named_type.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/resolution/named_type.html",
+          "hash": "mW9K06Ahve1tnhCzr9jkaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/resolution/overrides.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/resolution/overrides.html",
+          "hash": "Z5Ix9lC9+2HVSKjkfprY+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tutorials/resolution/resolution.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/resolution/resolution.html",
-          "hash": "B4jBxbdZ8UrZ7pBDxhHb1w=="
+          "hash": "HlynHD+BIvJymj7/2VATGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/resolution/type.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/resolution/type.html",
+          "hash": "RPDRt6ksKZ/UnaJGVS20iw=="
         }
       },
       "is_incremental": false,
@@ -1237,7 +1285,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "etrpWiP0voaCdzOj1KrMdQ=="
+          "hash": "XI7zBDy+VhH/WpCU0rE4yA=="
         }
       },
       "is_incremental": false,
@@ -1277,7 +1325,13 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 22,
+          "total_file_count": 26,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 76,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
@@ -1285,12 +1339,6 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 76,
           "skipped_file_count": 0
         }
       }

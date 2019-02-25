@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Resolving Objects | Unity Container </title>
+    <title> | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Resolving Objects | Unity Container ">
+    <meta name="title" content=" | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -67,20 +67,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="resolving-objects">Resolving Objects</h1>
 
-<p>You can use the Unity container to generate instances of any object that has a public constructor (in other words, objects that you can create using the new operator). When you call the Resolve method and specify the type that is not registered, the container simply generates and returns an instance of that type. However, the only time that this is realistically practical is when the object you are generating does not have ambiguities Unity could not resolve or contains dependency attributes that the container will use to inject dependent objects into the requested object.</p>
-<p>The Unity container identifies type registrations and type mappings in the container using a type and, optionally, a name. The type is an interface or a class (usually an interface or base class) that the desired concrete object type implements or inherits. This identifies the mapping so that the container can retrieve the correct object type in response to a call to the <code>Resolve</code> method. Where there is more than one mapping for the same type, the optional name differentiates these mappings and allows code to specify which of the mappings for that type to use.</p>
-<p>The provision of both generic and non-generic overloads of many of the Unity container methods ensures that Unity can be used in languages that do not support generics. You can use either approach (the generic or the non-generic overloads) in your code and mix them as required.</p>
-<p>The following topics describe how you can resolve objects using the Resolve or BuildUp methods:</p>
-<ul>
-<li><a href="type.html">Resolving an Object by Type</a></li>
-<li><a href="named_type.html">Resolving an Object by Type and Registration Name</a></li>
-<li><a href="collections.html">Resolving collections of Objects of a Particular Type</a></li>
-<li><a href="overrides.html">Overrides</a></li>
-</ul>
-<p>For more information about how you can configure Unity with type registrations and mappings, see Registration.</p>
-<p>For more information about how you can perform dependency injection on existing object instances, see Using BuildUp to Wire Up Objects Not Created by the Container.</p>
 </article>
           </div>
           
@@ -89,7 +76,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/resolution/resolution.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/resolution/overrides.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
