@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> | Unity Container </title>
+    <title>Using Container Hierarchies | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" | Unity Container ">
+    <meta name="title" content="Using Container Hierarchies | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
@@ -67,7 +67,92 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-container-hierarchies">Using Container Hierarchies</h1>
 
+<p>Unity supports nested containers, allowing you to build container hierarchies. Nesting containers enables you to control the scope and lifetime of singleton objects, and register different mappings for specific types. This topic contains the following sections that describe how you can create container hierarchies and use them in your applications:</p>
+<ul>
+<li>Constructing and Disposing Unity Containers</li>
+<li>Controlling Object Scope and Lifetime</li>
+<li>Registering Different Mappings for Specific Types</li>
+</ul>
+<h2 id="constructing-and-disposing-unity-containers">Constructing and Disposing Unity Containers</h2>
+<p>The following methods enable you to create a new default UnityContainer, create a child container that has a specified UnityContainer as its parent, and dispose an existing container.
+| Method | Description |
+|:-----|-----|
+|<code>new UnityContainer()</code>|Creates a root UnityContainer. Returns a reference to the new container.|
+|<code>CreateChildContainer()</code>|Creates a new nested UnityContainer as a child of the current container. The current container first applies its own settings, and then it checks the parent for additional settings. Returns a reference to the new container.|
+|<code>Dispose()</code>|Disposes this container instance and any child containers. Also disposes any registered object instances whose lifetimes are managed by the container.|</p>
+<h2 id="controlling-object-scope-and-lifetime">Controlling Object Scope and Lifetime</h2>
+<p>When the container creates singleton objects, it manages the lifetime of these singletons. They remain in scope until you (or the garbage collector) dispose the container. At this point, it disposes the registered singleton instances it contains. In addition, if you dispose the parent container in a nested container hierarchy, it automatically disposes all child containers and the registered singletons they contain.</p>
+<p>Therefore, if you require two separate sets of such objects that must have different lifetimes, you can use hierarchical containers to store and manage each set. Register instances that you want to be able to dispose separately in one or more child containers that you can dispose without disposing the parent container.</p>
+<p>The following code demonstrates the use of a child container to manage the lifetime of specific singleton instances while maintaining the singleton instances in the parent container.</p>
+<pre><code class="lang-cs">// Create parent container
+IUnityContainer parentCtr = new UnityContainer();
+
+// Register type in parent container
+parentCtr.RegisterType&lt;MyParentObject&gt;(TypeLifetime.PerContainer);
+
+// Create nested child container in parent container
+IUnityContainer childCtr = parentCtr.CreateChildContainer();
+
+// Register type in child container
+childCtr.RegisterType&lt;MyChildObject&gt;(TypeLifetime.PerContainer);
+
+// Create instance of type stored in parent container
+MyParentObject parentObj = parentCtr.Resolve&lt;MyParentObject&gt;();
+
+// Create instance of type stored in child container
+MyChildObject childObj = childCtr.Resolve&lt;MyChildObject&gt;();
+
+// ... can use both generated objects here ...
+
+// Dispose child container
+childCtr.Dispose();
+
+// ... can use only object in parent container here ...
+
+// Dispose parent container
+parentCtr.Dispose();
+</code></pre>
+<h2 id="overriding-registrations">Overriding registrations</h2>
+<p>You can use nested containers when you have slightly different dependency injection requirements for specific objects but want to provide a fallback facility for objects that implement a specific interface or are of a specific type. For example, you may have a general requirement for objects that implement the IMyObject interface to map to the type MyStandardObject. However, in specific parts of the application code, you may want the IMyObject interface to map to the type MySpecialObject.</p>
+<p>In this case, you can register the general mapping in the parent container and register the specific case in a child container. Then, when you want to obtain an instance of the object, you call the Resolve method on the appropriate container. If you call the method on the child container, it returns an object of type MySpecialObject. If you call the method on the parent container, it returns an object of type MyStandardObject.</p>
+<p>However, the advantage with nested containers is that, if the child container cannot locate a mapping for the requested interface or type, it passes the request to its parent container and onward through the hierarchy until it reaches the root or base container. Therefore, for objects not mapped in the child container, the mapping in the parent container (or in an ancestor container where there are more than two levels in the hierarchy) defines the object type returned.</p>
+<p>The following code shows how you can implement the preceding scenario.</p>
+<pre><code class="lang-cs">// Create parent container
+IUnityContainer parentCtr = new UnityContainer();
+
+// Register two mappings for types in parent container
+parentCtr.RegisterType&lt;IMyObject, MyStandardObject&gt;();
+parentCtr.RegisterType&lt;IMyOtherObject, MyOtherObject&gt;();
+
+// Create nested child container in parent container
+IUnityContainer childCtr = parentCtr.CreateChildContainer();
+
+// Register mapping for specific type in child container
+childCtr.RegisterType&lt;IMyObject, MySpecialObject&gt;();
+
+// Now retrieve instances of the mapped objects using the child container.
+// Using the interface as the type for the returned objects means that it
+// does not matter which container returns the actual object.
+
+// This code returns an object of type MySpecialObject using the mapping
+// registered in the child container:
+IMyObject specialObject = childCtr.Resolve&lt;IMyObject&gt;();
+
+// This code returns an object of type MyOtherObject using the mapping
+// registered in the parent container because there is no mapping in 
+// the child container for this type:
+IMyOtherObject otherObject = childCtr.Resolve&lt;IMyOtherObject&gt;();
+
+// Now retrieve instance of the standard object using the parent container.
+// This code returns an object of type MyStandardObject using the mapping
+// registered in the parent container:
+IMyObject standardObject = parentCtr.Resolve&lt;IMyObject&gt;();
+
+// Dispose parent container and child container
+parentCtr.Dispose();
+</code></pre>
 </article>
           </div>
           
