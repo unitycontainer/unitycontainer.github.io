@@ -3127,6 +3127,12 @@ references:
   commentId: M:Unity.Override.Dependency(System.String,System.Object)
   fullName: Unity.Override.Dependency(System.String, System.Object)
   nameWithType: Override.Dependency(String, Object)
+- uid: Unity.Override.Dependency(System.Type,System.Object)
+  name: Dependency(Type, Object)
+  href: api/Unity.Override.html#Unity_Override_Dependency_System_Type_System_Object_
+  commentId: M:Unity.Override.Dependency(System.Type,System.Object)
+  fullName: Unity.Override.Dependency(System.Type, System.Object)
+  nameWithType: Override.Dependency(Type, Object)
 - uid: Unity.Override.Dependency(System.Type,System.String,System.Object)
   name: Dependency(Type, String, Object)
   href: api/Unity.Override.html#Unity_Override_Dependency_System_Type_System_String_System_Object_
@@ -3140,6 +3146,15 @@ references:
   isSpec: "True"
   fullName: Unity.Override.Dependency
   nameWithType: Override.Dependency
+- uid: Unity.Override.Dependency``1(System.Object)
+  name: Dependency<TType>(Object)
+  href: api/Unity.Override.html#Unity_Override_Dependency__1_System_Object_
+  commentId: M:Unity.Override.Dependency``1(System.Object)
+  name.vb: Dependency(Of TType)(Object)
+  fullName: Unity.Override.Dependency<TType>(System.Object)
+  fullName.vb: Unity.Override.Dependency(Of TType)(System.Object)
+  nameWithType: Override.Dependency<TType>(Object)
+  nameWithType.vb: Override.Dependency(Of TType)(Object)
 - uid: Unity.Override.Dependency``1(System.String,System.Object)
   name: Dependency<TType>(String, Object)
   href: api/Unity.Override.html#Unity_Override_Dependency__1_System_String_System_Object_
@@ -3401,13 +3416,30 @@ references:
   commentId: M:Unity.Resolution.DependencyOverride.Equals(System.Object)
   fullName: Unity.Resolution.DependencyOverride.Equals(System.Object)
   nameWithType: DependencyOverride.Equals(Object)
-- uid: Unity.Resolution.DependencyOverride.Equals(System.ValueTuple{System.Type,System.String})
-  name: Equals((Type, String))
-  href: api/Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_System_ValueTuple_System_Type_System_String__
-  commentId: M:Unity.Resolution.DependencyOverride.Equals(System.ValueTuple{System.Type,System.String})
-  fullName: Unity.Resolution.DependencyOverride.Equals(System.ValueTuple<System.Type, System.String>)
-  fullName.vb: Unity.Resolution.DependencyOverride.Equals(System.ValueTuple(Of System.Type, System.String))
-  nameWithType: DependencyOverride.Equals((Type, String))
+- uid: Unity.Resolution.DependencyOverride.Equals(System.Reflection.FieldInfo)
+  name: Equals(FieldInfo)
+  href: api/Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_System_Reflection_FieldInfo_
+  commentId: M:Unity.Resolution.DependencyOverride.Equals(System.Reflection.FieldInfo)
+  fullName: Unity.Resolution.DependencyOverride.Equals(System.Reflection.FieldInfo)
+  nameWithType: DependencyOverride.Equals(FieldInfo)
+- uid: Unity.Resolution.DependencyOverride.Equals(System.Reflection.ParameterInfo)
+  name: Equals(ParameterInfo)
+  href: api/Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_System_Reflection_ParameterInfo_
+  commentId: M:Unity.Resolution.DependencyOverride.Equals(System.Reflection.ParameterInfo)
+  fullName: Unity.Resolution.DependencyOverride.Equals(System.Reflection.ParameterInfo)
+  nameWithType: DependencyOverride.Equals(ParameterInfo)
+- uid: Unity.Resolution.DependencyOverride.Equals(System.Reflection.PropertyInfo)
+  name: Equals(PropertyInfo)
+  href: api/Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_System_Reflection_PropertyInfo_
+  commentId: M:Unity.Resolution.DependencyOverride.Equals(System.Reflection.PropertyInfo)
+  fullName: Unity.Resolution.DependencyOverride.Equals(System.Reflection.PropertyInfo)
+  nameWithType: DependencyOverride.Equals(PropertyInfo)
+- uid: Unity.Resolution.DependencyOverride.Equals(Unity.Resolution.NamedType)
+  name: Equals(NamedType)
+  href: api/Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_Unity_Resolution_NamedType_
+  commentId: M:Unity.Resolution.DependencyOverride.Equals(Unity.Resolution.NamedType)
+  fullName: Unity.Resolution.DependencyOverride.Equals(Unity.Resolution.NamedType)
+  nameWithType: DependencyOverride.Equals(NamedType)
 - uid: Unity.Resolution.DependencyOverride.Equals*
   name: Equals
   href: api/Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_
@@ -3705,6 +3737,37 @@ references:
   fullName.vb: Unity.Resolution.IResolverFactory(Of TMemberInfo).GetResolver(Of TContext)(TMemberInfo)
   nameWithType: IResolverFactory<TMemberInfo>.GetResolver<TContext>(TMemberInfo)
   nameWithType.vb: IResolverFactory(Of TMemberInfo).GetResolver(Of TContext)(TMemberInfo)
+- uid: Unity.Resolution.NamedType
+  name: NamedType
+  href: api/Unity.Resolution.NamedType.html
+  commentId: T:Unity.Resolution.NamedType
+  fullName: Unity.Resolution.NamedType
+  nameWithType: NamedType
+- uid: Unity.Resolution.NamedType.GetHashCode
+  name: GetHashCode()
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_GetHashCode
+  commentId: M:Unity.Resolution.NamedType.GetHashCode
+  fullName: Unity.Resolution.NamedType.GetHashCode()
+  nameWithType: NamedType.GetHashCode()
+- uid: Unity.Resolution.NamedType.GetHashCode*
+  name: GetHashCode
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_GetHashCode_
+  commentId: Overload:Unity.Resolution.NamedType.GetHashCode
+  isSpec: "True"
+  fullName: Unity.Resolution.NamedType.GetHashCode
+  nameWithType: NamedType.GetHashCode
+- uid: Unity.Resolution.NamedType.Name
+  name: Name
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_Name
+  commentId: F:Unity.Resolution.NamedType.Name
+  fullName: Unity.Resolution.NamedType.Name
+  nameWithType: NamedType.Name
+- uid: Unity.Resolution.NamedType.Type
+  name: Type
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_Type
+  commentId: F:Unity.Resolution.NamedType.Type
+  fullName: Unity.Resolution.NamedType.Type
+  nameWithType: NamedType.Type
 - uid: Unity.Resolution.ParameterOverride
   name: ParameterOverride
   href: api/Unity.Resolution.ParameterOverride.html

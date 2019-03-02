@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Injection.InjectionConstructor.html",
-          "hash": "tpB45FKLdO3IFTDDVDVKWw=="
+          "hash": "jEr3tkoiIALGHYHZ4GPp8A=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Injection.InjectionField.html",
-          "hash": "Eps1nJJeHLBbBQXAiAAr2g=="
+          "hash": "2LLvHuO6rSLKVbDdo5NqIA=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Injection.InjectionMethod.html",
-          "hash": "Tyvy/GathFBd5sAUkP+P9g=="
+          "hash": "uxcpEFy2/Q25yeN/++D5tw=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Injection.InjectionProperty.html",
-          "hash": "VxKlNuf0U4iOO5YkjsbBag=="
+          "hash": "S77V5UKS4BZ4cZDnyCnQ7g=="
         }
       },
       "is_incremental": false,
@@ -645,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Override.html",
-          "hash": "OZHFRmMtB/XedIelQP+Zmg=="
+          "hash": "bvYdAmTYu2i4qYdN/HaOVg=="
         }
       },
       "is_incremental": false,
@@ -705,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Resolution.DependencyOverride-1.html",
-          "hash": "mxxa9tmceevy7rhGUc84cg=="
+          "hash": "PZNyBEZ672RfMYLJ9Lrt9A=="
         }
       },
       "is_incremental": false,
@@ -717,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Resolution.DependencyOverride.html",
-          "hash": "P81GdNdo3U+k5S342DDNww=="
+          "hash": "v8Can1hiXOXHOpaEU3wu6A=="
         }
       },
       "is_incremental": false,
@@ -778,6 +778,18 @@
         ".html": {
           "relative_path": "api/Unity.Resolution.IResolverFactory-1.html",
           "hash": "qBKMU8fw5ZQgdse2CrluRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Resolution.NamedType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Resolution.NamedType.html",
+          "hash": "8Ot1fG08vu+a3utC/O1kHg=="
         }
       },
       "is_incremental": false,
@@ -861,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Resolution.html",
-          "hash": "9noE5EmHNvbFOKcK2tDqsA=="
+          "hash": "JC8M5lsTcrXv6O+nIKiufA=="
         }
       },
       "is_incremental": false,
@@ -945,7 +957,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "vmiNJaRo6/KX2tBFFN/buw=="
+          "hash": "p8ccdBDSB1XI4nSQYNC7wg=="
         }
       },
       "is_incremental": false,
@@ -993,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/features.html",
-          "hash": "px5t+1fSLtufAD72xQjwaQ=="
+          "hash": "z95UF/O75TjNId013++wOA=="
         }
       },
       "is_incremental": false,
@@ -1083,11 +1095,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tutorials/diagnostic.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/diagnostic.html",
+          "hash": "8w3demjiGFEiRQ/6s0mBSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tutorials/hierarchies.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/hierarchies.html",
           "hash": "8UbIOM0veaPYVxkOpS3hIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/legacy/legacy.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/legacy/legacy.html",
+          "hash": "1/oXHoisUyJOcfH6PVhPDA=="
         }
       },
       "is_incremental": false,
@@ -1135,7 +1171,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/managers.html",
-          "hash": "b6TWC7rfPh4f3M0K/OPMnw=="
+          "hash": "//sA+S+TqZstiv2TexPghA=="
         }
       },
       "is_incremental": false,
@@ -1372,7 +1408,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "8GiwLlGw8PruZ8uxqmpS4Q=="
+          "hash": "oS5d0psvNoIcEthc9P4wxg=="
         }
       },
       "is_incremental": false,
@@ -1412,7 +1448,13 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 33,
+          "total_file_count": 35,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 77,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
@@ -1420,12 +1462,6 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 76,
           "skipped_file_count": 0
         }
       }
