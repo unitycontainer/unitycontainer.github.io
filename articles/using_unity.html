@@ -147,6 +147,34 @@ var value = container.Resolve&lt;Foo&gt;();
 </code></pre>
 <p>During the resolution Unity tries to satisfy dependency of type <code>IService</code> and finds an instruction you left during registration to use type <code>Component</code> to satisfy it. It crates <code>Component</code>, satisfying all the dependencies, if required, and passes it to constructor of <code>Foo</code> as <code>IService</code>.</p>
 <p>For more information see <a href="xref:Tutorials.Registration.Type.Mapping">Type Mapping</a></p>
+<h2 id="lifetime">Lifetime</h2>
+<p>By default, when no lifetime manager is associated with type, Unity crates a new instance every time this type is requested. Instances created are not tracked and their lifetime is not managed by the container.</p>
+<pre><code class="lang-cs">// Register mapping between IService and Component
+container.RegisterType&lt;IService, Component&gt;();
+
+// Resolve Foo
+var value1 = container.Resolve&lt;IService&gt;();
+var value2 = container.Resolve&lt;IService&gt;();
+
+// value1 and value2 are not the same
+</code></pre>
+<p>To enable lifetime management of the crated instances, type needs to be registered with one of the compatible <a class="xref" href="../api/Unity.Lifetime.html">lifetime managers</a>. Depending on registration type Unity provides three utility types to help with registrations:</p>
+<ul>
+<li><a class="xref" href="../api/Unity.TypeLifetime.html">TypeLifetime</a></li>
+<li><a class="xref" href="../api/Unity.InstanceLifetime.html">InstanceLifetime</a></li>
+<li><a class="xref" href="../api/Unity.FactoryLifetime.html">FactoryLifetime</a></li>
+</ul>
+<p>To make <code>IService</code> a singleton for entire application and create it only once you would register it like this:</p>
+<pre><code class="lang-cs">// Register mapping between IService and Component
+container.RegisterType&lt;IService, Component&gt;(TypeLifetime.Singleton);
+
+// Resolve Foo
+var value1 = container.Resolve&lt;IService&gt;();
+var value2 = container.Resolve&lt;IService&gt;();
+
+// value1 and value2 are the same instance of Component
+</code></pre>
+<p>For more information see <a href="xref:Tutorials.Lifetime.Overview">Lifetime Management</a></p>
 </article>
           </div>
           
