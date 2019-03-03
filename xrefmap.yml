@@ -1,6 +1,12 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Tutorial.Registration.Type.Mapping
+  name: Type Mapping
+  href: tutorials/registration/mapping.html
+- uid: Tutorial.Resolution.Selection
+  name: Tutorial.Resolution.Selection
+  href: tutorials/resolution/selection.html
 - uid: Unity
   name: Unity
   href: api/Unity.html

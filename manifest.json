@@ -1217,15 +1217,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/registration/instance.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/instance.html",
-          "hash": "ntIhhsMSZGNerfcPyen6Rg=="
+          "hash": "oUZ8s/GrGJiGPQ6v/uRiyw=="
         }
       },
       "is_incremental": false,
@@ -1237,7 +1234,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/mapping.html",
-          "hash": "HEtt2L9joWiHamfRKcRTOg=="
+          "hash": "8iDhpniXM9yBsevlIrcXmA=="
         }
       },
       "is_incremental": false,
@@ -1396,7 +1393,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/resolution/selection.html",
-          "hash": "eJoQP/gwgp8Wlv9a/WG1Tg=="
+          "hash": "Ap1fJakoxEcQAWg31ym8/A=="
         }
       },
       "is_incremental": false,
@@ -1418,15 +1415,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Toc",
       "source_relative_path": "tutorials/toc.yml",
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "mmmxXGjlow9m/7eBqCB+mw=="
+          "hash": "Qs/yHdl8q4MWwusoOs9Wsw=="
         }
       },
       "is_incremental": false,
@@ -1456,16 +1450,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 36,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 77,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 36,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
