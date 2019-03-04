@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Annotating Objects for Constructor Injection | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Annotating Objects for Constructor Injection | Unity Container ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tutorial.Annotation.Constructor">
+<h1 id="annotating-objects-for-constructor-injection">Annotating Objects for Constructor Injection</h1>
+
+<p>Unity supports automatic dependency injection for class constructors. You can use the Unity container to generate instances of dependent objects and wire up the target class with these instances. This topic explains how to use both the automatic constructor injection mechanism and an attribute applied to the constructor of a class to define the dependency injection requirements of that class. The attribute can also specify parameters that the constructor will pass to the dependent object that the container generates.</p>
+<p>To perform injection of dependent classes into objects you create through the Unity container, you can use the following techniques:</p>
+<ul>
+<li><p><strong>Automatic Injection</strong>. With this technique, you allow the Unity container to select the constructor and satisfy any dependencies defined in parameters of the constructor automatically. It will select most complex constructor it can satisfy with dependencies.</p>
+</li>
+<li><p><strong>Constructor Injection</strong>. With this technique, you provide <a class="xref" href="../../api/Unity.Injection.InjectionConstructor.html">InjectionConstructor</a> injection member during registration of the type or the type mapping. This mechanism allows you to pick different constructor for each <a class="xref" href="../registration/mapping.html">Type Mapping</a> or each named registration you create.</p>
+</li>
+<li><p><strong><a class="xref" href="constructor.html">Constructor Injection Using an Attribute Annotation</a></strong>. With this technique, you apply attribute to the class constructor designating that constructor for dependency injection. When creating the class, Unity will always (unless registered <a href="(xref:Tutorial.Injection.Constructor)">InjectionConstructor</a> overrides the designation) use that constructor. You only need to use this technique when there is more than one constructor in the target class.</p>
+</li>
+</ul>
+<p>Constructor injection is a form of mandatory injection of dependent objects, as long as developers use the Unity container to generate the target object. The dependent object instance is generated when the Unity container creates an instance of the target class using the constructor. For more information, see Notes on Using Constructor Injection.</p>
+<h2 id="constructor-injection-using-an-attribute-annotation">Constructor Injection Using an Attribute Annotation</h2>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/Annotation/constructor.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2009–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

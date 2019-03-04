@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using Unity in Applications | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using Unity in Applications | Unity Container ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Article.Unity.Using">
+<h1 id="using-unity-in-applications">Using Unity in Applications</h1>
+
+<p>This topic describes how to develop applications using Unity, and how to create and build instances of objects. It assumes that you familiar with dependency injection and separation of concerns concepts.</p>
+<h2 id="the-container">The Container</h2>
+<p>Unity exposes very compact API to operate the container. The most operations related to registration, resolution, and lifetime management is exposed through one interface - <strong><a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a></strong>.</p>
+<p>To start using Unity you need to create an instance of the container and get reference to <a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a> interface:</p>
+<pre><code class="lang-cs">IUnityContainer container = new UnityContainer();
+</code></pre>
+<h2 id="creating-instances">Creating instances</h2>
+<p>Once container is created you could start using it immediately:</p>
+<pre><code class="lang-cs">IUnityContainer container = new UnityContainer();
+var value = container.Resolve&lt;object&gt;();
+
+// Calling Resolve&lt;object&gt;() is the same as 
+value = new object(); 
+</code></pre>
+<p>It will create any type with accessible constructor. Consider following example:</p>
+<pre><code class="lang-cs">// Simple class Foo
+public class Foo
+{
+    public Foo() { }
+
+    public Foo(object obj) { }
+
+    public Foo(string id, object obj) { }
+}
+
+// Create container
+IUnityContainer container = new UnityContainer();
+
+// Resolve Foo
+var value = container.Resolve&lt;Foo&gt;();
+
+// value created with constructor 'Foo(object obj)'
+</code></pre>
+<p><code>Foo</code> is a simple class with three public constructors. When <code>Resolve&lt;Foo&gt;()</code> is called, Unity will evaluate available constructors and select one with longest list of parameters it can satisfy with dependencies. It will create all required dependencies and pass them to selected constructor during initialization.</p>
+<p>In this particular case Unity will select second constructor with parameter <code>obj</code> of type <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>. Although constructor <code>Foo(string id, object obj)</code> is longer, it has parameter of type <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> which is a primitive type. Unity can not create primitive types by itself. If you want to make these available for dependency injection you would need to register them with the container. For Unity to select third constructor <code>Foo(string id, object obj)</code> you need to register string instance with container:</p>
+<pre><code class="lang-cs">// Register string instance
+container.RegisterInstance(&quot;xyz&quot;);
+
+// Resolve Foo
+var value = container.Resolve&lt;Foo&gt;();
+
+// value created with constructor 'Foo(string id, object obj)'
+</code></pre>
+<p>For more information on how Unity selects members see <a class="xref" href="../tutorials/resolution/selection.html">Member Selection</a></p>
+<h2 id="type-mapping">Type Mapping</h2>
+<p>In service oriented architecture contracts are represented by interfaces and components implement these contracts to provide services. Consider these types:</p>
+<pre><code class="lang-cs">// Public service contract
+public interface IService 
+{
+    // Service API
+}
+
+
+// Component implementing the contract
+public class Component : IService
+{
+    // Some logic here
+}
+
+
+// Service consumer
+public class Foo
+{
+    public Foo(IService service)
+    {
+        // Some logic here
+    }
+}
+</code></pre>
+<p>In this example we have <code>IService</code> interface defining an API and class <code>Component</code> implementing that API. Type <code>Foo</code> is a consumer of the service and should be injected by container with an instance of the service during initialization.</p>
+<p>If you just call <code>container.Resolve&lt;IService&gt;()</code> it will throw an exception complaining that it can not create an interface of type <code>IService</code>. You need to register a <a class="xref" href="../tutorials/registration/mapping.html">Type Mapping</a> to instructs Unity how to create service of type <code>IService</code>:</p>
+<pre><code class="lang-cs">// Register mapping between IService and Component
+container.RegisterType&lt;IService, Component&gt;();
+
+// Resolve Foo
+var value = container.Resolve&lt;Foo&gt;();
+
+// value created with constructor 'Foo(IService service)'
+</code></pre>
+<p>During the resolution, when Unity will try to satisfy dependencies, it will look for a registration for each dependency and will find this mapping. It will create <code>Component</code> and passes it to constructor of <code>Foo</code> as <code>IService</code>.</p>
+<p>For more information see <a class="xref" href="../tutorials/registration/mapping.html">Type Mapping</a></p>
+<h2 id="lifetime">Lifetime</h2>
+<p>By default Unity creates a new instance every time type is requested. Instances it created are not tracked or managed by the container.</p>
+<pre><code class="lang-cs">// Register mapping between IService and Component
+container.RegisterType&lt;IService, Component&gt;();
+
+// Resolve IService
+var value1 = container.Resolve&lt;IService&gt;();
+var value2 = container.Resolve&lt;IService&gt;();
+
+// value1 and value2 are not the same
+</code></pre>
+<p>To enable lifetime management, type needs to be registered with one of the compatible <a class="xref" href="../api/Unity.Lifetime.html">lifetime managers</a>. Depending on registration type Unity provides three helpers:</p>
+<ul>
+<li><a class="xref" href="../api/Unity.TypeLifetime.html">TypeLifetime</a></li>
+<li><a class="xref" href="../api/Unity.InstanceLifetime.html">InstanceLifetime</a></li>
+<li><a class="xref" href="../api/Unity.FactoryLifetime.html">FactoryLifetime</a></li>
+</ul>
+<p>For example, to make <code>IService</code> a singleton for the entire application and create it only once you would register it like this:</p>
+<pre><code class="lang-cs">// Register mapping between IService and Component
+container.RegisterType&lt;IService, Component&gt;(TypeLifetime.Singleton);
+
+// Resolve IService
+var value1 = container.Resolve&lt;IService&gt;();
+var value2 = container.Resolve&lt;IService&gt;();
+
+// value1 and value2 are the same instance of Component
+</code></pre>
+<p>For more information see <a class="xref" href="../tutorials/lifetime/lifetime.html">Lifetime Management</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/articles/quickstart.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2009–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
