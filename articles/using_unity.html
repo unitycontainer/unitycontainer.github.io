@@ -66,18 +66,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Article.Unity.Using">
 <h1 id="using-unity-in-applications">Using Unity in Applications</h1>
 
 <p>This topic describes how to develop applications using Unity, and how to create and build instances of objects. It assumes that you familiar with dependency injection and separation of concerns concepts.</p>
 <h2 id="the-container">The Container</h2>
 <p>Unity exposes very compact API to operate the container. The most operations related to registration, resolution, and lifetime management is exposed through one interface - <strong><a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a></strong>.</p>
-<p>So, to start using Unity you need to create an instance of the container and get reference to <a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a> interface:</p>
+<p>To start using Unity you need to create an instance of the container and get reference to <a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a> interface:</p>
 <pre><code class="lang-cs">IUnityContainer container = new UnityContainer();
 </code></pre>
 <h2 id="creating-instances">Creating instances</h2>
-<p>In basic scenario, once container is created you could immediately start using it:</p>
-<pre><code class="lang-cs">var value = container.Resolve&lt;object&gt;();
+<p>Once container is created you could start using it immediately:</p>
+<pre><code class="lang-cs">IUnityContainer container = new UnityContainer();
+var value = container.Resolve&lt;object&gt;();
+
+// Calling Resolve&lt;object&gt;() is the same as 
+value = new object(); 
 </code></pre>
 <p>It will create any type with accessible constructor. Consider following example:</p>
 <pre><code class="lang-cs">// Simple class Foo
@@ -108,7 +112,7 @@ var value = container.Resolve&lt;Foo&gt;();
 
 // value created with constructor 'Foo(string id, object obj)'
 </code></pre>
-<p>For more information on how Unity selects members see <a href="xref:Tutorials.Resolution.Selection">Member Selection</a></p>
+<p>For more information on how Unity selects members see <a class="xref" href="../tutorials/resolution/selection.html">Member Selection</a></p>
 <h2 id="type-mapping">Type Mapping</h2>
 <p>In service oriented architecture contracts are represented by interfaces and components implement these contracts to provide services. Consider these types:</p>
 <pre><code class="lang-cs">// Public service contract
@@ -134,9 +138,8 @@ public class Foo
     }
 }
 </code></pre>
-<p>In this example we have <code>IService</code> interface defining an API and class <code>Component</code> implementing that API. Type <code>Foo</code> is a consumer of the service and should be injected by container with an instance of the service during creating.</p>
-<p>If you just call <code>container.Resolve&lt;IService&gt;()</code> it will throw an exception complaining that it can not crate an interface type. It does no know that type <code>Component</code> implements the interface and should be crated as a dependency.</p>
-<p>Type mapping crated during registration instructs Unity to create implementation type (<code>Component</code> in this case) when service type (<code>IService</code> in this example) is requested:</p>
+<p>In this example we have <code>IService</code> interface defining an API and class <code>Component</code> implementing that API. Type <code>Foo</code> is a consumer of the service and should be injected by container with an instance of the service during initialization.</p>
+<p>If you just call <code>container.Resolve&lt;IService&gt;()</code> it will throw an exception complaining that it can not create an interface of type <code>IService</code>. You need to register a <a class="xref" href="../tutorials/registration/mapping.html">Type Mapping</a> to instructs Unity how to create service of type <code>IService</code>:</p>
 <pre><code class="lang-cs">// Register mapping between IService and Component
 container.RegisterType&lt;IService, Component&gt;();
 
@@ -145,10 +148,10 @@ var value = container.Resolve&lt;Foo&gt;();
 
 // value created with constructor 'Foo(IService service)'
 </code></pre>
-<p>During the resolution Unity tries to satisfy dependency of type <code>IService</code> and finds an instruction you left during registration to use type <code>Component</code> to satisfy it. It crates <code>Component</code>, satisfying all the dependencies, if required, and passes it to constructor of <code>Foo</code> as <code>IService</code>.</p>
-<p>For more information see <a href="xref:Tutorials.Registration.Type.Mapping">Type Mapping</a></p>
+<p>During the resolution, when Unity will try to satisfy dependencies, it will look for a registration for each dependency and will find this mapping. It will create <code>Component</code> and passes it to constructor of <code>Foo</code> as <code>IService</code>.</p>
+<p>For more information see <a class="xref" href="../tutorials/registration/mapping.html">Type Mapping</a></p>
 <h2 id="lifetime">Lifetime</h2>
-<p>By default Unity crates a new instance every time type is requested. Instances it created are not tracked and their lifetime is not managed by the container.</p>
+<p>By default Unity creates a new instance every time type is requested. Instances it created are not tracked or managed by the container.</p>
 <pre><code class="lang-cs">// Register mapping between IService and Component
 container.RegisterType&lt;IService, Component&gt;();
 
@@ -158,13 +161,13 @@ var value2 = container.Resolve&lt;IService&gt;();
 
 // value1 and value2 are not the same
 </code></pre>
-<p>To enable lifetime management of the crated instances, type needs to be registered with one of the compatible <a class="xref" href="../api/Unity.Lifetime.html">lifetime managers</a>. Depending on registration type Unity provides three utility types to help with registrations:</p>
+<p>To enable lifetime management, type needs to be registered with one of the compatible <a class="xref" href="../api/Unity.Lifetime.html">lifetime managers</a>. Depending on registration type Unity provides three helpers:</p>
 <ul>
 <li><a class="xref" href="../api/Unity.TypeLifetime.html">TypeLifetime</a></li>
 <li><a class="xref" href="../api/Unity.InstanceLifetime.html">InstanceLifetime</a></li>
 <li><a class="xref" href="../api/Unity.FactoryLifetime.html">FactoryLifetime</a></li>
 </ul>
-<p>To make <code>IService</code> a singleton for entire application and create it only once you would register it like this:</p>
+<p>For example, to make <code>IService</code> a singleton for the entire application and create it only once you would register it like this:</p>
 <pre><code class="lang-cs">// Register mapping between IService and Component
 container.RegisterType&lt;IService, Component&gt;(TypeLifetime.Singleton);
 
@@ -174,7 +177,7 @@ var value2 = container.Resolve&lt;IService&gt;();
 
 // value1 and value2 are the same instance of Component
 </code></pre>
-<p>For more information see <a href="xref:Tutorials.Lifetime.Overview">Lifetime Management</a></p>
+<p>For more information see <a class="xref" href="../tutorials/lifetime/lifetime.html">Lifetime Management</a></p>
 </article>
           </div>
           

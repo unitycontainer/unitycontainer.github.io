@@ -1,12 +1,81 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: Tutorial.Registration.Type.Mapping
+- uid: Article.Application.Design
+  name: Application Design Concepts with Unity
+  href: articles/application.html
+- uid: Article.Unity.Design
+  name: Design of Unity
+  href: articles/design.html
+- uid: Article.Unity.Features
+  name: Features
+  href: articles/features.html
+- uid: Article.Unity.Install
+  name: Adding Unity to Your Application
+  href: articles/installation.html
+- uid: Article.Unity.Introduction
+  name: Overview
+  href: articles/introduction.html
+- uid: Article.Unity.Using
+  name: Using Unity in Applications
+  href: articles/quickstart.html
+- uid: Tutorial.Annotation.Constructor
+  name: Annotating Objects for Constructor Injection
+  href: tutorials/Annotation/constructor.html
+- uid: Tutorial.Annotation.Field
+  name: Annotating Objects for Field Injection
+  href: tutorials/Annotation/field.html
+- uid: Tutorial.Annotation.Method
+  name: Annotating Objects for Method Call Injection
+  href: tutorials/Annotation/method.html
+- uid: Tutorial.Annotation.Overview
+  name: Using Injection Attributes
+  href: tutorials/Annotation/overview.html
+- uid: Tutorial.Annotation.Parameter
+  name: Annotating Constructors and Methods for Parameter Injection
+  href: tutorials/Annotation/parameter.html
+- uid: Tutorial.Annotation.Property
+  name: Annotating Objects for Property Injection
+  href: tutorials/Annotation/property.html
+- uid: Tutorial.Injection.Constructor
+  name: Tutorial.Injection.Constructor
+  href: tutorials/Registration/Injection/constructor.html
+- uid: Tutorial.Lifetime.Overview
+  name: Lifetime
+  href: tutorials/lifetime/lifetime.html
+- uid: Tutorial.Registration.Factory
+  name: Factory Registration
+  href: tutorials/registration/factory.html
+- uid: Tutorial.Registration.Injection
+  name: Injection Members
+  href: tutorials/registration/injection.html
+- uid: Tutorial.Registration.Instance
+  name: Instance Registration
+  href: tutorials/registration/instance.html
+- uid: Tutorial.Registration.Mapping
   name: Type Mapping
   href: tutorials/registration/mapping.html
+- uid: Tutorial.Registration.Metadata
+  name: Registration Metadata
+  href: tutorials/registration/metadata.html
+- uid: Tutorial.Registration.Overview
+  name: Registering Types with Unity
+  href: tutorials/registration/registration.html
+- uid: Tutorial.Registration.Type
+  name: Type Registration
+  href: tutorials/Registration/Type/type.html
+- uid: Tutorial.Resolution.Overview
+  name: Resolving Objects
+  href: tutorials/resolution/resolution.html
 - uid: Tutorial.Resolution.Selection
   name: Tutorial.Resolution.Selection
   href: tutorials/resolution/selection.html
+- uid: Tutorial.Resolution.Type
+  name: Resolving an Object by Type
+  href: tutorials/resolution/type.html
+- uid: Tutorial.Workflow.Overview
+  name: Unity Workflow
+  href: tutorials/workflow.html
 - uid: Unity
   name: Unity
   href: api/Unity.html

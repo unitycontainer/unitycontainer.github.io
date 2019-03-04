@@ -66,7 +66,7 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Tutorial.Registration.Overview">
 <h1 id="registering-types-with-unity">Registering Types with Unity</h1>
 
 <p>Unity does not require <code>Type</code> to be registered to resolve it.</p>
@@ -86,28 +86,24 @@
 </ul>
 <h2 id="what-is-a-registration-and-how-it-works">What is a Registration and how it works</h2>
 <p>When you register a <code>Type</code>, you are instructing Unity how to create and initialize an instance of that <code>Type</code> during instantiation. You also instruct Unity how to deal with the crated instance during its lifetime.</p>
-<p>Once registration is complete, Unity creates a blueprint of the type factory where it stores implementation details (name, to and from types, etc.), information about what members to inject and how, and lifetime manager responsible for managing the instance. <br>
+<p>Once registration is complete, Unity creates a blueprint of the type factory where it stores implementation details (name, to and from types, etc.), information about what members to inject and how, and lifetime manager responsible for managing the instance.
 At the later time, when that <code>Type</code> is requested, Unity uses this blueprint to create a pipeline (resolver delegate) to be used to create type.</p>
-<p>Each Unity container exposes a <a class="xref" href="../../api/Unity.IUnityContainer.html#Unity_IUnityContainer_Registrations">collection</a> of available registrations presented as an enumeration of <a class="xref" href="../../api/Unity.IContainerRegistration.html">IContainerRegistration</a> objects. This collection could be used to filter and select certain registrations as well as to <a href="xref:#Unity.IUnityContainer#Unity_IUnityContainer_IsRegistered_System_Type_System_String_">check if the <code>Type</code> is registered</a> and how.</p>
+<p>Each Unity container exposes a <a class="xref" href="../../api/Unity.IUnityContainer.html#Unity_IUnityContainer_Registrations">collection</a> of available registrations presented as an enumeration of <a class="xref" href="../../api/Unity.IContainerRegistration.html">IContainerRegistration</a> objects. This collection could be used to filter and select certain registrations as well as to <a class="xref" href="../../api/Unity.IUnityContainer.html#Unity_IUnityContainer_IsRegistered_System_Type_System_String_">check if the <code>Type</code> is registered</a> and how.</p>
 <h2 id="different-types-of-registrations">Different types of registrations</h2>
 <p>Unity recognizes three different scenarios of how instances and types are created:</p>
-<h4 id="instances-created-outside-of-unity">Instances created outside of Unity</h4>
-<p>A lot of times parts of system's infrastructure require to be available to clients and services of the application. These entities are created and managed outside of Unity but should be accessible by consumers of the framework during subsequent resolutions. <br>
-To enable access to these objects Unity provides a way to register instances. For more information see <a href="instance.html">Instance Registration</a>.</p>
-<h4 id="instances-created-by-registered-type-factories">Instances created by registered Type factories</h4>
-<p>Although Unity is quite capable in creating instance of types, sometimes it is more efficient or desireable to use <code>Type</code> factories. Unity satisfies this requirement by providing API to register a special factory delegate. For more information see <a href="factory.html">Factory Registration</a></p>
-<h4 id="instances-created-by-unity">Instances created by Unity</h4>
-<p>This is the most common scenario where objects are created by the container itself. Creation process is controlled by either <code>Type</code> registrations associated with the container or implicit Unity defaults if none registered. For more information how <code>Type</code> can be registered see <a href="type.html">Type Registration</a></p>
+<h3 id="instances-created-outside-of-unity">Instances created outside of Unity</h3>
+<p>A lot of times parts of system's infrastructure require to be available to clients and services of the application. These entities are created and managed outside of Unity but should be accessible by consumers of the framework during subsequent resolutions.
+To enable access to these objects Unity provides a way to register instances. For more information see <a class="xref" href="instance.html">Instance Registration</a>.</p>
+<h3 id="instances-created-by-registered-type-factories">Instances created by registered Type factories</h3>
+<p>Although Unity is quite capable in creating instance of types, sometimes it is more efficient or desireable to use <code>Type</code> factories. Unity satisfies this requirement by providing API to register a special factory delegate. For more information see <a class="xref" href="factory.html">Factory Registration</a></p>
+<h3 id="instances-created-by-unity">Instances created by Unity</h3>
+<p>This is the most common scenario where objects are created by the container itself. Creation process is controlled by either <code>Type</code> registrations associated with the container or implicit Unity defaults if none registered. For more information how <code>Type</code> can be registered see <a class="xref" href="type.html">Type Registration</a></p>
 <h2 id="registration-hierarchies">Registration Hierarchies</h2>
 <p>Unity container provides a way to create child containers (other systems refer to it as resolution scopes) and allows building sophisticated scope trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies:</p>
-<ul>
-<li><p><strong>Types registered in predecessor containers always available in descendant containers</strong><br>
-This is a very simple concept, each registration is like a public virtual declaration in cs types. Every descendant inherits it and can use at will.</p>
-</li>
-<li><p><strong>Types registered in descendant containers override the same registration of predecessors</strong><br>
-Following the same analogy with public virtual declarations, each override registration installs its own declaration and hides the one in predecessor containers.</p>
-</li>
-</ul>
+<h3 id="types-registered-in-predecessor-containers-always-available-in-descendant-containers">Types registered in predecessor containers always available in descendant containers</h3>
+<p>This is a very simple concept, each registration is like a public virtual declaration in cs types. Every descendant inherits it and can use at will.</p>
+<h3 id="types-registered-in-descendant-containers-override-the-same-registration-of-predecessors">Types registered in descendant containers override the same registration of predecessors</h3>
+<p>Following the same analogy with public virtual declarations, each override registration installs its own declaration and hides the one in predecessor containers.</p>
 </article>
           </div>
           

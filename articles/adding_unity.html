@@ -66,15 +66,15 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Article.Unity.Install">
 <h1 id="adding-unity-to-your-application">Adding Unity to Your Application</h1>
 
 <p>Unity is designed to support a range of common scenarios for resolving instances of objects that, themselves, depend on other objects or services. However, you must first prepare your application to use Unity. The following procedure describes how to include the necessary assemblies and elements in your code.</p>
 <h2 id="to-prepare-your-application">To prepare your application</h2>
 <p>Before you can add Unity to your solution you need to decide if you want to reference packages individually (<a href="https://www.nuget.org/packages/Unity.Abstractions/">Abstractions</a>, <a href="https://www.nuget.org/packages/Unity.Container/">Container</a>) or use composite <a href="%5BUnity%5D(https://www.nuget.org/packages/Unity/)">Unity</a> package.</p>
-<h4 id="referencing-composite-package">Referencing composite package</h4>
+<h3 id="referencing-composite-package">Referencing composite package</h3>
 <p>Referencing single <a href="%5BUnity%5D(https://www.nuget.org/packages/Unity/)">Unity</a> package is more appropriate in case of small(ish) project, when everything is contained within one solution. Upgrading such solution is trivial with the help of NuGet Manager.</p>
-<h4 id="referencing-individual-packages">Referencing individual packages</h4>
+<h3 id="referencing-individual-packages">Referencing individual packages</h3>
 <p>Main benefit of referencing <a href="https://www.nuget.org/packages/Unity.Abstractions/">Abstractions</a> and <a href="https://www.nuget.org/packages/Unity.Container/">Container</a> packages individually is when it is used in large project spanning multiple solutions, modules, and project files.</p>
 <p>Normally modular systems have one main application/module with boot-loader responsible for initializing environment, and number of modules loaded by it (<a href="https://prismlibrary.github.io/">Prism library</a> for example). This boot loader is required to reference both <a href="https://www.nuget.org/packages/Unity.Abstractions/">Abstractions</a> and <a href="https://www.nuget.org/packages/Unity.Container/">Container</a> packages.</p>
 <p>In such systems modules are created and distributed by various teams and departments and synchronization between these might be a challenge. This is where Unity comes in.
@@ -90,7 +90,7 @@ Install-Package Unity.Abstractions
 Install-Package Unity.Container
 </code></pre>
 <p>If you wish to use <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files#floating-versions">Floating Version references</a> it is recommended to lock in the minor and major versions and only allow patch version to slide:</p>
-<pre><code>&lt;PackageReference Include=&quot;Unity.Container&quot; Version=&quot;5.9.*&quot; /&gt;
+<pre><code class="lang-js">&lt;PackageReference Include=&quot;Unity.Container&quot; Version=&quot;5.9.*&quot; /&gt;
 </code></pre>
 <p>doing so will guarantee that no breaking change caught you of guard.</p>
 </article>

@@ -66,7 +66,7 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Tutorial.Lifetime.Overview">
 <h1 id="lifetime">Lifetime</h1>
 
 <p>The Unity container manages the lifetime of objects based on a <a class="xref" href="../../api/Unity.Lifetime.html">Lifetime Manager</a> you specify when you register the type. If you do not specify anything for your type registration Unity uses transient lifetime manager.</p>
@@ -85,8 +85,8 @@
 When type is registered as a mapping:</p>
 <pre><code class="lang-C#">RegisterType&lt;IService, SomeType&gt;();
 </code></pre>
-<p><strong>Registered</strong> type (used to be called <strong>From</strong> type) is always the first in the sequence, in this case <code>IService</code>. Registration like this tells Unity that when <code>ISerive</code> is requested it should resolve it as <code>SomeType</code> and return as <code>ISerive</code>.
-When next time you call <code>Resolve&lt;ISerive&gt;()</code> Unity performs following tasks:</p>
+<p><strong>Registered</strong> type (used to be called <strong>From</strong> type) is always the first in the sequence, in this case <code>IService</code>. Registration like this tells Unity that when <code>IService</code> is requested it should resolve it as <code>SomeType</code> and return as <code>IService</code>.
+When next time you call <code>Resolve&lt;IService&gt;()</code> Unity performs following tasks:</p>
 <ul>
 <li>Checks if <code>SomeType</code> is registered and if yes, resolves that registration</li>
 <li>If <code>SomeType</code> is not registered Unity creates it and returns to the caller</li>

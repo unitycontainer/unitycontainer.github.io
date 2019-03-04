@@ -124,9 +124,17 @@ an attempt to resolve a dependency fails.</p>
   </h3>
       <h4><a class="xref" href="Unity.IContainerRegistration.html">IContainerRegistration</a></h4>
       <section><p>Information about the types registered in a container.</p>
+<p>
+Types registered with container are stored in registry and exposed to outside world
+through <a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_Registrations">Registrations</a> enumeration. Each record is 
+represented by an instance of this interface.
+</p>
 </section>
       <h4><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></h4>
       <section><p>Interface defining the behavior of the Unity dependency injection container.</p>
+<p>This interface defines a compact API that allows registration of types, instances, and 
+factories, resolution of new objects or initialization of existing instances, scope manipulations,
+and etc.</p>
 </section>
       <h4><a class="xref" href="Unity.IUnityContainerAsync.html">IUnityContainerAsync</a></h4>
       <section><p>Interface defining the behavior of the Unity dependency injection container.</p>
