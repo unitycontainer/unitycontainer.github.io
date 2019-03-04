@@ -39,7 +39,7 @@ references:
   href: tutorials/Annotation/property.html
 - uid: Tutorial.Injection.Constructor
   name: Tutorial.Injection.Constructor
-  href: tutorials/Registration/Injection/constructor.html
+  href: tutorials/registration/Injection/constructor.html
 - uid: Tutorial.Lifetime.Overview
   name: Lifetime
   href: tutorials/lifetime/lifetime.html
@@ -63,7 +63,7 @@ references:
   href: tutorials/registration/registration.html
 - uid: Tutorial.Registration.Type
   name: Type Registration
-  href: tutorials/Registration/Type/type.html
+  href: tutorials/registration/Type/type.html
 - uid: Tutorial.Resolution.Overview
   name: Resolving Objects
   href: tutorials/resolution/resolution.html
