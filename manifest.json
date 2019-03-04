@@ -1095,6 +1095,7 @@
     },
     {
       "log_codes": [
+        "InvalidFileLink",
         "UidNotFound"
       ],
       "type": "Conceptual",
@@ -1102,7 +1103,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/Annotation/constructor.html",
-          "hash": "mhlyWCQVJmS3zPP0u0pXfA=="
+          "hash": "IasOM+gvwuk4/7J0SiXb9Q=="
         }
       },
       "is_incremental": false,
