@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Annotating Objects for Field Injection | Unity Container </title>
+    <title>Annotating types for Field injection | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Annotating Objects for Field Injection | Unity Container ">
+    <meta name="title" content="Annotating types for Field injection | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -67,8 +67,15 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Tutorial.Annotation.Field">
-<h1 id="annotating-objects-for-field-injection">Annotating Objects for Field Injection</h1>
+<h1 id="annotating-types-for-field-injection">Annotating types for Field injection</h1>
 
+<p>By default Unity does not inject any fields of the classes it creates.</p>
+<p>To enable field injection you need to configure Unity during registration of annotate appropriate fields with dependency attributes. Unity supports two types of field injection:</p>
+<ul>
+<li>Required injection - Unity either satisfies this dependency or throws an exception</li>
+<li>Optional injection - Unity either satisfies this dependency or returns <code>null</code></li>
+</ul>
+<h2 id="field-injection">Field injection</h2>
 </article>
           </div>
           

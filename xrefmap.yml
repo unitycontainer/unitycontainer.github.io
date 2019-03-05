@@ -23,7 +23,7 @@ references:
   name: Annotating types for Constructor invocation
   href: tutorials/Annotation/constructor.html
 - uid: Tutorial.Annotation.Field
-  name: Annotating Objects for Field Injection
+  name: Annotating types for Field injection
   href: tutorials/Annotation/field.html
 - uid: Tutorial.Annotation.Method
   name: Annotating types for Method invocation
