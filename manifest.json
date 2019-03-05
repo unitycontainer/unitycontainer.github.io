@@ -1178,15 +1178,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/Annotation/constructor.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/Annotation/constructor.html",
-          "hash": "4fcbzTb//xvbxyJZdmNjvQ=="
+          "hash": "bO54afdSPy6cTomCBZRiUg=="
         }
       },
       "is_incremental": false,
@@ -1217,15 +1214,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/Annotation/overview.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/Annotation/overview.html",
-          "hash": "HP0dcqEM7T3rPXYR5OjtwA=="
+          "hash": "nHfWFQFmNPz80bvDB7hXGw=="
         }
       },
       "is_incremental": false,

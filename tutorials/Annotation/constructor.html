@@ -71,7 +71,7 @@
 
 <p>When classes are created, Unity provides following mechanisms to properly select and execute constructors:</p>
 <ul>
-<li><p><strong><a href="xref:Tutorial.Selection.Constructor">Automatic Injection</a></strong>. With this technique, you allow the Unity container to select the constructor and satisfy any dependencies defined in parameters of the constructor automatically. It will select most complex constructor it can satisfy with dependencies.</p>
+<li><p><strong>Automatic Injection</strong>. With this technique, you allow the Unity container to select the constructor and satisfy any dependencies defined in parameters of the constructor automatically. It will select most complex constructor it can satisfy with dependencies.</p>
 </li>
 <li><p><strong><a class="xref" href="../registration/Injection/constructor.html">Constructor Injection</a></strong>. With this technique, you provide <a class="xref" href="../../api/Unity.Injection.InjectionConstructor.html">InjectionConstructor</a> injection member during registration of the type or the type mapping. This mechanism allows you to pick different constructor for each <a class="xref" href="../registration/mapping.html">Type Mapping</a> or each named registration you create.</p>
 </li>
@@ -108,7 +108,6 @@
                          Invoke.Constructor(typeof(SomeOtherClass)))
 </code></pre>
 <p>In this example you create registration for type <code>MyObject</code> with name <code>&quot;Special Case&quot;</code> and instruct Unity to select constructor that takes one parameter of type <code>SomeOtherClass</code>. When registration has explicitly defined by injection member constructor, Unity will ignore <a class="xref" href="../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute and use injected constructor instead.</p>
-<p>For more information see <a href="xref:Tutorial.Selection.Constructor">Constructor Selection</a></p>
 </article>
           </div>
           
