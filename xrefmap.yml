@@ -20,13 +20,13 @@ references:
   name: Using Unity in Applications
   href: articles/quickstart.html
 - uid: Tutorial.Annotation.Constructor
-  name: Annotating Objects for Constructor Injection
+  name: Annotating types for Constructor invocation
   href: tutorials/Annotation/constructor.html
 - uid: Tutorial.Annotation.Field
   name: Annotating Objects for Field Injection
   href: tutorials/Annotation/field.html
 - uid: Tutorial.Annotation.Method
-  name: Annotating Objects for Method Call Injection
+  name: Annotating types for Method invocation
   href: tutorials/Annotation/method.html
 - uid: Tutorial.Annotation.Overview
   name: Using Injection Attributes
@@ -73,6 +73,9 @@ references:
 - uid: Tutorial.Resolution.Type
   name: Resolving an Object by Type
   href: tutorials/resolution/type.html
+- uid: Tutorial.Unity.Diagnostic
+  name: Tutorial.Unity.Diagnostic
+  href: tutorials/diagnostic.html
 - uid: Tutorial.Workflow.Overview
   name: Unity Workflow
   href: tutorials/workflow.html

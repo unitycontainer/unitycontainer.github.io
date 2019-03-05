@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Annotating Objects for Method Call Injection | Unity Container </title>
+    <title>Annotating types for Method invocation | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Annotating Objects for Method Call Injection | Unity Container ">
+    <meta name="title" content="Annotating types for Method invocation | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -67,8 +67,73 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Tutorial.Annotation.Method">
-<h1 id="annotating-objects-for-method-call-injection">Annotating Objects for Method Call Injection</h1>
+<h1 id="annotating-types-for-method-invocation">Annotating types for Method invocation</h1>
 
+<p>Method invocation is an optional step you can add to the created object's initialization. Any accessible method could be invoked, provided Unity can satisfy all the parameters with appropriate values.</p>
+<h2 id="method-annotation">Method Annotation</h2>
+<p>To enable method invocation during object initialization you could apply <a class="xref" href="../../api/Unity.InjectionMethodAttribute.html">InjectionMethod</a> attribute to the method you want to be executed.</p>
+<pre><code class="lang-cs">public class Service
+{
+    ...
+    private void PreInitialize(...)
+    {
+        ...
+    }
+
+    [InjectionMethod]
+    public void Initialize(...)
+    {
+        ...
+    }
+
+    public void PostInitialize(...)
+    {
+        ...
+    }
+}
+</code></pre>
+<p>In example above attribute <a class="xref" href="../../api/Unity.InjectionMethodAttribute.html">InjectionMethod</a> is applied to method <code>Initialize(...)</code> and the method will be executed immediately after the object is created.</p>
+<h2 id="multiple-method-annotation">Multiple Method Annotation</h2>
+<p>Unity does not place any restrictions on how many methods of the class to be invoked during initialization. You could mark any and all methods with the attribute and Unity will execute them all:</p>
+<pre><code class="lang-cs">public class Service
+{
+    ...
+
+    [InjectionMethod]
+    public void PreInitialize(...)
+    {
+        ...
+    }
+
+    [InjectionMethod]
+    public void Initialize(...)
+    {
+        ...
+    }
+
+    [InjectionMethod]
+    public void PostInitialize(...)
+    {
+        ...
+    }
+}
+</code></pre>
+<h2 id="annotating-private-and-protected-methods">Annotating <code>private</code> and <code>protected</code> methods</h2>
+<p>Although it is technically possible to call <code>private</code> and <code>protected</code> methods of the class, Unity does not support this feature. This restriction is implemented to impose consistency with accessibility principles of <code>C#</code> language.</p>
+<p>Unity will ignore attributes on non accessible methods.</p>
+<pre><code class="lang-cs">public class Service
+{
+    ...
+
+    [InjectionMethod]
+    protected void ProtectedMethod(...)
+    {
+        ...
+    }
+}
+</code></pre>
+<p>In example above method <code>ProtectedMethod(...)</code> will not be called.</p>
+<p>If <a class="xref" href="../diagnostic.html">Unity Diagnostic</a> is enabled, the container will throw an exception when it encounters such an annotation. For more information see  <a class="xref" href="../diagnostic.html">Unity Diagnostic</a>.</p>
 </article>
           </div>
           
