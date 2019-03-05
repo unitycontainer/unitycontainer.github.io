@@ -19,6 +19,21 @@ references:
 - uid: Article.Unity.Using
   name: Using Unity in Applications
   href: articles/quickstart.html
+- uid: Specification.Constructor
+  name: Constructor Invocation Specification
+  href: specs/constructor.html
+- uid: Specification.Field
+  name: Field Injection Specification
+  href: specs/field.html
+- uid: Specification.Method
+  name: Method Invocation
+  href: specs/method.html
+- uid: Specification.Property
+  name: Property Injection Specification
+  href: specs/property.html
+- uid: Specification.Summary
+  name: Unity Specification
+  href: specs/summary.html
 - uid: Tutorial.Annotation.Constructor
   name: Annotating types for Constructor invocation
   href: tutorials/Annotation/constructor.html
