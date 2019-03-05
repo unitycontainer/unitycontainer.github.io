@@ -1179,7 +1179,6 @@
     },
     {
       "log_codes": [
-        "InvalidFileLink",
         "UidNotFound"
       ],
       "type": "Conceptual",
@@ -1187,7 +1186,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/Annotation/constructor.html",
-          "hash": "jsrJ8zsAuXZJO6nbHNl7+g=="
+          "hash": "4fcbzTb//xvbxyJZdmNjvQ=="
         }
       },
       "is_incremental": false,
@@ -1604,6 +1603,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
@@ -1619,13 +1625,6 @@
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
