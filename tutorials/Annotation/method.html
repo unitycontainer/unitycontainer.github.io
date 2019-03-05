@@ -70,7 +70,7 @@
 <h1 id="annotating-types-for-method-invocation">Annotating types for Method invocation</h1>
 
 <p>Method invocation is an optional step you can add to the created object's initialization. Any accessible method could be invoked, provided Unity can satisfy all the parameters with appropriate values.</p>
-<h2 id="method-annotation">Method Annotation</h2>
+<h2 id="method-invocation">Method Invocation</h2>
 <p>To enable method invocation during object initialization you could apply <a class="xref" href="../../api/Unity.InjectionMethodAttribute.html">InjectionMethod</a> attribute to the method you want to be executed.</p>
 <pre><code class="lang-cs">public class Service
 {
@@ -93,8 +93,8 @@
 }
 </code></pre>
 <p>In example above attribute <a class="xref" href="../../api/Unity.InjectionMethodAttribute.html">InjectionMethod</a> is applied to method <code>Initialize(...)</code> and the method will be executed immediately after the object is created.</p>
-<h2 id="multiple-method-annotation">Multiple Method Annotation</h2>
-<p>Unity does not place any restrictions on how many methods of the class to be invoked during initialization. You could mark any and all methods with the attribute and Unity will execute them all:</p>
+<h2 id="multiple-method-invocation">Multiple Method Invocation</h2>
+<p>Unity does not place any restrictions on how many methods of the class will be invoked during the initialization. You could mark any and all methods with the attribute and Unity will execute them all:</p>
 <pre><code class="lang-cs">public class Service
 {
     ...
