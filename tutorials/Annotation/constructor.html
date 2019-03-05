@@ -104,7 +104,7 @@
 <h2 id="overriding-constructor-selection">Overriding constructor selection</h2>
 <p>Attribute annotated types are not required to be registered with the Unity container to participate in dependency injection. At runtime Unity will use reflection to discover all required information to create objects of that type.</p>
 <p>Sometimes you might be required to use attribute annotated type in a way not intended by original designer. For example if you want to create type <code>MyObject</code> from example above using different constructor. You may do so by registering the type with the container and passing <a class="xref" href="../../api/Unity.Injection.InjectionConstructor.html">InjectionConstructor</a> injection member to registration method:</p>
-<pre><code class="lang-cs">c.RegisterType&lt;MyObject&gt;(&quot;Special Case&quot;, 
+<pre><code class="lang-cs">c.RegisterType&lt;MyObject&gt;(&quot;Special Case&quot;,
                          Invoke.Constructor(typeof(SomeOtherClass)))
 </code></pre>
 <p>In this example you create registration for type <code>MyObject</code> with name <code>&quot;Special Case&quot;</code> and instruct Unity to select constructor that takes one parameter of type <code>SomeOtherClass</code>. When registration has explicitly defined by injection member constructor, Unity will ignore <a class="xref" href="../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute and use injected constructor instead.</p>
