@@ -71,7 +71,7 @@
 
 <p>Method invocation is an optional step you can add to the created object's initialization. Any accessible method could be invoked, provided Unity can satisfy all the parameters with appropriate values.</p>
 <h2 id="method-invocation">Method Invocation</h2>
-<p>To enable method invocation during object initialization you could apply <a href="xref:Unity.InjectionMethodAttribute">InjectionMethod</a> attribute to the method you want to be executed.</p>
+<p>To enable method invocation during object initialization you could apply <a class="xref" href="../../api/Unity.InjectionMethodAttribute.html">InjectionMethod</a> attribute to the method you want to be executed.</p>
 <pre><code class="lang-cs">public class Service
 {
     ...
@@ -92,7 +92,7 @@
     }
 }
 </code></pre>
-<p>In the example above, attribute <a href="xref:Unity.InjectionMethodAttribute">InjectionMethod</a> is applied to method <code>Initialize(...)</code> and the method will be executed immediately after the object is created.</p>
+<p>In the example above, attribute <a class="xref" href="../../api/Unity.InjectionMethodAttribute.html">InjectionMethod</a> is applied to method <code>Initialize(...)</code> and the method will be executed immediately after the object is created.</p>
 <h2 id="multiple-method-invocation">Multiple Method Invocation</h2>
 <p>Unity does not place any restrictions on how many methods of the class will be invoked during the initialization. You could mark any and all methods with the attribute and Unity will execute them all:</p>
 <pre><code class="lang-cs">public class Service
@@ -120,7 +120,7 @@
 </code></pre>
 <h2 id="restrictions">Restrictions</h2>
 <h3 id="static-methods-cannot-be-invoked">Static methods cannot be invoked</h3>
-<p>Unity does not support invocation of static methods. Static methods annotated with <a href="xref:Unity.InjectionMethodAttribute">InjectionMethod</a> attribute will be ignored. If <a class="xref" href="../diagnostic.html">Unity Diagnostic</a> is enabled, the container will throw an exception when it encounters such an annotation.</p>
+<p>Unity does not support invocation of static methods. Static methods annotated with <a class="xref" href="../../api/Unity.InjectionMethodAttribute.html">InjectionMethod</a> attribute will be ignored. If <a class="xref" href="../diagnostic.html">Unity Diagnostic</a> is enabled, the container will throw an exception when it encounters such an annotation.</p>
 <h3 id="methods-with-ref-or-out-parameters-cannot-be-invoked">Methods with <code>ref</code> or <code>out</code> parameters cannot be invoked</h3>
 <p>Methods containing <code>ref</code> or <code>out</code> parameters cannot be invoked during initialization. The container will throw an exception if encountered these.</p>
 <pre><code class="lang-cs">public class Service
