@@ -71,8 +71,8 @@
 
 <p>This topic describes how to develop applications using Unity, and how to create and build instances of objects. It assumes that you familiar with dependency injection and separation of concerns concepts.</p>
 <h2 id="the-container">The Container</h2>
-<p>Unity exposes very compact API to operate the container. The most operations related to registration, resolution, and lifetime management is exposed through one interface - <strong><a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a></strong>.</p>
-<p>To start using Unity you need to create an instance of the container and get reference to <a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a> interface:</p>
+<p>Unity exposes very compact API to operate the container. The most operations related to registration, resolution, and lifetime management is exposed through one interface - <strong><a href="xref:Unity.IUnityContainer">IUnityContainer</a></strong>.</p>
+<p>To start using Unity you need to create an instance of the container and get reference to <a href="xref:Unity.IUnityContainer">IUnityContainer</a> interface:</p>
 <pre><code class="lang-cs">IUnityContainer container = new UnityContainer();
 </code></pre>
 <h2 id="creating-instances">Creating instances</h2>
@@ -161,11 +161,11 @@ var value2 = container.Resolve&lt;IService&gt;();
 
 // value1 and value2 are not the same
 </code></pre>
-<p>To enable lifetime management, type needs to be registered with one of the compatible <a class="xref" href="../api/Unity.Lifetime.html">lifetime managers</a>. Depending on registration type Unity provides three helpers:</p>
+<p>To enable lifetime management, type needs to be registered with one of the compatible <a href="xref:Unity.Lifetime">lifetime managers</a>. Depending on registration type Unity provides three helpers:</p>
 <ul>
-<li><a class="xref" href="../api/Unity.TypeLifetime.html">TypeLifetime</a></li>
-<li><a class="xref" href="../api/Unity.InstanceLifetime.html">InstanceLifetime</a></li>
-<li><a class="xref" href="../api/Unity.FactoryLifetime.html">FactoryLifetime</a></li>
+<li><a href="xref:Unity.TypeLifetime">TypeLifetime</a></li>
+<li><a href="xref:Unity.InstanceLifetime">InstanceLifetime</a></li>
+<li><a href="xref:Unity.FactoryLifetime">FactoryLifetime</a></li>
 </ul>
 <p>For example, to make <code>IService</code> a singleton for the entire application and create it only once you would register it like this:</p>
 <pre><code class="lang-cs">// Register mapping between IService and Component

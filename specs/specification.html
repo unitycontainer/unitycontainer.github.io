@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Unity Container Specification | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Unity Container Specification | Unity Container ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Specification.Unity">
+
+
+<ol>
+<li><a class="xref" href="1-introduction.html">Introduction</a></li>
+<li>Terms and Definitions
+<ol>
+<li>Injection</li>
+<li>Dependency</li>
+<li>Contract
+<ul>
+<li>Type</li>
+<li>Name</li>
+</ul>
+</li>
+<li>Metadata</li>
+<li>Lifetime</li>
+</ol>
+</li>
+<li>Workflow
+<ol>
+<li>Setup
+<ol>
+<li>Creating Container
+<ol>
+<li>Root</li>
+<li>Scopes</li>
+</ol>
+</li>
+<li>Type Contracts
+<ol>
+<li>Implicit</li>
+<li>Mapping</li>
+<li>Explicit
+<ul>
+<li>Instance</li>
+<li>Factory</li>
+<li>Type</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Provide Services
+<ol>
+<li>Locate Contract
+<ol>
+<li>Existing</li>
+<li>Hierarchical</li>
+<li>None
+<ol>
+<li>Create Locally</li>
+<li>With the registration</li>
+<li>At the root</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Execute contract
+<ol>
+<li>From lifetime manager</li>
+<li>From pipeline</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Manage created objects</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="unity-container-specification">Unity Container Specification</h1>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>Unity is a full featured, general-purpose container for use in any type of Microsoft® .NET Framework-based application. It provides all of the features commonly found in dependency injection implementations.</p>
+<p>In addition, Unity is extensible. You can write container extensions that change the behavior of the container, or add new capabilities. For example, the interception feature provided by Unity, which you can use to add policies to objects, is implemented as a container extension.</p>
+<h1 id="2-terms-and-definitions">2 Terms and Definitions</h1>
+<h2 id="21-injection">2.1 Injection</h2>
+<h2 id="22-dependency">2.2 Dependency</h2>
+<h2 id="23-contract">2.3 Contract</h2>
+<ul>
+<li>Type</li>
+<li>Name</li>
+</ul>
+<h2 id="24-metadata">2.4 Metadata</h2>
+<h2 id="25-lifetime">2.5 Lifetime</h2>
+<h2 id="3-workflow">3 Workflow</h2>
+<h3 id="setup">Setup</h3>
+<p>Before container could be used it should be prepared for operation.</p>
+<h4 id="creating-container">Creating Container</h4>
+<h5 id="root">Root</h5>
+<h5 id="scopes">Scopes</h5>
+<h4 id="type-contracts">Type Contracts</h4>
+<h5 id="implicit">Implicit</h5>
+<h5 id="mapping">Mapping</h5>
+<h5 id="explicit">Explicit</h5>
+<ul>
+<li>Instance</li>
+<li>Factory</li>
+<li>Type</li>
+</ul>
+<h3 id="provide-services">Provide Services</h3>
+<h4 id="locate-contract">Locate Contract</h4>
+<h5 id="existing">Existing</h5>
+<h5 id="hierarchical">Hierarchical</h5>
+<h5 id="none">None</h5>
+<h6 id="create-locally">Create Locally</h6>
+<h6 id="with-the-registration">With the registration</h6>
+<h6 id="at-the-root">At the root</h6>
+<h4 id="execute-contract">Execute contract</h4>
+<h5 id="from-lifetime-manager">From lifetime manager</h5>
+<h5 id="from-pipeline">From pipeline</h5>
+<h3 id="manage-created-objects">Manage created objects</h3>
+<h3 id="teardown">Teardown</h3>
+<h4 id="dispose-child-scopes">Dispose child scopes</h4>
+<h4 id="dispose-managed-objects">Dispose managed objects</h4>
+<pre><code class="lang-csharp" name="Overrides">
+public override bool BuildRequired =&gt; true;
+
+public override void AddPolicies&lt;TContext, TPolicySet&gt;(Type registeredType, Type mappedToType, string name, ref TPolicySet policies)
+{
+    var select = policies.Get&lt;Func&lt;Type, InjectionMember, TMemberInfo&gt;&gt;() 
+              ?? SelectMember;
+
+    Selection = select(mappedToType, this);
+}
+
+</code></pre><pre><code class="lang-csharp" name="Implementation">
+protected virtual TMemberInfo SelectMember(Type type, InjectionMember member) =&gt; throw new NotImplementedException();
+
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/specs/specification.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2009–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
