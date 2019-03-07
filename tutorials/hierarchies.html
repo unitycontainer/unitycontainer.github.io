@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Using Container Hierarchies | Unity Container </title>
+    <title>Container Hierarchy | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Using Container Hierarchies | Unity Container ">
+    <meta name="title" content="Container Hierarchy | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
@@ -66,9 +66,15 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 id="using-container-hierarchies">Using Container Hierarchies</h1>
+            <article class="content wrap" id="_content" data-uid="Tutorial.Container.Hierarchy">
+<h1 id="container-hierarchies">Container Hierarchies</h1>
 
+<p>Unity container provides a way to create child containers (other systems refer to it as resolution scopes) and allows building sophisticated scope trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies:</p>
+<h3 id="types-registered-in-predecessor-containers-always-available-in-descendant-containers">Types registered in predecessor containers always available in descendant containers</h3>
+<p>This is a very simple concept, each registration is like a public virtual declaration in cs types. Every descendant inherits it and can use at will.</p>
+<h3 id="types-registered-in-descendant-containers-override-the-same-registration-of-predecessors">Types registered in descendant containers override the same registration of predecessors</h3>
+<p>Following the same analogy with public virtual declarations, each override registration installs its own declaration and hides the one in predecessor containers.</p>
+<h1 id="using-container-hierarchies">Using Container Hierarchies</h1>
 <p>Unity supports nested containers, allowing you to build container hierarchies. Nesting containers enables you to control the scope and lifetime of singleton objects, and register different mappings for specific types. This topic contains the following sections that describe how you can create container hierarchies and use them in your applications:</p>
 <ul>
 <li>Constructing and Disposing Unity Containers</li>

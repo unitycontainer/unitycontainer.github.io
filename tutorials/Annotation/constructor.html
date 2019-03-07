@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Annotating types for Constructor invocation | Unity Container </title>
+    <title>Constructor Annotation | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Annotating types for Constructor invocation | Unity Container ">
+    <meta name="title" content="Constructor Annotation | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -69,16 +69,8 @@
             <article class="content wrap" id="_content" data-uid="Tutorial.Annotation.Constructor">
 <h1 id="annotating-types-for-constructor-invocation">Annotating types for Constructor invocation</h1>
 
-<p>When classes are created, Unity provides following mechanisms to properly select and execute constructors:</p>
-<ul>
-<li><p><strong>Automatic Injection</strong>. With this technique, you allow the Unity container to select the constructor and satisfy any dependencies defined in parameters of the constructor automatically. It will select most complex constructor it can satisfy with dependencies.</p>
-</li>
-<li><p><strong><a class="xref" href="../registration/Injection/constructor.html">Constructor Injection</a></strong>. With this technique, you provide <a class="xref" href="../../api/Unity.Injection.InjectionConstructor.html">InjectionConstructor</a> injection member during registration of the type or the type mapping. This mechanism allows you to pick different constructor for each <a class="xref" href="../registration/mapping.html">Type Mapping</a> or each named registration you create.</p>
-</li>
-<li><p><strong><a class="xref" href="constructor.html#constructor-injection-using-an-attribute-annotation">Constructor Injection Using an Attribute Annotation</a></strong>. With this technique, you apply attribute to the class constructor designating that constructor for dependency injection. When creating the class, Unity will always (unless explicitly overwritten) use that constructor. You only need to use this technique when there is more than one constructor in the target class.</p>
-</li>
-</ul>
-<h2 id="constructor-injection-using-an-attribute-annotation">Constructor Injection Using an Attribute Annotation</h2>
+<p>Constructor Injection Using an Attribute Annotation allows you to apply attribute to the class' constructor designating it for dependency injection. When creating the class, Unity will always (unless explicitly overwritten) use that constructor. You only need to use this technique when there is more than one constructor in the target type.</p>
+<h2 id="annotating-constructor">Annotating Constructor</h2>
 <p>When a target class contains more than one constructor and automatic selection process does not provide desired selection, you may use the <a class="xref" href="../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute to specify the constructor you wish to use for injection.</p>
 <p>Following example demonstrates this technique:</p>
 <pre><code class="lang-cs">public class MyObject

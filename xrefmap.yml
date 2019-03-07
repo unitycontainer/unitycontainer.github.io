@@ -22,15 +22,9 @@ references:
 - uid: Specification.Constructor
   name: Constructor Invocation Specification
   href: specs/constructor.html
-- uid: Specification.Definitions
-  name: Terms and Definitions
-  href: specs/2-definitions.html
 - uid: Specification.Field
   name: Field Injection Specification
   href: specs/field.html
-- uid: Specification.Introduction
-  name: Introduction
-  href: specs/1-introduction.html
 - uid: Specification.Method
   name: Method Invocation
   href: specs/method.html
@@ -38,7 +32,7 @@ references:
   name: Property Injection Specification
   href: specs/property.html
 - uid: Specification.Summary
-  name: Unity Specification
+  name: Summary
   href: specs/summary.html
 - uid: Specification.Unity
   name: Unity Container Specification
@@ -47,7 +41,7 @@ references:
   name: Workflow
   href: specs/workflow.html
 - uid: Tutorial.Annotation.Constructor
-  name: Annotating types for Constructor invocation
+  name: Constructor Annotation
   href: tutorials/Annotation/constructor.html
 - uid: Tutorial.Annotation.Field
   name: Annotating types for Field injection
@@ -64,18 +58,33 @@ references:
 - uid: Tutorial.Annotation.Property
   name: Annotating Objects for Property Injection
   href: tutorials/Annotation/property.html
-- uid: Tutorial.Injection.Constructor
-  name: Tutorial.Injection.Constructor
-  href: tutorials/registration/Injection/constructor.html
+- uid: Tutorial.Container.Hierarchy
+  name: Container Hierarchy
+  href: tutorials/hierarchies.html
+- uid: Tutorial.Injection.Constructor.Invoking
+  name: Invoking Constructor
+  href: tutorials/registration/Type/Constructor/invoking.html
+- uid: Tutorial.Injection.Constructor.Selection
+  name: Constructor Selection
+  href: tutorials/registration/Type/Constructor/selection.html
+- uid: Tutorial.Injection.Field
+  name: Field Injection
+  href: tutorials/registration/Type/field.html
+- uid: Tutorial.Injection.Method
+  name: Method Injection
+  href: tutorials/registration/Type/method.html
+- uid: Tutorial.Injection.Parameter
+  name: Parameter Injection
+  href: tutorials/registration/Type/parameter.html
+- uid: Tutorial.Injection.Property
+  name: Property Injection
+  href: tutorials/registration/Type/property.html
 - uid: Tutorial.Lifetime.Overview
-  name: Lifetime
+  name: Lifetime Management
   href: tutorials/lifetime/lifetime.html
 - uid: Tutorial.Registration.Factory
   name: Factory Registration
   href: tutorials/registration/factory.html
-- uid: Tutorial.Registration.Injection
-  name: Injection Members
-  href: tutorials/registration/injection.html
 - uid: Tutorial.Registration.Instance
   name: Instance Registration
   href: tutorials/registration/instance.html
@@ -86,8 +95,8 @@ references:
   name: Registration Metadata
   href: tutorials/registration/metadata.html
 - uid: Tutorial.Registration.Overview
-  name: Registering Types with Unity
-  href: tutorials/registration/registration.html
+  name: Registration
+  href: tutorials/registration/overview.html
 - uid: Tutorial.Registration.Type
   name: Type Registration
   href: tutorials/registration/Type/type.html
