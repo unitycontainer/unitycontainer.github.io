@@ -61,9 +61,12 @@ references:
 - uid: Tutorial.Container.Hierarchy
   name: Container Hierarchy
   href: tutorials/hierarchies.html
-- uid: Tutorial.Injection.Constructor.Invoking
-  name: Invoking Constructor
-  href: tutorials/registration/Type/Constructor/invoking.html
+- uid: Tutorial.Injection.Constructor
+  name: Constructor Injection
+  href: tutorials/registration/Type/Constructor/constructor.html
+- uid: Tutorial.Injection.Constructor.Default
+  name: Default Constructor
+  href: tutorials/registration/Type/Constructor/default.html
 - uid: Tutorial.Injection.Constructor.Selection
   name: Constructor Selection
   href: tutorials/registration/Type/Constructor/selection.html
@@ -109,8 +112,11 @@ references:
 - uid: Tutorial.Resolution.Type
   name: Resolving an Object by Type
   href: tutorials/resolution/type.html
+- uid: Tutorial.Terms
+  name: Terms and Definitions
+  href: tutorials/definitions.html
 - uid: Tutorial.Unity.Diagnostic
-  name: Tutorial.Unity.Diagnostic
+  name: Diagnostic
   href: tutorials/diagnostic.html
 - uid: Tutorial.Workflow.Overview
   name: Unity Workflow

@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Constructor Injection | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Constructor Injection | Unity Container ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.png">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tutorial.Injection.Constructor">
+<h1 id="constructor-injection">Constructor Injection</h1>
+
+<p>Constructor Injection is a process where Unity selects a constructor, resolves parameter dependencies, and executes the constructor by injecting it with resolved or injected dependencies.</p>
+<h2 id="restrictions">Restrictions</h2>
+<p>Unity can be configured to execute any accessible constructor with the following exceptions:</p>
+<ul>
+<li><code>static</code> constructors are not supported</li>
+<li><code>private</code> and <code>protected</code> constructors are not accessible</li>
+<li>Constructors with <code>ref</code> and <code>out</code> parameters are not supported</li>
+</ul>
+<h2 id="selection-methods">Selection Methods</h2>
+<p>Selecting a constructor is one of the first steps in creating a resolution pipeline. Unity supports the following selection methods:</p>
+<h3 id="automatic-selection">Automatic Selection</h3>
+<p>Automatic Selection is a default method of selecting constructors. It will be used if no constructor is injected or annotated.</p>
+<p>By default Unity uses 'smart' algorithm to select constructor. It sorts all accessible constructors by number of parameters in ascending order and goes from most complex to the default, checking if it can satisfy its parameters. The container selects the first constructor it can create and executes it.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Unity will not check for ambiguities unless <a class="xref" href="../../../diagnostic.html">Diagnostic</a> extension is installed.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Legacy selection algorithm which selects the most complex constructor could be enabled by installing <code>Legacy</code> extension. It will replace and disable 'smart' selection.</p>
+</div>
+<h3 id="constructor-annotation">Constructor Annotation</h3>
+<p>Constructor annotated with <a class="xref" href="../../../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute overrides automatic selection. For more information see <a class="xref" href="../../../Annotation/constructor.html">Constructor Annotation</a></p>
+<h3 id="constructor-injection-1">Constructor injection</h3>
+<p>Constructor configuration registered for the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> has highest priority. It will override other selection methods and will always execute the configured constructor.</p>
+<p>As opposed to methods, constructors do not have a name to distinguish one from the other. The only difference between constructors is number and <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> of parameters they take. Because of that constructor selection is based solely on parameters and its types.</p>
+<h4 id="invoking-the-constructor">Invoking the Constructor</h4>
+<p>Invoked constructor and injection of its parameters is configured by registering the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> with the <a class="xref" href="../../../../api/Unity.Injection.InjectionConstructor.html">InjectionConstructor</a>. Creating the <a class="xref" href="../../../../api/Unity.Injection.InjectionConstructor.html">InjectionConstructor</a> with proper injection members or values determines what constructor is selected and how parameters are initialized. Values and resolvers added to <a class="xref" href="../../../../api/Unity.Injection.InjectionConstructor.html">InjectionConstructor</a> will be used to initialize parameters of the constructor of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>. The following aspects could be configured:</p>
+<ul>
+<li>Parameter <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></li>
+<li>Force resolution of parameter</li>
+<li>Specify the Contract/Registration Name to by used when resolving</li>
+<li>Provide a Resolver for the parameter</li>
+<li>Provide value</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>As alternative, helper <a class="xref" href="../../../../api/Unity.Invoke.html#Unity_Invoke_Constructor">Invoke.Constructor(...)</a> can be used to configure invoked constructor.</p>
+</div>
+<h4 id="how-to">How To</h4>
+<ul>
+<li><a class="xref" href="default.html">Invoke default constructors</a></li>
+<li><a class="xref" href="selection.html">Select constructors by parameter types</a></li>
+<li><a class="xref" href="selection.html">Select constructors based on injected values</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/registration/Type/Constructor/constructor.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2009–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

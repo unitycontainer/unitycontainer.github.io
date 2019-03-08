@@ -1195,7 +1195,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "OQNug+IGl5tahBJqp9d4FQ=="
+          "hash": "KLnRCF2smBZl/rZ4PjD/FQ=="
         }
       },
       "is_incremental": false,
@@ -1275,11 +1275,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tutorials/definitions.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/definitions.html",
+          "hash": "LVW+wW0iskD2SaU1pP3ccQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tutorials/diagnostic.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/diagnostic.html",
-          "hash": "iSQuArSjkBYcxFROgwQc5Q=="
+          "hash": "osZFDg2oswztDZTV3hBFVw=="
         }
       },
       "is_incremental": false,
@@ -1359,11 +1371,23 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/registration/Type/Constructor/invoking.md",
+      "source_relative_path": "tutorials/registration/Type/Constructor/constructor.md",
       "output": {
         ".html": {
-          "relative_path": "tutorials/registration/Type/Constructor/invoking.html",
-          "hash": "HPXoSEzBHOMj6Fqc3Q+XYw=="
+          "relative_path": "tutorials/registration/Type/Constructor/constructor.html",
+          "hash": "Z2xWn+KQmDSomJ3PKxQk1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/default.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/default.html",
+          "hash": "xEg00nJJ2H9mfZFK53WaSA=="
         }
       },
       "is_incremental": false,
@@ -1375,7 +1399,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/Constructor/selection.html",
-          "hash": "P6zFb4bLyi2C4w/0OurfEA=="
+          "hash": "H7Ou2RLTf1zfDY/MQYmOpQ=="
         }
       },
       "is_incremental": false,
@@ -1430,15 +1454,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/registration/Type/type.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/type.html",
-          "hash": "exPnAajvZlt0C4K59+k/Xw=="
+          "hash": "xDKdYkpUs56qqtgcJOGr5A=="
         }
       },
       "is_incremental": false,
@@ -1642,7 +1663,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "vLjV8d4IMF45AYh0B5JFbA=="
+          "hash": "hMcTTrnoZwd041cGce0jpg=="
         }
       },
       "is_incremental": false,
@@ -1681,19 +1702,19 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 54,
-          "skipped_file_count": 0
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 56,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0

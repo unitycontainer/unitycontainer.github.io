@@ -69,37 +69,6 @@
             <article class="content wrap" id="_content" data-uid="Tutorial.Injection.Constructor.Selection">
 <h1 id="constructor-selection">Constructor Selection</h1>
 
-<p>Selecting a constructor is the first step in creating a resolution pipeline. Unity supports various constructor selection methods. It can be configured to execute any accessible constructor with the following exceptions:</p>
-<ul>
-<li><code>static</code> constructors are not supported</li>
-<li><code>private</code> and <code>protected</code> constructors are not accessible</li>
-<li>Constructors with <code>ref</code> and <code>out</code> parameters are not supported</li>
-</ul>
-<h2 id="constructor-selection-algorithms">Constructor Selection Algorithms</h2>
-<p>Selection is done in the following order:</p>
-<h3 id="automatic-selection">Automatic Selection</h3>
-<p>Automatic Selection is a default method of selecting constructors. It will be used if no constructor is injected or annotated.</p>
-<p>By default Unity uses 'smart' algorithm to select constructor. It sorts all accessible constructors by number of parameters in ascending order and goes from most complex to the default, checking if it can satisfy its parameters. The container selects the first constructor it can create and executes it.</p>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>Unity will not check for ambiguities unless <code>Diagnostic</code> extension is installed.</p>
-</div>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Legacy selection algorithm which selects the most complex constructor could be enabled by installing <code>Legacy</code> extension. It will replace and disable 'smart' selection.</p>
-</div>
-<h3 id="constructor-annotation">Constructor Annotation</h3>
-<p>Constructor annotated with <a class="xref" href="../../../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> overrides automatic selection. For more information see <a class="xref" href="../../../Annotation/constructor.html">Constructor Annotation</a></p>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>Multiple constructor annotation is not supported.</p>
-</div>
-<h3 id="constructor-injection">Constructor injection</h3>
-<p>Constructor configured for invocation during registration has highest priority. It will override other selection methods and will always execute configured constructor.</p>
-<h4 id="default-constructor">Default Constructor</h4>
-<p>No parameters</p>
-<h4 id="selection-by-parameter-types">Selection By Parameter Types</h4>
-<p>Constructor has not name so only parameter types distinguish one from another.</p>
 </article>
           </div>
           

@@ -115,10 +115,10 @@ container.RegisterType&lt;IService, SecureService&gt;(&quot;Encrypted&quot;, Typ
 </code></pre>
 <p>For more information about lifetime management see <a class="xref" href="../../lifetime/lifetime.html">Lifetime Management</a></p>
 <h2 id="creating-object-instances">Creating object Instances</h2>
-<p>Unity instantiates an objects by creating a resolve pipeline and executing the pipeline with passed in injection values. Each pipeline consists of several steps with each step performing part of the initialization.</p>
-<p>How this pipeline is assembled and what values are injected is controlled by collection of <a class="xref" href="../../../api/Unity.Injection.InjectionMember.html">Injection Member</a> objects passed to registration method. The normal steps of the object creation process are:</p>
+<p>Unity instantiates an objects by creating a resolver pipeline and executing the pipeline with passed in injection values. Each pipeline consists of several steps with each step performing part of the initialization.</p>
+<p>How the pipeline is assembled and what values are injected is controlled by collection of <a class="xref" href="../../../api/Unity.Injection.InjectionMember.html">Injection Member</a> objects passed to registration method. The normal steps of the object creation process are:</p>
 <ul>
-<li><a href="xref:Tutorial.Injection.Constructor">Constructor invocation and injection</a></li>
+<li><a class="xref" href="Constructor/constructor.html">Constructor invocation and injection</a></li>
 <li><a class="xref" href="field.html">Fields injection</a></li>
 <li><a class="xref" href="property.html">Properties injection</a></li>
 <li><a class="xref" href="method.html">Method(s) invocation and injection</a></li>
