@@ -71,7 +71,7 @@
 
 <h2 id="by-number-of-parameters">By Number of Parameters</h2>
 <p>Selecting constructor by number of parameters is the simplest form of selection. You could use this selection method if the constructor you invoking has unique number of parameters.</p>
-<h3 id="any-type">Any Type</h3>
+<h3 id="type-of-parameter-as-contract-type">Type of Parameter as Contract Type</h3>
 <p>This method is useful when you are working on a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> that takes certain number of parameters but you don't care what these parameter types are.</p>
 <h4 id="parameters">Parameters</h4>
 <p>In a case like this you could use <code>Resolve.Parameter()</code> to specify that you want a parameter at this position to be resolved. For example, consider the following <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>:</p>
@@ -172,8 +172,11 @@ var instance = Container.Resolve&lt;SampleType&lt;object&gt;&gt;();
 
 </code></pre>
 <p>If you'd like to preserve contracts from annotations, you need to use one of the following selection methods instead.</p>
-<h3 id="for-more-information-see">For more information see</h3>
+<h3 id="see-also">See Also</h3>
 <ul>
+<li><a class="xref" href="automatic.html">Implicit Constructor Registration</a></li>
+<li><a class="xref" href="annotation.html">Constructor Annotation</a></li>
+<li><a class="xref" href="param_none.html">Invoke default constructor</a></li>
 <li><a class="xref" href="param_types.html">Select constructors by parameter types</a></li>
 <li><a class="xref" href="param_values.html">Select constructors based on injected values</a></li>
 </ul>

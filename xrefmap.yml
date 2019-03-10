@@ -41,7 +41,7 @@ references:
   name: Workflow
   href: specs/workflow.html
 - uid: Tutorial.Annotation.Constructor
-  name: Constructor Annotation
+  name: Annotating Type for Constructor Injection
   href: tutorials/Annotation/constructor.html
 - uid: Tutorial.Annotation.Field
   name: Annotating types for Field injection
@@ -64,12 +64,18 @@ references:
 - uid: Tutorial.Injection.Constructor
   name: Constructor Injection
   href: tutorials/registration/Type/Constructor/constructor.html
+- uid: Tutorial.Injection.Constructor.Annotation
+  name: Select Constructor By Attribute Annotation
+  href: tutorials/registration/Type/Constructor/annotation.html
 - uid: Tutorial.Injection.Constructor.Count
   name: Select Constructor By Number of Parameters
   href: tutorials/registration/Type/Constructor/param_count.html
 - uid: Tutorial.Injection.Constructor.Default
   name: Default Constructor
   href: tutorials/registration/Type/Constructor/param_none.html
+- uid: Tutorial.Injection.Constructor.Implicit
+  name: Automatic Constructor Injection
+  href: tutorials/registration/Type/Constructor/automatic.html
 - uid: Tutorial.Injection.Constructor.Types
   name: Select Constructor by Parameter Types
   href: tutorials/registration/Type/Constructor/param_types.html
@@ -108,7 +114,7 @@ references:
   href: tutorials/registration/overview.html
 - uid: Tutorial.Registration.Type
   name: Type Registration
-  href: tutorials/registration/Type/type.html
+  href: tutorials/registration/Type/registration.html
 - uid: Tutorial.Resolution.Overview
   name: Resolving Objects
   href: tutorials/resolution/resolution.html
@@ -118,6 +124,9 @@ references:
 - uid: Tutorial.Resolution.Type
   name: Resolving an Object by Type
   href: tutorials/resolution/type.html
+- uid: Tutorial.Selection.Constructor
+  name: Automatic Constructor Selection
+  href: tutorials/resolution/Selection/constructor.html
 - uid: Tutorial.Terms
   name: Terms and Definitions
   href: tutorials/definitions.html

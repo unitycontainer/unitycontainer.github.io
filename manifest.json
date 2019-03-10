@@ -1207,7 +1207,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/Annotation/constructor.html",
-          "hash": "xc1Stm+X7WBWLP2kPTqp2w=="
+          "hash": "EuFPqlV7DuqTt4XiNG8OUw=="
         }
       },
       "is_incremental": false,
@@ -1371,11 +1371,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/annotation.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/annotation.html",
+          "hash": "1clYL8Z/5+8nOi5Ygiyl3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/automatic.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/automatic.html",
+          "hash": "2EVDfACWodZkEDwaNpc0FQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tutorials/registration/Type/Constructor/constructor.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/Constructor/constructor.html",
-          "hash": "6vs6r7vk20X5M/ibiiI5kg=="
+          "hash": "OdWEmnBMotzyDFj9MV7TeA=="
         }
       },
       "is_incremental": false,
@@ -1387,7 +1411,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/Constructor/param_count.html",
-          "hash": "7Eh81+PlM0KlMbhtWrhFOg=="
+          "hash": "RZdN5aTJ/YmfXPV+GwiSgw=="
         }
       },
       "is_incremental": false,
@@ -1399,7 +1423,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/Constructor/param_none.html",
-          "hash": "hBI9uDurBPYEBGXy/uQ0Xg=="
+          "hash": "K7/ckIz8fhnxTIC3g9WWWg=="
         }
       },
       "is_incremental": false,
@@ -1411,7 +1435,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/Constructor/param_types.html",
-          "hash": "SyXl/Ks1D3WBAF6rQbPMPQ=="
+          "hash": "hKJ4wn6Rg8E4ktAeoVabEA=="
         }
       },
       "is_incremental": false,
@@ -1423,7 +1447,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/Constructor/param_values.html",
-          "hash": "f7pRFGp8amXXnfVY56zuFw=="
+          "hash": "pz3ojLPwL8WU52PbvHIHPQ=="
         }
       },
       "is_incremental": false,
@@ -1479,11 +1503,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/registration/Type/type.md",
+      "source_relative_path": "tutorials/registration/Type/registration.md",
       "output": {
         ".html": {
-          "relative_path": "tutorials/registration/Type/type.html",
-          "hash": "xDKdYkpUs56qqtgcJOGr5A=="
+          "relative_path": "tutorials/registration/Type/registration.html",
+          "hash": "iQWP49Q0R0gB++TM5/F3AA=="
         }
       },
       "is_incremental": false,
@@ -1531,7 +1555,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/metadata.html",
-          "hash": "pKwJTan9K10tWp2gqEtXTQ=="
+          "hash": "8XMMTNFvsRaCAzw9Re/jjg=="
         }
       },
       "is_incremental": false,
@@ -1543,7 +1567,19 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/overview.html",
-          "hash": "xV8ol9jnoUKU2vVVbIAZVQ=="
+          "hash": "g01o8uhtJf32PSHFgX9eRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/resolution/Selection/constructor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/resolution/Selection/constructor.html",
+          "hash": "ZEKs7TJWw0TIt6pCeIRaxg=="
         }
       },
       "is_incremental": false,
@@ -1687,7 +1723,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "1rfYZz2A3nh56NtoR2St9w=="
+          "hash": "sZvm9dzXBSekUhK1531rBA=="
         }
       },
       "is_incremental": false,
@@ -1717,28 +1753,28 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 58,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 77,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 61,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0

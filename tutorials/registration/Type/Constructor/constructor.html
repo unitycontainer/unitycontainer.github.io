@@ -91,7 +91,7 @@
 <p>Legacy selection algorithm which selects the most complex constructor could be enabled by installing <code>Legacy</code> extension. It will replace and disable 'smart' selection.</p>
 </div>
 <h3 id="constructor-annotation">Constructor Annotation</h3>
-<p>Constructor annotated with <a class="xref" href="../../../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute overrides automatic selection. For more information see <a class="xref" href="../../../Annotation/constructor.html">Constructor Annotation</a></p>
+<p>Constructor annotated with <a class="xref" href="../../../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute overrides automatic selection. For more information see <a class="xref" href="../../../Annotation/constructor.html">Annotating Type for Constructor Injection</a></p>
 <h3 id="constructor-injection-1">Constructor injection</h3>
 <p>Constructor configuration registered for the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> has highest priority. It will override other selection methods and will always execute the configured constructor.</p>
 <p>As opposed to methods, constructors do not have a name to distinguish one from the other. The only difference between constructors is number and <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> of parameters they take. Because of that constructor selection is based solely on parameters and its types.</p>
@@ -108,8 +108,10 @@
 <h5>Tip</h5>
 <p>As alternative, helper <a class="xref" href="../../../../api/Unity.Invoke.html#Unity_Invoke_Constructor">Invoke.Constructor(...)</a> can be used to configure invoked constructor.</p>
 </div>
-<h4 id="for-more-information-see">For more information see</h4>
+<h4 id="see-also">See Also</h4>
 <ul>
+<li><a class="xref" href="automatic.html">Implicit Constructor Registration</a></li>
+<li><a class="xref" href="annotation.html">Constructor Annotation</a></li>
 <li><a class="xref" href="param_none.html">Invoke default constructor</a></li>
 <li><a class="xref" href="param_count.html">Select constructors by parameters count</a></li>
 <li><a class="xref" href="param_types.html">Select constructors by parameter types</a></li>

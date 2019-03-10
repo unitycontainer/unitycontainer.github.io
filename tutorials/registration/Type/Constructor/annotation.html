@@ -5,17 +5,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Annotating Type for Constructor Injection | Unity Container </title>
+    <title>Select Constructor By Attribute Annotation | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Annotating Type for Constructor Injection | Unity Container ">
+    <meta name="title" content="Select Constructor By Attribute Annotation | Unity Container ">
     <meta name="generator" content="docfx 2.40.11.0">
     
-    <link rel="shortcut icon" href="../../images/favicon.png">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <link rel="shortcut icon" href="../../../../images/favicon.png">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
     
     
     
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../index.html">
-                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -66,14 +66,14 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tutorial.Annotation.Constructor">
+            <article class="content wrap" id="_content" data-uid="Tutorial.Injection.Constructor.Annotation">
 <h1 id="selecting-constructor">Selecting Constructor</h1>
 
 <p>To perform injection of dependent classes into objects you create through the Unity container, you can use the following two techniques:</p>
 <ul>
-<li><p><a class="xref" href="../resolution/Selection/constructor.html">Automatic Constructor Injection</a>. With this technique, you allow the Unity container select a constructor and to satisfy any constructor dependencies defined in parameters of the constructor automatically. For more information see <a class="xref" href="../resolution/Selection/constructor.html">Automatic Constructor Selection</a>.</p>
+<li><p><a class="xref" href="../../../resolution/Selection/constructor.html">Automatic Constructor Injection</a>. With this technique, you allow the Unity container select a constructor and to satisfy any constructor dependencies defined in parameters of the constructor automatically. For more information see <a class="xref" href="../../../resolution/Selection/constructor.html">Automatic Constructor Selection</a>.</p>
 </li>
-<li><p><a class="xref" href="../registration/Type/Constructor/constructor.html">Constructor Injection using explicit registration</a>. With this technique, you register the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> and apply an <a class="xref" href="../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor Member</a> that specifies the dependencies to the registration. For more information see <a class="xref" href="../registration/Type/Constructor/constructor.html">Constructor Injection</a></p>
+<li><p><a class="xref" href="constructor.html">Constructor Injection using explicit registration</a>. With this technique, you register the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> and apply an <a class="xref" href="../../../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor Member</a> that specifies the dependencies to the registration. For more information see <a class="xref" href="constructor.html">Constructor Injection</a></p>
 </li>
 <li><p><strong>Annotated Constructor Injection</strong>. With this technique, you apply attributes to the class constructor(s) that specify the injection configuration.</p>
 </li>
@@ -81,7 +81,7 @@
 <h2 id="annotated-constructor-injection">Annotated Constructor Injection</h2>
 <p>Constructor Injection with Attribute Annotation allows you to apply attributes to the class' constructor designating it for dependency injection. When creating the class, Unity will always (unless explicitly overwritten in Registration) use that constructor. You only need to use this technique when there is more than one constructor in the target type.</p>
 <h3 id="annotating-a-constructor">Annotating a Constructor</h3>
-<p>When a target class contains more than one constructor and automatic algorithm does not provide desired selection, you may use the <a class="xref" href="../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute to specify the constructor you wish to use for injection.</p>
+<p>When a target class contains more than one constructor and automatic algorithm does not provide desired selection, you may use the <a class="xref" href="../../../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute to specify the constructor you wish to use for injection.</p>
 <p>Consider the following <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>:</p>
 <pre><code class="lang-csharp" name="class Service">public class Service 
 {
@@ -109,10 +109,18 @@
 <p>Normally, Unity would select third constructor with three parameters, but by annotating second constructor with the attribute you force Unity to use it during resolution.</p>
 <h3 id="overriding-constructor-selection">Overriding constructor selection</h3>
 <p>Attribute annotated types are not required to be registered with the Unity container to participate in dependency injection. At runtime Unity will use reflection to discover all required information to create objects of that type.</p>
-<p>Sometimes you might be required to use attribute annotated type in a way not intended by original designer. For example if you want to create type <code>MyObject</code> from example above using different constructor. You may do so by registering the type with the container and passing <a class="xref" href="../../api/Unity.Injection.InjectionConstructor.html">InjectionConstructor</a> injection member to registration method:</p>
+<p>Sometimes you might be required to use attribute annotated type in a way not intended by original designer. For example if you want to create type <code>MyObject</code> from example above using different constructor. You may do so by registering the type with the container and passing <a class="xref" href="../../../../api/Unity.Injection.InjectionConstructor.html">InjectionConstructor</a> injection member to registration method:</p>
 <pre><code class="lang-cs">c.RegisterType&lt;MyObject&gt;(&quot;Special&quot;, Invoke.Constructor() )
 </code></pre>
-<p>In this example you create registration for type <code>MyObject</code> with name <code>&quot;Special&quot;</code> and instruct Unity to select default constructor. When registration has explicitly defined by injection member constructor, Unity will ignore <a class="xref" href="../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute and use injected constructor instead.</p>
+<p>In this example you create registration for type <code>MyObject</code> with name <code>&quot;Special&quot;</code> and instruct Unity to select default constructor. When registration has explicitly defined by injection member constructor, Unity will ignore <a class="xref" href="../../../../api/Unity.InjectionConstructorAttribute.html">InjectionConstructor</a> attribute and use injected constructor instead.</p>
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a class="xref" href="automatic.html">Implicit Constructor Registration</a></li>
+<li><a class="xref" href="param_none.html">Invoke default constructor</a></li>
+<li><a class="xref" href="param_count.html">Select constructors by parameters count</a></li>
+<li><a class="xref" href="param_types.html">Select constructors by parameter types</a></li>
+<li><a class="xref" href="param_values.html">Select constructors based on injected values</a></li>
+</ul>
 </article>
           </div>
           
@@ -121,7 +129,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/Annotation/constructor.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/registration/Type/Constructor/annotation.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -147,8 +155,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>
 </html>

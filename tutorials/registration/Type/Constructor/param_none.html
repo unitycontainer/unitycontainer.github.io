@@ -130,7 +130,7 @@ Container.RegisterType&lt;Service&lt;object&gt;&gt;(Invoke.Constructor());
 
 </code></pre>
 <p>Or you can register Open Generic <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>:</p>
-<pre><code class="lang-csharp" name="Register Service{}">
+<pre><code class="lang-csharp" name="Register Service{T arg}">
 Container.RegisterType(typeof(Service&lt;&gt;), Invoke.Constructor());
 
 </code></pre><h3 id="resolving-servicet">Resolving <code>Service&lt;T&gt;</code></h3>
@@ -142,8 +142,10 @@ var instance = Container.Resolve&lt;Service&lt;object&gt;&gt;();
 
 </code></pre>
 <p>either registration will invoke the default constructor.</p>
-<h3 id="for-more-information-see">For more information see</h3>
+<h3 id="see-also">See Also</h3>
 <ul>
+<li><a class="xref" href="automatic.html">Implicit Constructor Registration</a></li>
+<li><a class="xref" href="annotation.html">Constructor Annotation</a></li>
 <li><a class="xref" href="param_count.html">Select constructors by parameters count</a></li>
 <li><a class="xref" href="param_types.html">Select constructors by parameter types</a></li>
 <li><a class="xref" href="param_values.html">Select constructors based on injected values</a></li>
