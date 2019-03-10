@@ -1375,7 +1375,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/Constructor/constructor.html",
-          "hash": "Z2xWn+KQmDSomJ3PKxQk1g=="
+          "hash": "6vs6r7vk20X5M/ibiiI5kg=="
         }
       },
       "is_incremental": false,
@@ -1383,11 +1383,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/registration/Type/Constructor/default.md",
+      "source_relative_path": "tutorials/registration/Type/Constructor/param_count.md",
       "output": {
         ".html": {
-          "relative_path": "tutorials/registration/Type/Constructor/default.html",
-          "hash": "ZcAnsxU/mrpXgo25SZh29w=="
+          "relative_path": "tutorials/registration/Type/Constructor/param_count.html",
+          "hash": "7Eh81+PlM0KlMbhtWrhFOg=="
         }
       },
       "is_incremental": false,
@@ -1395,11 +1395,35 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/registration/Type/Constructor/selection.md",
+      "source_relative_path": "tutorials/registration/Type/Constructor/param_none.md",
       "output": {
         ".html": {
-          "relative_path": "tutorials/registration/Type/Constructor/selection.html",
-          "hash": "H7Ou2RLTf1zfDY/MQYmOpQ=="
+          "relative_path": "tutorials/registration/Type/Constructor/param_none.html",
+          "hash": "hBI9uDurBPYEBGXy/uQ0Xg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/param_types.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/param_types.html",
+          "hash": "SyXl/Ks1D3WBAF6rQbPMPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/registration/Type/Constructor/param_values.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/registration/Type/Constructor/param_values.html",
+          "hash": "f7pRFGp8amXXnfVY56zuFw=="
         }
       },
       "is_incremental": false,
@@ -1663,7 +1687,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "hMcTTrnoZwd041cGce0jpg=="
+          "hash": "1rfYZz2A3nh56NtoR2St9w=="
         }
       },
       "is_incremental": false,
@@ -1693,9 +1717,9 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -1703,7 +1727,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 56,
+          "total_file_count": 58,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
@@ -1712,9 +1736,9 @@
           "total_file_count": 77,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0

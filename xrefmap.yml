@@ -64,12 +64,18 @@ references:
 - uid: Tutorial.Injection.Constructor
   name: Constructor Injection
   href: tutorials/registration/Type/Constructor/constructor.html
+- uid: Tutorial.Injection.Constructor.Count
+  name: Select Constructor By Number of Parameters
+  href: tutorials/registration/Type/Constructor/param_count.html
 - uid: Tutorial.Injection.Constructor.Default
   name: Default Constructor
-  href: tutorials/registration/Type/Constructor/default.html
-- uid: Tutorial.Injection.Constructor.Selection
-  name: Constructor Selection
-  href: tutorials/registration/Type/Constructor/selection.html
+  href: tutorials/registration/Type/Constructor/param_none.html
+- uid: Tutorial.Injection.Constructor.Types
+  name: Select Constructor by Parameter Types
+  href: tutorials/registration/Type/Constructor/param_types.html
+- uid: Tutorial.Injection.Constructor.Values
+  name: Select Constructor by Parameter Values
+  href: tutorials/registration/Type/Constructor/param_values.html
 - uid: Tutorial.Injection.Field
   name: Field Injection
   href: tutorials/registration/Type/field.html

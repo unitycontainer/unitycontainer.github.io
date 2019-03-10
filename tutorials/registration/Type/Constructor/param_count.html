@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Select Constructor By Number of Parameters | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Select Constructor By Number of Parameters | Unity Container ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.png">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tutorial.Injection.Constructor.Count">
+<h1 id="selecting-constructor">Selecting Constructor</h1>
+
+<h2 id="by-number-of-parameters">By Number of Parameters</h2>
+<p>Selecting constructor by number of parameters is the simplest form of selection. You could use this selection method if the constructor you invoking has unique number of parameters.</p>
+<h3 id="any-type">Any Type</h3>
+<p>This method is useful when you are working on a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> that takes certain number of parameters but you don't care what these parameter types are.</p>
+<h4 id="parameters">Parameters</h4>
+<p>In a case like this you could use <code>Resolve.Parameter()</code> to specify that you want a parameter at this position to be resolved. For example, consider the following <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>:</p>
+<pre><code class="lang-csharp" name="class Service">public class SampleType
+{
+    public SampleType(object arg) =&gt; Ctor = 1;
+
+    public SampleType(IService service, object arg) =&gt; Ctor = 2;
+
+    public SampleType(IService service, object arg, Type type) =&gt; Ctor = 3;
+
+    public int Ctor { get; } // Constructor called 
+}
+</code></pre>
+<p>It has several constructors with different number of parameters each. Normally, the container would try to run the most complex constructor, but if you want to invoke the one with just a single parameter you need to register it like this:</p>
+<pre><code class="lang-csharp" name="class Service">
+Container.RegisterType&lt;SampleType&gt;( Invoke.Constructor( Resolve.Parameter() ));
+
+</code></pre>
+<p>In this registration you configure the container to invoke a constructor that takes just one parameter. The parameter is resolved using a contract with a type of the parameter and no name.</p>
+<p>Now if you resolve the type, the container will invoke that constructor and inject the parameter:</p>
+<pre><code class="lang-csharp" name="class Service">
+var instance = Container.Resolve&lt;SampleType&gt;();
+
+// 1 == instance.Ctor
+
+</code></pre><h4 id="generic-parameters">Generic Parameters</h4>
+<p>The same method as above, could be used to invoke constructors with generic parameters. Consider the following class:</p>
+<pre><code class="lang-csharp" name="class Service">public class SampleType&lt;T&gt;
+{
+    public SampleType(T arg)
+    {
+        Ctor = 1;
+        Value = arg;
+    }
+
+    public SampleType([Dependency(&quot;one&quot;)]IService service, T arg)
+    {
+        Ctor = 2;
+        Service = service;
+        Value = arg;
+    }
+
+    public SampleType(IService service, T arg, object obj)
+    {
+        Ctor = 3;
+        Service = service;
+        Value = arg;
+    }
+
+    public int Ctor { get; }        // Called Constructor
+    public IService Service { get; }// Service passed in
+    public T Value { get; }         // Generic argument value
+}
+</code></pre>
+<p>To configure the container to invoke the first constructor you would execute the same code with exception of how you pass in a type of the contract. Registration of an open generic requires a conventional method call:</p>
+<pre><code class="lang-csharp" name="class Service">
+Container.RegisterType(typeof(SampleType&lt;&gt;), Invoke.Constructor( Resolve.Parameter() ));
+
+</code></pre>
+<p>When resolved, the container will invoke the first constructor and inject it with created instance of <code>Object</code>:</p>
+<pre><code class="lang-csharp" name="class Service">
+var instance = Container.Resolve&lt;SampleType&lt;object&gt;&gt;();
+
+// 1 == instance.Ctor
+
+</code></pre><h4 id="parameter-dependencies-with-contract-name">Parameter dependencies with Contract Name</h4>
+<p>When configuring constructors with the method described above you should be mindful of parameter annotations and contract names these annotations might provide.</p>
+<p>When implicitly injecting a parameter, the container will recognize all metadata the parameter is annotated with and will properly inject it with correct contract. When you add an <a class="xref" href="../../../../api/Unity.Injection.ResolvedParameter.html">InjectionMember</a> to configure the parameter you override all these annotations.</p>
+<p>If you look at the second constructor of <code>SampleType&lt;T&gt;</code> you will notice that the first parameter is marked with <a class="xref" href="../../../../api/Unity.DependencyAttribute.html">Dependency</a> attribute. Normally, when resolving that parameter, Unity will, if present, use Name of the Contract the attribute provides. But when you register it as in the following example, you will override that contract:</p>
+<pre><code class="lang-csharp" name="class Service">Container.RegisterType&lt;IService, Service&gt;()
+         .RegisterType&lt;IService, ServiceOne&gt;(&quot;one&quot;)
+         .RegisterType&lt;IService, ServiceTwo&gt;(&quot;two&quot;);
+
+Container.RegisterType(typeof(SampleType&lt;&gt;),
+    Invoke.Constructor(
+        Resolve.Parameter(),
+        Resolve.Parameter()));
+
+var instance = Container.Resolve&lt;SampleType&lt;object&gt;&gt;();
+
+// 2 == instance.Ctor
+// typeof(Service) == instance.Service.GetType()
+
+</code></pre>
+<p>When resolved, Unity will execute the constructor but instead of dependency with contract name <code>one</code> it will use contract with no name.</p>
+<p>If you need to, you could override contract name explicitly as in the following example:</p>
+<pre><code class="lang-csharp" name="class Service">
+Container.RegisterType(typeof(SampleType&lt;&gt;),
+    Invoke.Constructor(
+        Resolve.Parameter(&quot;two&quot;),
+        Resolve.Parameter()));
+
+var instance = Container.Resolve&lt;SampleType&lt;object&gt;&gt;();
+
+// 2 == instance.Ctor
+// typeof(ServiceTwo) == instance.Service.GetType()
+
+</code></pre>
+<p>If you'd like to preserve contracts from annotations, you need to use one of the following selection methods instead.</p>
+<h3 id="for-more-information-see">For more information see</h3>
+<ul>
+<li><a class="xref" href="param_types.html">Select constructors by parameter types</a></li>
+<li><a class="xref" href="param_values.html">Select constructors based on injected values</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/registration/Type/Constructor/param_count.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2009–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>
