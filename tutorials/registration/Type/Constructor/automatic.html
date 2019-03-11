@@ -87,19 +87,19 @@
 <h3 id="constructor-selection-steps">Constructor selection Steps</h3>
 <p>One of the first steps, when creating a pipeline, is a constructor selection. Constructors are selected in the following order:</p>
 <ul>
-<li>If present, constructor specified by <a class="xref" href="../../../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor</a></li>
-<li>If present, constructor annotated with an attribute</li>
+<li>If present, use registered <a class="xref" href="../../../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor</a></li>
+<li>If present, annotated with an attribute</li>
 <li>Automatically select constructor
 <ul>
 <li>Get all accessible constructors</li>
 <li>Process constructors in ascending order from most complex to the default
 <ul>
-<li>Filter out static and <a class="xref" href="constructor.html#restrictions">restricted</a> constructors</li>
+<li>Filter out <a class="xref" href="constructor.html#restrictions">restricted</a> constructors</li>
 <li>Loop through parameters and check if
 <ul>
 <li>Is primitive
 <ul>
-<li>Registered with the container</li>
+<li>Is registered with the container</li>
 <li>Has <em>default</em> value</li>
 </ul>
 </li>
@@ -107,7 +107,7 @@
 <li>Is registered with container</li>
 </ul>
 </li>
-<li>Select the first constructor with all parameters that can be successfully injected</li>
+<li>Select the first constructor the container can create</li>
 </ul>
 </li>
 </ul>

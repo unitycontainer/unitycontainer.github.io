@@ -114,9 +114,11 @@ container.RegisterType&lt;IService, WebService&gt;(&quot;WebMail&quot;, TypeLife
 container.RegisterType&lt;IService, SecureService&gt;(&quot;Encrypted&quot;, TypeLifetime.Singleton);
 </code></pre>
 <p>For more information about lifetime management see <a class="xref" href="../../lifetime/lifetime.html">Lifetime Management</a></p>
-<h2 id="configuring-creation-pipeline">Configuring Creation Pipeline</h2>
+<h2 id="creation-pipeline">Creation Pipeline</h2>
 <p>Unity instantiates an objects by creating a resolver pipeline and executing it with passed in injection values. Each pipeline consists of a several steps with each step performing part of the initialization.</p>
 <p>How the pipeline is assembled and what values are injected is controlled by collection of <a class="xref" href="../../../api/Unity.Injection.InjectionMember.html">Injection Member</a> objects passed to registration method. The normal steps of the object creation process are:</p>
+<h2 id="injection-instructions">Injection Instructions</h2>
+<p>During the registration you could Configure the container to select certain constructor, initialize properties and fields, call methods, and inject values and instructions for dependencies. All this is done by passing appropriate <a class="xref" href="../../../api/Unity.Injection.html">Injection Members</a> to the registration. For more information see:</p>
 <ul>
 <li><a class="xref" href="Constructor/constructor.html">Constructor invocation and injection</a></li>
 <li><a class="xref" href="field.html">Fields injection</a></li>
