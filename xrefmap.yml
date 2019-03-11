@@ -64,6 +64,9 @@ references:
 - uid: Tutorial.Container.Hierarchy
   name: Container Hierarchy
   href: tutorials/hierarchies.html
+- uid: Tutorial.Injection
+  name: Dependency Injection
+  href: tutorials/registration/Type/Injection/injection.html
 - uid: Tutorial.Injection.Constructor
   name: Constructor Injection
   href: tutorials/registration/Type/Constructor/constructor.html
@@ -85,9 +88,15 @@ references:
 - uid: Tutorial.Injection.Constructor.Values
   name: Select Constructor by Parameter Values
   href: tutorials/registration/Type/Constructor/param_values.html
+- uid: Tutorial.Injection.Default
+  name: Support for Default Values
+  href: tutorials/registration/Type/Injection/default.html
 - uid: Tutorial.Injection.Field
   name: Field Injection
   href: tutorials/registration/Type/field.html
+- uid: Tutorial.Injection.Injected
+  name: Injecting Dependency Values
+  href: tutorials/registration/Type/Injection/injected.html
 - uid: Tutorial.Injection.Method
   name: Method Injection
   href: tutorials/registration/Type/method.html
@@ -97,6 +106,9 @@ references:
 - uid: Tutorial.Injection.Property
   name: Property Injection
   href: tutorials/registration/Type/property.html
+- uid: Tutorial.Injection.Resolved
+  name: Resolving Dependency Values
+  href: tutorials/registration/Type/Injection/resolved.html
 - uid: Tutorial.Lifetime
   name: Lifetime Management
   href: tutorials/lifetime/lifetime.html
