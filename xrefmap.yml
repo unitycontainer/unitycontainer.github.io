@@ -40,6 +40,9 @@ references:
 - uid: Specification.Workflow
   name: Workflow
   href: specs/workflow.html
+- uid: Tutorial.Annotation
+  name: Type Annotation
+  href: tutorials/Annotation/annotation.html
 - uid: Tutorial.Annotation.Constructor
   name: Annotating Type for Constructor Injection
   href: tutorials/Annotation/constructor.html
@@ -94,9 +97,12 @@ references:
 - uid: Tutorial.Injection.Property
   name: Property Injection
   href: tutorials/registration/Type/property.html
-- uid: Tutorial.Lifetime.Overview
+- uid: Tutorial.Lifetime
   name: Lifetime Management
   href: tutorials/lifetime/lifetime.html
+- uid: Tutorial.Registration
+  name: Registration
+  href: tutorials/registration/registration.html
 - uid: Tutorial.Registration.Factory
   name: Factory Registration
   href: tutorials/registration/factory.html
@@ -109,13 +115,10 @@ references:
 - uid: Tutorial.Registration.Metadata
   name: Registration Metadata
   href: tutorials/registration/metadata.html
-- uid: Tutorial.Registration.Overview
-  name: Registration
-  href: tutorials/registration/overview.html
 - uid: Tutorial.Registration.Type
   name: Type Registration
   href: tutorials/registration/Type/registration.html
-- uid: Tutorial.Resolution.Overview
+- uid: Tutorial.Resolution
   name: Resolving Objects
   href: tutorials/resolution/resolution.html
 - uid: Tutorial.Resolution.Selection
