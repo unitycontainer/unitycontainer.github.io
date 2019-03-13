@@ -8,7 +8,7 @@
     <title>Automatic Constructor Selection | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Automatic Constructor Selection | Unity Container ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.png">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -81,10 +81,10 @@
 <h2 id="automatic-constructor-selection">Automatic Constructor Selection</h2>
 <p>Automatic constructor selection is performed if no other information is available on how to create a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>. Unity uses dynamic, real time algorithm to discover and select a constructor.</p>
 <p>The Unity container will try to execute the most complex constructor it can provide with appropriate dependencies. In other words, if the container can resolve and/or inject all parameters of the constructor, it will be selected.</p>
-<h3 id="creating-pipeline">Creating Pipeline</h3>
+<h3 id="creating-build-pipeline">Creating Build Pipeline</h3>
 <p>Selection process takes place during the first resolution of a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> contract. Unity container employs lazy resolution strategy. It will defer pipeline creation until the contract (<a class="xref" href="../../registration/metadata.html">RegistrationType and Name</a>) is requested.</p>
 <p>The lazy approach allows registrations to proceed at random order and do not require dependencies to be registered before dependents. As long as all of these are available at the time of resolution Unity does not care in what order they were registered.</p>
-<h3 id="constructor-selection-steps">Constructor selection Steps</h3>
+<h3 id="constructor-selection-steps">Constructor Selection Steps</h3>
 <p>One of the first steps, when creating a pipeline, is a constructor selection. Constructors are selected in the following order:</p>
 <ul>
 <li>If present, use registered <a class="xref" href="../../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor</a></li>
@@ -116,11 +116,11 @@
 <p>The Unity container will select the first successful match and use it as a selection.</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>In case when more than one constructor could be matched at the same time, the order and constructor selection can not be guaranteed.</p>
+<p>When more than one constructor could be matched at the same time, the order and constructor selection can not be guaranteed.</p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If <a class="xref" href="../../diagnostic.html">Diagnostic</a> extension is enabled, Unity will perform a selection validation and will throw an exception, reporting ambiguous constructors, if more than one constructor can be selected with current configuration.</p>
+<p>If <a class="xref" href="../../diagnostic.html">Diagnostic</a> extension is enabled, Unity will perform a selection validation and will throw an exception, reporting ambiguous constructors, if more than one constructor can be successfully selected with current configuration.</p>
 </div>
 <p>If no constructor could be selected, the container will throw an exception.</p>
 <h3 id="pipeline-retention">Pipeline retention</h3>
