@@ -81,8 +81,7 @@
 </code></pre>
 <p>everything is simple. Registered type is <code>SomeType</code> and Unity will resolve it as container controlled singleton.</p>
 <h3 id="mapping-registration">Mapping registration</h3>
-<p>This is the most common scenario for dependency injection using Unity. It involves registering a mapping between types such as an interface or a base class and a corresponding concrete class that implements or inherits from it.
-When type is registered as a mapping:</p>
+<p>This is the most common scenario for dependency injection using Unity. It involves registering a mapping between types such as an interface or a base class and a corresponding concrete class that implements or inherits from it. When type is registered as a mapping:</p>
 <pre><code class="lang-C#">RegisterType&lt;IService, SomeType&gt;();
 </code></pre>
 <p><strong>Registered</strong> type (used to be called <strong>From</strong> type) is always the first in the sequence, in this case <code>IService</code>. Registration like this tells Unity that when <code>IService</code> is requested it should resolve it as <code>SomeType</code> and return as <code>IService</code>.
