@@ -67,7 +67,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Tutorial.Resolution.Override">
-<h1 id="overriding-dependency-values-during-resolution">Overriding dependency values during resolution</h1>
+<h1 id="overriding-dependencies-during-resolution">Overriding dependencies during resolution</h1>
 
 <p>The parameter and dependency overrides, ParameterOverride and DependencyOverride, are ResolverOverride implementations that provide support for overriding the registration information for resolving instances of types. When you call the Resolve method, these classes enable you to override values specified when the type was registered, such as by a RegisterType or RegisterInstance statement. In effect, RegisterType supplied values are overridden by Resolve supplied values.</p>
 <p>Use ParameterOverride to override the specified constructor parameter or parameters. The override applies everywhere the parameter appears unless you use OnType to constrain the override to a specified type. Since the purpose of overrides is to affect the resolution of dependencies for all relevant created objects, not just the object requested in the call to Resolve, unconstrained overrides can produce errors if there are unconstrained ParameterOverride parameters that match parameters with the same name but different types on the selected constructors for objects created in a given resolve operation.</p>
