@@ -10,6 +10,9 @@ references:
 - uid: Article.Unity.Features
   name: Features
   href: articles/features.html
+- uid: Article.Unity.History
+  name: The Unity Container History
+  href: articles/history.html
 - uid: Article.Unity.Install
   name: Adding Unity to Your Application
   href: articles/installation.html
@@ -41,7 +44,7 @@ references:
   name: Workflow
   href: specs/workflow.html
 - uid: Tutorial.Annotation
-  name: Type Annotation
+  name: Attributed Injection Model
   href: tutorials/Annotation/annotation.html
 - uid: Tutorial.Annotation.Constructor
   name: Annotating Type for Constructor Injection
@@ -52,14 +55,11 @@ references:
 - uid: Tutorial.Annotation.Method
   name: Annotating types for Method invocation
   href: tutorials/Annotation/method.html
-- uid: Tutorial.Annotation.Overview
-  name: Using Injection Attributes
-  href: tutorials/Annotation/overview.html
 - uid: Tutorial.Annotation.Parameter
   name: Annotating Constructors and Methods for Parameter Injection
   href: tutorials/Annotation/parameter.html
 - uid: Tutorial.Annotation.Property
-  name: Annotating Objects for Property Injection
+  name: Property Injection Annotation
   href: tutorials/Annotation/property.html
 - uid: Tutorial.Container.Hierarchy
   name: Container Hierarchy
