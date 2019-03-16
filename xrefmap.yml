@@ -3581,24 +3581,6 @@ references:
   commentId: M:Unity.Resolution.DependencyOverride.Equals(System.Object)
   fullName: Unity.Resolution.DependencyOverride.Equals(System.Object)
   nameWithType: DependencyOverride.Equals(Object)
-- uid: Unity.Resolution.DependencyOverride.Equals(System.Reflection.FieldInfo)
-  name: Equals(FieldInfo)
-  href: api/Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_System_Reflection_FieldInfo_
-  commentId: M:Unity.Resolution.DependencyOverride.Equals(System.Reflection.FieldInfo)
-  fullName: Unity.Resolution.DependencyOverride.Equals(System.Reflection.FieldInfo)
-  nameWithType: DependencyOverride.Equals(FieldInfo)
-- uid: Unity.Resolution.DependencyOverride.Equals(System.Reflection.ParameterInfo)
-  name: Equals(ParameterInfo)
-  href: api/Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_System_Reflection_ParameterInfo_
-  commentId: M:Unity.Resolution.DependencyOverride.Equals(System.Reflection.ParameterInfo)
-  fullName: Unity.Resolution.DependencyOverride.Equals(System.Reflection.ParameterInfo)
-  nameWithType: DependencyOverride.Equals(ParameterInfo)
-- uid: Unity.Resolution.DependencyOverride.Equals(System.Reflection.PropertyInfo)
-  name: Equals(PropertyInfo)
-  href: api/Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_System_Reflection_PropertyInfo_
-  commentId: M:Unity.Resolution.DependencyOverride.Equals(System.Reflection.PropertyInfo)
-  fullName: Unity.Resolution.DependencyOverride.Equals(System.Reflection.PropertyInfo)
-  nameWithType: DependencyOverride.Equals(PropertyInfo)
 - uid: Unity.Resolution.DependencyOverride.Equals(Unity.Resolution.NamedType)
   name: Equals(NamedType)
   href: api/Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_Unity_Resolution_NamedType_

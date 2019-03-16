@@ -705,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Resolution.DependencyOverride-1.html",
-          "hash": "6czOHN4kI2NTJDUJEQcQPA=="
+          "hash": "CAh41ZyjL/WhvS6yHq4HJQ=="
         }
       },
       "is_incremental": false,
@@ -717,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Resolution.DependencyOverride.html",
-          "hash": "c0j43Sl6ZZNq4kGxGZEryg=="
+          "hash": "0jLAEohXfN8BHfgMYB+c9Q=="
         }
       },
       "is_incremental": false,
@@ -1087,7 +1087,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "lxe7dfD52cQ/BqtW+7Hbfw=="
+          "hash": "13l0yOKMlDmh6pOlcve1CQ=="
         }
       },
       "is_incremental": false,
@@ -1816,11 +1816,10 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 77,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
@@ -1829,10 +1828,11 @@
           "total_file_count": 66,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 77,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

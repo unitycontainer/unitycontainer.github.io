@@ -87,9 +87,6 @@ specify the dependency type using generic syntax.</p>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Unity.Resolution.NamedType.html">NamedType</a>&gt;</div>
-    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.fieldinfo">FieldInfo</a>&gt;</div>
-    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.propertyinfo">PropertyInfo</a>&gt;</div>
-    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.parameterinfo">ParameterInfo</a>&gt;</div>
     <div><a class="xref" href="Unity.Resolution.IResolve.html">IResolve</a></div>
   </div>
   <div class="inheritedMembers">
@@ -105,15 +102,6 @@ specify the dependency type using generic syntax.</p>
     </div>
     <div>
       <a class="xref" href="Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_Unity_Resolution_NamedType_">DependencyOverride.Equals(NamedType)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_System_Reflection_FieldInfo_">DependencyOverride.Equals(FieldInfo)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_System_Reflection_PropertyInfo_">DependencyOverride.Equals(PropertyInfo)</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Equals_System_Reflection_ParameterInfo_">DependencyOverride.Equals(ParameterInfo)</a>
     </div>
     <div>
       <a class="xref" href="Unity.Resolution.DependencyOverride.html#Unity_Resolution_DependencyOverride_Resolve__1___0__">DependencyOverride.Resolve&lt;TContext&gt;(TContext)</a>
@@ -156,7 +144,7 @@ specify the dependency type using generic syntax.</p>
   <h6><strong>Assembly</strong>: Unity.Abstractions.dll</h6>
   <h5 id="Unity_Resolution_DependencyOverride_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DependencyOverride&lt;T&gt; : DependencyOverride, IEquatable&lt;NamedType&gt;, IEquatable&lt;FieldInfo&gt;, IEquatable&lt;PropertyInfo&gt;, IEquatable&lt;ParameterInfo&gt;, IResolve</code></pre>
+    <pre><code class="lang-csharp hljs">public class DependencyOverride&lt;T&gt; : DependencyOverride, IEquatable&lt;NamedType&gt;, IResolve</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,7 +169,7 @@ specify the dependency type using generic syntax.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride_1__ctor_System_Object_.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride%601.%23ctor(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L130">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L108">View Source</a>
   </span>
   <a id="Unity_Resolution_DependencyOverride_1__ctor_" data-uid="Unity.Resolution.DependencyOverride`1.#ctor*"></a>
   <h4 id="Unity_Resolution_DependencyOverride_1__ctor_System_Object_" data-uid="Unity.Resolution.DependencyOverride`1.#ctor(System.Object)">DependencyOverride(Object)</h4>
@@ -215,15 +203,6 @@ override the given dependency, and pass the given value.</p>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
   </div>
   <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
-  </div>
-  <div>
       <a class="xref" href="Unity.Resolution.IResolve.html">IResolve</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
@@ -244,7 +223,7 @@ override the given dependency, and pass the given value.</p>
                     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Resolution_DependencyOverride_1.md&amp;value=---%0Auid%3A%20Unity.Resolution.DependencyOverride%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L124" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Dependency/Resolution/Overrides/DependencyOverride.cs/#L102" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
