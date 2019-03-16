@@ -133,6 +133,21 @@ references:
 - uid: Tutorial.Resolution
   name: Resolving Objects
   href: tutorials/resolution/resolution.html
+- uid: Tutorial.Resolution.Override
+  name: Resolution Override
+  href: tutorials/resolution/Overrides/override.html
+- uid: Tutorial.Resolution.Override.Dependency
+  name: Dependency Override
+  href: tutorials/resolution/Overrides/dependency.html
+- uid: Tutorial.Resolution.Override.Field
+  name: Field Overrides
+  href: tutorials/resolution/Overrides/field.html
+- uid: Tutorial.Resolution.Override.Parameter
+  name: Parameter Override
+  href: tutorials/resolution/Overrides/parameter.html
+- uid: Tutorial.Resolution.Override.Property
+  name: Property Override
+  href: tutorials/resolution/Overrides/property.html
 - uid: Tutorial.Resolution.Selection
   name: Tutorial.Resolution.Selection
   href: tutorials/resolution/selection.html
