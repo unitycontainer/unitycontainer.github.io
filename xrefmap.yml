@@ -3286,6 +3286,12 @@ references:
   commentId: T:Unity.Override
   fullName: Unity.Override
   nameWithType: Override
+- uid: Unity.Override.Dependency(System.Object)
+  name: Dependency(Object)
+  href: api/Unity.Override.html#Unity_Override_Dependency_System_Object_
+  commentId: M:Unity.Override.Dependency(System.Object)
+  fullName: Unity.Override.Dependency(System.Object)
+  nameWithType: Override.Dependency(Object)
 - uid: Unity.Override.Dependency(System.String,System.Object)
   name: Dependency(String, Object)
   href: api/Unity.Override.html#Unity_Override_Dependency_System_String_System_Object_
@@ -3342,6 +3348,12 @@ references:
   isSpec: "True"
   fullName: Unity.Override.Field
   nameWithType: Override.Field
+- uid: Unity.Override.Parameter(System.Object)
+  name: Parameter(Object)
+  href: api/Unity.Override.html#Unity_Override_Parameter_System_Object_
+  commentId: M:Unity.Override.Parameter(System.Object)
+  fullName: Unity.Override.Parameter(System.Object)
+  nameWithType: Override.Parameter(Object)
 - uid: Unity.Override.Parameter(System.String,System.Object)
   name: Parameter(String, Object)
   href: api/Unity.Override.html#Unity_Override_Parameter_System_String_System_Object_
@@ -4336,6 +4348,15 @@ references:
   isSpec: "True"
   fullName: Unity.Resolve.Dependency
   nameWithType: Resolve.Dependency
+- uid: Unity.Resolve.Dependency``1
+  name: Dependency<TTarget>()
+  href: api/Unity.Resolve.html#Unity_Resolve_Dependency__1
+  commentId: M:Unity.Resolve.Dependency``1
+  name.vb: Dependency(Of TTarget)()
+  fullName: Unity.Resolve.Dependency<TTarget>()
+  fullName.vb: Unity.Resolve.Dependency(Of TTarget)()
+  nameWithType: Resolve.Dependency<TTarget>()
+  nameWithType.vb: Resolve.Dependency(Of TTarget)()
 - uid: Unity.Resolve.Dependency``1(System.String)
   name: Dependency<TTarget>(String)
   href: api/Unity.Resolve.html#Unity_Resolve_Dependency__1_System_String_
