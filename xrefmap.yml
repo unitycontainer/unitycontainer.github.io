@@ -112,6 +112,12 @@ references:
 - uid: Tutorial.Lifetime
   name: Lifetime Management
   href: tutorials/lifetime/lifetime.html
+- uid: Tutorial.Lifetime.Managers
+  name: Lifetime Managers
+  href: tutorials/lifetime/managers.html
+- uid: Tutorial.Lifetime.Transient
+  name: Transient Lifetime
+  href: tutorials/lifetime/transient.html
 - uid: Tutorial.Registration
   name: Registration
   href: tutorials/registration/registration.html

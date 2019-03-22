@@ -1350,7 +1350,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/lifetime.html",
-          "hash": "ulb+fANoYmGghLfxlCTFcw=="
+          "hash": "PQp5k0vmm/04i55YGdWFaA=="
         }
       },
       "is_incremental": false,
@@ -1374,7 +1374,19 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/managers.html",
-          "hash": "DMmppyGQF/eIQ8ISE2QgQw=="
+          "hash": "bXnHKhu/InIVV95lYU4D2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/transient.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/transient.html",
+          "hash": "uipH0KNICX0fNMC28OorRA=="
         }
       },
       "is_incremental": false,
@@ -1785,7 +1797,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "QIKagzWeTkKNcwI9/wCLwQ=="
+          "hash": "Z0macZ+YmpQa94yx5Ulkkw=="
         }
       },
       "is_incremental": false,
@@ -1815,23 +1827,23 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 77,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 65,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 66,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 77,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

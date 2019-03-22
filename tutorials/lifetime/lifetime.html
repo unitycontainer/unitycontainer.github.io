@@ -99,6 +99,20 @@ When next time you call <code>Resolve&lt;IService&gt;()</code> Unity performs fo
 <pre><code class="lang-C#">RegisterType&lt;IService, Service&gt;(new ContainerControlledLifetimeManager());
 </code></pre>
 <p>it tells Unity to resolve <code>IService</code> as usual and store result in <code>ContainerControlledLifetimeManager</code>. So next time you call <code>Resolve&lt;IService&gt;</code> Unity will locate registration for <code>IService</code> and check if associated <code>ContainerControlledLifetimeManager</code> has instance already stored in it. If yes, it will simply return that instance.</p>
+<h2 id="unity-built-in-lifetime-managers">Unity Built-In Lifetime Managers</h2>
+<p>Unity includes several lifetime managers that you can use directly in your code, but you can create your own lifetime managers to implement specific lifetime scenarios. Unity includes the following lifetime managers:</p>
+<ul>
+<li><a class="xref" href="transient.html">Transient</a></li>
+<li><a class="xref" href="../../api/Unity.Lifetime.SingletonLifetimeManager.html">Singleton</a></li>
+<li>Per Container</li>
+<li>Per Container Transient</li>
+<li>Hierarchical</li>
+<li>External</li>
+<li>Per Thread</li>
+<li>Per Resolve</li>
+</ul>
+
+<p><a href="https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff660872(v%3dpandp.20)">Ref</a></p>
 </article>
           </div>
           
