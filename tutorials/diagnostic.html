@@ -69,12 +69,12 @@
             <article class="content wrap" id="_content" data-uid="Tutorial.Unity.Diagnostic">
 <h1 id="diagnostic">Diagnostic</h1>
 
-<p>Creating and configuring Unity container is a complicated process. A lot of things could go wrong and finding where it was misconfigured might be rather involved. To simplify debugging and to help fix issues Unity offers <strong>Diagnostic</strong> extension.</p>
+<p>Creating and configuring Unity container is a complicated process. A lot of things could go wrong and finding where it was misconfigured could be rather involved. To simplify debugging and to help fix issues Unity offers <strong>Diagnostic</strong> extension.</p>
 <h2 id="performance-considerations">Performance considerations</h2>
-<p>The Unity container uses reflection for most of its operations. It gather information about types and creates pipelines to create these types based on reflected data. Validation is performed based on reflected data as well. Because of that it is rather resource extensive and relatively slow.</p>
-<p>Unity runtime engine, to optimize performance, does not do any runtime validation and only performs absolute minimum checks, just enough to be able to run. As result a lot of error conditions are not captured during the design and debug phase. To remedy this shortcoming the container exposes <strong>Diagnostic</strong> extension which does thorough examination of registration data and reports any error conditions to the developer.</p>
+<p>The Unity container uses reflection for most of its operations. It gathers information about types, creates pipelines to create these types, and verifies everything all based on reflected data. Because of that it is rather resource extensive and relatively slow.</p>
+<p>To optimize performance, Unity engine does not do any runtime validation and only performs absolute minimum checks, just enough to be able to run. As result a lot of irregular conditions might go unnoticed. To remedy this, the container exposes <strong>Diagnostic</strong> extension which does thorough examination of all registration data and throws exceptions on any irregularities.</p>
 <h2 id="unity-diagnostic-extension">Unity Diagnostic Extension</h2>
-<p><strong>Diagnostic</strong> extension, among other things, validates for the following errors:</p>
+<p><strong>Diagnostic</strong> extension, among other things, verifies the following conditions:</p>
 <ul>
 <li>Cyclical references (The famous Stack Overflow Exception)</li>
 <li>Validity of provided Injection Members</li>
@@ -84,7 +84,7 @@
 <h2 id="enabling-diagnostics">Enabling Diagnostics</h2>
 <p>The extension could be enabled in few different ways:</p>
 <h3 id="add-extension">Add Extension</h3>
-<p>The most basic case is when extension as added through call to <code>AddExtension(...)</code>. It works with either regular or generic methods.</p>
+<p>The most basic case is when extension is added via <code>AddExtension(...)</code> call. It works with either regular or generic methods.</p>
 <pre><code class="lang-cs">var container = new UnityContainer()
                 .AddExtension(new Diagnostic());
 </code></pre>
@@ -92,7 +92,7 @@
 <pre><code class="lang-cs">var container = new UnityContainer()
                 .AddExtension&lt;Diagnostic&gt;();
 </code></pre>
-<p>The first method with <code>AddExtension(new Diagnostic())</code> is a bit faster but difference is negligible.</p>
+<p>The first method, one with <code>AddExtension(new Diagnostic())</code> is a bit faster.</p>
 <h3 id="using-extension-method">Using extension method</h3>
 <p>For convenience, Unity container exposes <a href="https://github.com/unitycontainer/container/blob/master/src/Extensions/DiagnosticExtensions.cs">EnableDiagnostic()</a> extension method. This method is equal to adding extension to the container.</p>
 <pre><code class="lang-cs">var container = new UnityContainer()
