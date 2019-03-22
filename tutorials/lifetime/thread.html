@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Transient Lifetime | Unity Container </title>
+    <title>Per Thread Lifetime | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Transient Lifetime | Unity Container ">
+    <meta name="title" content="Per Thread Lifetime | Unity Container ">
     <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -66,20 +66,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tutorial.Lifetime.Transient">
-<h1 id="transient-lifetime">Transient Lifetime</h1>
+            <article class="content wrap" id="_content" data-uid="Tutorial.Lifetime.Thread">
+<h1 id="per-thread-lifetime">Per Thread Lifetime</h1>
 
-<p>Transient lifetime is a default lifetime of the Unity container. As the name implies it lasts very short period of time, actually, no time at all. In the Unity container terms, having transient lifetime is the same as having no lifetime manager at all.</p>
-<p>For this lifetime manager Unity creates and returns a new instance of the requested type for each call to the <strong>Resolve</strong> method.</p>
+<p>Per thread lifetime means a new instance of the registered <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> will be created once per each thread. In other words, if a <code>Resolve&lt;T&gt;()</code> method is called on a thread the first time, it will return a new object. Each subsequent call to <code>Resolve&lt;T&gt;()</code>, or when the dependency mechanism injects instances of the type into other classes on the same thread, the container will return the same object.</p>
 <h2 id="the-lifetime-manager">The Lifetime Manager</h2>
-<p>The transient lifetime is controlled by <a class="xref" href="../../api/Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a>. This lifetime manager is used by default for all types registered using the <strong>RegisterType</strong> method where no specific manager has been provided.</p>
+<p>Per thread lifetime is controlled by <a class="xref" href="../../api/Unity.Lifetime.PerThreadLifetimeManager.html">PerThreadLifetimeManager</a> lifetime manager. This lifetime manager effectively implements a singleton behavior for objects on a per-thread basis.</p>
 <h2 id="registration">Registration</h2>
-<p>When registering a transient <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> it is recommended to not pass an instance of <a class="xref" href="../../api/Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a> to the registration, but allow Unity to create it explicitly.</p>
+<p>Per thread lifetime is only supported by <a class="xref" href="../registration/Type/registration.html">Type</a> and <a class="xref" href="../registration/factory.html">Factory</a> registrations. <a class="xref" href="../registration/instance.html">Instance</a> registration does not support this lifetime.</p>
 <h3 id="example">Example</h3>
-<pre><code class="lang-C#">RegisterType&lt;Foo&gt;();
-RegisterType&lt;IService, Service&gt;();
+<p>To create a Type registration with per thread lifetime:</p>
+<pre><code class="lang-C#">container.RegisterType&lt;IService, Service&gt;(TypeLifetime.PerThread);
 </code></pre>
-<p>In this example a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> <code>Foo</code> and a mapping from <code>IService</code> to <code>Service</code> both registered with transient lifetime.  So every call to <code>Resolve&lt;Foo&gt;()</code> or <code>Resolve&lt;IService&gt;()</code> will create a new object instance.</p>
+<p>or you could register a factory:</p>
+<pre><code class="lang-C#">container.RegisterFactory&lt;IService&gt;((c, t, n) =&gt; new Service(),
+                                    FactoryLifetime.PerThread);
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Please note that registrations use <a class="xref" href="../../api/Unity.TypeLifetime.html">TypeLifetime</a> and <a href="xref:FactoryLifetime">FactoryLifetime</a> respectively.</p>
+</div>
 <h2 id="see-also">See Also</h2>
 <ul>
 <li><a class="xref" href="transient.html">Transient</a></li>
@@ -99,7 +105,7 @@ RegisterType&lt;IService, Service&gt;();
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/lifetime/transient.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/lifetime/thread.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

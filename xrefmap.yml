@@ -112,9 +112,30 @@ references:
 - uid: Tutorial.Lifetime
   name: Lifetime Management
   href: tutorials/lifetime/lifetime.html
+- uid: Tutorial.Lifetime.Container
+  name: Per Container Lifetime
+  href: tutorials/lifetime/container.html
+- uid: Tutorial.Lifetime.Container.Transient
+  name: Container Lifetime
+  href: tutorials/lifetime/container_transient.html
+- uid: Tutorial.Lifetime.External
+  name: External Lifetime
+  href: tutorials/lifetime/external.html
+- uid: Tutorial.Lifetime.Hierarchical
+  name: Hierarchical Lifetime
+  href: tutorials/lifetime/hierarchical.html
 - uid: Tutorial.Lifetime.Managers
   name: Lifetime Managers
   href: tutorials/lifetime/managers.html
+- uid: Tutorial.Lifetime.Resolve
+  name: Per Resolve Lifetime
+  href: tutorials/lifetime/resolve.html
+- uid: Tutorial.Lifetime.Singleton
+  name: Singleton Lifetime
+  href: tutorials/lifetime/singleton.html
+- uid: Tutorial.Lifetime.Thread
+  name: Per Thread Lifetime
+  href: tutorials/lifetime/thread.html
 - uid: Tutorial.Lifetime.Transient
   name: Transient Lifetime
   href: tutorials/lifetime/transient.html

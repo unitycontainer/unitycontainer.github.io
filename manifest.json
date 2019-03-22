@@ -1334,6 +1334,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/container.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/container.html",
+          "hash": "WjV7UkE75ciCD0A3cB9MOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/container_transient.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/container_transient.html",
+          "hash": "w8g+md5jHF75Vqq+pkpZOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tutorials/lifetime/disposal.md",
       "output": {
         ".html": {
@@ -1346,11 +1370,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/external.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/external.html",
+          "hash": "gWEuPF8tbmlyQYd5aAHRDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/hierarchical.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/hierarchical.html",
+          "hash": "w9vSwAhGhKBOhh8awYgVMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tutorials/lifetime/lifetime.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/lifetime.html",
-          "hash": "PQp5k0vmm/04i55YGdWFaA=="
+          "hash": "P7vhaF4jQuYKEvUJpLmulA=="
         }
       },
       "is_incremental": false,
@@ -1362,7 +1410,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/lifetime_managers.html",
-          "hash": "aJmM7qRXDdPWCekQGz3fPA=="
+          "hash": "KeZLRoieLtoUHfrFP5Wnqg=="
         }
       },
       "is_incremental": false,
@@ -1374,7 +1422,46 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/managers.html",
-          "hash": "bXnHKhu/InIVV95lYU4D2Q=="
+          "hash": "Bb040wHyf1BU4Wyx9bVoPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/resolve.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/resolve.html",
+          "hash": "NCOuz2SC+yPkx76MFho5gw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/singleton.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/singleton.html",
+          "hash": "YpETjzD3XCFNK1nxiv4sSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/lifetime/thread.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/lifetime/thread.html",
+          "hash": "nsHOfrizWYN/22mbFs4D6Q=="
         }
       },
       "is_incremental": false,
@@ -1386,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/transient.html",
-          "hash": "uipH0KNICX0fNMC28OorRA=="
+          "hash": "DyyGVFTNc45bxFjH0LSXHw=="
         }
       },
       "is_incremental": false,
@@ -1797,7 +1884,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "Z0macZ+YmpQa94yx5Ulkkw=="
+          "hash": "+OqGvTsl9W+cjEF2hbCdjA=="
         }
       },
       "is_incremental": false,
@@ -1827,9 +1914,9 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -1837,20 +1924,20 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 66,
+          "total_file_count": 73,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 77,
-          "skipped_file_count": 0
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }

@@ -70,12 +70,6 @@
 <h1 id="lifetime-managers">Lifetime Managers</h1>
 
 <p>Unity uses lifetime managers to control lifetime of objects it creates. It includes several lifetime managers that you can use directly in your code, but you can also create your own lifetime managers to implement specific lifetime scenarios.</p>
-<h2 id="transientlifetimemanager"><a class="xref" href="../../api/Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a></h2>
-<p>For this lifetime manager Unity creates and returns a new instance of the requested type for each call to the <strong>Resolve</strong> method. This lifetime manager is used by default for all types registered using the <strong>RegisterType</strong> method where no specific manager has been provided. When registering transient types it is not necessary to pass instance of <code>TransientLifetimeManager</code> to the registration.
-Example:</p>
-<pre><code class="lang-C#">RegisterType&lt;Service&gt;();
-RegisterType&lt;IService, Service&gt;();
-</code></pre>
 <h2 id="containercontrolledtransientmanager"><a class="xref" href="../../api/Unity.Lifetime.ContainerControlledTransientManager.html">ContainerControlledTransientManager</a></h2>
 <p>For this lifetime manager Unity creates and returns a new instance of the requested type for each call to the <strong>Resolve</strong> method. This lifetime manager is similar to <strong>TransientManager</strong> with the only difference that it holds reference to each created disposable instance and disposes these when container is disposed.
 This manager is useful when used in session based designs with child container associated with the session.</p>
@@ -106,9 +100,6 @@ RegisterInstance(new OtherService(), new HierarchicalLifetimeManager()); &lt;-- 
 </code></pre>
 <h2 id="perresolvelifetimemanager"><a class="xref" href="../../api/Unity.Lifetime.PerResolveLifetimeManager.html">PerResolveLifetimeManager</a></h2>
 <p>For this lifetime manager the behavior is like a <strong>TransientLifetimeManager</strong>, but also provides a signal to the default build plan, marking the type so that instances are reused across the build-up object graph. In the case of recursion, the singleton behavior applies where the object has been registered with the <strong>PerResolveLifetimeManager</strong>.</p>
-<h2 id="perthreadlifetimemanager"><a class="xref" href="../../api/Unity.Lifetime.PerThreadLifetimeManager.html">PerThreadLifetimeManager</a></h2>
-<p>For this lifetime manager Unity returns, on a per-thread basis, the same instance of the registered type or object each time you call the <strong>Resolve</strong> method or when the dependency mechanism injects instances into other classes. This lifetime manager effectively implements a singleton behavior for objects on a per-thread basis. <strong>PerThreadLifetimeManager</strong> returns different objects from the container for each thread.</p>
-<p>If you registered a type mapping using configuration or using the <strong>RegisterType</strong> method, Unity creates a new instance of the registered type the first time the type is resolved in a specified thread, either to answer a call to the <strong>Resolve</strong> method for the registered type or to fulfill a dependency while resolving a different type. Subsequent resolutions on the same thread return the same instance.</p>
 </article>
           </div>
           

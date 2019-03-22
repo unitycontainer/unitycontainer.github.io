@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Transient Lifetime | Unity Container </title>
+    <title>Hierarchical Lifetime | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Transient Lifetime | Unity Container ">
+    <meta name="title" content="Hierarchical Lifetime | Unity Container ">
     <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -66,20 +66,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tutorial.Lifetime.Transient">
-<h1 id="transient-lifetime">Transient Lifetime</h1>
+            <article class="content wrap" id="_content" data-uid="Tutorial.Lifetime.Hierarchical">
+<h1 id="hierarchical-lifetime">Hierarchical Lifetime</h1>
 
-<p>Transient lifetime is a default lifetime of the Unity container. As the name implies it lasts very short period of time, actually, no time at all. In the Unity container terms, having transient lifetime is the same as having no lifetime manager at all.</p>
-<p>For this lifetime manager Unity creates and returns a new instance of the requested type for each call to the <strong>Resolve</strong> method.</p>
 <h2 id="the-lifetime-manager">The Lifetime Manager</h2>
-<p>The transient lifetime is controlled by <a class="xref" href="../../api/Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a>. This lifetime manager is used by default for all types registered using the <strong>RegisterType</strong> method where no specific manager has been provided.</p>
 <h2 id="registration">Registration</h2>
-<p>When registering a transient <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> it is recommended to not pass an instance of <a class="xref" href="../../api/Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a> to the registration, but allow Unity to create it explicitly.</p>
 <h3 id="example">Example</h3>
-<pre><code class="lang-C#">RegisterType&lt;Foo&gt;();
-RegisterType&lt;IService, Service&gt;();
-</code></pre>
-<p>In this example a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> <code>Foo</code> and a mapping from <code>IService</code> to <code>Service</code> both registered with transient lifetime.  So every call to <code>Resolve&lt;Foo&gt;()</code> or <code>Resolve&lt;IService&gt;()</code> will create a new object instance.</p>
 <h2 id="see-also">See Also</h2>
 <ul>
 <li><a class="xref" href="transient.html">Transient</a></li>
@@ -99,7 +91,7 @@ RegisterType&lt;IService, Service&gt;();
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/lifetime/transient.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/lifetime/hierarchical.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
