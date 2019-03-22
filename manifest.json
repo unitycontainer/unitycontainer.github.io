@@ -1334,18 +1334,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tutorials/legacy/legacy.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/legacy/legacy.html",
-          "hash": "SieY9XtXCCnIvVy+Xeasfg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "tutorials/lifetime/disposal.md",
       "output": {
         ".html": {
@@ -1797,7 +1785,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "8SGVdP9eGs9azQpCn4yRYg=="
+          "hash": "QIKagzWeTkKNcwI9/wCLwQ=="
         }
       },
       "is_incremental": false,
@@ -1827,23 +1815,23 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 77,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 66,
+          "total_file_count": 65,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 77,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
