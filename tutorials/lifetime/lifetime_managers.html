@@ -98,8 +98,6 @@ Any Unity container tree (parent and all the children) is guaranteed to have onl
 RegisterType&lt;IService, Service&gt;(new HierarchicalLifetimeManager());      &lt;-- IService is a per child singleton
 RegisterInstance(new OtherService(), new HierarchicalLifetimeManager()); &lt;-- OtherService is a per child singleton
 </code></pre>
-<h2 id="perresolvelifetimemanager"><a class="xref" href="../../api/Unity.Lifetime.PerResolveLifetimeManager.html">PerResolveLifetimeManager</a></h2>
-<p>For this lifetime manager the behavior is like a <strong>TransientLifetimeManager</strong>, but also provides a signal to the default build plan, marking the type so that instances are reused across the build-up object graph. In the case of recursion, the singleton behavior applies where the object has been registered with the <strong>PerResolveLifetimeManager</strong>.</p>
 </article>
           </div>
           
