@@ -69,19 +69,29 @@
             <article class="content wrap" id="_content" data-uid="Tutorial.Lifetime.External">
 <h1 id="external-lifetime">External Lifetime</h1>
 
+<p>This lifetime allows you to register externally created objects with the container to enable them to participate in dependency injection process. Unity maintains only a weak reference to the instances it registers.</p>
+<p>Since the container does not maintain a strong reference to the object, the garbage collector can dispose of the objects if no other code is keeping it alive.</p>
 <h2 id="the-lifetime-manager">The Lifetime Manager</h2>
+<p>External lifetime is controlled by <a class="xref" href="../../api/Unity.Lifetime.ExternallyControlledLifetimeManager.html">ExternallyControlledLifetimeManager</a> type and provides basic support for externally managed objects.</p>
 <h2 id="registration">Registration</h2>
+<p>External lifetime is only supported by <a class="xref" href="../registration/instance.html">Instance</a> registrations.</p>
+<p>External lifetime is similar to <a class="xref" href="container.html">Per Container Lifetime</a>. It is held at the same container it is registered with and could be accessed and overridden in child container. Registrations with external lifetime override singletons with the same contract.</p>
 <h3 id="example">Example</h3>
+<p>To create a registration with external lifetime:</p>
+<pre><code class="lang-C#">var instance = new Service();
+...
+container.RegisterInstance&lt;IService&gt;(instance, InstanceLifetime.External);
+</code></pre>
 <h2 id="see-also">See Also</h2>
 <ul>
-<li><a class="xref" href="transient.html">Transient</a></li>
-<li><a class="xref" href="singleton.html">Singleton</a></li>
-<li><a class="xref" href="container.html">Per Container</a></li>
+<li><a class="xref" href="transient.html">Transient Lifetime</a></li>
+<li><a class="xref" href="singleton.html">Singleton Lifetime</a></li>
+<li><a class="xref" href="container.html">Per Container Lifetime</a></li>
 <li><a class="xref" href="container_transient.html">Per Container Transient</a></li>
-<li><a class="xref" href="external.html">External</a></li>
-<li><a class="xref" href="hierarchical.html">Hierarchical</a></li>
-<li><a class="xref" href="resolve.html">Per Resolve</a></li>
-<li><a class="xref" href="thread.html">Per Thread</a></li>
+<li><a class="xref" href="hierarchical.html">Hierarchical Lifetime</a></li>
+<li><a class="xref" href="resolve.html">Per Resolve Lifetime</a></li>
+<li><a class="xref" href="thread.html">Per Thread Lifetime</a></li>
+<li><a class="xref" href="external.html">External Lifetime</a></li>
 </ul>
 </article>
           </div>

@@ -1338,7 +1338,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/container.html",
-          "hash": "WjV7UkE75ciCD0A3cB9MOA=="
+          "hash": "Gv6/en0cIJ0vJ/VHyawnKQ=="
         }
       },
       "is_incremental": false,
@@ -1350,7 +1350,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/container_transient.html",
-          "hash": "w8g+md5jHF75Vqq+pkpZOg=="
+          "hash": "ogeDrcJNVvwjJlTC6sQZ0w=="
         }
       },
       "is_incremental": false,
@@ -1374,7 +1374,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/external.html",
-          "hash": "gWEuPF8tbmlyQYd5aAHRDA=="
+          "hash": "T58xeuZMzxwCvWvufu4hpA=="
         }
       },
       "is_incremental": false,
@@ -1386,7 +1386,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/hierarchical.html",
-          "hash": "w9vSwAhGhKBOhh8awYgVMA=="
+          "hash": "RP6wE9Db1HF7KprB5KtO3A=="
         }
       },
       "is_incremental": false,
@@ -1398,19 +1398,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/lifetime.html",
-          "hash": "P7vhaF4jQuYKEvUJpLmulA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/lifetime/lifetime_managers.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/lifetime/lifetime_managers.html",
-          "hash": "OTa/WKPRK7iTkKgOQYddrQ=="
+          "hash": "ZxSpcCo53lxbKlbIR7yG4A=="
         }
       },
       "is_incremental": false,
@@ -1422,7 +1410,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/managers.html",
-          "hash": "Bb040wHyf1BU4Wyx9bVoPA=="
+          "hash": "8DJlfydPO0o6lab4UcykNA=="
         }
       },
       "is_incremental": false,
@@ -1434,7 +1422,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/resolve.html",
-          "hash": "YJevL1l3h4Fqggak74QEBg=="
+          "hash": "XM5IE4eDGQHw6oO6uPqt6A=="
         }
       },
       "is_incremental": false,
@@ -1446,7 +1434,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/singleton.html",
-          "hash": "YpETjzD3XCFNK1nxiv4sSA=="
+          "hash": "9/2XOV2LhDCowDuKCKH1Pg=="
         }
       },
       "is_incremental": false,
@@ -1458,7 +1446,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/thread.html",
-          "hash": "MPANMMZiF/pIoq1YZ4GshA=="
+          "hash": "0KPzcaGilL9i5mvO4QFv2g=="
         }
       },
       "is_incremental": false,
@@ -1470,7 +1458,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/lifetime/transient.html",
-          "hash": "DyyGVFTNc45bxFjH0LSXHw=="
+          "hash": "qRok7oi5J16ja7za4q5peQ=="
         }
       },
       "is_incremental": false,
@@ -1878,7 +1866,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "+OqGvTsl9W+cjEF2hbCdjA=="
+          "hash": "AYRJGaXm0Wc8MCzdL6fppQ=="
         }
       },
       "is_incremental": false,
@@ -1917,7 +1905,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 73,
+          "total_file_count": 72,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

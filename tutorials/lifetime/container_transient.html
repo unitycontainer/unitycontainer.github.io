@@ -69,19 +69,35 @@
             <article class="content wrap" id="_content" data-uid="Tutorial.Lifetime.Container.Transient">
 <h1 id="container-transient-lifetime">Container Transient Lifetime</h1>
 
+<p>This lifetime is similar to <a class="xref" href="transient.html">Transient Lifetime</a> with exception how the container holds references to created objects.</p>
+<p>On each call to the <code>Resolve&lt;T&gt;()</code> method a container will create a new objects. If the objects implements <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>, the container will hold a reference to the interface and will dispose the object when the container goes out of scope.</p>
+<p>This lifetime is particularly useful in session based designs with child containers associated with the session.</p>
 <h2 id="the-lifetime-manager">The Lifetime Manager</h2>
+<p>Per container transient lifetime is controlled by <a class="xref" href="../../api/Unity.Lifetime.ContainerControlledTransientManager.html">ContainerControlledTransientManager</a> type. This lifetime manager creates transient objects and holds reference to disposable instance and disposes these when container goes out of scope.</p>
 <h2 id="registration">Registration</h2>
+<p>Per container transient lifetime is only supported by <a class="xref" href="../registration/Type/registration.html">Type</a> and <a class="xref" href="../registration/factory.html">Factory</a> registrations. <a class="xref" href="../registration/instance.html">Instance</a> registration does not support this lifetime.</p>
 <h3 id="example">Example</h3>
+<p>To create a Type registration with per container transient lifetime:</p>
+<pre><code class="lang-C#">container.RegisterType&lt;IService, Service&gt;(TypeLifetime.PerContainerTransient);
+</code></pre>
+<p>or you could register a factory:</p>
+<pre><code class="lang-C#">container.RegisterFactory&lt;IService&gt;((c, t, n) =&gt; new Service(),
+                                    FactoryLifetime.PerContainerTransient);
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Please note that registrations use <a class="xref" href="../../api/Unity.TypeLifetime.html#Unity_TypeLifetime_PerContainerTransient">TypeLifetime</a> and <a class="xref" href="../../api/Unity.FactoryLifetime.html#Unity_FactoryLifetime_PerContainerTransient">FactoryLifetime</a> respectively.</p>
+</div>
 <h2 id="see-also">See Also</h2>
 <ul>
-<li><a class="xref" href="transient.html">Transient</a></li>
-<li><a class="xref" href="singleton.html">Singleton</a></li>
-<li><a class="xref" href="container.html">Per Container</a></li>
+<li><a class="xref" href="transient.html">Transient Lifetime</a></li>
+<li><a class="xref" href="singleton.html">Singleton Lifetime</a></li>
+<li><a class="xref" href="container.html">Per Container Lifetime</a></li>
 <li><a class="xref" href="container_transient.html">Per Container Transient</a></li>
-<li><a class="xref" href="external.html">External</a></li>
-<li><a class="xref" href="hierarchical.html">Hierarchical</a></li>
-<li><a class="xref" href="resolve.html">Per Resolve</a></li>
-<li><a class="xref" href="thread.html">Per Thread</a></li>
+<li><a class="xref" href="hierarchical.html">Hierarchical Lifetime</a></li>
+<li><a class="xref" href="resolve.html">Per Resolve Lifetime</a></li>
+<li><a class="xref" href="thread.html">Per Thread Lifetime</a></li>
+<li><a class="xref" href="external.html">External Lifetime</a></li>
 </ul>
 </article>
           </div>
