@@ -69,27 +69,26 @@
             <article class="content wrap" id="_content" data-uid="Tutorial.Lifetime.Resolve">
 <h1 id="per-resolve-lifetime">Per Resolve Lifetime</h1>
 
-<p>This lifetime keeps instance reference only for the duration of one resolution call. This type of lifetime is useful when you need to pass same instance of the dependency to different nodes of the resolution graph. Consider this scenario:</p>
+<p>This lifetime keeps a reference to an instance only for the duration of one resolution call. This type of lifetime is useful when you need to pass the same instance of the dependency to a different nodes of the resolution graph. Consider this scenario:</p>
 <pre><code class="lang-cs">
 class a {}
 
 class b
 {
     b(a arg)
-    {
-    }
+    {...}
 }
 
 class c
 {
     c(a arg1, b arg1)
-    {}
+    {...}
 }
 
 </code></pre>
 <p>When you resolve type <code>c</code>, it depends on type <code>b</code> and type <code>a</code>. Type <code>b</code>, in turn, also depends on type <code>a</code>, and both types, <code>c</code> and <code>b</code>, require <code>a</code> to be the same instance.</p>
 <p>If type <code>a</code> is a singleton, the logic is easy. But if you require each instance of <code>c</code> to have a unique <code>a</code>, you could use per resolve lifetime. The instance of <code>a</code> will act as a singleton only during that one resolution. Next call to resolve the dependent type will create a new object.</p>
-<p>In the case of recursion, the singleton behavior still applies and prevents circular dependency.</p>
+<p>In the case of recursion, the singleton behavior is still applies and prevents circular dependency.</p>
 <h2 id="the-lifetime-manager">The Lifetime Manager</h2>
 <p>Per resolve lifetime is controlled by <a class="xref" href="../../api/Unity.Lifetime.PerResolveLifetimeManager.html">PerResolveLifetimeManager</a> type. This lifetime manager effectively implements a singleton behavior for objects on a per-resolve basis.</p>
 <h2 id="registration">Registration</h2>
