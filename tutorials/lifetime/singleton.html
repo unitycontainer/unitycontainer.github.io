@@ -75,7 +75,7 @@
 <h2 id="registration">Registration</h2>
 <p>Registering a type with singleton lifetime always places the registration at the root of the container tree and makes it globally available for all the children of that container. It does not matter if registration takes places at the root of child container the destination is always the root node.</p>
 <p>Repeating the registration on any of the child nodes with singleton lifetime will always override the root registration.</p>
-<p>Singleton lifetime is supported by all registration types</p>
+<p>Singleton lifetime is supported by all registration types.</p>
 <h3 id="example">Example</h3>
 <p>To create a Type registration with singleton lifetime:</p>
 <pre><code class="lang-C#">container.RegisterType&lt;IService, Service&gt;(TypeLifetime.Singleton);
