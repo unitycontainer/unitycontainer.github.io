@@ -126,14 +126,20 @@ thus ensuring that instances are created new every time.</p>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="Unity.Lifetime.IFactoryLifetimeManager.html">IFactoryLifetimeManager</a></h4>
-      <section></section>
+      <section><p>This interface marks all lifetime managers compatible with
+<a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterFactory_System_Type_System_String_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_">RegisterFactory(Type, String, Func&lt;IUnityContainer, Type, String, Object&gt;, IFactoryLifetimeManager)</a> registration.</p>
+</section>
       <h4><a class="xref" href="Unity.Lifetime.IInstanceLifetimeManager.html">IInstanceLifetimeManager</a></h4>
-      <section></section>
+      <section><p>This interface marks all lifetime managers compatible with
+<a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_">RegisterInstance(Type, String, Object, IInstanceLifetimeManager)</a> registration.</p>
+</section>
       <h4><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></h4>
       <section><p>Represents a lifetime container.</p>
 </section>
       <h4><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></h4>
-      <section></section>
+      <section><p>This interface marks all lifetime managers compatible with
+<a class="xref" href="Unity.IUnityContainer.html#Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___">RegisterType(Type, Type, String, ITypeLifetimeManager, InjectionMember[])</a> registration.</p>
+</section>
 </article>
           </div>
           
