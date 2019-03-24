@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.FactoryLifetime.html",
-          "hash": "+WtWYAjysY4bz3zYyZzGfw=="
+          "hash": "PvuoohrExeiJ0JaoLYG2mw=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.IUnityContainerAsync.html",
-          "hash": "Iq00FqcgeVxh8NnL+VLI+w=="
+          "hash": "ouwCPtlAb+8ttchV3MZQAQ=="
         }
       },
       "is_incremental": false,
@@ -429,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.InstanceLifetime.html",
-          "hash": "tB8v16gii/Nq/hrh53RxoA=="
+          "hash": "4zBS1257ohxA12Arpisd1g=="
         }
       },
       "is_incremental": false,
@@ -453,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.ContainerControlledLifetimeManager.html",
-          "hash": "CJNwpgEpKekQQY3lHqUqHA=="
+          "hash": "5aiTvshkUaTaMMz9XTXREg=="
         }
       },
       "is_incremental": false,
@@ -465,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.ContainerControlledTransientManager.html",
-          "hash": "MhdhcclptEntJeSqT1NysQ=="
+          "hash": "UmEtLsJeZrVvGy1INyrCSw=="
         }
       },
       "is_incremental": false,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.ExternallyControlledLifetimeManager.html",
-          "hash": "gXdFifKJEw4PqGd2GaO70g=="
+          "hash": "hlGCgbo17N1kfcu1Fk3XMA=="
         }
       },
       "is_incremental": false,
@@ -489,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.HierarchicalLifetimeManager.html",
-          "hash": "c29zoQGgGkYZJo4sSIlYww=="
+          "hash": "bI5BrlLe0mX/Igy27+KCag=="
         }
       },
       "is_incremental": false,
@@ -549,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.LifetimeManager.html",
-          "hash": "i1xIlx3+ugpcz7u+2tiOVQ=="
+          "hash": "K40mOIJ0uEQrk1iCh1Idkw=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.PerResolveLifetimeManager.html",
-          "hash": "EoYsnCPWfamPe7dp5elGPQ=="
+          "hash": "NLbCpgY7RzFbkcKiMpvrEw=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.PerThreadLifetimeManager.html",
-          "hash": "NOuKGzVe6MxK+GF12S8ZZg=="
+          "hash": "7oWGyZFsMmQ8Gq/DyV33RQ=="
         }
       },
       "is_incremental": false,
@@ -585,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.SingletonLifetimeManager.html",
-          "hash": "DHXNV21NJMEaNzgIp3IuNA=="
+          "hash": "xzthqozeDCXGg5L6pU9TUw=="
         }
       },
       "is_incremental": false,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.SynchronizedLifetimeManager.html",
-          "hash": "enm9ak3gh05fWGl7pxBhIg=="
+          "hash": "VHuwWsneYhV1d/aiap3m4g=="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.TransientLifetimeManager.html",
-          "hash": "1/PRHNTnh/WX6m8ShFo5Rw=="
+          "hash": "HbL3EeI3SaPzYxUBqxB73w=="
         }
       },
       "is_incremental": false,
@@ -621,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.html",
-          "hash": "jlmZ5Zc7LlhliH5PaMsFJg=="
+          "hash": "MbhnD/cLV9VqwryhjRqJpw=="
         }
       },
       "is_incremental": false,
@@ -909,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.TypeLifetime.html",
-          "hash": "8kbaMiZ84SUxyYxe50Yh+A=="
+          "hash": "6TQ9GUYQhfC1XcwG18ndMg=="
         }
       },
       "is_incremental": false,

@@ -327,6 +327,19 @@ references:
   isSpec: "True"
   fullName: Unity.FactoryLifetime.PerThread
   nameWithType: FactoryLifetime.PerThread
+- uid: Unity.FactoryLifetime.Scoped
+  name: Scoped
+  href: api/Unity.FactoryLifetime.html#Unity_FactoryLifetime_Scoped
+  commentId: P:Unity.FactoryLifetime.Scoped
+  fullName: Unity.FactoryLifetime.Scoped
+  nameWithType: FactoryLifetime.Scoped
+- uid: Unity.FactoryLifetime.Scoped*
+  name: Scoped
+  href: api/Unity.FactoryLifetime.html#Unity_FactoryLifetime_Scoped_
+  commentId: Overload:Unity.FactoryLifetime.Scoped
+  isSpec: "True"
+  fullName: Unity.FactoryLifetime.Scoped
+  nameWithType: FactoryLifetime.Scoped
 - uid: Unity.FactoryLifetime.Singleton
   name: Singleton
   href: api/Unity.FactoryLifetime.html#Unity_FactoryLifetime_Singleton

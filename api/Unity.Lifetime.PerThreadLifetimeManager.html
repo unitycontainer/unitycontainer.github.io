@@ -73,8 +73,8 @@
   
   <h1 id="Unity_Lifetime_PerThreadLifetimeManager" data-uid="Unity.Lifetime.PerThreadLifetimeManager" class="text-break">Class PerThreadLifetimeManager
   </h1>
-  <div class="markdown level0 summary"><p>A <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> that holds the instances given to it,
-keeping one instance per thread.</p>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a> that creates a new instance of
+the registered <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> once per each thread.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -129,6 +129,14 @@ keeping one instance per thread.</p>
   </div>
   <h5 id="Unity_Lifetime_PerThreadLifetimeManager_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
+Per thread lifetime means a new instance of the registered <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>
+will be created once per each thread. In other words, if a Resolve{T}() method 
+is called on a thread the first time, it will return a new object. Each
+subsequent call to Resolve{T}(), or when the dependency mechanism injects 
+instances of the type into other classes on the same thread, the container 
+will return the same object.
+</p>
+<p>
 This LifetimeManager does not dispose the instances it holds.
 </p>
 </div>
@@ -139,7 +147,7 @@ This LifetimeManager does not dispose the instances it holds.
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_PerThreadLifetimeManager__ctor.md&amp;value=---%0Auid%3A%20Unity.Lifetime.PerThreadLifetimeManager.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L26">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L34">View Source</a>
   </span>
   <a id="Unity_Lifetime_PerThreadLifetimeManager__ctor_" data-uid="Unity.Lifetime.PerThreadLifetimeManager.#ctor*"></a>
   <h4 id="Unity_Lifetime_PerThreadLifetimeManager__ctor" data-uid="Unity.Lifetime.PerThreadLifetimeManager.#ctor">PerThreadLifetimeManager()</h4>
@@ -157,12 +165,11 @@ This LifetimeManager does not dispose the instances it holds.
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_PerThreadLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.PerThreadLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L38">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L40">View Source</a>
   </span>
   <a id="Unity_Lifetime_PerThreadLifetimeManager_GetValue_" data-uid="Unity.Lifetime.PerThreadLifetimeManager.GetValue*"></a>
   <h4 id="Unity_Lifetime_PerThreadLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.PerThreadLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)">GetValue(ILifetimeContainer)</h4>
-  <div class="markdown level1 summary"><p>Retrieve a value from the backing store associated with this WithLifetime policy for the
-current thread.</p>
+  <div class="markdown level1 summary"><p>Retrieves a value from the backing store associated with this Lifetime policy.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -182,7 +189,7 @@ current thread.</p>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
         <td><span class="parametername">container</span></td>
-        <td><p>Instance of container requesting the value</p>
+        <td><p>The container this lifetime is associated with</p>
 </td>
       </tr>
     </tbody>
@@ -198,8 +205,7 @@ current thread.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><p>the object desired, or <span class="xref">null</span> if no such object is currently
-stored for the current thread.</p>
+        <td><p>the object desired, or null if no such object is currently stored.</p>
 </td>
       </tr>
     </tbody>
@@ -211,11 +217,12 @@ stored for the current thread.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_PerThreadLifetimeManager_OnCreateLifetimeManager.md&amp;value=---%0Auid%3A%20Unity.Lifetime.PerThreadLifetimeManager.OnCreateLifetimeManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L69">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L67">View Source</a>
   </span>
   <a id="Unity_Lifetime_PerThreadLifetimeManager_OnCreateLifetimeManager_" data-uid="Unity.Lifetime.PerThreadLifetimeManager.OnCreateLifetimeManager*"></a>
   <h4 id="Unity_Lifetime_PerThreadLifetimeManager_OnCreateLifetimeManager" data-uid="Unity.Lifetime.PerThreadLifetimeManager.OnCreateLifetimeManager">OnCreateLifetimeManager()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Implementation of <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_CreateLifetimePolicy">CreateLifetimePolicy()</a> policy.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -232,7 +239,8 @@ stored for the current thread.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of the same lifetime manager of appropriate type</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -243,12 +251,11 @@ stored for the current thread.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_PerThreadLifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.PerThreadLifetimeManager.SetValue(System.Object%2CUnity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L53">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L50">View Source</a>
   </span>
   <a id="Unity_Lifetime_PerThreadLifetimeManager_SetValue_" data-uid="Unity.Lifetime.PerThreadLifetimeManager.SetValue*"></a>
   <h4 id="Unity_Lifetime_PerThreadLifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.PerThreadLifetimeManager.SetValue(System.Object,Unity.Lifetime.ILifetimeContainer)">SetValue(Object, ILifetimeContainer)</h4>
-  <div class="markdown level1 summary"><p>Stores the given value into backing store for retrieval later when requested
-in the current thread.</p>
+  <div class="markdown level1 summary"><p>Stores the given value into backing store for retrieval later.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -274,7 +281,7 @@ in the current thread.</p>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
         <td><span class="parametername">container</span></td>
-        <td><p>Instance of container which owns the value</p>
+        <td><p>The container this lifetime is associated with</p>
 </td>
       </tr>
     </tbody>
@@ -286,11 +293,12 @@ in the current thread.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_PerThreadLifetimeManager_ToString.md&amp;value=---%0Auid%3A%20Unity.Lifetime.PerThreadLifetimeManager.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L77">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L79">View Source</a>
   </span>
   <a id="Unity_Lifetime_PerThreadLifetimeManager_ToString_" data-uid="Unity.Lifetime.PerThreadLifetimeManager.ToString*"></a>
   <h4 id="Unity_Lifetime_PerThreadLifetimeManager_ToString" data-uid="Unity.Lifetime.PerThreadLifetimeManager.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method provides human readable representation of the lifetime</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -307,7 +315,8 @@ in the current thread.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><p>Name of the lifetime</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -338,7 +347,7 @@ in the current thread.</p>
                     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_PerThreadLifetimeManager.md&amp;value=---%0Auid%3A%20Unity.Lifetime.PerThreadLifetimeManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerThreadLifetimeManager.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

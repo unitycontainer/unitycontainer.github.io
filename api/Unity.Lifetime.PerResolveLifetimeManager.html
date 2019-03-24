@@ -189,11 +189,11 @@ itself manage an instance.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_PerResolveLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.PerResolveLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerResolveLifetimeManager.cs/#L29">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerResolveLifetimeManager.cs/#L25">View Source</a>
   </span>
   <a id="Unity_Lifetime_PerResolveLifetimeManager_GetValue_" data-uid="Unity.Lifetime.PerResolveLifetimeManager.GetValue*"></a>
   <h4 id="Unity_Lifetime_PerResolveLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.PerResolveLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)">GetValue(ILifetimeContainer)</h4>
-  <div class="markdown level1 summary"><p>Retrieve a value from the backing store associated with this WithLifetime policy.</p>
+  <div class="markdown level1 summary"><p>Retrieves a value from the backing store associated with this Lifetime policy.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -213,7 +213,7 @@ itself manage an instance.</p>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
         <td><span class="parametername">container</span></td>
-        <td><p>Instance of container requesting the value</p>
+        <td><p>The container this lifetime is associated with</p>
 </td>
       </tr>
     </tbody>
@@ -241,11 +241,12 @@ itself manage an instance.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_PerResolveLifetimeManager_OnCreateLifetimeManager.md&amp;value=---%0Auid%3A%20Unity.Lifetime.PerResolveLifetimeManager.OnCreateLifetimeManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerResolveLifetimeManager.cs/#L34">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerResolveLifetimeManager.cs/#L31">View Source</a>
   </span>
   <a id="Unity_Lifetime_PerResolveLifetimeManager_OnCreateLifetimeManager_" data-uid="Unity.Lifetime.PerResolveLifetimeManager.OnCreateLifetimeManager*"></a>
   <h4 id="Unity_Lifetime_PerResolveLifetimeManager_OnCreateLifetimeManager" data-uid="Unity.Lifetime.PerResolveLifetimeManager.OnCreateLifetimeManager">OnCreateLifetimeManager()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Implementation of <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_CreateLifetimePolicy">CreateLifetimePolicy()</a> policy.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -262,7 +263,8 @@ itself manage an instance.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of the same lifetime manager of appropriate type</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -273,11 +275,12 @@ itself manage an instance.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_PerResolveLifetimeManager_ToString.md&amp;value=---%0Auid%3A%20Unity.Lifetime.PerResolveLifetimeManager.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerResolveLifetimeManager.cs/#L42">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/PerResolveLifetimeManager.cs/#L43">View Source</a>
   </span>
   <a id="Unity_Lifetime_PerResolveLifetimeManager_ToString_" data-uid="Unity.Lifetime.PerResolveLifetimeManager.ToString*"></a>
   <h4 id="Unity_Lifetime_PerResolveLifetimeManager_ToString" data-uid="Unity.Lifetime.PerResolveLifetimeManager.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method provides human readable representation of the lifetime</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -294,7 +297,8 @@ itself manage an instance.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><p>Name of the lifetime</p>
+</td>
       </tr>
     </tbody>
   </table>

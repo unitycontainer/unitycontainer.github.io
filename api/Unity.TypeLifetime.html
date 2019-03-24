@@ -117,11 +117,13 @@
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_TypeLifetime_ContainerControlled.md&amp;value=---%0Auid%3A%20Unity.TypeLifetime.ContainerControlled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L9">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L34">View Source</a>
   </span>
   <a id="Unity_TypeLifetime_ContainerControlled_" data-uid="Unity.TypeLifetime.ContainerControlled*"></a>
   <h4 id="Unity_TypeLifetime_ContainerControlled" data-uid="Unity.TypeLifetime.ContainerControlled">ContainerControlled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Unity returns the same instance each time the Resolve(...) method is called or when
+the dependency mechanism injects the instance into other classes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -138,20 +140,28 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Unity_TypeLifetime_ContainerControlled_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Per Container lifetime allows a registration of an existing or resolved object as
+a scoped singleton in the container it was created or registered. In other words this
+instance is unique within the container it war registered with. Child or parent
+containers could have their own instances registered for the same contract.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_TypeLifetime_Hierarchical.md&amp;value=---%0Auid%3A%20Unity.TypeLifetime.Hierarchical%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L13">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L67">View Source</a>
   </span>
   <a id="Unity_TypeLifetime_Hierarchical_" data-uid="Unity.TypeLifetime.Hierarchical*"></a>
   <h4 id="Unity_TypeLifetime_Hierarchical" data-uid="Unity.TypeLifetime.Hierarchical">Hierarchical</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Unity returns a unique value for each child container.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -168,20 +178,37 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.HierarchicalLifetimeManager.html">HierarchicalLifetimeManager</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Unity_TypeLifetime_Hierarchical_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The Unity container allows creating hierarchies of child containers. This lifetime 
+creates local singleton for each level of the hierarchy. So, when you resolve a 
+type and this container does not have an instance of that type, the container will 
+create new instance. Next type the type is resolved the same instance will be returned.
+</p>
+<p>
+If a child container is created and requested to resolve the type, the child container 
+will create a new instance and store it for subsequent resolutions. Next time the 
+child container requested to resolve the type, it will return stored instance.
+</p>
+<p>If you have multiple children, each will resolve its own instance.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_TypeLifetime_PerContainer.md&amp;value=---%0Auid%3A%20Unity.TypeLifetime.PerContainer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L11">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L47">View Source</a>
   </span>
   <a id="Unity_TypeLifetime_PerContainer_" data-uid="Unity.TypeLifetime.PerContainer*"></a>
   <h4 id="Unity_TypeLifetime_PerContainer" data-uid="Unity.TypeLifetime.PerContainer">PerContainer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Unity returns the same instance each time the Resolve(...) method is called or when
+the dependency mechanism injects the instance into other classes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -198,20 +225,29 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Unity_TypeLifetime_PerContainer_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Per Container lifetime allows a registration of an existing or resolved object as
+a scoped singleton in the container it was created or registered. In other words this
+instance is unique within the container it war registered with. Child or parent
+containers could have their own instances registered for the same contract.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_TypeLifetime_PerContainerTransient.md&amp;value=---%0Auid%3A%20Unity.TypeLifetime.PerContainerTransient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L23">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L169">View Source</a>
   </span>
   <a id="Unity_TypeLifetime_PerContainerTransient_" data-uid="Unity.TypeLifetime.PerContainerTransient*"></a>
   <h4 id="Unity_TypeLifetime_PerContainerTransient" data-uid="Unity.TypeLifetime.PerContainerTransient">PerContainerTransient</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This lifetime is similar to <a class="xref" href="Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a> with exception
+how the container holds references to created objects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -228,20 +264,33 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.ContainerControlledTransientManager.html">ContainerControlledTransientManager</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Unity_TypeLifetime_PerContainerTransient_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+On each call to the Resolve{T}() method a container will create a new objects.
+If the objects implements <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>, the container will hold a 
+reference to the interface and will dispose the object when the container goes out of scope.
+</p>
+<p>
+This lifetime is particularly useful in session based designs with child containers 
+associated with the session
+</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_TypeLifetime_PerResolve.md&amp;value=---%0Auid%3A%20Unity.TypeLifetime.PerResolve%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L17">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L128">View Source</a>
   </span>
   <a id="Unity_TypeLifetime_PerResolve_" data-uid="Unity.TypeLifetime.PerResolve*"></a>
   <h4 id="Unity_TypeLifetime_PerResolve" data-uid="Unity.TypeLifetime.PerResolve">PerResolve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This lifetime keeps a reference to an instance only for the duration of one resolution call</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -258,20 +307,60 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.PerResolveLifetimeManager.html">PerResolveLifetimeManager</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Unity_TypeLifetime_PerResolve_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This type of lifetime is useful when you need to pass the same instance of the dependency
+to a different nodes of the resolution graph.</p>
+</div>
+  <h5 id="Unity_TypeLifetime_PerResolve_examples">Examples</h5>
+  <p>Consider this scenario:</p>
+<pre><code>class a {}
+
+class b 
+{
+    b(a arg1)
+    {...}
+}
+
+class c
+{
+    c(a arg1, b arg2)
+    {...}
+}</code></pre>
+<p>
+When you resolve type `c`, it depends on type `b` and type `a`. Type `b`, in turn, 
+also depends on type `a`, and both types, `c` and `b`, require `a` to be the same instance.
+</p>
+<p>
+If type `a` is a singleton, the logic is easy. But if you require each instance of
+`c` to have a unique `a`, you could use per resolve lifetime. The instance of `a` 
+will act as a singleton only during that one resolution. Next call to resolve the 
+dependent type will create a new object.
+</p>
+<p>
+In the case of recursion, the singleton behavior is still applies and prevents circular dependency
+</p>
+
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_TypeLifetime_PerThread.md&amp;value=---%0Auid%3A%20Unity.TypeLifetime.PerThread%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L19">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L139">View Source</a>
   </span>
   <a id="Unity_TypeLifetime_PerThread_" data-uid="Unity.TypeLifetime.PerThread*"></a>
   <h4 id="Unity_TypeLifetime_PerThread" data-uid="Unity.TypeLifetime.PerThread">PerThread</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Per thread lifetime means a new instance of the registered <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>
+will be created once per each thread. In other words, if a Resolve{T}() method is
+called on a thread the first time, it will return a new object. Each subsequent
+call to Resolve{T}(), or when the dependency mechanism injects instances of
+the type into other classes on the same thread, the container will return the
+same object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -288,7 +377,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.PerThreadLifetimeManager.html">PerThreadLifetimeManager</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -297,11 +387,12 @@
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_TypeLifetime_Scoped.md&amp;value=---%0Auid%3A%20Unity.TypeLifetime.Scoped%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L15">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L87">View Source</a>
   </span>
   <a id="Unity_TypeLifetime_Scoped_" data-uid="Unity.TypeLifetime.Scoped*"></a>
   <h4 id="Unity_TypeLifetime_Scoped" data-uid="Unity.TypeLifetime.Scoped">Scoped</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Unity returns a unique value for each scope.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -318,20 +409,38 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.HierarchicalLifetimeManager.html">HierarchicalLifetimeManager</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Unity_TypeLifetime_Scoped_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The Unity container allows creating hierarchies of child containers. This lifetime 
+creates local singleton for each level of the hierarchy. So, when you resolve a 
+type and this container does not have an instance of that type, the container will 
+create new instance. Next type the type is resolved the same instance will be returned.
+</p>
+<p>
+If a child container is created and requested to resolve the type, the child container 
+will create a new instance and store it for subsequent resolutions. Next time the 
+child container requested to resolve the type, it will return stored instance.
+</p>
+<p>If you have multiple children, each will resolve its own instance.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_TypeLifetime_Singleton.md&amp;value=---%0Auid%3A%20Unity.TypeLifetime.Singleton%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L7">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L21">View Source</a>
   </span>
   <a id="Unity_TypeLifetime_Singleton_" data-uid="Unity.TypeLifetime.Singleton*"></a>
   <h4 id="Unity_TypeLifetime_Singleton" data-uid="Unity.TypeLifetime.Singleton">Singleton</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Singleton lifetime creates globally unique singleton. Any Unity container
+tree (parent and all the children) is guaranteed to have only one global
+singleton for the registered type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -348,20 +457,31 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.SingletonLifetimeManager.html">SingletonLifetimeManager</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Unity_TypeLifetime_Singleton_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Registering a type with singleton lifetime always places the registration 
+at the root of the container tree and makes it globally available for all 
+the children of that container. It does not matter if registration takes 
+places at the root of child container the destination is always the root node.</p>
+<p>Repeating the registration on any of the child nodes with singleton lifetime 
+will always override the root registration.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_TypeLifetime_Transient.md&amp;value=---%0Auid%3A%20Unity.TypeLifetime.Transient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L21">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L151">View Source</a>
   </span>
   <a id="Unity_TypeLifetime_Transient_" data-uid="Unity.TypeLifetime.Transient*"></a>
   <h4 id="Unity_TypeLifetime_Transient" data-uid="Unity.TypeLifetime.Transient">Transient</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This lifetime creates and returns a new instance of the requested type for each call
+to the Resolve(...) method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -378,10 +498,16 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
-        <td></td>
+        <td><p>An instance of a <a class="xref" href="Unity.Lifetime.TransientLifetimeManager.html">TransientLifetimeManager</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Unity_TypeLifetime_Transient_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Transient lifetime is a default lifetime of the Unity container. As the name implies it
+lasts very short period of time, actually, no time at all. In the Unity container terms,
+having transient lifetime is the same as having no lifetime manager at all.</p>
+</div>
 </article>
           </div>
           
