@@ -8,7 +8,7 @@
     <title>Select Constructor By Attribute Annotation | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Select Constructor By Attribute Annotation | Unity Container ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.41.0.0">
     
     <link rel="shortcut icon" href="../../../../images/favicon.png">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -102,16 +102,17 @@
 <h5>Warning</h5>
 <p>During resolution, the container will pick the first constructor it could satisfy with dependencies and will use it. In the example above, it could be any of the three constructors with one parameter.</p>
 </div>
+<p>The container is not trying to validate all available contractors during normal execution.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If <a class="xref" href="../../../diagnostic.html">Diagnostic</a> extension is enabled, Unity will throw an exception reporting ambiguous constructors.</p>
+<p>If <a class="xref" href="../../../Extensions/diagnostic.html">Diagnostic</a> extension is enabled, Unity will throw an exception reporting ambiguous constructors.</p>
 </div>
 <p>Normally, Unity would select the third constructor with three parameters, but by annotating the second constructor with the attribute you force Unity to use it during resolution.</p>
 <h3 id="multiple-constructor-annotations">Multiple Constructor Annotations</h3>
 <p>Annotating multiple constructors with injection parameters is not recommended. Unity is not guaranteed to process constructors in certain order. If multiple constructors are annotated, behavior might change from version to version.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If <a class="xref" href="../../../diagnostic.html">Diagnostic</a> extension is enabled, Unity will throw an exception reporting ambiguous constructor annotations.</p>
+<p>If <a class="xref" href="../../../Extensions/diagnostic.html">Diagnostic</a> extension is enabled, Unity will throw an exception reporting ambiguous constructor annotations.</p>
 </div>
 <h3 id="see-also">See Also</h3>
 <ul>

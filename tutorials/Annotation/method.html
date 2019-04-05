@@ -8,7 +8,7 @@
     <title>Annotating types for Method invocation | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Annotating types for Method invocation | Unity Container ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.41.0.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -120,7 +120,7 @@
 </code></pre>
 <h2 id="restrictions">Restrictions</h2>
 <h3 id="static-methods-cannot-be-invoked">Static methods cannot be invoked</h3>
-<p>Unity does not support invocation of static methods. Static methods annotated with <a class="xref" href="../../api/Unity.InjectionMethodAttribute.html">InjectionMethod</a> attribute will be ignored. If <a class="xref" href="../diagnostic.html">Unity Diagnostic</a> is enabled, the container will throw an exception when it encounters such an annotation.</p>
+<p>Unity does not support invocation of static methods. Static methods annotated with <a class="xref" href="../../api/Unity.InjectionMethodAttribute.html">InjectionMethod</a> attribute will be ignored. If <a class="xref" href="../Extensions/diagnostic.html">Unity Diagnostic</a> is enabled, the container will throw an exception when it encounters such an annotation.</p>
 <h3 id="methods-with-ref-or-out-parameters-cannot-be-invoked">Methods with <code>ref</code> or <code>out</code> parameters cannot be invoked</h3>
 <p>Methods containing <code>ref</code> or <code>out</code> parameters cannot be invoked during initialization. The container will throw an exception if encountered these.</p>
 <pre><code class="lang-cs">public class Service
@@ -155,8 +155,8 @@
 }
 </code></pre>
 <p>In the example above method <code>ProtectedMethod(...)</code> will not be called.</p>
-<p>If <a class="xref" href="../diagnostic.html">Unity Diagnostic</a> is enabled, the container will throw an exception when it encounters this condition.</p>
-<p>For more information see  <a class="xref" href="../diagnostic.html">Unity Diagnostic</a>.</p>
+<p>If <a class="xref" href="../Extensions/diagnostic.html">Unity Diagnostic</a> is enabled, the container will throw an exception when it encounters this condition.</p>
+<p>For more information see  <a class="xref" href="../Extensions/diagnostic.html">Unity Diagnostic</a>.</p>
 </article>
           </div>
           

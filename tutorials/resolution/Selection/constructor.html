@@ -8,7 +8,7 @@
     <title>Automatic Constructor Selection | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Automatic Constructor Selection | Unity Container ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.41.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.png">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -118,9 +118,10 @@
 <h5>Warning</h5>
 <p>When more than one constructor could be matched at the same time, the order and constructor selection can not be guaranteed.</p>
 </div>
+<p>During normal operation the container does not perform validation.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If <a class="xref" href="../../diagnostic.html">Diagnostic</a> extension is enabled, Unity will perform a selection validation and will throw an exception, reporting ambiguous constructors, if more than one constructor can be successfully selected with current configuration.</p>
+<p>If <a class="xref" href="../../Extensions/diagnostic.html">Diagnostic</a> extension is enabled, Unity will perform a selection validation and will throw an exception, reporting ambiguous constructors, if more than one constructor can be successfully selected with current configuration.</p>
 </div>
 <p>If no constructor could be selected, the container will throw an exception.</p>
 <h3 id="pipeline-retention">Pipeline retention</h3>

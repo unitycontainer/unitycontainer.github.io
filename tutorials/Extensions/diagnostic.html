@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Diagnostic Extension | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Diagnostic Extension | Unity Container ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tutorial.Extension.Diagnostic">
+<h1 id="diagnostic">Diagnostic</h1>
+
+<p>Creating and configuring Unity container is a complicated process. A lot of things could go wrong and finding where it was misconfigured could be rather involved. To simplify debugging and to help fix issues Unity offers <strong>Diagnostic</strong> extension.</p>
+<h2 id="performance-considerations">Performance considerations</h2>
+<p>The Unity container uses reflection for most of its operations. It gathers information about types, creates pipelines to create these types, and verifies everything all based on reflected data. Because of that it is rather resource extensive and relatively slow.</p>
+<p>To optimize performance, Unity engine does not do any runtime validation and only performs absolute minimum checks, just enough to be able to run. As result a lot of irregular conditions might go unnoticed. To remedy this, the container exposes <strong>Diagnostic</strong> extension which does thorough examination of all registration data and throws exceptions on any irregularities.</p>
+<h2 id="unity-diagnostic-extension">Unity Diagnostic Extension</h2>
+<p><strong>Diagnostic</strong> extension, among other things, verifies the following conditions:</p>
+<ul>
+<li>Cyclical references (The famous Stack Overflow Exception)</li>
+<li>Validity of provided Injection Members</li>
+<li>Improper referencing to itself</li>
+<li>Invalid parameters in constructors and invoked methods</li>
+</ul>
+<h2 id="enabling-diagnostics">Enabling Diagnostics</h2>
+<p>The extension could be enabled in few different ways:</p>
+<h3 id="add-extension">Add Extension</h3>
+<p>The most basic case is when extension is added via <code>AddExtension(...)</code> call. It works with either regular or generic methods.</p>
+<pre><code class="lang-cs">var container = new UnityContainer()
+                .AddExtension(new Diagnostic());
+</code></pre>
+<p>or</p>
+<pre><code class="lang-cs">var container = new UnityContainer()
+                .AddExtension&lt;Diagnostic&gt;();
+</code></pre>
+<p>The first method, one with <code>AddExtension(new Diagnostic())</code> is a bit faster.</p>
+<h3 id="using-extension-method">Using extension method</h3>
+<p>For convenience, Unity container exposes <a href="https://github.com/unitycontainer/container/blob/master/src/Extensions/DiagnosticExtensions.cs">EnableDiagnostic()</a> extension method. This method is equal to adding extension to the container.</p>
+<pre><code class="lang-cs">var container = new UnityContainer()
+                    .EnableDiagnostic();
+</code></pre>
+<h3 id="enabling-extension-only-in-debug">Enabling extension only in Debug</h3>
+<p>The container provides conditional extension <a href="https://github.com/unitycontainer/container/blob/master/src/Extensions/DiagnosticExtensions.cs">EnableDebugDiagnostic()</a>. This method will only enable diagnostics in <code>DEBUG</code> mode. In this example</p>
+<pre><code class="lang-cs">var container = new UnityContainer();
+container.EnableDebugDiagnostic();
+</code></pre>
+<p>the extension is enabled only calling method is compiled with <code>DEBUG</code> symbol defined (compile in Debug mode).</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Extension methods will not work on <a class="xref" href="../../api/Unity.IUnityContainer.html">IUnityContainer</a> interface. It is only available on the UnityContainer itself.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/Extensions/diagnostic.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2008–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

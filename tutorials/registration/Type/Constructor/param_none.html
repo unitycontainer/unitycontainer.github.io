@@ -8,7 +8,7 @@
     <title>Default Constructor | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Default Constructor | Unity Container ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.41.0.0">
     
     <link rel="shortcut icon" href="../../../../images/favicon.png">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -90,7 +90,7 @@
 <p>If you try to resolve this class with no registration, Unity will select one of the constructors with parameter. You can not guarantee which one it will select because both have the same number of parameters and each could be satisfied with dependencies.</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>If <a class="xref" href="../../../diagnostic.html">Diagnostic</a> is enabled, it will throw an ambiguous constructor exception.</p>
+<p>If <a class="xref" href="../../../Extensions/diagnostic.html">Diagnostic</a> is enabled, it will throw an ambiguous constructor exception.</p>
 </div>
 <p>To prevent ambiguity, or if you need to execute default constructor, you can register this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> and instruct the container to invoke default constructor during resolution. In simplest form this registration will look like this:</p>
 <pre><code class="lang-csharp" name="Register Service">

@@ -64,6 +64,21 @@ references:
 - uid: Tutorial.Container.Hierarchy
   name: Container Hierarchy
   href: tutorials/hierarchies.html
+- uid: Tutorial.Extension.Activation
+  name: Force Activation Extension
+  href: tutorials/Extensions/activation.html
+- uid: Tutorial.Extension.Compilation
+  name: Force Compilation Extension
+  href: tutorials/Extensions/compilation.html
+- uid: Tutorial.Extension.Diagnostic
+  name: Diagnostic Extension
+  href: tutorials/Extensions/diagnostic.html
+- uid: Tutorial.Extension.Legacy
+  name: Legacy Extension
+  href: tutorials/Extensions/legacy.html
+- uid: Tutorial.Extensions
+  name: Unity Extensions
+  href: tutorials/Extensions/extensions.html
 - uid: Tutorial.Injection
   name: Dependency Injection
   href: tutorials/registration/Type/Injection/injection.html
@@ -187,9 +202,6 @@ references:
 - uid: Tutorial.Terms
   name: Terms and Definitions
   href: tutorials/definitions.html
-- uid: Tutorial.Unity.Diagnostic
-  name: Diagnostic
-  href: tutorials/diagnostic.html
 - uid: Tutorial.Workflow.Overview
   name: Unity Workflow
   href: tutorials/workflow.html
@@ -2497,19 +2509,6 @@ references:
   commentId: T:Unity.Lifetime.ContainerControlledTransientManager
   fullName: Unity.Lifetime.ContainerControlledTransientManager
   nameWithType: ContainerControlledTransientManager
-- uid: Unity.Lifetime.ContainerControlledTransientManager.GetValue(Unity.Lifetime.ILifetimeContainer)
-  name: GetValue(ILifetimeContainer)
-  href: api/Unity.Lifetime.ContainerControlledTransientManager.html#Unity_Lifetime_ContainerControlledTransientManager_GetValue_Unity_Lifetime_ILifetimeContainer_
-  commentId: M:Unity.Lifetime.ContainerControlledTransientManager.GetValue(Unity.Lifetime.ILifetimeContainer)
-  fullName: Unity.Lifetime.ContainerControlledTransientManager.GetValue(Unity.Lifetime.ILifetimeContainer)
-  nameWithType: ContainerControlledTransientManager.GetValue(ILifetimeContainer)
-- uid: Unity.Lifetime.ContainerControlledTransientManager.GetValue*
-  name: GetValue
-  href: api/Unity.Lifetime.ContainerControlledTransientManager.html#Unity_Lifetime_ContainerControlledTransientManager_GetValue_
-  commentId: Overload:Unity.Lifetime.ContainerControlledTransientManager.GetValue
-  isSpec: "True"
-  fullName: Unity.Lifetime.ContainerControlledTransientManager.GetValue
-  nameWithType: ContainerControlledTransientManager.GetValue
 - uid: Unity.Lifetime.ContainerControlledTransientManager.InUse
   name: InUse
   href: api/Unity.Lifetime.ContainerControlledTransientManager.html#Unity_Lifetime_ContainerControlledTransientManager_InUse
@@ -2536,19 +2535,6 @@ references:
   isSpec: "True"
   fullName: Unity.Lifetime.ContainerControlledTransientManager.OnCreateLifetimeManager
   nameWithType: ContainerControlledTransientManager.OnCreateLifetimeManager
-- uid: Unity.Lifetime.ContainerControlledTransientManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)
-  name: RemoveValue(ILifetimeContainer)
-  href: api/Unity.Lifetime.ContainerControlledTransientManager.html#Unity_Lifetime_ContainerControlledTransientManager_RemoveValue_Unity_Lifetime_ILifetimeContainer_
-  commentId: M:Unity.Lifetime.ContainerControlledTransientManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)
-  fullName: Unity.Lifetime.ContainerControlledTransientManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)
-  nameWithType: ContainerControlledTransientManager.RemoveValue(ILifetimeContainer)
-- uid: Unity.Lifetime.ContainerControlledTransientManager.RemoveValue*
-  name: RemoveValue
-  href: api/Unity.Lifetime.ContainerControlledTransientManager.html#Unity_Lifetime_ContainerControlledTransientManager_RemoveValue_
-  commentId: Overload:Unity.Lifetime.ContainerControlledTransientManager.RemoveValue
-  isSpec: "True"
-  fullName: Unity.Lifetime.ContainerControlledTransientManager.RemoveValue
-  nameWithType: ContainerControlledTransientManager.RemoveValue
 - uid: Unity.Lifetime.ContainerControlledTransientManager.SetValue(System.Object,Unity.Lifetime.ILifetimeContainer)
   name: SetValue(Object, ILifetimeContainer)
   href: api/Unity.Lifetime.ContainerControlledTransientManager.html#Unity_Lifetime_ContainerControlledTransientManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_
@@ -2851,19 +2837,44 @@ references:
   isSpec: "True"
   fullName: Unity.Lifetime.LifetimeManager.InUse
   nameWithType: LifetimeManager.InUse
-- uid: Unity.Lifetime.LifetimeManager.LifetimeType
-  name: LifetimeType
-  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_LifetimeType
-  commentId: P:Unity.Lifetime.LifetimeManager.LifetimeType
-  fullName: Unity.Lifetime.LifetimeManager.LifetimeType
-  nameWithType: LifetimeManager.LifetimeType
-- uid: Unity.Lifetime.LifetimeManager.LifetimeType*
-  name: LifetimeType
-  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_LifetimeType_
-  commentId: Overload:Unity.Lifetime.LifetimeManager.LifetimeType
+- uid: Unity.Lifetime.LifetimeManager.InvalidValue
+  name: LifetimeManager.InvalidValue
+  href: api/Unity.Lifetime.LifetimeManager.InvalidValue.html
+  commentId: T:Unity.Lifetime.LifetimeManager.InvalidValue
+  fullName: Unity.Lifetime.LifetimeManager.InvalidValue
+  nameWithType: LifetimeManager.InvalidValue
+- uid: Unity.Lifetime.LifetimeManager.InvalidValue.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Unity.Lifetime.LifetimeManager.InvalidValue.html#Unity_Lifetime_LifetimeManager_InvalidValue_Equals_System_Object_
+  commentId: M:Unity.Lifetime.LifetimeManager.InvalidValue.Equals(System.Object)
+  fullName: Unity.Lifetime.LifetimeManager.InvalidValue.Equals(System.Object)
+  nameWithType: LifetimeManager.InvalidValue.Equals(Object)
+- uid: Unity.Lifetime.LifetimeManager.InvalidValue.Equals*
+  name: Equals
+  href: api/Unity.Lifetime.LifetimeManager.InvalidValue.html#Unity_Lifetime_LifetimeManager_InvalidValue_Equals_
+  commentId: Overload:Unity.Lifetime.LifetimeManager.InvalidValue.Equals
   isSpec: "True"
-  fullName: Unity.Lifetime.LifetimeManager.LifetimeType
-  nameWithType: LifetimeManager.LifetimeType
+  fullName: Unity.Lifetime.LifetimeManager.InvalidValue.Equals
+  nameWithType: LifetimeManager.InvalidValue.Equals
+- uid: Unity.Lifetime.LifetimeManager.InvalidValue.GetHashCode
+  name: GetHashCode()
+  href: api/Unity.Lifetime.LifetimeManager.InvalidValue.html#Unity_Lifetime_LifetimeManager_InvalidValue_GetHashCode
+  commentId: M:Unity.Lifetime.LifetimeManager.InvalidValue.GetHashCode
+  fullName: Unity.Lifetime.LifetimeManager.InvalidValue.GetHashCode()
+  nameWithType: LifetimeManager.InvalidValue.GetHashCode()
+- uid: Unity.Lifetime.LifetimeManager.InvalidValue.GetHashCode*
+  name: GetHashCode
+  href: api/Unity.Lifetime.LifetimeManager.InvalidValue.html#Unity_Lifetime_LifetimeManager_InvalidValue_GetHashCode_
+  commentId: Overload:Unity.Lifetime.LifetimeManager.InvalidValue.GetHashCode
+  isSpec: "True"
+  fullName: Unity.Lifetime.LifetimeManager.InvalidValue.GetHashCode
+  nameWithType: LifetimeManager.InvalidValue.GetHashCode
+- uid: Unity.Lifetime.LifetimeManager.NoValue
+  name: NoValue
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_NoValue
+  commentId: F:Unity.Lifetime.LifetimeManager.NoValue
+  fullName: Unity.Lifetime.LifetimeManager.NoValue
+  nameWithType: LifetimeManager.NoValue
 - uid: Unity.Lifetime.LifetimeManager.OnCreateLifetimeManager
   name: OnCreateLifetimeManager()
   href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_OnCreateLifetimeManager
@@ -2909,19 +2920,6 @@ references:
   commentId: T:Unity.Lifetime.PerResolveLifetimeManager
   fullName: Unity.Lifetime.PerResolveLifetimeManager
   nameWithType: PerResolveLifetimeManager
-- uid: Unity.Lifetime.PerResolveLifetimeManager.#ctor
-  name: PerResolveLifetimeManager()
-  href: api/Unity.Lifetime.PerResolveLifetimeManager.html#Unity_Lifetime_PerResolveLifetimeManager__ctor
-  commentId: M:Unity.Lifetime.PerResolveLifetimeManager.#ctor
-  fullName: Unity.Lifetime.PerResolveLifetimeManager.PerResolveLifetimeManager()
-  nameWithType: PerResolveLifetimeManager.PerResolveLifetimeManager()
-- uid: Unity.Lifetime.PerResolveLifetimeManager.#ctor*
-  name: PerResolveLifetimeManager
-  href: api/Unity.Lifetime.PerResolveLifetimeManager.html#Unity_Lifetime_PerResolveLifetimeManager__ctor_
-  commentId: Overload:Unity.Lifetime.PerResolveLifetimeManager.#ctor
-  isSpec: "True"
-  fullName: Unity.Lifetime.PerResolveLifetimeManager.PerResolveLifetimeManager
-  nameWithType: PerResolveLifetimeManager.PerResolveLifetimeManager
 - uid: Unity.Lifetime.PerResolveLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)
   name: GetValue(ILifetimeContainer)
   href: api/Unity.Lifetime.PerResolveLifetimeManager.html#Unity_Lifetime_PerResolveLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_
@@ -2973,19 +2971,6 @@ references:
   commentId: T:Unity.Lifetime.PerThreadLifetimeManager
   fullName: Unity.Lifetime.PerThreadLifetimeManager
   nameWithType: PerThreadLifetimeManager
-- uid: Unity.Lifetime.PerThreadLifetimeManager.#ctor
-  name: PerThreadLifetimeManager()
-  href: api/Unity.Lifetime.PerThreadLifetimeManager.html#Unity_Lifetime_PerThreadLifetimeManager__ctor
-  commentId: M:Unity.Lifetime.PerThreadLifetimeManager.#ctor
-  fullName: Unity.Lifetime.PerThreadLifetimeManager.PerThreadLifetimeManager()
-  nameWithType: PerThreadLifetimeManager.PerThreadLifetimeManager()
-- uid: Unity.Lifetime.PerThreadLifetimeManager.#ctor*
-  name: PerThreadLifetimeManager
-  href: api/Unity.Lifetime.PerThreadLifetimeManager.html#Unity_Lifetime_PerThreadLifetimeManager__ctor_
-  commentId: Overload:Unity.Lifetime.PerThreadLifetimeManager.#ctor
-  isSpec: "True"
-  fullName: Unity.Lifetime.PerThreadLifetimeManager.PerThreadLifetimeManager
-  nameWithType: PerThreadLifetimeManager.PerThreadLifetimeManager
 - uid: Unity.Lifetime.PerThreadLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)
   name: GetValue(ILifetimeContainer)
   href: api/Unity.Lifetime.PerThreadLifetimeManager.html#Unity_Lifetime_PerThreadLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_
@@ -3179,6 +3164,12 @@ references:
   isSpec: "True"
   fullName: Unity.Lifetime.SynchronizedLifetimeManager.Recover
   nameWithType: SynchronizedLifetimeManager.Recover
+- uid: Unity.Lifetime.SynchronizedLifetimeManager.ResolveTimeout
+  name: ResolveTimeout
+  href: api/Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_ResolveTimeout
+  commentId: F:Unity.Lifetime.SynchronizedLifetimeManager.ResolveTimeout
+  fullName: Unity.Lifetime.SynchronizedLifetimeManager.ResolveTimeout
+  nameWithType: SynchronizedLifetimeManager.ResolveTimeout
 - uid: Unity.Lifetime.SynchronizedLifetimeManager.SetValue(System.Object,Unity.Lifetime.ILifetimeContainer)
   name: SetValue(Object, ILifetimeContainer)
   href: api/Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_
@@ -3237,19 +3228,6 @@ references:
   commentId: T:Unity.Lifetime.TransientLifetimeManager
   fullName: Unity.Lifetime.TransientLifetimeManager
   nameWithType: TransientLifetimeManager
-- uid: Unity.Lifetime.TransientLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)
-  name: GetValue(ILifetimeContainer)
-  href: api/Unity.Lifetime.TransientLifetimeManager.html#Unity_Lifetime_TransientLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_
-  commentId: M:Unity.Lifetime.TransientLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)
-  fullName: Unity.Lifetime.TransientLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)
-  nameWithType: TransientLifetimeManager.GetValue(ILifetimeContainer)
-- uid: Unity.Lifetime.TransientLifetimeManager.GetValue*
-  name: GetValue
-  href: api/Unity.Lifetime.TransientLifetimeManager.html#Unity_Lifetime_TransientLifetimeManager_GetValue_
-  commentId: Overload:Unity.Lifetime.TransientLifetimeManager.GetValue
-  isSpec: "True"
-  fullName: Unity.Lifetime.TransientLifetimeManager.GetValue
-  nameWithType: TransientLifetimeManager.GetValue
 - uid: Unity.Lifetime.TransientLifetimeManager.Instance
   name: Instance
   href: api/Unity.Lifetime.TransientLifetimeManager.html#Unity_Lifetime_TransientLifetimeManager_Instance

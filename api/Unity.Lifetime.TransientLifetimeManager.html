@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TransientLifetimeManager
    | Unity Container ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.41.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,6 +91,12 @@ thus ensuring that instances are created new every time.</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_NoValue">LifetimeManager.NoValue</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_">LifetimeManager.GetValue(ILifetimeContainer)</a>
+    </div>
+    <div>
       <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_">LifetimeManager.SetValue(Object, ILifetimeContainer)</a>
     </div>
     <div>
@@ -98,9 +104,6 @@ thus ensuring that instances are created new every time.</p>
     </div>
     <div>
       <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_CreateLifetimePolicy">LifetimeManager.CreateLifetimePolicy()</a>
-    </div>
-    <div>
-      <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_LifetimeType">LifetimeManager.LifetimeType</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
@@ -140,7 +143,7 @@ is the same as having no lifetime manager at all.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_TransientLifetimeManager_Instance.md&amp;value=---%0Auid%3A%20Unity.Lifetime.TransientLifetimeManager.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/TransientLifetimeManager.cs/#L24">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/TransientLifetimeManager.cs/#L26">View Source</a>
   </span>
   <h4 id="Unity_Lifetime_TransientLifetimeManager_Instance" data-uid="Unity.Lifetime.TransientLifetimeManager.Instance">Instance</h4>
   <div class="markdown level1 summary"><p>Globally unique transient lifetime manager singleton</p>
@@ -148,7 +151,7 @@ is the same as having no lifetime manager at all.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TransientLifetimeManager Instance</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly TransientLifetimeManager Instance</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,7 +179,7 @@ is the same as having no lifetime manager at all.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_TransientLifetimeManager_InUse.md&amp;value=---%0Auid%3A%20Unity.Lifetime.TransientLifetimeManager.InUse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/TransientLifetimeManager.cs/#L27">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/TransientLifetimeManager.cs/#L34">View Source</a>
   </span>
   <a id="Unity_Lifetime_TransientLifetimeManager_InUse_" data-uid="Unity.Lifetime.TransientLifetimeManager.InUse*"></a>
   <h4 id="Unity_Lifetime_TransientLifetimeManager_InUse" data-uid="Unity.Lifetime.TransientLifetimeManager.InUse">InUse</h4>
@@ -214,62 +217,10 @@ lifetime manager. This property is being used to track that condition.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_TransientLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.TransientLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/TransientLifetimeManager.cs/#L34">View Source</a>
-  </span>
-  <a id="Unity_Lifetime_TransientLifetimeManager_GetValue_" data-uid="Unity.Lifetime.TransientLifetimeManager.GetValue*"></a>
-  <h4 id="Unity_Lifetime_TransientLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.TransientLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)">GetValue(ILifetimeContainer)</h4>
-  <div class="markdown level1 summary"><p>Retrieves a value from the backing store associated with this Lifetime policy.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override object GetValue(ILifetimeContainer container = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
-        <td><span class="parametername">container</span></td>
-        <td><p>The container this lifetime is associated with</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><p>the object desired, or null if no such object is currently stored.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_">LifetimeManager.GetValue(ILifetimeContainer)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_TransientLifetimeManager_OnCreateLifetimeManager.md&amp;value=---%0Auid%3A%20Unity.Lifetime.TransientLifetimeManager.OnCreateLifetimeManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/TransientLifetimeManager.cs/#L40">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/TransientLifetimeManager.cs/#L41">View Source</a>
   </span>
   <a id="Unity_Lifetime_TransientLifetimeManager_OnCreateLifetimeManager_" data-uid="Unity.Lifetime.TransientLifetimeManager.OnCreateLifetimeManager*"></a>
   <h4 id="Unity_Lifetime_TransientLifetimeManager_OnCreateLifetimeManager" data-uid="Unity.Lifetime.TransientLifetimeManager.OnCreateLifetimeManager">OnCreateLifetimeManager()</h4>
@@ -303,7 +254,7 @@ lifetime manager. This property is being used to track that condition.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_TransientLifetimeManager_ToString.md&amp;value=---%0Auid%3A%20Unity.Lifetime.TransientLifetimeManager.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/TransientLifetimeManager.cs/#L52">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Managers/TransientLifetimeManager.cs/#L47">View Source</a>
   </span>
   <a id="Unity_Lifetime_TransientLifetimeManager_ToString_" data-uid="Unity.Lifetime.TransientLifetimeManager.ToString*"></a>
   <h4 id="Unity_Lifetime_TransientLifetimeManager_ToString" data-uid="Unity.Lifetime.TransientLifetimeManager.ToString">ToString()</h4>
