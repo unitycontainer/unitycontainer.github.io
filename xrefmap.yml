@@ -202,9 +202,6 @@ references:
 - uid: Tutorial.Terms
   name: Terms and Definitions
   href: tutorials/definitions.html
-- uid: Tutorial.Workflow.Overview
-  name: Unity Workflow
-  href: tutorials/workflow.html
 - uid: Unity
   name: Unity
   href: api/Unity.html
@@ -3926,6 +3923,12 @@ references:
   commentId: M:Unity.Resolution.NamedType.GetHashCode
   fullName: Unity.Resolution.NamedType.GetHashCode()
   nameWithType: NamedType.GetHashCode()
+- uid: Unity.Resolution.NamedType.GetHashCode(System.Type,System.String)
+  name: GetHashCode(Type, String)
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_GetHashCode_System_Type_System_String_
+  commentId: M:Unity.Resolution.NamedType.GetHashCode(System.Type,System.String)
+  fullName: Unity.Resolution.NamedType.GetHashCode(System.Type, System.String)
+  nameWithType: NamedType.GetHashCode(Type, String)
 - uid: Unity.Resolution.NamedType.GetHashCode*
   name: GetHashCode
   href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_GetHashCode_
