@@ -4,6 +4,9 @@ references:
 - uid: Article.Application.Design
   name: Application Design Concepts with Unity
   href: articles/application.html
+- uid: Article.Change.Log
+  name: Upgrading Unity Container (Changelog)
+  href: articles/changelog.html
 - uid: Article.Unity.Design
   name: Design of Unity
   href: articles/design.html
@@ -439,6 +442,31 @@ references:
   commentId: T:Unity.Inject
   fullName: Unity.Inject
   nameWithType: Inject
+- uid: Unity.Inject.Array(System.Type,System.Object[])
+  name: Array(Type, Object[])
+  href: api/Unity.Inject.html#Unity_Inject_Array_System_Type_System_Object___
+  commentId: M:Unity.Inject.Array(System.Type,System.Object[])
+  name.vb: Array(Type, Object())
+  fullName: Unity.Inject.Array(System.Type, System.Object[])
+  fullName.vb: Unity.Inject.Array(System.Type, System.Object())
+  nameWithType: Inject.Array(Type, Object[])
+  nameWithType.vb: Inject.Array(Type, Object())
+- uid: Unity.Inject.Array*
+  name: Array
+  href: api/Unity.Inject.html#Unity_Inject_Array_
+  commentId: Overload:Unity.Inject.Array
+  isSpec: "True"
+  fullName: Unity.Inject.Array
+  nameWithType: Inject.Array
+- uid: Unity.Inject.Array``1(System.Object[])
+  name: Array<TElement>(Object[])
+  href: api/Unity.Inject.html#Unity_Inject_Array__1_System_Object___
+  commentId: M:Unity.Inject.Array``1(System.Object[])
+  name.vb: Array(Of TElement)(Object())
+  fullName: Unity.Inject.Array<TElement>(System.Object[])
+  fullName.vb: Unity.Inject.Array(Of TElement)(System.Object())
+  nameWithType: Inject.Array<TElement>(Object[])
+  nameWithType.vb: Inject.Array(Of TElement)(Object())
 - uid: Unity.Inject.Field(System.String,System.Object)
   name: Field(String, Object)
   href: api/Unity.Inject.html#Unity_Inject_Field_System_String_System_Object_
@@ -796,18 +824,18 @@ references:
   commentId: T:Unity.Injection.InjectionField
   fullName: Unity.Injection.InjectionField
   nameWithType: InjectionField
-- uid: Unity.Injection.InjectionField.#ctor(System.String,System.Boolean)
-  name: InjectionField(String, Boolean)
-  href: api/Unity.Injection.InjectionField.html#Unity_Injection_InjectionField__ctor_System_String_System_Boolean_
-  commentId: M:Unity.Injection.InjectionField.#ctor(System.String,System.Boolean)
-  fullName: Unity.Injection.InjectionField.InjectionField(System.String, System.Boolean)
-  nameWithType: InjectionField.InjectionField(String, Boolean)
 - uid: Unity.Injection.InjectionField.#ctor(System.String,System.Object)
   name: InjectionField(String, Object)
   href: api/Unity.Injection.InjectionField.html#Unity_Injection_InjectionField__ctor_System_String_System_Object_
   commentId: M:Unity.Injection.InjectionField.#ctor(System.String,System.Object)
   fullName: Unity.Injection.InjectionField.InjectionField(System.String, System.Object)
   nameWithType: InjectionField.InjectionField(String, Object)
+- uid: Unity.Injection.InjectionField.#ctor(System.String,Unity.ResolutionOption)
+  name: InjectionField(String, ResolutionOption)
+  href: api/Unity.Injection.InjectionField.html#Unity_Injection_InjectionField__ctor_System_String_Unity_ResolutionOption_
+  commentId: M:Unity.Injection.InjectionField.#ctor(System.String,Unity.ResolutionOption)
+  fullName: Unity.Injection.InjectionField.InjectionField(System.String, Unity.ResolutionOption)
+  nameWithType: InjectionField.InjectionField(String, ResolutionOption)
 - uid: Unity.Injection.InjectionField.#ctor*
   name: InjectionField
   href: api/Unity.Injection.InjectionField.html#Unity_Injection_InjectionField__ctor_
@@ -1351,18 +1379,18 @@ references:
   commentId: T:Unity.Injection.InjectionProperty
   fullName: Unity.Injection.InjectionProperty
   nameWithType: InjectionProperty
-- uid: Unity.Injection.InjectionProperty.#ctor(System.String,System.Boolean)
-  name: InjectionProperty(String, Boolean)
-  href: api/Unity.Injection.InjectionProperty.html#Unity_Injection_InjectionProperty__ctor_System_String_System_Boolean_
-  commentId: M:Unity.Injection.InjectionProperty.#ctor(System.String,System.Boolean)
-  fullName: Unity.Injection.InjectionProperty.InjectionProperty(System.String, System.Boolean)
-  nameWithType: InjectionProperty.InjectionProperty(String, Boolean)
 - uid: Unity.Injection.InjectionProperty.#ctor(System.String,System.Object)
   name: InjectionProperty(String, Object)
   href: api/Unity.Injection.InjectionProperty.html#Unity_Injection_InjectionProperty__ctor_System_String_System_Object_
   commentId: M:Unity.Injection.InjectionProperty.#ctor(System.String,System.Object)
   fullName: Unity.Injection.InjectionProperty.InjectionProperty(System.String, System.Object)
   nameWithType: InjectionProperty.InjectionProperty(String, Object)
+- uid: Unity.Injection.InjectionProperty.#ctor(System.String,Unity.ResolutionOption)
+  name: InjectionProperty(String, ResolutionOption)
+  href: api/Unity.Injection.InjectionProperty.html#Unity_Injection_InjectionProperty__ctor_System_String_Unity_ResolutionOption_
+  commentId: M:Unity.Injection.InjectionProperty.#ctor(System.String,Unity.ResolutionOption)
+  fullName: Unity.Injection.InjectionProperty.InjectionProperty(System.String, Unity.ResolutionOption)
+  nameWithType: InjectionProperty.InjectionProperty(String, ResolutionOption)
 - uid: Unity.Injection.InjectionProperty.#ctor*
   name: InjectionProperty
   href: api/Unity.Injection.InjectionProperty.html#Unity_Injection_InjectionProperty__ctor_
@@ -2358,6 +2386,15 @@ references:
   fullName.vb: Unity.IUnityContainerAsync.Resolve(System.Type, System.String, Unity.Resolution.ResolverOverride())
   nameWithType: IUnityContainerAsync.Resolve(Type, String, ResolverOverride[])
   nameWithType.vb: IUnityContainerAsync.Resolve(Type, String, ResolverOverride())
+- uid: Unity.IUnityContainerAsync.Resolve(System.Type,System.Text.RegularExpressions.Regex,Unity.Resolution.ResolverOverride[])
+  name: Resolve(Type, Regex, ResolverOverride[])
+  href: api/Unity.IUnityContainerAsync.html#Unity_IUnityContainerAsync_Resolve_System_Type_System_Text_RegularExpressions_Regex_Unity_Resolution_ResolverOverride___
+  commentId: M:Unity.IUnityContainerAsync.Resolve(System.Type,System.Text.RegularExpressions.Regex,Unity.Resolution.ResolverOverride[])
+  name.vb: Resolve(Type, Regex, ResolverOverride())
+  fullName: Unity.IUnityContainerAsync.Resolve(System.Type, System.Text.RegularExpressions.Regex, Unity.Resolution.ResolverOverride[])
+  fullName.vb: Unity.IUnityContainerAsync.Resolve(System.Type, System.Text.RegularExpressions.Regex, Unity.Resolution.ResolverOverride())
+  nameWithType: IUnityContainerAsync.Resolve(Type, Regex, ResolverOverride[])
+  nameWithType.vb: IUnityContainerAsync.Resolve(Type, Regex, ResolverOverride())
 - uid: Unity.IUnityContainerAsync.Resolve*
   name: Resolve
   href: api/Unity.IUnityContainerAsync.html#Unity_IUnityContainerAsync_Resolve_
@@ -3456,6 +3493,12 @@ references:
   commentId: M:Unity.Policy.IPolicyList.Get(System.Type,System.String,System.Type)
   fullName: Unity.Policy.IPolicyList.Get(System.Type, System.String, System.Type)
   nameWithType: IPolicyList.Get(Type, String, Type)
+- uid: Unity.Policy.IPolicyList.Get(System.Type,System.Type)
+  name: Get(Type, Type)
+  href: api/Unity.Policy.IPolicyList.html#Unity_Policy_IPolicyList_Get_System_Type_System_Type_
+  commentId: M:Unity.Policy.IPolicyList.Get(System.Type,System.Type)
+  fullName: Unity.Policy.IPolicyList.Get(System.Type, System.Type)
+  nameWithType: IPolicyList.Get(Type, Type)
 - uid: Unity.Policy.IPolicyList.Get*
   name: Get
   href: api/Unity.Policy.IPolicyList.html#Unity_Policy_IPolicyList_Get_
@@ -3469,6 +3512,12 @@ references:
   commentId: M:Unity.Policy.IPolicyList.Set(System.Type,System.String,System.Type,System.Object)
   fullName: Unity.Policy.IPolicyList.Set(System.Type, System.String, System.Type, System.Object)
   nameWithType: IPolicyList.Set(Type, String, Type, Object)
+- uid: Unity.Policy.IPolicyList.Set(System.Type,System.Type,System.Object)
+  name: Set(Type, Type, Object)
+  href: api/Unity.Policy.IPolicyList.html#Unity_Policy_IPolicyList_Set_System_Type_System_Type_System_Object_
+  commentId: M:Unity.Policy.IPolicyList.Set(System.Type,System.Type,System.Object)
+  fullName: Unity.Policy.IPolicyList.Set(System.Type, System.Type, System.Object)
+  nameWithType: IPolicyList.Set(Type, Type, Object)
 - uid: Unity.Policy.IPolicyList.Set*
   name: Set
   href: api/Unity.Policy.IPolicyList.html#Unity_Policy_IPolicyList_Set_
@@ -3917,6 +3966,19 @@ references:
   commentId: T:Unity.Resolution.NamedType
   fullName: Unity.Resolution.NamedType
   nameWithType: NamedType
+- uid: Unity.Resolution.NamedType.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_Equals_System_Object_
+  commentId: M:Unity.Resolution.NamedType.Equals(System.Object)
+  fullName: Unity.Resolution.NamedType.Equals(System.Object)
+  nameWithType: NamedType.Equals(Object)
+- uid: Unity.Resolution.NamedType.Equals*
+  name: Equals
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_Equals_
+  commentId: Overload:Unity.Resolution.NamedType.Equals
+  isSpec: "True"
+  fullName: Unity.Resolution.NamedType.Equals
+  nameWithType: NamedType.Equals
 - uid: Unity.Resolution.NamedType.GetHashCode
   name: GetHashCode()
   href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_GetHashCode
@@ -3942,6 +4004,45 @@ references:
   commentId: F:Unity.Resolution.NamedType.Name
   fullName: Unity.Resolution.NamedType.Name
   nameWithType: NamedType.Name
+- uid: Unity.Resolution.NamedType.op_Equality(Unity.Resolution.NamedType,Unity.Resolution.NamedType)
+  name: Equality(NamedType, NamedType)
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_op_Equality_Unity_Resolution_NamedType_Unity_Resolution_NamedType_
+  commentId: M:Unity.Resolution.NamedType.op_Equality(Unity.Resolution.NamedType,Unity.Resolution.NamedType)
+  fullName: Unity.Resolution.NamedType.Equality(Unity.Resolution.NamedType, Unity.Resolution.NamedType)
+  nameWithType: NamedType.Equality(NamedType, NamedType)
+- uid: Unity.Resolution.NamedType.op_Equality*
+  name: Equality
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_op_Equality_
+  commentId: Overload:Unity.Resolution.NamedType.op_Equality
+  isSpec: "True"
+  fullName: Unity.Resolution.NamedType.Equality
+  nameWithType: NamedType.Equality
+- uid: Unity.Resolution.NamedType.op_Inequality(Unity.Resolution.NamedType,Unity.Resolution.NamedType)
+  name: Inequality(NamedType, NamedType)
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_op_Inequality_Unity_Resolution_NamedType_Unity_Resolution_NamedType_
+  commentId: M:Unity.Resolution.NamedType.op_Inequality(Unity.Resolution.NamedType,Unity.Resolution.NamedType)
+  fullName: Unity.Resolution.NamedType.Inequality(Unity.Resolution.NamedType, Unity.Resolution.NamedType)
+  nameWithType: NamedType.Inequality(NamedType, NamedType)
+- uid: Unity.Resolution.NamedType.op_Inequality*
+  name: Inequality
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_op_Inequality_
+  commentId: Overload:Unity.Resolution.NamedType.op_Inequality
+  isSpec: "True"
+  fullName: Unity.Resolution.NamedType.Inequality
+  nameWithType: NamedType.Inequality
+- uid: Unity.Resolution.NamedType.ToString
+  name: ToString()
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_ToString
+  commentId: M:Unity.Resolution.NamedType.ToString
+  fullName: Unity.Resolution.NamedType.ToString()
+  nameWithType: NamedType.ToString()
+- uid: Unity.Resolution.NamedType.ToString*
+  name: ToString
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_ToString_
+  commentId: Overload:Unity.Resolution.NamedType.ToString
+  isSpec: "True"
+  fullName: Unity.Resolution.NamedType.ToString
+  nameWithType: NamedType.ToString
 - uid: Unity.Resolution.NamedType.Type
   name: Type
   href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_Type
@@ -4356,6 +4457,24 @@ references:
   isSpec: "True"
   fullName: Unity.ResolutionFailedException.TypeRequested
   nameWithType: ResolutionFailedException.TypeRequested
+- uid: Unity.ResolutionOption
+  name: ResolutionOption
+  href: api/Unity.ResolutionOption.html
+  commentId: T:Unity.ResolutionOption
+  fullName: Unity.ResolutionOption
+  nameWithType: ResolutionOption
+- uid: Unity.ResolutionOption.Optional
+  name: Optional
+  href: api/Unity.ResolutionOption.html#Unity_ResolutionOption_Optional
+  commentId: F:Unity.ResolutionOption.Optional
+  fullName: Unity.ResolutionOption.Optional
+  nameWithType: ResolutionOption.Optional
+- uid: Unity.ResolutionOption.Required
+  name: Required
+  href: api/Unity.ResolutionOption.html#Unity_ResolutionOption_Required
+  commentId: F:Unity.ResolutionOption.Required
+  fullName: Unity.ResolutionOption.Required
+  nameWithType: ResolutionOption.Required
 - uid: Unity.Resolve
   name: Resolve
   href: api/Unity.Resolve.html
