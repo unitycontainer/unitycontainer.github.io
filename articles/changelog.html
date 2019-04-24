@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Upgrading Unity Container (Changelog) | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Upgrading Unity Container (Changelog) | Unity Container ">
+    <meta name="generator" content="docfx 2.42.0.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="upgrading-unity-container-changelog">Upgrading Unity Container (Changelog)</h1>
+
+<p>This document contains a list of breaking changes and noteworthy issues. At this time the list is not complete. If you discover an issue while upgrading that is not covered here please open an issue or, preferrably, issue a pull request. You can clone the wiki to do that.</p>
+<p>Some breaking changes are currently documented in the issue tracker only. Again, please report any such findings by commenting on the issue.</p>
+<h1 id="upgrading-to-unity-59x">Upgrading to Unity 5.9.x</h1>
+<p>Starting with version 5.9.0 Unity package will only contain Unity.Abstractions and Unity.Container packages.</p>
+<p>All other packages will be available as individual NuGet packages</p>
+<h2 id="breaking-change">Breaking change</h2>
+<p>Some extension methods have been moved out of the Unity nuget package and have been moved into their own individual packages.</p>
+<p>For example, the following code will no longer work</p>
+<pre><code class="lang-C#">Container = new UnityContainer();
+Container.LoadConfiguration();
+</code></pre>
+<p>You will receive an error that the namespace <strong>Microsoft.Practices.Unity.Configuration</strong> no longer exists in your using statements.</p>
+<h2 id="the-fix">The Fix</h2>
+<p>To fix this and similar problems, add the required nuget packages separately.</p>
+<p>For the example above, add nuget package <strong>Unity.Configuration</strong></p>
+<p><em>This wiki created with help from <a href="https://github.com/quintonn">quintonn</a></em></p>
+<h1 id="upgrading-to-unity-58x">Upgrading to Unity 5.8.x</h1>
+<p>Unity 5.8.0 adds support for nesting generic types when resolving collections (arrays and enumerables).</p>
+<h2 id="problem">Problem</h2>
+<p>Unity has build in support for <code>IEnumerable&lt;&gt;</code>, <code>Array</code> ( <code>type[]</code> ), <code>Func&lt;&gt;</code>, and <code>Lazy&lt;&gt;</code>. Theoretically it should be able to recognize these types and properly resolve them individually and in combination. Unfortunately it did not do so. For example if you registered several interfaces like this:</p>
+<pre><code class="lang-C#">RegisterType&lt;IService, Service&gt;(&quot;1&quot;);
+RegisterType&lt;IService, Service&gt;(&quot;2&quot;);
+RegisterType&lt;IService, Service&gt;(&quot;3&quot;);
+RegisterType&lt;IService, Service&gt;();
+</code></pre>
+<p>resolving enumerable in combination with generic will resolve incorrectly:</p>
+<pre><code class="lang-C#">Resolve&lt;Lazy&lt;IEnumenrable&lt;type&gt;&gt;&gt;  - resolve correctly
+Resolve&lt;IEnumenrable&lt;Lazy&lt;type&gt;&gt;&gt;  - resolve empty 
+</code></pre>
+<h2 id="the-fix-1">The Fix</h2>
+<p>Release v5.8.0 fixes resolution of collections of generic and array types and Lazy collections of items. This will now work fine:</p>
+<pre><code class="lang-C#">Resolve&lt;Lazy&lt;IEnumenrable&lt;type&gt;&gt;&gt;
+Resolve&lt;IEnumenrable&lt;Lazy&lt;type&gt;&gt;&gt;
+
+Resolve&lt;Lazy&lt;type[]&gt;&gt;
+Resolve&lt;Lazy&lt;type&gt;[]&gt;
+
+Resolve&lt;IEnumerable&lt;Lazy&lt;Func&lt;IService&gt;&gt;&gt;&gt;()
+Resolve&lt;IEnumerable&lt;Func&lt;Lazy&lt;IService&gt;&gt;&gt;&gt;()
+
+Resolve&lt;Lazy&lt;Func&lt;IService&gt;&gt;[]&gt;()
+Resolve&lt;Func&lt;Lazy&lt;IService&gt;&gt;[]&gt;()
+</code></pre>
+<p>The logic behind resolving collections is to find type to enumerate and get all registrations for it no matter how deep in generics tree. Enumerated type could be:</p>
+<ul>
+<li>Non generic (Constructed Generic) type</li>
+<li>Explicitly registered type</li>
+</ul>
+<p>So, in this example</p>
+<pre><code class="lang-C#">RegisterType&lt;IService, Service&gt;(&quot;1&quot;);
+RegisterType&lt;IService, Service&gt;(&quot;2&quot;);
+RegisterType&lt;IService, Service&gt;(&quot;3&quot;);
+RegisterType&lt;IService, Service&gt;();
+
+Resolve&lt;IEnumerable&lt;Func&lt;Lazy&lt;IService&gt;&gt;&gt;&gt;();
+</code></pre>
+<p>Unity will recognize <code>IService</code> as registered type and enumerate four instances of <code>Func&lt;Lazy&lt;IService&gt;&gt;</code>.</p>
+<p>But if you look at this example:</p>
+<pre><code class="lang-C#">RegisterType&lt;IService, Service&gt;(&quot;1&quot;);
+RegisterType&lt;IService, Service&gt;(&quot;2&quot;);
+RegisterType&lt;IService, Service&gt;(&quot;3&quot;);
+RegisterType&lt;IService, Service&gt;();
+
+RegisterType(typeof(IFoo&lt;&gt;), typeof(Foo&lt;&gt;));  &lt;-- note this registraton
+
+Resolve&lt;IEnumerable&lt;IFoo&lt;IService&gt;&gt;&gt;();
+</code></pre>
+<p>Returned result is different! Adding registration for IFoo changes enumerable type to IFoo. This resolution will only return one item.</p>
+<h2 id="breaking-change-1">Breaking change</h2>
+<p>Sometimes you do want Unity to ignore a generic when it resolves collections similar to how it deals with <code>Lazy</code> and <code>Func</code>. Suppose in example above you want Unity to resolve all four of IService instances wrapped in <code>IFoo</code>.
+To do so you would have to make <code>IFoo&lt;&gt;</code> a <strong>Built-In</strong> type of the container.</p>
+<p>It could be simply done by creating either <a href="https://github.com/unitycontainer/examples/blob/master/src/Extending%20Unity/BuildPlanCreator/FooBuildPlanCreatorPolicy.cs">IBuildPlanCreatorPolicy</a> or <a href="https://github.com/unitycontainer/examples/blob/master/src/Extending%20Unity/BuildPlan/FooBuildPlanPolicy.cs">IBuildPlanPolicy</a> factories.
+There are just a few steps you need to follow:</p>
+<ul>
+<li>Create factory for the generic (See example for <a href="https://github.com/unitycontainer/examples/blob/master/src/Extending%20Unity/BuildPlanCreator/FooBuildPlanCreatorPolicy.cs">IBuildPlanCreatorPolicy</a> or <a href="https://github.com/unitycontainer/examples/blob/master/src/Extending%20Unity/BuildPlan/FooBuildPlanPolicy.cs">IBuildPlanPolicy</a> )</li>
+<li>Create and extension to get access to Unity internal policies and register your factory (See example <a href="https://github.com/unitycontainer/examples/blob/master/src/Extending%20Unity/BuildPlanCreator/FooUnityExtension.cs">IBuildPlanCreatorPolicy</a> or  <a href="https://github.com/unitycontainer/examples/blob/master/src/Extending%20Unity/BuildPlan/FooUnityExtension.cs">IBuildPlanPolicy</a>)</li>
+<li>Register your extension with <code>UnityContainer</code></li>
+</ul>
+<p>For examples of how it should be done please follow <a href="https://github.com/unitycontainer/examples/tree/master/src/Extending%20Unity">this link</a>.</p>
+<h1 id="upgrading-to-unity-521">Upgrading to Unity 5.2.1</h1>
+<p>This release fundamentally changes how types are registered with Unity. The rationale behind this change is <a href="https://github.com/unitycontainer/container/issues/35">this issue</a>.</p>
+<h3 id="the-problem">The problem</h3>
+<p>To explain the problem please look at this example. Prior to this release registering singleton <code>ILogger</code> service like this:</p>
+<pre><code class="lang-C#">container.RegisterType&lt;ILogger, MockLogger&gt;(new ContainerControlledLifetimeManager(), new InjectionConstructor());
+</code></pre>
+<p>would create two registrations:</p>
+<ol>
+<li>A mapping between <code>ILogger</code> to <code>MockLogger</code></li>
+<li>A singleton registration for <code>MockLogger</code> with default constructor.</li>
+</ol>
+<p>Calling <code>container.Resolve&lt;ILogger&gt;()</code> resolves singleton instance of <strong>MockLogger</strong> as expected, and resolving type <strong>MockLogger</strong> <code>container.Resolve&lt;MockLogger&gt;()</code> would resolve <strong>the same</strong> instance of <strong>MockLogger</strong>. Both <strong>ContainerControlledLifetimeManager</strong> and <strong>InjectionConstructor</strong> would be associated with <strong>MockLogger</strong> registration.</p>
+<p>Suppose you want to resolve a new <strong>MockLogger</strong> whenever it is resolved directly like this  <code>container.Resolve&lt;MockLogger&gt;()</code>. To do so you would create another registration just for the <strong>MockLogger</strong>:</p>
+<pre><code class="lang-C#">container.RegisterType&lt;MockLogger&gt;(new TransientLifetimeManager());
+</code></pre>
+<p>So, now when you call <code>container.Resolve&lt;MockLogger&gt;()</code> it resolves new instance of the <strong>MockLogger</strong> class and uses constructor with longest list of parameters. All is well and as expected. But now if you try to resolve <code>container.Resolve&lt;ILogger&gt;()</code> it is no longer returns singleton instance of the <strong>MockLogger</strong>. Now it also returns new <strong>MockLogger</strong> created with constructor with longest list of parameters.
+The subsequent registration overwritten all information associated with <code>ILogger</code>.</p>
+<h3 id="the-solution">The solution</h3>
+<p>Release 5.2.1 fixes this behavior. Now all information passed to Unity during registration is stored with <code>FromType</code> instead of <code>ToType</code>. So registering type like this:</p>
+<pre><code class="lang-C#">container.RegisterType&lt;ILogger, MockLogger&gt;(new ContainerControlledLifetimeManager(), new InjectionConstructor());
+</code></pre>
+<p>creates just one registration <code>ILogger</code> and associates <strong>LifetimeManager</strong> and all provided <strong>InjectionMemebers</strong> with it. At this point  <strong>MockLogger</strong> is still unregistered.</p>
+<p>So, think about it as a <code>RegisteredType</code> and <code>MappedTo</code> type. If you look at initial example:</p>
+<pre><code class="lang-C#">container.RegisterType&lt;ILogger, MockLogger&gt;(new ContainerControlledLifetimeManager());
+</code></pre>
+<p><code>ILogger</code> - is a registered type and ContainerControlledLifetimeManager is associated with this type, as well as any <code>InjectionMembers</code> you provide during registration.</p>
+<h2 id="breaking-changes">Breaking changes</h2>
+<p>This release breaks a lot of registrations. Anything relaying on TypeTo being registered in mappings will fail. For example:</p>
+<pre><code class="lang-C#">container.RegisterType&lt;ILogger, MockLogger&gt;(new ContainerControlledLifetimeManager());
+
+Assert.AreSame( container.Resolve&lt;ILogger&gt;(), container.Resolve&lt;MockLogger&gt;()) &lt;-- Will fail now
+</code></pre>
+<p>This could be easily fixed by slightly modifying how types are registered. If you want TypeTo to be available independently you could register it like this:</p>
+<pre><code class="lang-C#">container.RegisterType&lt;MockLogger&gt;(new ContainerControlledLifetimeManager());
+container.RegisterType&lt;ILogger, MockLogger&gt;();
+
+Assert.AreSame( container.Resolve&lt;ILogger&gt;(), container.Resolve&lt;MockLogger&gt;()) &lt;-- Passes
+</code></pre>
+<p>This applies to anything you registering with the type: factories, injection members, interceptors, etc.</p>
+<h2 id="fixing">Fixing</h2>
+<p>With some creative searching and sorting these breaking registrations could be identified statically, without running the code. The key is to look for registrations with same TypeTo type. If you see multiple registrations registering same type as implementation type and at least one of them has non transient lifetime it is a good indicator that it might fail after update:</p>
+<pre><code class="lang-C#">container.RegisterType&lt;ILogger, Logger&gt;(new ContainerControlledLifetimeManager());
+...
+container.RegisterType&lt;IOtherLogger, Logger&gt;();
+</code></pre>
+<p>To fix just add individual registration for implementation type with proper lifetime manager like so:</p>
+<pre><code class="lang-C#">container.RegisterType&lt;Logger&gt;(new ContainerControlledLifetimeManager());
+...
+container.RegisterType&lt;ILogger, Logger&gt;();
+...
+container.RegisterType&lt;IOtherLogger, Logger&gt;();
+</code></pre>
+<p>Make sure it is registered before other mappings.</p>
+<h1 id="upgrading-to-unityabstractions-414">Upgrading to Unity.Abstractions 4.1.4</h1>
+<p>Lifetime managers now support the value <code>null</code>. <code>GetValue</code> must return <code>LifetimeManager.NoValue</code> to indicate that no value has been set. You must upgrade custom lifetime managers to not return <code>null</code> inappropriately. Mainly the <code>GetValue</code> method must be adjusted. The built-in lifetime managers have been upgraded. If you do not use custom lifetime managers you should not see any changes in behavior. (<a href="https://github.com/unitycontainer/abstractions/issues/102">https://github.com/unitycontainer/abstractions/issues/102</a>)</p>
+<p>Design time validation for <code>LifetimeManager</code> was added. The marker interfaces <code>ITypeLifetimeManager</code>, <code>IInstanceLifetimeManager</code> and <code>IFactoryLifetimeManager</code> have been introduced. Various other parts of the framework now refer to these types instead of <code>LifetimeManager</code>. The marker interfaces are empty and <code>LifetimeManager</code> does not inherit from any of them. This can lead to compiler errors. In general these errors can be fixed through  changing the type of variables or through casting. (<a href="https://github.com/unitycontainer/abstractions/issues/90">https://github.com/unitycontainer/abstractions/issues/90</a>)</p>
+<h1 id="upgrading-to-unityabstractions-400350">Upgrading to Unity.Abstractions 4.0.0.350</h1>
+<p>The namespace <code>Unity.Attributes</code> was removed. These types are now in namespace <code>Unity</code>. One common type that is affected is <code>DependencyAttribute</code>. Suggested way to upgrade: Mass delete the old namespace reference using the Regex <code>using Unity.Attributes;\r\n</code> in Visual Studio. Then, use Resharper to fix missing imports in the entire solution in one action.</p>
+<h1 id="upgrading-to-unityabstractions-4000">Upgrading to Unity.Abstractions 4.0.0.0</h1>
+<p>A few breaking changes have been made. For more information see <a href="https://github.com/unitycontainer/abstractions/issues/97">https://github.com/unitycontainer/abstractions/issues/97</a>.</p>
+<h3 id="problem-1">Problem</h3>
+<p>Build error <code>The type or namespace name 'IBuilderContext' could not be found.</code></p>
+<h3 id="solution">Solution</h3>
+<p><code>IBuilderContext</code> has been replaced with: <code>Unity.Builder.BuilderContext</code></p>
+<h3 id="problem-2">Problem</h3>
+<p>Build Error `'IBuildPlanCreatorPolicy' is obsolete: 'This interface has been replaced with Unity.Policy.ResolveDelegateFactory delegate'``</p>
+<h3 id="solution-1">Solution</h3>
+<p>See <a href="https://github.com/unitycontainer/examples/blob/master/src/Extending%20Unity/BuildPlanCreator/FooBuildPlanCreatorPolicy.cs">this example</a> or <a href="https://github.com/unitycontainer/microsoft-logging/blob/master/src/LoggingExtension.cs">this example</a> or <a href="https://github.com/unitycontainer/examples/blob/master/src/Extending%20Unity/BuildPlanCreator/FooBuildPlanCreatorPolicy.cs">this example</a></p>
+<h3 id="problem-3">Problem</h3>
+<p>Build Error in <code>BuilderStrategy</code> derived classes: <code>'MyCustomStrategy.PreBuildUp(BuilderContext)': no suitable method found to override</code></p>
+<h3 id="solution-2">Solution</h3>
+<p>Adjust the signature of the <code>PreBuildUp</code> method to: <code>public override void PreBuildUp(ref BuilderContext context)</code></p>
+<h3 id="problem-4">Problem</h3>
+<p>Build Error in <code>BuilderStrategy</code> derived classes: <code>'MyCustomStrategy.PostBuildUp(BuilderContext)': no suitable method found to override</code></p>
+<h3 id="solution-3">Solution</h3>
+<p>Adjust the signature of the PostBuildUp method to:
+public override void PreBuildUp(ref BuilderContext context)</p>
+<h3 id="problem-5">Problem</h3>
+<p>Build Error in Builder Strategy derived class:
+<code>'BuilderContext' does not contain a definition for 'AddResolverOverrides' and no accessible extension method 'AddResolverOverrides' accepting a first argument of type 'BuilderContext' could be found</code></p>
+<h3 id="solution-4">Solution</h3>
+<p>The behaviour can be mimicked by something like:</p>
+<pre><code class="lang-cs">        public static void AddResolverOverrides(ref BuilderContext ctx, ResolverOverride theOverride)
+        {
+            var newOverrides = ctx.Overrides;
+            newOverrides = newOverrides == null 
+                ? new ResolverOverride[]{theOverride} 
+                : newOverrides.Concat(new[] {theOverride}).ToArray();
+
+            ctx.Overrides = newOverrides;
+        }
+</code></pre>
+<h3 id="problem-6">Problem</h3>
+<p><code>'BuilderContext' does not contain a definition for 'ParentContext' and no accessible extension method 'ParentContext' accepting a first argument of type 'BuilderContext' could be found</code></p>
+<p>I used the <code>ParentContext</code> of <code>IBuilderContext</code> to determine if anything in the build hierarchy was of a certain type. More specifically I was checking to see if a specific decorator class was being applied as part of the build.</p>
+<h3 id="solution-5">Solution</h3>
+<p>There is an <code>IntPtr Parent</code> property on the <code>BuilderContext</code> struct. Can this be used to find the parent context?</p>
+<h3 id="problem-7">Problem</h3>
+<p>There is a build warning:
+<code>'InjectionFactory' is obsolete: 'InjectionFactory has been deprecated and will be removed in next release. Please use IUnityContainer.RegisterFactory(...) method instead.'</code></p>
+<h3 id="solution-6">Solution</h3>
+<p>The <code>InjectionFactory</code> class has been deprecated. Injection factories are now registered directly with the container.
+For example:</p>
+<p><strong>Old code:</strong>
+<code>Container.RegisterType&lt;IEncryptionProvider&gt;(new ContainerControlledLifetimeManager(), new InjectionFactory(c =&gt; MakeEncryptionProvider(c)));</code></p>
+<p><strong>New code:</strong>
+<code>Container.RegisterFactory&lt;IEncryptionProvider&gt;(c =&gt; MakeEncryptionProvider(c), new ContainerControlledLifetimeManager());</code></p>
+<h3 id="be-aware">Be Aware</h3>
+<p>The public key token of the assembly has changed, so you may need to remove redundant assembly bindings from config files.</p>
+<p>For example:
+This binding will now be ineefective, and can be removed:</p>
+<pre><code>      &lt;dependentAssembly&gt;
+        &lt;assemblyIdentity name=&quot;Unity.Abstractions&quot; publicKeyToken=&quot;6d32ff45e0ccc69f&quot; culture=&quot;neutral&quot; /&gt;
+        &lt;bindingRedirect oldVersion=&quot;0.0.0.0-3.3.0.0&quot; newVersion=&quot;3.3.0.0&quot; /&gt;
+      &lt;/dependentAssembly&gt;
+</code></pre>
+<p>Note:</p>
+<ul>
+<li>The old public key token value is <code>6d32ff45e0ccc69f</code></li>
+<li>The new public key token is <code>489b6accfaf20ef0</code></li>
+</ul>
+<h3 id="problem-8">Problem</h3>
+<p>Build Error in <code>BuilderStrategy</code> derived classes: <code>'MyCustomStrategy.PostBuildUp(BuilderContext)': no suitable method found to override</code></p>
+<h3 id="solution-7">Solution</h3>
+<p>Adjust the signature of the <code>PostBuildUp</code> method to: <code>public override void PreBuildUp(ref BuilderContext context)</code></p>
+<h3 id="problem-9">Problem</h3>
+<p>I'm using this code to register my interfaces:</p>
+<pre><code>Containter.RegisterType&lt;ICustomerRepository, CustomerRepository&gt;(new ContainerControlledLifetimeManager(), InjectionConstructor);
+</code></pre>
+<p>But after the upgrade im getting the following error when resolving:</p>
+<pre><code>Exception thrown: 'System.InvalidCastException' in Unity.Abstractions.dll
+Unable to cast object of type
+</code></pre>
+<h3 id="solution-8">Solution</h3>
+<p>Ok I managed to find out what I was doing wrong.
+I was reusing the same 'InjectionConstructor' for all my registrations.
+After replacing them with a new instance for each my problem went away.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/articles/changelog.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2008–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
