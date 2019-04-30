@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Automatic Constructor Selection | Unity Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Automatic Constructor Selection | Unity Container ">
+    <meta name="generator" content="docfx 2.42.0.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tutorial.Selection.Constructor">
+<h1 id="selecting-constructor">Selecting Constructor</h1>
+
+<p>Proper selection of the constructor used for type instantiation is one of the most important aspects of the container operation. When creating an object, the container uses one of the following algorithms to select a constructor it will be using to initialize the object:</p>
+<ul>
+<li><p><a class="xref" href="../../registration/Type/Constructor/constructor.html">Constructor Injection using explicit registration</a>. With this technique, you register the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> and apply an <a class="xref" href="../../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor</a> that specifies the dependencies to the registration. For more information see <a class="xref" href="../../registration/Type/Constructor/constructor.html">Constructor Injection</a></p>
+</li>
+<li><p><a class="xref" href="../../Annotation/constructor.html">Constructor Annotation</a>. With this technique, you apply attribute to a class constructor that is used for injection. For more information see <a class="xref" href="../../Annotation/constructor.html">Annotating Type for Constructor Injection</a></p>
+</li>
+<li><p><strong>Automatic Constructor Selection</strong>. This technique is used by the Unity container to select a constructor and to satisfy any constructor dependencies defined in parameters of the constructor if no <a class="xref" href="../../Annotation/annotation.html">Annotation</a> or <a class="xref" href="../../registration/registration.html">Registration</a> exists.</p>
+</li>
+</ul>
+<h2 id="automatic-constructor-selection">Automatic Constructor Selection</h2>
+<p>Automatic constructor selection is performed if no other information is available on how to create a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>. Unity uses dynamic, real time algorithm to discover and select a constructor.</p>
+<p>The Unity container will try to execute the most complex constructor it can provide with appropriate dependencies. In other words, if the container can resolve and/or inject all parameters of the constructor, it will be selected.</p>
+<h3 id="creating-build-pipeline">Creating Build Pipeline</h3>
+<p>Selection process takes place during the first resolution of a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> contract. Unity container employs lazy resolution strategy. It will defer pipeline creation until the contract (<a class="xref" href="../../registration/metadata.html">RegistrationType and Name</a>) is requested.</p>
+<p>The lazy approach allows registrations to proceed at random order and do not require dependencies to be registered before dependents. As long as all of these are available at the time of resolution Unity does not care in what order they were registered.</p>
+<h3 id="constructor-selection-steps">Constructor Selection Steps</h3>
+<p>One of the first steps, when creating a pipeline, is a constructor selection. Constructors are selected in the following order:</p>
+<ul>
+<li>If present, use registered <a class="xref" href="../../../api/Unity.Injection.InjectionConstructor.html">Injection Constructor</a></li>
+<li>If present, annotated with an attribute</li>
+<li>Automatically select constructor
+<ul>
+<li>Get all accessible constructors</li>
+<li>Process constructors in ascending order from most complex to the default
+<ul>
+<li>Filter out <a class="xref" href="../../registration/Type/Constructor/constructor.html#restrictions">restricted</a> constructors</li>
+<li>Loop through parameters and check if
+<ul>
+<li>Is primitive
+<ul>
+<li>Is registered with the container</li>
+<li>Has <em>default</em> value</li>
+</ul>
+</li>
+<li>Is resolvable type</li>
+<li>Is registered with container</li>
+</ul>
+</li>
+<li>Select the first constructor the container can create</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The Unity container will select the first successful match and use it as a selection.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>When more than one constructor could be matched at the same time, the order and constructor selection can not be guaranteed.</p>
+</div>
+<p>During normal operation the container does not perform validation.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If <a class="xref" href="../../Extensions/diagnostic.html">Diagnostic</a> extension is enabled, Unity will perform a selection validation and will throw an exception, reporting ambiguous constructors, if more than one constructor can be successfully selected with current configuration.</p>
+</div>
+<p>If no constructor could be selected, the container will throw an exception.</p>
+<h3 id="pipeline-retention">Pipeline retention</h3>
+<p>Once the pipeline is created, it will be used to satisfy all subsequent requests for that contract. If you need to update or rebuild the pipeline, the contract has to be re-registered.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/unitycontainer/documentation/blob/master/tutorials/Composition/Selection/constructor.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2008–2019 <strong>Unity Container</strong> project</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

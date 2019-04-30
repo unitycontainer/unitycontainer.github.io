@@ -96,7 +96,7 @@ public interface IUnityContainerAsync : IDisposable</code></pre>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_IUnityContainerAsync_Parent.md&amp;value=---%0Auid%3A%20Unity.IUnityContainerAsync.Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Abstracts/IUnityContainerAsync.cs/#L116">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Abstracts/IUnityContainerAsync.cs/#L137">View Source</a>
   </span>
   <a id="Unity_IUnityContainerAsync_Parent_" data-uid="Unity.IUnityContainerAsync.Parent*"></a>
   <h4 id="Unity_IUnityContainerAsync_Parent" data-uid="Unity.IUnityContainerAsync.Parent">Parent</h4>
@@ -105,7 +105,7 @@ public interface IUnityContainerAsync : IDisposable</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IUnityContainer Parent { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IUnityContainerAsync Parent { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,7 +117,7 @@ public interface IUnityContainerAsync : IDisposable</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
+        <td><a class="xref" href="Unity.IUnityContainerAsync.html">IUnityContainerAsync</a></td>
         <td><p>The parent container, or null if this container doesn't have one.</p>
 </td>
       </tr>
@@ -168,7 +168,7 @@ The sort order of returned registrations is not guaranteed in any way.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_IUnityContainerAsync_CreateChildContainer.md&amp;value=---%0Auid%3A%20Unity.IUnityContainerAsync.CreateChildContainer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Abstracts/IUnityContainerAsync.cs/#L126">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Abstracts/IUnityContainerAsync.cs/#L147">View Source</a>
   </span>
   <a id="Unity_IUnityContainerAsync_CreateChildContainer_" data-uid="Unity.IUnityContainerAsync.CreateChildContainer*"></a>
   <h4 id="Unity_IUnityContainerAsync_CreateChildContainer" data-uid="Unity.IUnityContainerAsync.CreateChildContainer">CreateChildContainer()</h4>
@@ -177,7 +177,7 @@ The sort order of returned registrations is not guaranteed in any way.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IUnityContainer CreateChildContainer()</code></pre>
+    <pre><code class="lang-csharp hljs">IUnityContainerAsync CreateChildContainer()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,7 +189,7 @@ The sort order of returned registrations is not guaranteed in any way.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
+        <td><a class="xref" href="Unity.IUnityContainerAsync.html">IUnityContainerAsync</a></td>
         <td><p>The new child container.</p>
 </td>
       </tr>
@@ -272,7 +272,7 @@ it uses the same algorithm the container employs to obtain registrations and was
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IUnityContainer RegisterFactory(IEnumerable&lt;Type&gt; interfaces, string name, Func&lt;IUnityContainer, Type, string, object&gt; factory, IFactoryLifetimeManager lifetimeManager)</code></pre>
+    <pre><code class="lang-csharp hljs">Task RegisterFactory(IEnumerable&lt;Type&gt; interfaces, string name, Func&lt;IUnityContainer, Type, string, object&gt; factory, IFactoryLifetimeManager lifetimeManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,8 +320,8 @@ of the returned instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
-        <td><p>The <a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a> object that this method was called on.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Returns <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> indicating when registration is done</p>
 </td>
       </tr>
     </tbody>
@@ -340,7 +340,7 @@ of the returned instance.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IUnityContainer RegisterInstance(IEnumerable&lt;Type&gt; interfaces, string name, object instance, IInstanceLifetimeManager lifetimeManager)</code></pre>
+    <pre><code class="lang-csharp hljs">Task RegisterInstance(IEnumerable&lt;Type&gt; interfaces, string name, object instance, IInstanceLifetimeManager lifetimeManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -389,8 +389,8 @@ Following are the only valid options: <a class="xref" href="Unity.Lifetime.Conta
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
-        <td><p>The <a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a> object that this method was called on (this in C#, Me in Visual Basic).</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Returns <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> indicating when registration is done</p>
 </td>
       </tr>
     </tbody>
@@ -416,7 +416,7 @@ creates the instance ahead of type and adds that instance to the container.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IUnityContainer RegisterType(IEnumerable&lt;Type&gt; interfaces, Type type, string name, ITypeLifetimeManager lifetimeManager, params InjectionMember[] injectionMembers)</code></pre>
+    <pre><code class="lang-csharp hljs">Task RegisterType(IEnumerable&lt;Type&gt; interfaces, Type type, string name, ITypeLifetimeManager lifetimeManager, params InjectionMember[] injectionMembers)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -470,8 +470,9 @@ creates the instance ahead of type and adds that instance to the container.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unity.IUnityContainer.html">IUnityContainer</a></td>
-        <td></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Returns <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> indicating when registration is done</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -547,7 +548,7 @@ In other words this registration will always create build plan and resolve new o
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_IUnityContainerAsync_Resolve_System_Type_System_Text_RegularExpressions_Regex_Unity_Resolution_ResolverOverride___.md&amp;value=---%0Auid%3A%20Unity.IUnityContainerAsync.Resolve(System.Type%2CSystem.Text.RegularExpressions.Regex%2CUnity.Resolution.ResolverOverride%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Abstracts/IUnityContainerAsync.cs/#L109">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Abstracts/IUnityContainerAsync.cs/#L119">View Source</a>
   </span>
   <a id="Unity_IUnityContainerAsync_Resolve_" data-uid="Unity.IUnityContainerAsync.Resolve*"></a>
   <h4 id="Unity_IUnityContainerAsync_Resolve_System_Type_System_Text_RegularExpressions_Regex_Unity_Resolution_ResolverOverride___" data-uid="Unity.IUnityContainerAsync.Resolve(System.Type,System.Text.RegularExpressions.Regex,Unity.Resolution.ResolverOverride[])">Resolve(Type, Regex, ResolverOverride[])</h4>
@@ -605,7 +606,284 @@ In other words this registration will always create build plan and resolve new o
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_IUnityContainerAsync_Resolve__1_System_String_Unity_Resolution_ResolverOverride___.md&amp;value=---%0Auid%3A%20Unity.IUnityContainerAsync.Resolve%60%601(System.String%2CUnity.Resolution.ResolverOverride%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Abstracts/IUnityContainerAsync.cs/#L108">View Source</a>
+  </span>
+  <a id="Unity_IUnityContainerAsync_Resolve_" data-uid="Unity.IUnityContainerAsync.Resolve*"></a>
+  <h4 id="Unity_IUnityContainerAsync_Resolve__1_System_String_Unity_Resolution_ResolverOverride___" data-uid="Unity.IUnityContainerAsync.Resolve``1(System.String,Unity.Resolution.ResolverOverride[])">Resolve&lt;T&gt;(String, ResolverOverride[])</h4>
+  <div class="markdown level1 summary"><p>Resolve an instance of the requested type from the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;T&gt; Resolve&lt;T&gt;(string name, params ResolverOverride[] overrides)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the object to retrieve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a>[]</td>
+        <td><span class="parametername">overrides</span></td>
+        <td><p>Any overrides for the resolve call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</td>
+        <td><p>The retrieved object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> of object to get typeFrom the container.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_IUnityContainerAsync_Resolve__1_System_Text_RegularExpressions_Regex_Unity_Resolution_ResolverOverride___.md&amp;value=---%0Auid%3A%20Unity.IUnityContainerAsync.Resolve%60%601(System.Text.RegularExpressions.Regex%2CUnity.Resolution.ResolverOverride%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Abstracts/IUnityContainerAsync.cs/#L130">View Source</a>
+  </span>
+  <a id="Unity_IUnityContainerAsync_Resolve_" data-uid="Unity.IUnityContainerAsync.Resolve*"></a>
+  <h4 id="Unity_IUnityContainerAsync_Resolve__1_System_Text_RegularExpressions_Regex_Unity_Resolution_ResolverOverride___" data-uid="Unity.IUnityContainerAsync.Resolve``1(System.Text.RegularExpressions.Regex,Unity.Resolution.ResolverOverride[])">Resolve&lt;T&gt;(Regex, ResolverOverride[])</h4>
+  <div class="markdown level1 summary"><p>Resolve an instance of the requested type from the container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;T&gt;&gt; Resolve&lt;T&gt;(Regex regex, params ResolverOverride[] overrides)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regex">Regex</a></td>
+        <td><span class="parametername">regex</span></td>
+        <td><p>Pattern to match names to. Only these with successful
+<see cref="!:Regex.IsMatch(string name)"></see> will be resolved</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Unity.Resolution.ResolverOverride.html">ResolverOverride</a>[]</td>
+        <td><span class="parametername">overrides</span></td>
+        <td><p>Any overrides for the resolve call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;</td>
+        <td><p>The retrieved object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> of object to get typeFrom the container.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__1_Unity_IUnityContainerAsync_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType&lt;T&gt;(IUnityContainerAsync, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__1_Unity_IUnityContainerAsync_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType&lt;T&gt;(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__1_Unity_IUnityContainerAsync_System_String_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType&lt;T&gt;(IUnityContainerAsync, String, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__1_Unity_IUnityContainerAsync_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType&lt;T&gt;(IUnityContainerAsync, String, ITypeLifetimeManager, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__2_Unity_IUnityContainerAsync_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType&lt;TFrom, TTo&gt;(IUnityContainerAsync, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__2_Unity_IUnityContainerAsync_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType&lt;TFrom, TTo&gt;(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__2_Unity_IUnityContainerAsync_System_String_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType&lt;TFrom, TTo&gt;(IUnityContainerAsync, String, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__2_Unity_IUnityContainerAsync_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType&lt;TFrom, TTo&gt;(IUnityContainerAsync, String, ITypeLifetimeManager, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton__1_Unity_IUnityContainerAsync_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterSingleton&lt;T&gt;(IUnityContainerAsync, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton__1_Unity_IUnityContainerAsync_System_String_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterSingleton&lt;T&gt;(IUnityContainerAsync, String, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton__2_Unity_IUnityContainerAsync_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterSingleton&lt;TFrom, TTo&gt;(IUnityContainerAsync, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton__2_Unity_IUnityContainerAsync_System_String_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterSingleton&lt;TFrom, TTo&gt;(IUnityContainerAsync, String, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Type_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Type_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, ITypeLifetimeManager, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Type_System_String_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, String, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, String, ITypeLifetimeManager, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Collections_Generic_IEnumerable_System_Type__System_Type_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, IEnumerable&lt;Type&gt;, Type, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Collections_Generic_IEnumerable_System_Type__System_Type_System_String_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, IEnumerable&lt;Type&gt;, Type, String, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Collections_Generic_IEnumerable_System_Type__System_Type_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, IEnumerable&lt;Type&gt;, Type, ITypeLifetimeManager, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton_Unity_IUnityContainerAsync_System_Type_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, Type, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton_Unity_IUnityContainerAsync_System_Type_System_String_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, Type, String, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton_Unity_IUnityContainerAsync_System_Collections_Generic_IEnumerable_System_Type__System_Type_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, IEnumerable&lt;Type&gt;, Type, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton_Unity_IUnityContainerAsync_System_Collections_Generic_IEnumerable_System_Type__System_Type_System_String_Unity_Injection_InjectionMember___">UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, IEnumerable&lt;Type&gt;, Type, String, InjectionMember[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance__1_Unity_IUnityContainerAsync___0_">UnityContainerAsyncExtensions.RegisterInstance&lt;TInterface&gt;(IUnityContainerAsync, TInterface)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance__1_Unity_IUnityContainerAsync___0_Unity_Lifetime_IInstanceLifetimeManager_">UnityContainerAsyncExtensions.RegisterInstance&lt;TInterface&gt;(IUnityContainerAsync, TInterface, IInstanceLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance__1_Unity_IUnityContainerAsync_System_String___0_">UnityContainerAsyncExtensions.RegisterInstance&lt;TInterface&gt;(IUnityContainerAsync, String, TInterface)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance__1_Unity_IUnityContainerAsync_System_String___0_Unity_Lifetime_IInstanceLifetimeManager_">UnityContainerAsyncExtensions.RegisterInstance&lt;TInterface&gt;(IUnityContainerAsync, String, TInterface, IInstanceLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance_Unity_IUnityContainerAsync_System_Type_System_Object_">UnityContainerAsyncExtensions.RegisterInstance(IUnityContainerAsync, Type, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance_Unity_IUnityContainerAsync_System_Type_System_Object_Unity_Lifetime_IInstanceLifetimeManager_">UnityContainerAsyncExtensions.RegisterInstance(IUnityContainerAsync, Type, Object, IInstanceLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance_Unity_IUnityContainerAsync_System_Type_System_String_System_Object_">UnityContainerAsyncExtensions.RegisterInstance(IUnityContainerAsync, Type, String, Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory__1_Unity_IUnityContainerAsync_System_Func_Unity_IUnityContainer_System_Object__Unity_Lifetime_IFactoryLifetimeManager_">UnityContainerAsyncExtensions.RegisterFactory&lt;TInterface&gt;(IUnityContainerAsync, Func&lt;IUnityContainer, Object&gt;, IFactoryLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory__1_Unity_IUnityContainerAsync_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_">UnityContainerAsyncExtensions.RegisterFactory&lt;TInterface&gt;(IUnityContainerAsync, Func&lt;IUnityContainer, Type, String, Object&gt;, IFactoryLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory__1_Unity_IUnityContainerAsync_System_String_System_Func_Unity_IUnityContainer_System_Object__Unity_Lifetime_IFactoryLifetimeManager_">UnityContainerAsyncExtensions.RegisterFactory&lt;TInterface&gt;(IUnityContainerAsync, String, Func&lt;IUnityContainer, Object&gt;, IFactoryLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory__1_Unity_IUnityContainerAsync_System_String_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_">UnityContainerAsyncExtensions.RegisterFactory&lt;TInterface&gt;(IUnityContainerAsync, String, Func&lt;IUnityContainer, Type, String, Object&gt;, IFactoryLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory_Unity_IUnityContainerAsync_System_Type_System_Func_Unity_IUnityContainerAsync_System_Object__Unity_Lifetime_IFactoryLifetimeManager_">UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, Func&lt;IUnityContainerAsync, Object&gt;, IFactoryLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory_Unity_IUnityContainerAsync_System_Type_System_Func_Unity_IUnityContainerAsync_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_">UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, Func&lt;IUnityContainerAsync, Type, String, Object&gt;, IFactoryLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory_Unity_IUnityContainerAsync_System_Type_System_String_System_Func_Unity_IUnityContainerAsync_System_Object__Unity_Lifetime_IFactoryLifetimeManager_">UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, String, Func&lt;IUnityContainerAsync, Object&gt;, IFactoryLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory_Unity_IUnityContainerAsync_System_Type_System_String_System_Func_Unity_IUnityContainerAsync_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_">UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, String, Func&lt;IUnityContainerAsync, Type, String, Object&gt;, IFactoryLifetimeManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve__1_Unity_IUnityContainerAsync_Unity_Resolution_ResolverOverride___">UnityContainerAsyncExtensions.Resolve&lt;T&gt;(IUnityContainerAsync, ResolverOverride[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve__1_Unity_IUnityContainerAsync_System_String_Unity_Resolution_ResolverOverride___">UnityContainerAsyncExtensions.Resolve&lt;T&gt;(IUnityContainerAsync, String, ResolverOverride[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve_Unity_IUnityContainerAsync_System_Type_Unity_Resolution_ResolverOverride___">UnityContainerAsyncExtensions.Resolve(IUnityContainerAsync, Type, ResolverOverride[])</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_IsRegistered_Unity_IUnityContainerAsync_System_Type_">UnityContainerAsyncExtensions.IsRegistered(IUnityContainerAsync, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_IsRegistered__1_Unity_IUnityContainerAsync_">UnityContainerAsyncExtensions.IsRegistered&lt;T&gt;(IUnityContainerAsync)</a>
+  </div>
+  <div>
+      <a class="xref" href="Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_IsRegistered__1_Unity_IUnityContainerAsync_System_String_">UnityContainerAsyncExtensions.IsRegistered&lt;T&gt;(IUnityContainerAsync, String)</a>
+  </div>
   <div>
       <a class="xref" href="Unity.Injection.InjectionMatching.html#Unity_Injection_InjectionMatching_Matches_System_Object_System_Type_">InjectionMatching.Matches(Object, Type)</a>
   </div>

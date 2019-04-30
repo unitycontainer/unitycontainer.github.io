@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.IUnityContainerAsync.html",
-          "hash": "25tjIccDkTsiFd9oWrHBdw=="
+          "hash": "T0nkLRZ4kcja7JHAksC3Aw=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.Lifetime.LifetimeManager.html",
-          "hash": "0O1IVIZ6ifgUjRLiw/aG2g=="
+          "hash": "p+8kCrIUYn4UADdc1XeejQ=="
         }
       },
       "is_incremental": false,
@@ -941,6 +941,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Unity.UnityContainerAsyncExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.UnityContainerAsyncExtensions.html",
+          "hash": "svdGxwX0J4AkH6poJISsKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Unity.UnityContainerExtensions.yml",
       "output": {
         ".html": {
@@ -957,7 +969,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unity.html",
-          "hash": "4XYygS7kzsw/qiuytZPZbQ=="
+          "hash": "fLWfL/HDnkjGMV/NQoxaVw=="
         }
       },
       "is_incremental": false,
@@ -981,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "2ZCtRVZTDBiWTD4vf5U2Wg=="
+          "hash": "yD9V8HZTP4+ro2TD2nvaRg=="
         }
       },
       "is_incremental": false,
@@ -1077,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/quickstart.html",
-          "hash": "r/YrI2zIiY/W59AuY1irjw=="
+          "hash": "8R+IxBq2nKG0f6a2tKdHOA=="
         }
       },
       "is_incremental": false,
@@ -1254,7 +1266,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "3wCZQB7fZdnMySPMzgtZuA=="
+          "hash": "yQocuf4KSp+ziB5IOXsOpQ=="
         }
       },
       "is_incremental": false,
@@ -1278,7 +1290,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/Annotation/constructor.html",
-          "hash": "uNCXo96ZxPV10FKitTzEnw=="
+          "hash": "7TRJzz6rX7uSn1GAriAIfA=="
         }
       },
       "is_incremental": false,
@@ -1327,6 +1339,198 @@
         ".html": {
           "relative_path": "tutorials/Annotation/property.html",
           "hash": "BxPn2XYH1cYgPkX9CftVvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/BuildUp/buildup.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/BuildUp/buildup.html",
+          "hash": "iDV7pSLUd9UTlHQAGPwhhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Generics/deferred.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Generics/deferred.html",
+          "hash": "eq757tzj69T7OU/ew/Oy7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Generics/generics.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Generics/generics.html",
+          "hash": "BB+eJLfFFrqGV91b6FJS1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Generics/lazy.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Generics/lazy.html",
+          "hash": "mZPsa/7azJRvswuXRiresw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Generics/metadata.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Generics/metadata.html",
+          "hash": "njkWDmfF8Fsr79Gk3nf5Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Overrides/dependency.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/dependency.html",
+          "hash": "5y81sAuq+ldJsnNKLriWxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Overrides/field.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/field.html",
+          "hash": "he/E44NBCFnX208qSMDaXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Overrides/override.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/override.html",
+          "hash": "7fk5H4URrnJcYwHbx+w73w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Overrides/parameter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/parameter.html",
+          "hash": "JCErjTXoQNSwgbST/ZHgFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Overrides/property.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Overrides/property.html",
+          "hash": "pIEzf2nP4Wp5mbEHC/O7zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Resolution/resolution.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Resolution/resolution.html",
+          "hash": "d5LTy1lt85YU/4QHwjyvww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Resolution/type.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Resolution/type.html",
+          "hash": "O4u/+NhUxMbkMYyK21G7Bg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Selection/constructor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Selection/constructor.html",
+          "hash": "bCuyKpRx6uslkVq9jz4dWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Selection/selection.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Selection/selection.html",
+          "hash": "+aBb+4QUwZvy8bylDgmLAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/collections.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/collections.html",
+          "hash": "/6FJGxrxjIHTaA8UM/9tCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/composition.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/composition.html",
+          "hash": "tBuOow+MCCf3lDi9rrT5qg=="
         }
       },
       "is_incremental": false,
@@ -1554,7 +1758,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/Constructor/annotation.html",
-          "hash": "Y7QPTBLHRoUit71Ql/C53A=="
+          "hash": "Cm1JFSuH4eHb7IhuKhxQ3g=="
         }
       },
       "is_incremental": false,
@@ -1566,7 +1770,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/Constructor/automatic.html",
-          "hash": "3KxNdS38lpIlvyZzh8Hngw=="
+          "hash": "pOdp5jJIMVsg8feXGaG1nA=="
         }
       },
       "is_incremental": false,
@@ -1801,156 +2005,12 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/Overrides/dependency.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/Overrides/dependency.html",
-          "hash": "RzvrGEjtyBiGp2b2Js1Ciw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/Overrides/field.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/Overrides/field.html",
-          "hash": "59BqIi1bco93qBEA0KA9Fg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/Overrides/override.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/Overrides/override.html",
-          "hash": "+9Ees7OL0j/NQaYZmApgAA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/Overrides/parameter.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/Overrides/parameter.html",
-          "hash": "AYNDZrtzxoRGxdhPVM2vfw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/Overrides/property.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/Overrides/property.html",
-          "hash": "QuYfA9LWFR5ODYuhY+E/bA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/Selection/constructor.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/Selection/constructor.html",
-          "hash": "AJzhXtvpQqIPW8uCynUBDQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/collections.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/collections.html",
-          "hash": "77l26/91jTKOb/0YRuFAfQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/deferred.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/deferred.html",
-          "hash": "Auh6fmNFFIo9zHB0rLd4Pw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/generics.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/generics.html",
-          "hash": "vJSVE3nD48djm2YoLF7MmQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/resolution.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/resolution.html",
-          "hash": "BS44edalow+qY+88Bzx/jw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/selection.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/selection.html",
-          "hash": "TIVXWSdgKDivNEN1wzi68A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/resolution/type.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/resolution/type.html",
-          "hash": "wMR7nVjUpvdesp3rQS1zVw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "tutorials/toc.yml",
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "H5IBb423b49cLtZQIKu4JA=="
+          "hash": "YijIFBnwXOdvr+h1Xyn2SQ=="
         }
       },
       "is_incremental": false,
@@ -1968,28 +2028,28 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 76,
+          "total_file_count": 80,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 79,
+          "total_file_count": 80,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0

@@ -64,9 +64,21 @@ references:
 - uid: Tutorial.Annotation.Property
   name: Property Injection Annotation
   href: tutorials/Annotation/property.html
+- uid: Tutorial.BuildUp
+  name: Object Build Up
+  href: tutorials/Composition/BuildUp/buildup.html
+- uid: Tutorial.Collections
+  name: Collections
+  href: tutorials/Composition/collections.html
+- uid: Tutorial.Composition
+  name: Composition
+  href: tutorials/Composition/composition.html
 - uid: Tutorial.Container.Hierarchy
   name: Container Hierarchy
   href: tutorials/hierarchies.html
+- uid: Tutorial.Deferred
+  name: Deferred Resolution
+  href: tutorials/Composition/Generics/deferred.html
 - uid: Tutorial.Extension.Activation
   name: Force Activation Extension
   href: tutorials/Extensions/activation.html
@@ -82,6 +94,15 @@ references:
 - uid: Tutorial.Extensions
   name: Unity Extensions
   href: tutorials/Extensions/extensions.html
+- uid: Tutorial.Generics
+  name: Generics
+  href: tutorials/Composition/Generics/generics.html
+- uid: Tutorial.Generics.Lazy
+  name: Lazy
+  href: tutorials/Composition/Generics/lazy.html
+- uid: Tutorial.Generics.Metadata
+  name: Metadata
+  href: tutorials/Composition/Generics/metadata.html
 - uid: Tutorial.Injection
   name: Dependency Injection
   href: tutorials/registration/Type/Injection/injection.html
@@ -176,32 +197,32 @@ references:
   name: Type Registration
   href: tutorials/registration/Type/registration.html
 - uid: Tutorial.Resolution
-  name: Resolving Objects
-  href: tutorials/resolution/resolution.html
+  name: Object Resolution
+  href: tutorials/Composition/Resolution/resolution.html
 - uid: Tutorial.Resolution.Override
   name: Resolution Override
-  href: tutorials/resolution/Overrides/override.html
+  href: tutorials/Composition/Overrides/override.html
 - uid: Tutorial.Resolution.Override.Dependency
   name: Dependency Override
-  href: tutorials/resolution/Overrides/dependency.html
+  href: tutorials/Composition/Overrides/dependency.html
 - uid: Tutorial.Resolution.Override.Field
   name: Field Overrides
-  href: tutorials/resolution/Overrides/field.html
+  href: tutorials/Composition/Overrides/field.html
 - uid: Tutorial.Resolution.Override.Parameter
   name: Parameter Override
-  href: tutorials/resolution/Overrides/parameter.html
+  href: tutorials/Composition/Overrides/parameter.html
 - uid: Tutorial.Resolution.Override.Property
   name: Property Override
-  href: tutorials/resolution/Overrides/property.html
+  href: tutorials/Composition/Overrides/property.html
 - uid: Tutorial.Resolution.Selection
-  name: Tutorial.Resolution.Selection
-  href: tutorials/resolution/selection.html
+  name: Selection
+  href: tutorials/Composition/Selection/selection.html
 - uid: Tutorial.Resolution.Type
-  name: Resolving an Object by Type
-  href: tutorials/resolution/type.html
+  name: Resolution By Type
+  href: tutorials/Composition/Resolution/type.html
 - uid: Tutorial.Selection.Constructor
   name: Automatic Constructor Selection
-  href: tutorials/resolution/Selection/constructor.html
+  href: tutorials/Composition/Selection/constructor.html
 - uid: Tutorial.Terms
   name: Terms and Definitions
   href: tutorials/definitions.html
@@ -2402,6 +2423,24 @@ references:
   isSpec: "True"
   fullName: Unity.IUnityContainerAsync.Resolve
   nameWithType: IUnityContainerAsync.Resolve
+- uid: Unity.IUnityContainerAsync.Resolve``1(System.String,Unity.Resolution.ResolverOverride[])
+  name: Resolve<T>(String, ResolverOverride[])
+  href: api/Unity.IUnityContainerAsync.html#Unity_IUnityContainerAsync_Resolve__1_System_String_Unity_Resolution_ResolverOverride___
+  commentId: M:Unity.IUnityContainerAsync.Resolve``1(System.String,Unity.Resolution.ResolverOverride[])
+  name.vb: Resolve(Of T)(String, ResolverOverride())
+  fullName: Unity.IUnityContainerAsync.Resolve<T>(System.String, Unity.Resolution.ResolverOverride[])
+  fullName.vb: Unity.IUnityContainerAsync.Resolve(Of T)(System.String, Unity.Resolution.ResolverOverride())
+  nameWithType: IUnityContainerAsync.Resolve<T>(String, ResolverOverride[])
+  nameWithType.vb: IUnityContainerAsync.Resolve(Of T)(String, ResolverOverride())
+- uid: Unity.IUnityContainerAsync.Resolve``1(System.Text.RegularExpressions.Regex,Unity.Resolution.ResolverOverride[])
+  name: Resolve<T>(Regex, ResolverOverride[])
+  href: api/Unity.IUnityContainerAsync.html#Unity_IUnityContainerAsync_Resolve__1_System_Text_RegularExpressions_Regex_Unity_Resolution_ResolverOverride___
+  commentId: M:Unity.IUnityContainerAsync.Resolve``1(System.Text.RegularExpressions.Regex,Unity.Resolution.ResolverOverride[])
+  name.vb: Resolve(Of T)(Regex, ResolverOverride())
+  fullName: Unity.IUnityContainerAsync.Resolve<T>(System.Text.RegularExpressions.Regex, Unity.Resolution.ResolverOverride[])
+  fullName.vb: Unity.IUnityContainerAsync.Resolve(Of T)(System.Text.RegularExpressions.Regex, Unity.Resolution.ResolverOverride())
+  nameWithType: IUnityContainerAsync.Resolve<T>(Regex, ResolverOverride[])
+  nameWithType.vb: IUnityContainerAsync.Resolve(Of T)(Regex, ResolverOverride())
 - uid: Unity.Lifetime
   name: Unity.Lifetime
   href: api/Unity.Lifetime.html
@@ -4798,6 +4837,438 @@ references:
   isSpec: "True"
   fullName: Unity.TypeLifetime.Transient
   nameWithType: TypeLifetime.Transient
+- uid: Unity.UnityContainerAsyncExtensions
+  name: UnityContainerAsyncExtensions
+  href: api/Unity.UnityContainerAsyncExtensions.html
+  commentId: T:Unity.UnityContainerAsyncExtensions
+  fullName: Unity.UnityContainerAsyncExtensions
+  nameWithType: UnityContainerAsyncExtensions
+- uid: Unity.UnityContainerAsyncExtensions.IsRegistered(Unity.IUnityContainerAsync,System.Type)
+  name: IsRegistered(IUnityContainerAsync, Type)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_IsRegistered_Unity_IUnityContainerAsync_System_Type_
+  commentId: M:Unity.UnityContainerAsyncExtensions.IsRegistered(Unity.IUnityContainerAsync,System.Type)
+  fullName: Unity.UnityContainerAsyncExtensions.IsRegistered(Unity.IUnityContainerAsync, System.Type)
+  nameWithType: UnityContainerAsyncExtensions.IsRegistered(IUnityContainerAsync, Type)
+- uid: Unity.UnityContainerAsyncExtensions.IsRegistered*
+  name: IsRegistered
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_IsRegistered_
+  commentId: Overload:Unity.UnityContainerAsyncExtensions.IsRegistered
+  isSpec: "True"
+  fullName: Unity.UnityContainerAsyncExtensions.IsRegistered
+  nameWithType: UnityContainerAsyncExtensions.IsRegistered
+- uid: Unity.UnityContainerAsyncExtensions.IsRegistered``1(Unity.IUnityContainerAsync)
+  name: IsRegistered<T>(IUnityContainerAsync)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_IsRegistered__1_Unity_IUnityContainerAsync_
+  commentId: M:Unity.UnityContainerAsyncExtensions.IsRegistered``1(Unity.IUnityContainerAsync)
+  name.vb: IsRegistered(Of T)(IUnityContainerAsync)
+  fullName: Unity.UnityContainerAsyncExtensions.IsRegistered<T>(Unity.IUnityContainerAsync)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.IsRegistered(Of T)(Unity.IUnityContainerAsync)
+  nameWithType: UnityContainerAsyncExtensions.IsRegistered<T>(IUnityContainerAsync)
+  nameWithType.vb: UnityContainerAsyncExtensions.IsRegistered(Of T)(IUnityContainerAsync)
+- uid: Unity.UnityContainerAsyncExtensions.IsRegistered``1(Unity.IUnityContainerAsync,System.String)
+  name: IsRegistered<T>(IUnityContainerAsync, String)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_IsRegistered__1_Unity_IUnityContainerAsync_System_String_
+  commentId: M:Unity.UnityContainerAsyncExtensions.IsRegistered``1(Unity.IUnityContainerAsync,System.String)
+  name.vb: IsRegistered(Of T)(IUnityContainerAsync, String)
+  fullName: Unity.UnityContainerAsyncExtensions.IsRegistered<T>(Unity.IUnityContainerAsync, System.String)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.IsRegistered(Of T)(Unity.IUnityContainerAsync, System.String)
+  nameWithType: UnityContainerAsyncExtensions.IsRegistered<T>(IUnityContainerAsync, String)
+  nameWithType.vb: UnityContainerAsyncExtensions.IsRegistered(Of T)(IUnityContainerAsync, String)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync,System.Type,System.Func{Unity.IUnityContainerAsync,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name: RegisterFactory(IUnityContainerAsync, Type, Func<IUnityContainerAsync, Object>, IFactoryLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory_Unity_IUnityContainerAsync_System_Type_System_Func_Unity_IUnityContainerAsync_System_Object__Unity_Lifetime_IFactoryLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync,System.Type,System.Func{Unity.IUnityContainerAsync,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name.vb: RegisterFactory(IUnityContainerAsync, Type, Func(Of IUnityContainerAsync, Object), IFactoryLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync, System.Type, System.Func<Unity.IUnityContainerAsync, System.Object>, Unity.Lifetime.IFactoryLifetimeManager)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync, System.Type, System.Func(Of Unity.IUnityContainerAsync, System.Object), Unity.Lifetime.IFactoryLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, Func<IUnityContainerAsync, Object>, IFactoryLifetimeManager)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, Func(Of IUnityContainerAsync, Object), IFactoryLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync,System.Type,System.Func{Unity.IUnityContainerAsync,System.Type,System.String,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name: RegisterFactory(IUnityContainerAsync, Type, Func<IUnityContainerAsync, Type, String, Object>, IFactoryLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory_Unity_IUnityContainerAsync_System_Type_System_Func_Unity_IUnityContainerAsync_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync,System.Type,System.Func{Unity.IUnityContainerAsync,System.Type,System.String,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name.vb: RegisterFactory(IUnityContainerAsync, Type, Func(Of IUnityContainerAsync, Type, String, Object), IFactoryLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync, System.Type, System.Func<Unity.IUnityContainerAsync, System.Type, System.String, System.Object>, Unity.Lifetime.IFactoryLifetimeManager)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync, System.Type, System.Func(Of Unity.IUnityContainerAsync, System.Type, System.String, System.Object), Unity.Lifetime.IFactoryLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, Func<IUnityContainerAsync, Type, String, Object>, IFactoryLifetimeManager)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, Func(Of IUnityContainerAsync, Type, String, Object), IFactoryLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync,System.Type,System.String,System.Func{Unity.IUnityContainerAsync,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name: RegisterFactory(IUnityContainerAsync, Type, String, Func<IUnityContainerAsync, Object>, IFactoryLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory_Unity_IUnityContainerAsync_System_Type_System_String_System_Func_Unity_IUnityContainerAsync_System_Object__Unity_Lifetime_IFactoryLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync,System.Type,System.String,System.Func{Unity.IUnityContainerAsync,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name.vb: RegisterFactory(IUnityContainerAsync, Type, String, Func(Of IUnityContainerAsync, Object), IFactoryLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync, System.Type, System.String, System.Func<Unity.IUnityContainerAsync, System.Object>, Unity.Lifetime.IFactoryLifetimeManager)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync, System.Type, System.String, System.Func(Of Unity.IUnityContainerAsync, System.Object), Unity.Lifetime.IFactoryLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, String, Func<IUnityContainerAsync, Object>, IFactoryLifetimeManager)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, String, Func(Of IUnityContainerAsync, Object), IFactoryLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync,System.Type,System.String,System.Func{Unity.IUnityContainerAsync,System.Type,System.String,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name: RegisterFactory(IUnityContainerAsync, Type, String, Func<IUnityContainerAsync, Type, String, Object>, IFactoryLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory_Unity_IUnityContainerAsync_System_Type_System_String_System_Func_Unity_IUnityContainerAsync_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync,System.Type,System.String,System.Func{Unity.IUnityContainerAsync,System.Type,System.String,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name.vb: RegisterFactory(IUnityContainerAsync, Type, String, Func(Of IUnityContainerAsync, Type, String, Object), IFactoryLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync, System.Type, System.String, System.Func<Unity.IUnityContainerAsync, System.Type, System.String, System.Object>, Unity.Lifetime.IFactoryLifetimeManager)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterFactory(Unity.IUnityContainerAsync, System.Type, System.String, System.Func(Of Unity.IUnityContainerAsync, System.Type, System.String, System.Object), Unity.Lifetime.IFactoryLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, String, Func<IUnityContainerAsync, Type, String, Object>, IFactoryLifetimeManager)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterFactory(IUnityContainerAsync, Type, String, Func(Of IUnityContainerAsync, Type, String, Object), IFactoryLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterFactory*
+  name: RegisterFactory
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory_
+  commentId: Overload:Unity.UnityContainerAsyncExtensions.RegisterFactory
+  isSpec: "True"
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterFactory
+  nameWithType: UnityContainerAsyncExtensions.RegisterFactory
+- uid: Unity.UnityContainerAsyncExtensions.RegisterFactory``1(Unity.IUnityContainerAsync,System.Func{Unity.IUnityContainer,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name: RegisterFactory<TInterface>(IUnityContainerAsync, Func<IUnityContainer, Object>, IFactoryLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory__1_Unity_IUnityContainerAsync_System_Func_Unity_IUnityContainer_System_Object__Unity_Lifetime_IFactoryLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterFactory``1(Unity.IUnityContainerAsync,System.Func{Unity.IUnityContainer,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name.vb: RegisterFactory(Of TInterface)(IUnityContainerAsync, Func(Of IUnityContainer, Object), IFactoryLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterFactory<TInterface>(Unity.IUnityContainerAsync, System.Func<Unity.IUnityContainer, System.Object>, Unity.Lifetime.IFactoryLifetimeManager)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterFactory(Of TInterface)(Unity.IUnityContainerAsync, System.Func(Of Unity.IUnityContainer, System.Object), Unity.Lifetime.IFactoryLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterFactory<TInterface>(IUnityContainerAsync, Func<IUnityContainer, Object>, IFactoryLifetimeManager)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterFactory(Of TInterface)(IUnityContainerAsync, Func(Of IUnityContainer, Object), IFactoryLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterFactory``1(Unity.IUnityContainerAsync,System.Func{Unity.IUnityContainer,System.Type,System.String,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name: RegisterFactory<TInterface>(IUnityContainerAsync, Func<IUnityContainer, Type, String, Object>, IFactoryLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory__1_Unity_IUnityContainerAsync_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterFactory``1(Unity.IUnityContainerAsync,System.Func{Unity.IUnityContainer,System.Type,System.String,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name.vb: RegisterFactory(Of TInterface)(IUnityContainerAsync, Func(Of IUnityContainer, Type, String, Object), IFactoryLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterFactory<TInterface>(Unity.IUnityContainerAsync, System.Func<Unity.IUnityContainer, System.Type, System.String, System.Object>, Unity.Lifetime.IFactoryLifetimeManager)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterFactory(Of TInterface)(Unity.IUnityContainerAsync, System.Func(Of Unity.IUnityContainer, System.Type, System.String, System.Object), Unity.Lifetime.IFactoryLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterFactory<TInterface>(IUnityContainerAsync, Func<IUnityContainer, Type, String, Object>, IFactoryLifetimeManager)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterFactory(Of TInterface)(IUnityContainerAsync, Func(Of IUnityContainer, Type, String, Object), IFactoryLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterFactory``1(Unity.IUnityContainerAsync,System.String,System.Func{Unity.IUnityContainer,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name: RegisterFactory<TInterface>(IUnityContainerAsync, String, Func<IUnityContainer, Object>, IFactoryLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory__1_Unity_IUnityContainerAsync_System_String_System_Func_Unity_IUnityContainer_System_Object__Unity_Lifetime_IFactoryLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterFactory``1(Unity.IUnityContainerAsync,System.String,System.Func{Unity.IUnityContainer,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name.vb: RegisterFactory(Of TInterface)(IUnityContainerAsync, String, Func(Of IUnityContainer, Object), IFactoryLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterFactory<TInterface>(Unity.IUnityContainerAsync, System.String, System.Func<Unity.IUnityContainer, System.Object>, Unity.Lifetime.IFactoryLifetimeManager)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterFactory(Of TInterface)(Unity.IUnityContainerAsync, System.String, System.Func(Of Unity.IUnityContainer, System.Object), Unity.Lifetime.IFactoryLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterFactory<TInterface>(IUnityContainerAsync, String, Func<IUnityContainer, Object>, IFactoryLifetimeManager)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterFactory(Of TInterface)(IUnityContainerAsync, String, Func(Of IUnityContainer, Object), IFactoryLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterFactory``1(Unity.IUnityContainerAsync,System.String,System.Func{Unity.IUnityContainer,System.Type,System.String,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name: RegisterFactory<TInterface>(IUnityContainerAsync, String, Func<IUnityContainer, Type, String, Object>, IFactoryLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterFactory__1_Unity_IUnityContainerAsync_System_String_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterFactory``1(Unity.IUnityContainerAsync,System.String,System.Func{Unity.IUnityContainer,System.Type,System.String,System.Object},Unity.Lifetime.IFactoryLifetimeManager)
+  name.vb: RegisterFactory(Of TInterface)(IUnityContainerAsync, String, Func(Of IUnityContainer, Type, String, Object), IFactoryLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterFactory<TInterface>(Unity.IUnityContainerAsync, System.String, System.Func<Unity.IUnityContainer, System.Type, System.String, System.Object>, Unity.Lifetime.IFactoryLifetimeManager)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterFactory(Of TInterface)(Unity.IUnityContainerAsync, System.String, System.Func(Of Unity.IUnityContainer, System.Type, System.String, System.Object), Unity.Lifetime.IFactoryLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterFactory<TInterface>(IUnityContainerAsync, String, Func<IUnityContainer, Type, String, Object>, IFactoryLifetimeManager)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterFactory(Of TInterface)(IUnityContainerAsync, String, Func(Of IUnityContainer, Type, String, Object), IFactoryLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterInstance(Unity.IUnityContainerAsync,System.Type,System.Object)
+  name: RegisterInstance(IUnityContainerAsync, Type, Object)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance_Unity_IUnityContainerAsync_System_Type_System_Object_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterInstance(Unity.IUnityContainerAsync,System.Type,System.Object)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterInstance(Unity.IUnityContainerAsync, System.Type, System.Object)
+  nameWithType: UnityContainerAsyncExtensions.RegisterInstance(IUnityContainerAsync, Type, Object)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterInstance(Unity.IUnityContainerAsync,System.Type,System.Object,Unity.Lifetime.IInstanceLifetimeManager)
+  name: RegisterInstance(IUnityContainerAsync, Type, Object, IInstanceLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance_Unity_IUnityContainerAsync_System_Type_System_Object_Unity_Lifetime_IInstanceLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterInstance(Unity.IUnityContainerAsync,System.Type,System.Object,Unity.Lifetime.IInstanceLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterInstance(Unity.IUnityContainerAsync, System.Type, System.Object, Unity.Lifetime.IInstanceLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterInstance(IUnityContainerAsync, Type, Object, IInstanceLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterInstance(Unity.IUnityContainerAsync,System.Type,System.String,System.Object)
+  name: RegisterInstance(IUnityContainerAsync, Type, String, Object)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance_Unity_IUnityContainerAsync_System_Type_System_String_System_Object_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterInstance(Unity.IUnityContainerAsync,System.Type,System.String,System.Object)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterInstance(Unity.IUnityContainerAsync, System.Type, System.String, System.Object)
+  nameWithType: UnityContainerAsyncExtensions.RegisterInstance(IUnityContainerAsync, Type, String, Object)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterInstance*
+  name: RegisterInstance
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance_
+  commentId: Overload:Unity.UnityContainerAsyncExtensions.RegisterInstance
+  isSpec: "True"
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterInstance
+  nameWithType: UnityContainerAsyncExtensions.RegisterInstance
+- uid: Unity.UnityContainerAsyncExtensions.RegisterInstance``1(Unity.IUnityContainerAsync,``0)
+  name: RegisterInstance<TInterface>(IUnityContainerAsync, TInterface)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance__1_Unity_IUnityContainerAsync___0_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterInstance``1(Unity.IUnityContainerAsync,``0)
+  name.vb: RegisterInstance(Of TInterface)(IUnityContainerAsync, TInterface)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterInstance<TInterface>(Unity.IUnityContainerAsync, TInterface)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterInstance(Of TInterface)(Unity.IUnityContainerAsync, TInterface)
+  nameWithType: UnityContainerAsyncExtensions.RegisterInstance<TInterface>(IUnityContainerAsync, TInterface)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterInstance(Of TInterface)(IUnityContainerAsync, TInterface)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterInstance``1(Unity.IUnityContainerAsync,``0,Unity.Lifetime.IInstanceLifetimeManager)
+  name: RegisterInstance<TInterface>(IUnityContainerAsync, TInterface, IInstanceLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance__1_Unity_IUnityContainerAsync___0_Unity_Lifetime_IInstanceLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterInstance``1(Unity.IUnityContainerAsync,``0,Unity.Lifetime.IInstanceLifetimeManager)
+  name.vb: RegisterInstance(Of TInterface)(IUnityContainerAsync, TInterface, IInstanceLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterInstance<TInterface>(Unity.IUnityContainerAsync, TInterface, Unity.Lifetime.IInstanceLifetimeManager)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterInstance(Of TInterface)(Unity.IUnityContainerAsync, TInterface, Unity.Lifetime.IInstanceLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterInstance<TInterface>(IUnityContainerAsync, TInterface, IInstanceLifetimeManager)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterInstance(Of TInterface)(IUnityContainerAsync, TInterface, IInstanceLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterInstance``1(Unity.IUnityContainerAsync,System.String,``0)
+  name: RegisterInstance<TInterface>(IUnityContainerAsync, String, TInterface)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance__1_Unity_IUnityContainerAsync_System_String___0_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterInstance``1(Unity.IUnityContainerAsync,System.String,``0)
+  name.vb: RegisterInstance(Of TInterface)(IUnityContainerAsync, String, TInterface)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterInstance<TInterface>(Unity.IUnityContainerAsync, System.String, TInterface)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterInstance(Of TInterface)(Unity.IUnityContainerAsync, System.String, TInterface)
+  nameWithType: UnityContainerAsyncExtensions.RegisterInstance<TInterface>(IUnityContainerAsync, String, TInterface)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterInstance(Of TInterface)(IUnityContainerAsync, String, TInterface)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterInstance``1(Unity.IUnityContainerAsync,System.String,``0,Unity.Lifetime.IInstanceLifetimeManager)
+  name: RegisterInstance<TInterface>(IUnityContainerAsync, String, TInterface, IInstanceLifetimeManager)
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterInstance__1_Unity_IUnityContainerAsync_System_String___0_Unity_Lifetime_IInstanceLifetimeManager_
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterInstance``1(Unity.IUnityContainerAsync,System.String,``0,Unity.Lifetime.IInstanceLifetimeManager)
+  name.vb: RegisterInstance(Of TInterface)(IUnityContainerAsync, String, TInterface, IInstanceLifetimeManager)
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterInstance<TInterface>(Unity.IUnityContainerAsync, System.String, TInterface, Unity.Lifetime.IInstanceLifetimeManager)
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterInstance(Of TInterface)(Unity.IUnityContainerAsync, System.String, TInterface, Unity.Lifetime.IInstanceLifetimeManager)
+  nameWithType: UnityContainerAsyncExtensions.RegisterInstance<TInterface>(IUnityContainerAsync, String, TInterface, IInstanceLifetimeManager)
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterInstance(Of TInterface)(IUnityContainerAsync, String, TInterface, IInstanceLifetimeManager)
+- uid: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync,System.Collections.Generic.IEnumerable{System.Type},System.Type,System.String,Unity.Injection.InjectionMember[])
+  name: RegisterSingleton(IUnityContainerAsync, IEnumerable<Type>, Type, String, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton_Unity_IUnityContainerAsync_System_Collections_Generic_IEnumerable_System_Type__System_Type_System_String_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync,System.Collections.Generic.IEnumerable{System.Type},System.Type,System.String,Unity.Injection.InjectionMember[])
+  name.vb: RegisterSingleton(IUnityContainerAsync, IEnumerable(Of Type), Type, String, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync, System.Collections.Generic.IEnumerable<System.Type>, System.Type, System.String, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync, System.Collections.Generic.IEnumerable(Of System.Type), System.Type, System.String, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, IEnumerable<Type>, Type, String, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, IEnumerable(Of Type), Type, String, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync,System.Collections.Generic.IEnumerable{System.Type},System.Type,Unity.Injection.InjectionMember[])
+  name: RegisterSingleton(IUnityContainerAsync, IEnumerable<Type>, Type, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton_Unity_IUnityContainerAsync_System_Collections_Generic_IEnumerable_System_Type__System_Type_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync,System.Collections.Generic.IEnumerable{System.Type},System.Type,Unity.Injection.InjectionMember[])
+  name.vb: RegisterSingleton(IUnityContainerAsync, IEnumerable(Of Type), Type, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync, System.Collections.Generic.IEnumerable<System.Type>, System.Type, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync, System.Collections.Generic.IEnumerable(Of System.Type), System.Type, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, IEnumerable<Type>, Type, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, IEnumerable(Of Type), Type, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync,System.Type,System.String,Unity.Injection.InjectionMember[])
+  name: RegisterSingleton(IUnityContainerAsync, Type, String, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton_Unity_IUnityContainerAsync_System_Type_System_String_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync,System.Type,System.String,Unity.Injection.InjectionMember[])
+  name.vb: RegisterSingleton(IUnityContainerAsync, Type, String, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync, System.Type, System.String, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync, System.Type, System.String, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, Type, String, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, Type, String, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync,System.Type,Unity.Injection.InjectionMember[])
+  name: RegisterSingleton(IUnityContainerAsync, Type, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton_Unity_IUnityContainerAsync_System_Type_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync,System.Type,Unity.Injection.InjectionMember[])
+  name.vb: RegisterSingleton(IUnityContainerAsync, Type, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync, System.Type, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Unity.IUnityContainerAsync, System.Type, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, Type, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterSingleton(IUnityContainerAsync, Type, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterSingleton*
+  name: RegisterSingleton
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton_
+  commentId: Overload:Unity.UnityContainerAsyncExtensions.RegisterSingleton
+  isSpec: "True"
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterSingleton
+  nameWithType: UnityContainerAsyncExtensions.RegisterSingleton
+- uid: Unity.UnityContainerAsyncExtensions.RegisterSingleton``1(Unity.IUnityContainerAsync,System.String,Unity.Injection.InjectionMember[])
+  name: RegisterSingleton<T>(IUnityContainerAsync, String, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton__1_Unity_IUnityContainerAsync_System_String_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterSingleton``1(Unity.IUnityContainerAsync,System.String,Unity.Injection.InjectionMember[])
+  name.vb: RegisterSingleton(Of T)(IUnityContainerAsync, String, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterSingleton<T>(Unity.IUnityContainerAsync, System.String, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Of T)(Unity.IUnityContainerAsync, System.String, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterSingleton<T>(IUnityContainerAsync, String, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterSingleton(Of T)(IUnityContainerAsync, String, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterSingleton``1(Unity.IUnityContainerAsync,Unity.Injection.InjectionMember[])
+  name: RegisterSingleton<T>(IUnityContainerAsync, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton__1_Unity_IUnityContainerAsync_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterSingleton``1(Unity.IUnityContainerAsync,Unity.Injection.InjectionMember[])
+  name.vb: RegisterSingleton(Of T)(IUnityContainerAsync, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterSingleton<T>(Unity.IUnityContainerAsync, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Of T)(Unity.IUnityContainerAsync, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterSingleton<T>(IUnityContainerAsync, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterSingleton(Of T)(IUnityContainerAsync, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterSingleton``2(Unity.IUnityContainerAsync,System.String,Unity.Injection.InjectionMember[])
+  name: RegisterSingleton<TFrom, TTo>(IUnityContainerAsync, String, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton__2_Unity_IUnityContainerAsync_System_String_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterSingleton``2(Unity.IUnityContainerAsync,System.String,Unity.Injection.InjectionMember[])
+  name.vb: RegisterSingleton(Of TFrom, TTo)(IUnityContainerAsync, String, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterSingleton<TFrom, TTo>(Unity.IUnityContainerAsync, System.String, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Of TFrom, TTo)(Unity.IUnityContainerAsync, System.String, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterSingleton<TFrom, TTo>(IUnityContainerAsync, String, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterSingleton(Of TFrom, TTo)(IUnityContainerAsync, String, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterSingleton``2(Unity.IUnityContainerAsync,Unity.Injection.InjectionMember[])
+  name: RegisterSingleton<TFrom, TTo>(IUnityContainerAsync, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterSingleton__2_Unity_IUnityContainerAsync_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterSingleton``2(Unity.IUnityContainerAsync,Unity.Injection.InjectionMember[])
+  name.vb: RegisterSingleton(Of TFrom, TTo)(IUnityContainerAsync, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterSingleton<TFrom, TTo>(Unity.IUnityContainerAsync, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterSingleton(Of TFrom, TTo)(Unity.IUnityContainerAsync, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterSingleton<TFrom, TTo>(IUnityContainerAsync, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterSingleton(Of TFrom, TTo)(IUnityContainerAsync, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Collections.Generic.IEnumerable{System.Type},System.Type,System.String,Unity.Injection.InjectionMember[])
+  name: RegisterType(IUnityContainerAsync, IEnumerable<Type>, Type, String, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Collections_Generic_IEnumerable_System_Type__System_Type_System_String_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Collections.Generic.IEnumerable{System.Type},System.Type,System.String,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(IUnityContainerAsync, IEnumerable(Of Type), Type, String, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Collections.Generic.IEnumerable<System.Type>, System.Type, System.String, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Collections.Generic.IEnumerable(Of System.Type), System.Type, System.String, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, IEnumerable<Type>, Type, String, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, IEnumerable(Of Type), Type, String, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Collections.Generic.IEnumerable{System.Type},System.Type,Unity.Injection.InjectionMember[])
+  name: RegisterType(IUnityContainerAsync, IEnumerable<Type>, Type, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Collections_Generic_IEnumerable_System_Type__System_Type_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Collections.Generic.IEnumerable{System.Type},System.Type,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(IUnityContainerAsync, IEnumerable(Of Type), Type, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Collections.Generic.IEnumerable<System.Type>, System.Type, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Collections.Generic.IEnumerable(Of System.Type), System.Type, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, IEnumerable<Type>, Type, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, IEnumerable(Of Type), Type, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Collections.Generic.IEnumerable{System.Type},System.Type,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name: RegisterType(IUnityContainerAsync, IEnumerable<Type>, Type, ITypeLifetimeManager, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Collections_Generic_IEnumerable_System_Type__System_Type_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Collections.Generic.IEnumerable{System.Type},System.Type,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(IUnityContainerAsync, IEnumerable(Of Type), Type, ITypeLifetimeManager, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Collections.Generic.IEnumerable<System.Type>, System.Type, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Collections.Generic.IEnumerable(Of System.Type), System.Type, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, IEnumerable<Type>, Type, ITypeLifetimeManager, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, IEnumerable(Of Type), Type, ITypeLifetimeManager, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Type,System.String,Unity.Injection.InjectionMember[])
+  name: RegisterType(IUnityContainerAsync, Type, String, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Type_System_String_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Type,System.String,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(IUnityContainerAsync, Type, String, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Type, System.String, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Type, System.String, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, String, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, String, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Type,System.String,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name: RegisterType(IUnityContainerAsync, Type, String, ITypeLifetimeManager, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Type,System.String,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(IUnityContainerAsync, Type, String, ITypeLifetimeManager, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Type, System.String, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Type, System.String, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, String, ITypeLifetimeManager, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, String, ITypeLifetimeManager, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Type,Unity.Injection.InjectionMember[])
+  name: RegisterType(IUnityContainerAsync, Type, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Type_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Type,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(IUnityContainerAsync, Type, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Type, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Type, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Type,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name: RegisterType(IUnityContainerAsync, Type, ITypeLifetimeManager, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_Unity_IUnityContainerAsync_System_Type_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync,System.Type,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(IUnityContainerAsync, Type, ITypeLifetimeManager, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Type, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Unity.IUnityContainerAsync, System.Type, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, ITypeLifetimeManager, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(IUnityContainerAsync, Type, ITypeLifetimeManager, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType*
+  name: RegisterType
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType_
+  commentId: Overload:Unity.UnityContainerAsyncExtensions.RegisterType
+  isSpec: "True"
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType
+  nameWithType: UnityContainerAsyncExtensions.RegisterType
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType``1(Unity.IUnityContainerAsync,System.String,Unity.Injection.InjectionMember[])
+  name: RegisterType<T>(IUnityContainerAsync, String, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__1_Unity_IUnityContainerAsync_System_String_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType``1(Unity.IUnityContainerAsync,System.String,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(Of T)(IUnityContainerAsync, String, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType<T>(Unity.IUnityContainerAsync, System.String, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Of T)(Unity.IUnityContainerAsync, System.String, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType<T>(IUnityContainerAsync, String, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(Of T)(IUnityContainerAsync, String, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType``1(Unity.IUnityContainerAsync,System.String,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name: RegisterType<T>(IUnityContainerAsync, String, ITypeLifetimeManager, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__1_Unity_IUnityContainerAsync_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType``1(Unity.IUnityContainerAsync,System.String,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(Of T)(IUnityContainerAsync, String, ITypeLifetimeManager, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType<T>(Unity.IUnityContainerAsync, System.String, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Of T)(Unity.IUnityContainerAsync, System.String, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType<T>(IUnityContainerAsync, String, ITypeLifetimeManager, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(Of T)(IUnityContainerAsync, String, ITypeLifetimeManager, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType``1(Unity.IUnityContainerAsync,Unity.Injection.InjectionMember[])
+  name: RegisterType<T>(IUnityContainerAsync, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__1_Unity_IUnityContainerAsync_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType``1(Unity.IUnityContainerAsync,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(Of T)(IUnityContainerAsync, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType<T>(Unity.IUnityContainerAsync, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Of T)(Unity.IUnityContainerAsync, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType<T>(IUnityContainerAsync, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(Of T)(IUnityContainerAsync, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType``1(Unity.IUnityContainerAsync,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name: RegisterType<T>(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__1_Unity_IUnityContainerAsync_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType``1(Unity.IUnityContainerAsync,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(Of T)(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType<T>(Unity.IUnityContainerAsync, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Of T)(Unity.IUnityContainerAsync, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType<T>(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(Of T)(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType``2(Unity.IUnityContainerAsync,System.String,Unity.Injection.InjectionMember[])
+  name: RegisterType<TFrom, TTo>(IUnityContainerAsync, String, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__2_Unity_IUnityContainerAsync_System_String_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType``2(Unity.IUnityContainerAsync,System.String,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(Of TFrom, TTo)(IUnityContainerAsync, String, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType<TFrom, TTo>(Unity.IUnityContainerAsync, System.String, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Of TFrom, TTo)(Unity.IUnityContainerAsync, System.String, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType<TFrom, TTo>(IUnityContainerAsync, String, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(Of TFrom, TTo)(IUnityContainerAsync, String, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType``2(Unity.IUnityContainerAsync,System.String,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name: RegisterType<TFrom, TTo>(IUnityContainerAsync, String, ITypeLifetimeManager, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__2_Unity_IUnityContainerAsync_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType``2(Unity.IUnityContainerAsync,System.String,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(Of TFrom, TTo)(IUnityContainerAsync, String, ITypeLifetimeManager, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType<TFrom, TTo>(Unity.IUnityContainerAsync, System.String, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Of TFrom, TTo)(Unity.IUnityContainerAsync, System.String, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType<TFrom, TTo>(IUnityContainerAsync, String, ITypeLifetimeManager, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(Of TFrom, TTo)(IUnityContainerAsync, String, ITypeLifetimeManager, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType``2(Unity.IUnityContainerAsync,Unity.Injection.InjectionMember[])
+  name: RegisterType<TFrom, TTo>(IUnityContainerAsync, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__2_Unity_IUnityContainerAsync_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType``2(Unity.IUnityContainerAsync,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(Of TFrom, TTo)(IUnityContainerAsync, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType<TFrom, TTo>(Unity.IUnityContainerAsync, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Of TFrom, TTo)(Unity.IUnityContainerAsync, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType<TFrom, TTo>(IUnityContainerAsync, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(Of TFrom, TTo)(IUnityContainerAsync, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.RegisterType``2(Unity.IUnityContainerAsync,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name: RegisterType<TFrom, TTo>(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_RegisterType__2_Unity_IUnityContainerAsync_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___
+  commentId: M:Unity.UnityContainerAsyncExtensions.RegisterType``2(Unity.IUnityContainerAsync,Unity.Lifetime.ITypeLifetimeManager,Unity.Injection.InjectionMember[])
+  name.vb: RegisterType(Of TFrom, TTo)(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember())
+  fullName: Unity.UnityContainerAsyncExtensions.RegisterType<TFrom, TTo>(Unity.IUnityContainerAsync, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Of TFrom, TTo)(Unity.IUnityContainerAsync, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember())
+  nameWithType: UnityContainerAsyncExtensions.RegisterType<TFrom, TTo>(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember[])
+  nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(Of TFrom, TTo)(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember())
+- uid: Unity.UnityContainerAsyncExtensions.Resolve(Unity.IUnityContainerAsync,System.Type,Unity.Resolution.ResolverOverride[])
+  name: Resolve(IUnityContainerAsync, Type, ResolverOverride[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve_Unity_IUnityContainerAsync_System_Type_Unity_Resolution_ResolverOverride___
+  commentId: M:Unity.UnityContainerAsyncExtensions.Resolve(Unity.IUnityContainerAsync,System.Type,Unity.Resolution.ResolverOverride[])
+  name.vb: Resolve(IUnityContainerAsync, Type, ResolverOverride())
+  fullName: Unity.UnityContainerAsyncExtensions.Resolve(Unity.IUnityContainerAsync, System.Type, Unity.Resolution.ResolverOverride[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.Resolve(Unity.IUnityContainerAsync, System.Type, Unity.Resolution.ResolverOverride())
+  nameWithType: UnityContainerAsyncExtensions.Resolve(IUnityContainerAsync, Type, ResolverOverride[])
+  nameWithType.vb: UnityContainerAsyncExtensions.Resolve(IUnityContainerAsync, Type, ResolverOverride())
+- uid: Unity.UnityContainerAsyncExtensions.Resolve*
+  name: Resolve
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve_
+  commentId: Overload:Unity.UnityContainerAsyncExtensions.Resolve
+  isSpec: "True"
+  fullName: Unity.UnityContainerAsyncExtensions.Resolve
+  nameWithType: UnityContainerAsyncExtensions.Resolve
+- uid: Unity.UnityContainerAsyncExtensions.Resolve``1(Unity.IUnityContainerAsync,System.String,Unity.Resolution.ResolverOverride[])
+  name: Resolve<T>(IUnityContainerAsync, String, ResolverOverride[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve__1_Unity_IUnityContainerAsync_System_String_Unity_Resolution_ResolverOverride___
+  commentId: M:Unity.UnityContainerAsyncExtensions.Resolve``1(Unity.IUnityContainerAsync,System.String,Unity.Resolution.ResolverOverride[])
+  name.vb: Resolve(Of T)(IUnityContainerAsync, String, ResolverOverride())
+  fullName: Unity.UnityContainerAsyncExtensions.Resolve<T>(Unity.IUnityContainerAsync, System.String, Unity.Resolution.ResolverOverride[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.Resolve(Of T)(Unity.IUnityContainerAsync, System.String, Unity.Resolution.ResolverOverride())
+  nameWithType: UnityContainerAsyncExtensions.Resolve<T>(IUnityContainerAsync, String, ResolverOverride[])
+  nameWithType.vb: UnityContainerAsyncExtensions.Resolve(Of T)(IUnityContainerAsync, String, ResolverOverride())
+- uid: Unity.UnityContainerAsyncExtensions.Resolve``1(Unity.IUnityContainerAsync,Unity.Resolution.ResolverOverride[])
+  name: Resolve<T>(IUnityContainerAsync, ResolverOverride[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve__1_Unity_IUnityContainerAsync_Unity_Resolution_ResolverOverride___
+  commentId: M:Unity.UnityContainerAsyncExtensions.Resolve``1(Unity.IUnityContainerAsync,Unity.Resolution.ResolverOverride[])
+  name.vb: Resolve(Of T)(IUnityContainerAsync, ResolverOverride())
+  fullName: Unity.UnityContainerAsyncExtensions.Resolve<T>(Unity.IUnityContainerAsync, Unity.Resolution.ResolverOverride[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.Resolve(Of T)(Unity.IUnityContainerAsync, Unity.Resolution.ResolverOverride())
+  nameWithType: UnityContainerAsyncExtensions.Resolve<T>(IUnityContainerAsync, ResolverOverride[])
+  nameWithType.vb: UnityContainerAsyncExtensions.Resolve(Of T)(IUnityContainerAsync, ResolverOverride())
 - uid: Unity.UnityContainerExtensions
   name: UnityContainerExtensions
   href: api/Unity.UnityContainerExtensions.html
