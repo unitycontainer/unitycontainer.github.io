@@ -139,7 +139,7 @@ public class Foo
 }
 </code></pre>
 <p>In this example we have <code>IService</code> interface defining an API and class <code>Component</code> implementing that API. Type <code>Foo</code> is a consumer of the service and should be injected by container with an instance of the service during initialization.</p>
-<p>If you just call <code>container.Resolve&lt;IService&gt;()</code> it will throw an exception complaining that it can not create an interface of type <code>IService</code>. You need to register a <a class="xref" href="../tutorials/registration/mapping.html">Type Mapping</a> to instructs Unity how to create service of type <code>IService</code>:</p>
+<p>If you just call <code>container.Resolve&lt;IService&gt;()</code> it will throw an exception complaining that it can not create an interface of type <code>IService</code>. You need to register a <a class="xref" href="../tutorials/Composition/Mapping/mapping.html">Type Mapping</a> to instructs Unity how to create service of type <code>IService</code>:</p>
 <pre><code class="lang-cs">// Register mapping between IService and Component
 container.RegisterType&lt;IService, Component&gt;();
 
@@ -149,7 +149,7 @@ var value = container.Resolve&lt;Foo&gt;();
 // value created with constructor 'Foo(IService service)'
 </code></pre>
 <p>During the resolution, when Unity will try to satisfy dependencies, it will look for a registration for each dependency and will find this mapping. It will create <code>Component</code> and passes it to constructor of <code>Foo</code> as <code>IService</code>.</p>
-<p>For more information see <a class="xref" href="../tutorials/registration/mapping.html">Type Mapping</a></p>
+<p>For more information see <a class="xref" href="../tutorials/Composition/Mapping/mapping.html">Type Mapping</a></p>
 <h2 id="lifetime">Lifetime</h2>
 <p>By default Unity creates a new instance every time type is requested. Instances it created are not tracked or managed by the container.</p>
 <pre><code class="lang-cs">// Register mapping between IService and Component

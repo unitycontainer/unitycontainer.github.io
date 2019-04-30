@@ -1089,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/quickstart.html",
-          "hash": "8R+IxBq2nKG0f6a2tKdHOA=="
+          "hash": "2OVV8iisJKDFgqA+Tz5iRA=="
         }
       },
       "is_incremental": false,
@@ -1386,7 +1386,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/Composition/Generics/lazy.html",
-          "hash": "mZPsa/7azJRvswuXRiresw=="
+          "hash": "MqYlKMpRpwIuBG+wQlbKWA=="
         }
       },
       "is_incremental": false,
@@ -1399,6 +1399,42 @@
         ".html": {
           "relative_path": "tutorials/Composition/Generics/metadata.html",
           "hash": "njkWDmfF8Fsr79Gk3nf5Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Mapping/generic.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Mapping/generic.html",
+          "hash": "8I9OPKlYmxBfIjHiEVfPIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Mapping/implementation.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Mapping/implementation.html",
+          "hash": "QoSFS+v+dKL0C3S+YpgWJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/Composition/Mapping/mapping.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/Composition/Mapping/mapping.html",
+          "hash": "Ce/CdMPAENtp0GSi9ynVcA=="
         }
       },
       "is_incremental": false,
@@ -1933,12 +1969,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/registration/Type/registration.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/Type/registration.html",
-          "hash": "I+Wq0x3ofyKUObcwDiWRrw=="
+          "hash": "LMAmlRrHm4sB7m2cdfdXIQ=="
         }
       },
       "is_incremental": false,
@@ -1957,36 +1996,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/registration/instance.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/instance.html",
-          "hash": "tWSqjox/piwzyhIjnnGncw=="
+          "hash": "ZJzVLzocDwYhgKVYUR1K9Q=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "tutorials/registration/mapping.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorials/registration/mapping.html",
-          "hash": "SfMlifl2xb1MffxVPj++1A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/registration/metadata.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/registration/metadata.html",
-          "hash": "G/l5bLCLSMwxRPf8nKPd/A=="
+          "hash": "glHtJ8kpRuog52mm/KbVJQ=="
         }
       },
       "is_incremental": false,
@@ -2010,7 +2043,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/toc.html",
-          "hash": "YijIFBnwXOdvr+h1Xyn2SQ=="
+          "hash": "n6rxQaKdlR2BraGH25YZLg=="
         }
       },
       "is_incremental": false,
@@ -2031,7 +2064,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 80,
+          "total_file_count": 82,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

@@ -105,7 +105,7 @@
 container.RegisterType&lt;IService, WebService&gt;(&quot;WebMail&quot;);
 container.RegisterType&lt;IService, SecureService&gt;(&quot;Encrypted&quot;);
 </code></pre>
-<p>For more information see <a class="xref" href="../mapping.html">Type Mapping</a></p>
+<p>For more information see &lt;xref:Tutorial.Registration.Mapping&gt;</p>
 <h2 id="lifetime-management">Lifetime Management</h2>
 <p>Unity provides wide variety of lifetime managers <a class="xref" href="../../../api/Unity.TypeLifetime.html">compatible</a> with type registrations. Each of these managers provide unique algorithm for instance management.</p>
 <p>In example above services are created on each request. In most cases it is desireable to create services only once. To create singleton services appropriate lifetime managers must be added to the registration:</p>
