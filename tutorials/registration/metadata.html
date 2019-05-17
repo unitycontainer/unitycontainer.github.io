@@ -8,7 +8,7 @@
     <title>Registration Metadata | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Registration Metadata | Unity Container ">
-    <meta name="generator" content="docfx 2.42.0.0">
+    <meta name="generator" content="docfx 2.42.3.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -72,9 +72,9 @@
 <p>During registration Unity relies on information you provide to properly register types, instances, and factories. This is a description of metadata you could provide to properly declare how the <code>Type</code> should be registered and  built:</p>
 <h2 id="registered-type"><a class="xref" href="../../api/Unity.IContainerRegistration.html#Unity_IContainerRegistration_RegisteredType">Registered Type</a></h2>
 <p>A <code>Type</code> that will be requested during resolution is called <strong>Registered Type</strong>. In the example below <code>SomeType</code> would be a registered type.</p>
-<pre><code class="lang-cs">container.RegisterType&lt;SomeClass&gt;();
+<pre><code class="lang-cs">container.RegisterType&lt;SomeType&gt;();
 ...
-var value = container.Resolve&lt;SomeClass&gt;();
+var value = container.Resolve&lt;SomeType&gt;();
 </code></pre>
 <p>Different container authors call this type by different names, <a href="https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ee650974(v%3dpandp.10)">FromType</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.servicedescriptor.servicetype">ServiceType</a>, etc. The key point to remember is that this is the <code>Type</code> container will be referencing in the internal registry and will be looking for when executing the resolve.</p>
 <h2 id="name"><a class="xref" href="../../api/Unity.IContainerRegistration.html#Unity_IContainerRegistration_Name">Name</a></h2>
@@ -109,7 +109,7 @@ Assert(typeof(Service) == result.GetType())
 </code></pre>
 <p>For more information see <a href="mapping.md">Type Mapping</a>.</p>
 <h2 id="lifetime-manager"><a class="xref" href="../../api/Unity.IContainerRegistration.html#Unity_IContainerRegistration_LifetimeManager">Lifetime Manager</a></h2>
-<p>This member holds a reference to a lifetime manager that Unity will be using to manage instance(s) of this type. For more information see <a href="../lifetime/lifetime.html">Lifetime Management</a></p>
+<p>This member holds a reference to a lifetime manager that Unity will be using to manage instance(s) of this type. For more information see <a href="../lifetime/lifetime.html">Lifetime Management</a>.</p>
 </article>
           </div>
           
