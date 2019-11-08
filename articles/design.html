@@ -8,7 +8,7 @@
     <title>Design of Unity | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Design of Unity | Unity Container ">
-    <meta name="generator" content="docfx 2.42.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,7 +83,7 @@
 <li>Provide stability required in enterprise-level line of business (LOB) applications.</li>
 </ul>
 <h2 id="packaging">Packaging</h2>
-<p>To allow maximum decoupling between declarative part and implementation Unity split into two assemblies: <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> and <a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></p>
+<p>To allow maximum decoupling between declarative part and implementation, Unity split into two assemblies: <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> and <a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></p>
 <h3 id="unityabstractions"><a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a></h3>
 <p>This assembly contains all public member declarations required to use Unity container in applications. It defines <a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a> interface as well as types and interfaces used to register, configure and resolve types and instances. Abstraction assembly contains following namespaces:</p>
 <ul>
@@ -96,7 +96,7 @@
 <h3 id="unitycontainer"><a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></h3>
 <p>This assembly implements Unity container's engine and exposes public members required to extend the container.</p>
 <h3 id="unity"><a href="https://www.nuget.org/packages/Unity/">Unity</a></h3>
-<p>This is a convenience package containing both <a href="https://www.nuget.org/packages/Unity/">Unity.Abstractions</a> as well as <a href="https://www.nuget.org/packages/Unity/">Unity.Container</a> assemblies. This package is distributed for these who do now wish to separate declarations and implementation.</p>
+<p>This is a convenience package containing both <a href="https://www.nuget.org/packages/Unity/">Unity.Abstractions</a> as well as <a href="https://www.nuget.org/packages/Unity/">Unity.Container</a> assemblies. This package is distributed for these who do not wish to separate declarations and implementation.</p>
 <h2 id="more-information">More Information</h2>
 <p>For more information about using packages inside applications see <a class="xref" href="application.html">Application Design</a> concepts with Unity.</p>
 </article>

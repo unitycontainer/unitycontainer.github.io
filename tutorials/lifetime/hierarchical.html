@@ -8,7 +8,7 @@
     <title>Hierarchical Lifetime | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Hierarchical Lifetime | Unity Container ">
-    <meta name="generator" content="docfx 2.42.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -69,8 +69,8 @@
             <article class="content wrap" id="_content" data-uid="Tutorial.Lifetime.Hierarchical">
 <h1 id="hierarchical-lifetime">Hierarchical Lifetime</h1>
 
-<p>The Unity container allows creating hierarchies of child containers. This lifetime creates local singleton for each level of the hierarchy. So, when you resolve a type and this container does not have an instance of that type, the container will create new instance. Next type the type is resolved the same instance will be returned.</p>
-<p>If a child container is created and requested to resolve the type, the child container will create a new instance and store it for subsequent resolutions. Next time the child container requested to resolve the type, it will return stored instance.</p>
+<p>The Unity container allows creating hierarchies of child containers. This lifetime creates local singleton for each level of the hierarchy. So, when you resolve a type and this container does not have an instance of that type, the container will create new instance. Next time the type is resolved the same instance will be returned.</p>
+<p>If a child container is created and requested to resolve the type, the child container will create a new instance and store it for subsequent resolutions. Next time the child container requests to resolve the type, it will return the stored instance.</p>
 <p>If you have multiple children, each will resolve its own instance.</p>
 <h2 id="the-lifetime-manager">The Lifetime Manager</h2>
 <p>Hierarchical lifetime is controlled by <a class="xref" href="../../api/Unity.Lifetime.HierarchicalLifetimeManager.html">HierarchicalLifetimeManager</a> type. It forces each child container to resolve its own instance of the object and does not share one with the parent or child containers.</p>
