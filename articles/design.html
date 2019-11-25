@@ -69,8 +69,6 @@
             <article class="content wrap" id="_content" data-uid="Article.Unity.Design">
 <h1 id="design-of-unity">Design of Unity</h1>
 
-<p>This topic describes the design goals, the architecture, and the design highlights of Unity. You do not have to understand the design to use Unity; however, this topic will help you to understand how it works and how it interacts with the underlying object builder subsystem.</p>
-<h2 id="design-goals">Design Goals</h2>
 <p>Unity was designed to achieve the following goals:</p>
 <ul>
 <li>Promote the principles of modular design through aggressive decoupling.</li>
@@ -82,21 +80,28 @@
 <li>Provide extensibility through container extensions.</li>
 <li>Provide stability required in enterprise-level line of business (LOB) applications.</li>
 </ul>
-<h2 id="packaging">Packaging</h2>
-<p>To allow maximum decoupling between declarative part and implementation, Unity split into two assemblies: <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> and <a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></p>
-<h3 id="unityabstractions"><a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a></h3>
-<p>This assembly contains all public member declarations required to use Unity container in applications. It defines <a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a> interface as well as types and interfaces used to register, configure and resolve types and instances. Abstraction assembly contains following namespaces:</p>
+<p>To allow maximum flexibility Unity container split into <strong>core</strong> and <strong>extension</strong> packages. Core packages implement basic <a href="https://en.wikipedia.org/wiki/Inversion_of_control">IoC</a>/<a href="https://en.wikipedia.org/wiki/Dependency_injection">DI</a> functionality and extensions provide specific behavior such as configuration, decoration, and etc.</p>
+<h2 id="unity-core">Unity Core</h2>
+<p>Unity core consists of two assemblies:</p>
 <ul>
-<li><a class="xref" href="../api/Unity.html">Unity</a></li>
-<li><a class="xref" href="../api/Unity.Injection.html">Unity.Injection</a></li>
-<li><a class="xref" href="../api/Unity.Lifetime.html">Unity.Lifetime</a></li>
-<li><a class="xref" href="../api/Unity.Policy.html">Unity.Policy</a></li>
-<li><a class="xref" href="../api/Unity.Resolution.html">Unity.Resolution</a></li>
+<li><code>Unity.Abstractions</code></li>
+<li><code>Unity.Container</code></li>
 </ul>
-<h3 id="unitycontainer"><a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></h3>
-<p>This assembly implements Unity container's engine and exposes public members required to extend the container.</p>
-<h3 id="unity"><a href="https://www.nuget.org/packages/Unity/">Unity</a></h3>
-<p>This is a convenience package containing both <a href="https://www.nuget.org/packages/Unity/">Unity.Abstractions</a> as well as <a href="https://www.nuget.org/packages/Unity/">Unity.Container</a> assemblies. This package is distributed for these who do not wish to separate declarations and implementation.</p>
+<p><code>Unity.Abstractions</code> assembly contains all public declarations required to use the container in applications and relatively unchanged from version to version. It defines <a class="xref" href="../api/Unity.IUnityContainer.html">IUnityContainer</a> interface as well as types and interfaces used to register, configure and resolve types and instances.</p>
+<p><code>Unity.Container</code> assembly implements the IoC engine and exposes public members required to extend the container.</p>
+<h3 id="core-packages">Core Packages</h3>
+<p>For legacy support and general convenience core library is distributed in two different forms:</p>
+<ul>
+<li>as composite package <a href="https://www.nuget.org/packages/Unity/">Unity</a></li>
+<li>as independent packages <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> and <a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></li>
+</ul>
+<h4 id="composite-package-unity">Composite package <a href="https://www.nuget.org/packages/Unity/">Unity</a></h4>
+<p>This is a convenience package containing both <code>Unity.Abstractions</code> as well as <code>Unity.Container</code> assemblies. This package is distributed to support legacy applications.</p>
+<h4 id="independent-packages-unityabstractions-and-unitycontainer">Independent Packages <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> and <a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></h4>
+<p>To allow easier path to upgrade and maximum decoupling between declarative part and implementation, Unity split into two assemblies: <a href="https://www.nuget.org/packages/Unity.Abstractions/">Unity.Abstractions</a> and <a href="https://www.nuget.org/packages/Unity.Container/">Unity.Container</a></p>
+<p>When used in libraries it allows linking to Unity.Abstractions and referencing Unity.Container only in bootstrapping project.</p>
+<h2 id="unity-extensions">Unity Extensions</h2>
+<p>Unity project implements and distributes several extensions such as Unity.Configuration, Unity.Interception, <a href="https://www.nuget.org/packages?q=unitycontainer">and etc.</a></p>
 <h2 id="more-information">More Information</h2>
 <p>For more information about using packages inside applications see <a class="xref" href="application.html">Application Design</a> concepts with Unity.</p>
 </article>

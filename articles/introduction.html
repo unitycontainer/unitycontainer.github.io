@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Overview | Unity Container </title>
+    <title>Unity Container Introduction | Unity Container </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Overview | Unity Container ">
+    <meta name="title" content="Unity Container Introduction | Unity Container ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
@@ -67,11 +67,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Article.Unity.Introduction">
-<h1 id="overview">Overview</h1>
+<h1 id="unity-container-introduction">Unity Container Introduction</h1>
 
-<p>Unity is a full featured, general-purpose container for use in any type of Microsoft® .NET Framework-based application. It provides all of the features commonly found in dependency injection implementations.</p>
-<p>In addition, Unity is extensible. You can write container extensions that change the behavior of the container, or add new capabilities. For example, the interception feature provided by Unity, which you can use to add policies to objects, is implemented as a container extension.</p>
-<h1 id="what-does-unity-do">What Does Unity Do?</h1>
+<h2 id="overview">Overview</h2>
+<p>Unity Container is a full featured, general-purpose <a href="https://en.wikipedia.org/wiki/Inversion_of_control">IoC container</a> for use in any type of .NET application. It is <a href="https://en.wikipedia.org/wiki/Open_source">Open Source</a> and released under <a href="https://github.com/unitycontainer/unity/blob/master/LICENSE">Apache 2.0 license</a>.</p>
+<p>Unity is extensible. Anyone can write an extensions that changes the behavior of the container, or adds new capabilities. For example, the interception feature provided by Unity, which you can use to add policies to objects, is implemented as a container extension.</p>
+<h2 id="what-does-unity-do">What Does Unity Do</h2>
 <p>Apart from decoupling types, components, services, and separating concerns, Unity crates and manages objects. Think of it as operator <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new-operator">new ...</a> on steroids.</p>
 <ul>
 <li><a href="#the-types-of-objects-unity-can-create">The Types of Objects Unity Can Create</a></li>
@@ -90,7 +91,7 @@
 <li>Inject public fields with values</li>
 <li>Call any public method on the created object</li>
 </ul>
-<h2 id="registering-types-and-object-instances">Registering Types and Object Instances</h2>
+<h3 id="registering-types-and-object-instances">Registering Types and Object Instances</h3>
 <p>Unity can resolve any concrete, constructable reference type without registration. For example calling <code>container.Resolve&lt;object&gt;()</code> will produce an instance immediately.</p>
 <p>Registrations allow mapping between service types and implementation types. Create a blueprint of how instances instantiated, initialized, and managed. For generic types it creates internal mini factories that used to generate concrete types. Unity supports three ways of registering types:</p>
 <h4 id="instance-registration">Instance registration</h4>

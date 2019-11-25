@@ -20,7 +20,7 @@ references:
   name: Adding Unity to Your Application
   href: articles/installation.html
 - uid: Article.Unity.Introduction
-  name: Overview
+  name: Unity Container Introduction
   href: articles/introduction.html
 - uid: Article.Unity.Using
   name: Using Unity in Applications
