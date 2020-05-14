@@ -301,6 +301,19 @@ references:
   commentId: T:Unity.FactoryLifetime
   fullName: Unity.FactoryLifetime
   nameWithType: FactoryLifetime
+- uid: Unity.FactoryLifetime.External
+  name: External
+  href: api/Unity.FactoryLifetime.html#Unity_FactoryLifetime_External
+  commentId: P:Unity.FactoryLifetime.External
+  fullName: Unity.FactoryLifetime.External
+  nameWithType: FactoryLifetime.External
+- uid: Unity.FactoryLifetime.External*
+  name: External
+  href: api/Unity.FactoryLifetime.html#Unity_FactoryLifetime_External_
+  commentId: Overload:Unity.FactoryLifetime.External
+  isSpec: "True"
+  fullName: Unity.FactoryLifetime.External
+  nameWithType: FactoryLifetime.External
 - uid: Unity.FactoryLifetime.Hierarchical
   name: Hierarchical
   href: api/Unity.FactoryLifetime.html#Unity_FactoryLifetime_Hierarchical
@@ -2404,15 +2417,6 @@ references:
   isSpec: "True"
   fullName: Unity.IUnityContainerAsync.Registrations
   nameWithType: IUnityContainerAsync.Registrations
-- uid: Unity.IUnityContainerAsync.Resolve(System.Type,System.String,Unity.Resolution.ResolverOverride[])
-  name: Resolve(Type, String, ResolverOverride[])
-  href: api/Unity.IUnityContainerAsync.html#Unity_IUnityContainerAsync_Resolve_System_Type_System_String_Unity_Resolution_ResolverOverride___
-  commentId: M:Unity.IUnityContainerAsync.Resolve(System.Type,System.String,Unity.Resolution.ResolverOverride[])
-  name.vb: Resolve(Type, String, ResolverOverride())
-  fullName: Unity.IUnityContainerAsync.Resolve(System.Type, System.String, Unity.Resolution.ResolverOverride[])
-  fullName.vb: Unity.IUnityContainerAsync.Resolve(System.Type, System.String, Unity.Resolution.ResolverOverride())
-  nameWithType: IUnityContainerAsync.Resolve(Type, String, ResolverOverride[])
-  nameWithType.vb: IUnityContainerAsync.Resolve(Type, String, ResolverOverride())
 - uid: Unity.IUnityContainerAsync.Resolve(System.Type,System.Text.RegularExpressions.Regex,Unity.Resolution.ResolverOverride[])
   name: Resolve(Type, Regex, ResolverOverride[])
   href: api/Unity.IUnityContainerAsync.html#Unity_IUnityContainerAsync_Resolve_System_Type_System_Text_RegularExpressions_Regex_Unity_Resolution_ResolverOverride___
@@ -2429,24 +2433,22 @@ references:
   isSpec: "True"
   fullName: Unity.IUnityContainerAsync.Resolve
   nameWithType: IUnityContainerAsync.Resolve
-- uid: Unity.IUnityContainerAsync.Resolve``1(System.String,Unity.Resolution.ResolverOverride[])
-  name: Resolve<T>(String, ResolverOverride[])
-  href: api/Unity.IUnityContainerAsync.html#Unity_IUnityContainerAsync_Resolve__1_System_String_Unity_Resolution_ResolverOverride___
-  commentId: M:Unity.IUnityContainerAsync.Resolve``1(System.String,Unity.Resolution.ResolverOverride[])
-  name.vb: Resolve(Of T)(String, ResolverOverride())
-  fullName: Unity.IUnityContainerAsync.Resolve<T>(System.String, Unity.Resolution.ResolverOverride[])
-  fullName.vb: Unity.IUnityContainerAsync.Resolve(Of T)(System.String, Unity.Resolution.ResolverOverride())
-  nameWithType: IUnityContainerAsync.Resolve<T>(String, ResolverOverride[])
-  nameWithType.vb: IUnityContainerAsync.Resolve(Of T)(String, ResolverOverride())
-- uid: Unity.IUnityContainerAsync.Resolve``1(System.Text.RegularExpressions.Regex,Unity.Resolution.ResolverOverride[])
-  name: Resolve<T>(Regex, ResolverOverride[])
-  href: api/Unity.IUnityContainerAsync.html#Unity_IUnityContainerAsync_Resolve__1_System_Text_RegularExpressions_Regex_Unity_Resolution_ResolverOverride___
-  commentId: M:Unity.IUnityContainerAsync.Resolve``1(System.Text.RegularExpressions.Regex,Unity.Resolution.ResolverOverride[])
-  name.vb: Resolve(Of T)(Regex, ResolverOverride())
-  fullName: Unity.IUnityContainerAsync.Resolve<T>(System.Text.RegularExpressions.Regex, Unity.Resolution.ResolverOverride[])
-  fullName.vb: Unity.IUnityContainerAsync.Resolve(Of T)(System.Text.RegularExpressions.Regex, Unity.Resolution.ResolverOverride())
-  nameWithType: IUnityContainerAsync.Resolve<T>(Regex, ResolverOverride[])
-  nameWithType.vb: IUnityContainerAsync.Resolve(Of T)(Regex, ResolverOverride())
+- uid: Unity.IUnityContainerAsync.ResolveAsync(System.Type,System.String,Unity.Resolution.ResolverOverride[])
+  name: ResolveAsync(Type, String, ResolverOverride[])
+  href: api/Unity.IUnityContainerAsync.html#Unity_IUnityContainerAsync_ResolveAsync_System_Type_System_String_Unity_Resolution_ResolverOverride___
+  commentId: M:Unity.IUnityContainerAsync.ResolveAsync(System.Type,System.String,Unity.Resolution.ResolverOverride[])
+  name.vb: ResolveAsync(Type, String, ResolverOverride())
+  fullName: Unity.IUnityContainerAsync.ResolveAsync(System.Type, System.String, Unity.Resolution.ResolverOverride[])
+  fullName.vb: Unity.IUnityContainerAsync.ResolveAsync(System.Type, System.String, Unity.Resolution.ResolverOverride())
+  nameWithType: IUnityContainerAsync.ResolveAsync(Type, String, ResolverOverride[])
+  nameWithType.vb: IUnityContainerAsync.ResolveAsync(Type, String, ResolverOverride())
+- uid: Unity.IUnityContainerAsync.ResolveAsync*
+  name: ResolveAsync
+  href: api/Unity.IUnityContainerAsync.html#Unity_IUnityContainerAsync_ResolveAsync_
+  commentId: Overload:Unity.IUnityContainerAsync.ResolveAsync
+  isSpec: "True"
+  fullName: Unity.IUnityContainerAsync.ResolveAsync
+  nameWithType: IUnityContainerAsync.ResolveAsync
 - uid: Unity.Lifetime
   name: Unity.Lifetime
   href: api/Unity.Lifetime.html
@@ -2524,6 +2526,19 @@ references:
   isSpec: "True"
   fullName: Unity.Lifetime.ContainerControlledLifetimeManager.RemoveValue
   nameWithType: ContainerControlledLifetimeManager.RemoveValue
+- uid: Unity.Lifetime.ContainerControlledLifetimeManager.Scope
+  name: Scope
+  href: api/Unity.Lifetime.ContainerControlledLifetimeManager.html#Unity_Lifetime_ContainerControlledLifetimeManager_Scope
+  commentId: P:Unity.Lifetime.ContainerControlledLifetimeManager.Scope
+  fullName: Unity.Lifetime.ContainerControlledLifetimeManager.Scope
+  nameWithType: ContainerControlledLifetimeManager.Scope
+- uid: Unity.Lifetime.ContainerControlledLifetimeManager.Scope*
+  name: Scope
+  href: api/Unity.Lifetime.ContainerControlledLifetimeManager.html#Unity_Lifetime_ContainerControlledLifetimeManager_Scope_
+  commentId: Overload:Unity.Lifetime.ContainerControlledLifetimeManager.Scope
+  isSpec: "True"
+  fullName: Unity.Lifetime.ContainerControlledLifetimeManager.Scope
+  nameWithType: ContainerControlledLifetimeManager.Scope
 - uid: Unity.Lifetime.ContainerControlledLifetimeManager.SetValue(System.Object,Unity.Lifetime.ILifetimeContainer)
   name: SetValue(Object, ILifetimeContainer)
   href: api/Unity.Lifetime.ContainerControlledLifetimeManager.html#Unity_Lifetime_ContainerControlledLifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_
@@ -2646,19 +2661,6 @@ references:
   commentId: T:Unity.Lifetime.ExternallyControlledLifetimeManager
   fullName: Unity.Lifetime.ExternallyControlledLifetimeManager
   nameWithType: ExternallyControlledLifetimeManager
-- uid: Unity.Lifetime.ExternallyControlledLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)
-  name: GetValue(ILifetimeContainer)
-  href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_
-  commentId: M:Unity.Lifetime.ExternallyControlledLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)
-  fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)
-  nameWithType: ExternallyControlledLifetimeManager.GetValue(ILifetimeContainer)
-- uid: Unity.Lifetime.ExternallyControlledLifetimeManager.GetValue*
-  name: GetValue
-  href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_GetValue_
-  commentId: Overload:Unity.Lifetime.ExternallyControlledLifetimeManager.GetValue
-  isSpec: "True"
-  fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.GetValue
-  nameWithType: ExternallyControlledLifetimeManager.GetValue
 - uid: Unity.Lifetime.ExternallyControlledLifetimeManager.OnCreateLifetimeManager
   name: OnCreateLifetimeManager()
   href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_OnCreateLifetimeManager
@@ -2672,19 +2674,45 @@ references:
   isSpec: "True"
   fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.OnCreateLifetimeManager
   nameWithType: ExternallyControlledLifetimeManager.OnCreateLifetimeManager
-- uid: Unity.Lifetime.ExternallyControlledLifetimeManager.SetValue(System.Object,Unity.Lifetime.ILifetimeContainer)
-  name: SetValue(Object, ILifetimeContainer)
-  href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_
-  commentId: M:Unity.Lifetime.ExternallyControlledLifetimeManager.SetValue(System.Object,Unity.Lifetime.ILifetimeContainer)
-  fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.SetValue(System.Object, Unity.Lifetime.ILifetimeContainer)
-  nameWithType: ExternallyControlledLifetimeManager.SetValue(Object, ILifetimeContainer)
-- uid: Unity.Lifetime.ExternallyControlledLifetimeManager.SetValue*
-  name: SetValue
-  href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_SetValue_
-  commentId: Overload:Unity.Lifetime.ExternallyControlledLifetimeManager.SetValue
+- uid: Unity.Lifetime.ExternallyControlledLifetimeManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)
+  name: RemoveValue(ILifetimeContainer)
+  href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_RemoveValue_Unity_Lifetime_ILifetimeContainer_
+  commentId: M:Unity.Lifetime.ExternallyControlledLifetimeManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)
+  fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)
+  nameWithType: ExternallyControlledLifetimeManager.RemoveValue(ILifetimeContainer)
+- uid: Unity.Lifetime.ExternallyControlledLifetimeManager.RemoveValue*
+  name: RemoveValue
+  href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_RemoveValue_
+  commentId: Overload:Unity.Lifetime.ExternallyControlledLifetimeManager.RemoveValue
   isSpec: "True"
-  fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.SetValue
-  nameWithType: ExternallyControlledLifetimeManager.SetValue
+  fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.RemoveValue
+  nameWithType: ExternallyControlledLifetimeManager.RemoveValue
+- uid: Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)
+  name: SynchronizedGetValue(ILifetimeContainer)
+  href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_SynchronizedGetValue_Unity_Lifetime_ILifetimeContainer_
+  commentId: M:Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)
+  fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)
+  nameWithType: ExternallyControlledLifetimeManager.SynchronizedGetValue(ILifetimeContainer)
+- uid: Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedGetValue*
+  name: SynchronizedGetValue
+  href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_SynchronizedGetValue_
+  commentId: Overload:Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedGetValue
+  isSpec: "True"
+  fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedGetValue
+  nameWithType: ExternallyControlledLifetimeManager.SynchronizedGetValue
+- uid: Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedSetValue(System.Object,Unity.Lifetime.ILifetimeContainer)
+  name: SynchronizedSetValue(Object, ILifetimeContainer)
+  href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_SynchronizedSetValue_System_Object_Unity_Lifetime_ILifetimeContainer_
+  commentId: M:Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedSetValue(System.Object,Unity.Lifetime.ILifetimeContainer)
+  fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedSetValue(System.Object, Unity.Lifetime.ILifetimeContainer)
+  nameWithType: ExternallyControlledLifetimeManager.SynchronizedSetValue(Object, ILifetimeContainer)
+- uid: Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedSetValue*
+  name: SynchronizedSetValue
+  href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_SynchronizedSetValue_
+  commentId: Overload:Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedSetValue
+  isSpec: "True"
+  fullName: Unity.Lifetime.ExternallyControlledLifetimeManager.SynchronizedSetValue
+  nameWithType: ExternallyControlledLifetimeManager.SynchronizedSetValue
 - uid: Unity.Lifetime.ExternallyControlledLifetimeManager.ToString
   name: ToString()
   href: api/Unity.Lifetime.ExternallyControlledLifetimeManager.html#Unity_Lifetime_ExternallyControlledLifetimeManager_ToString
@@ -2788,12 +2816,38 @@ references:
   commentId: T:Unity.Lifetime.IFactoryLifetimeManager
   fullName: Unity.Lifetime.IFactoryLifetimeManager
   nameWithType: IFactoryLifetimeManager
+- uid: Unity.Lifetime.IFactoryLifetimeManager.CreateLifetimePolicy
+  name: CreateLifetimePolicy()
+  href: api/Unity.Lifetime.IFactoryLifetimeManager.html#Unity_Lifetime_IFactoryLifetimeManager_CreateLifetimePolicy
+  commentId: M:Unity.Lifetime.IFactoryLifetimeManager.CreateLifetimePolicy
+  fullName: Unity.Lifetime.IFactoryLifetimeManager.CreateLifetimePolicy()
+  nameWithType: IFactoryLifetimeManager.CreateLifetimePolicy()
+- uid: Unity.Lifetime.IFactoryLifetimeManager.CreateLifetimePolicy*
+  name: CreateLifetimePolicy
+  href: api/Unity.Lifetime.IFactoryLifetimeManager.html#Unity_Lifetime_IFactoryLifetimeManager_CreateLifetimePolicy_
+  commentId: Overload:Unity.Lifetime.IFactoryLifetimeManager.CreateLifetimePolicy
+  isSpec: "True"
+  fullName: Unity.Lifetime.IFactoryLifetimeManager.CreateLifetimePolicy
+  nameWithType: IFactoryLifetimeManager.CreateLifetimePolicy
 - uid: Unity.Lifetime.IInstanceLifetimeManager
   name: IInstanceLifetimeManager
   href: api/Unity.Lifetime.IInstanceLifetimeManager.html
   commentId: T:Unity.Lifetime.IInstanceLifetimeManager
   fullName: Unity.Lifetime.IInstanceLifetimeManager
   nameWithType: IInstanceLifetimeManager
+- uid: Unity.Lifetime.IInstanceLifetimeManager.CreateLifetimePolicy
+  name: CreateLifetimePolicy()
+  href: api/Unity.Lifetime.IInstanceLifetimeManager.html#Unity_Lifetime_IInstanceLifetimeManager_CreateLifetimePolicy
+  commentId: M:Unity.Lifetime.IInstanceLifetimeManager.CreateLifetimePolicy
+  fullName: Unity.Lifetime.IInstanceLifetimeManager.CreateLifetimePolicy()
+  nameWithType: IInstanceLifetimeManager.CreateLifetimePolicy()
+- uid: Unity.Lifetime.IInstanceLifetimeManager.CreateLifetimePolicy*
+  name: CreateLifetimePolicy
+  href: api/Unity.Lifetime.IInstanceLifetimeManager.html#Unity_Lifetime_IInstanceLifetimeManager_CreateLifetimePolicy_
+  commentId: Overload:Unity.Lifetime.IInstanceLifetimeManager.CreateLifetimePolicy
+  isSpec: "True"
+  fullName: Unity.Lifetime.IInstanceLifetimeManager.CreateLifetimePolicy
+  nameWithType: IInstanceLifetimeManager.CreateLifetimePolicy
 - uid: Unity.Lifetime.ILifetimeContainer
   name: ILifetimeContainer
   href: api/Unity.Lifetime.ILifetimeContainer.html
@@ -2871,12 +2925,38 @@ references:
   commentId: T:Unity.Lifetime.ITypeLifetimeManager
   fullName: Unity.Lifetime.ITypeLifetimeManager
   nameWithType: ITypeLifetimeManager
+- uid: Unity.Lifetime.ITypeLifetimeManager.CreateLifetimePolicy
+  name: CreateLifetimePolicy()
+  href: api/Unity.Lifetime.ITypeLifetimeManager.html#Unity_Lifetime_ITypeLifetimeManager_CreateLifetimePolicy
+  commentId: M:Unity.Lifetime.ITypeLifetimeManager.CreateLifetimePolicy
+  fullName: Unity.Lifetime.ITypeLifetimeManager.CreateLifetimePolicy()
+  nameWithType: ITypeLifetimeManager.CreateLifetimePolicy()
+- uid: Unity.Lifetime.ITypeLifetimeManager.CreateLifetimePolicy*
+  name: CreateLifetimePolicy
+  href: api/Unity.Lifetime.ITypeLifetimeManager.html#Unity_Lifetime_ITypeLifetimeManager_CreateLifetimePolicy_
+  commentId: Overload:Unity.Lifetime.ITypeLifetimeManager.CreateLifetimePolicy
+  isSpec: "True"
+  fullName: Unity.Lifetime.ITypeLifetimeManager.CreateLifetimePolicy
+  nameWithType: ITypeLifetimeManager.CreateLifetimePolicy
 - uid: Unity.Lifetime.LifetimeManager
   name: LifetimeManager
   href: api/Unity.Lifetime.LifetimeManager.html
   commentId: T:Unity.Lifetime.LifetimeManager
   fullName: Unity.Lifetime.LifetimeManager
   nameWithType: LifetimeManager
+- uid: Unity.Lifetime.LifetimeManager.#ctor
+  name: LifetimeManager()
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager__ctor
+  commentId: M:Unity.Lifetime.LifetimeManager.#ctor
+  fullName: Unity.Lifetime.LifetimeManager.LifetimeManager()
+  nameWithType: LifetimeManager.LifetimeManager()
+- uid: Unity.Lifetime.LifetimeManager.#ctor*
+  name: LifetimeManager
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager__ctor_
+  commentId: Overload:Unity.Lifetime.LifetimeManager.#ctor
+  isSpec: "True"
+  fullName: Unity.Lifetime.LifetimeManager.LifetimeManager
+  nameWithType: LifetimeManager.LifetimeManager
 - uid: Unity.Lifetime.LifetimeManager.CreateLifetimePolicy
   name: CreateLifetimePolicy()
   href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_CreateLifetimePolicy
@@ -2890,6 +2970,19 @@ references:
   isSpec: "True"
   fullName: Unity.Lifetime.LifetimeManager.CreateLifetimePolicy
   nameWithType: LifetimeManager.CreateLifetimePolicy
+- uid: Unity.Lifetime.LifetimeManager.Get
+  name: Get
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_Get
+  commentId: P:Unity.Lifetime.LifetimeManager.Get
+  fullName: Unity.Lifetime.LifetimeManager.Get
+  nameWithType: LifetimeManager.Get
+- uid: Unity.Lifetime.LifetimeManager.Get*
+  name: Get
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_Get_
+  commentId: Overload:Unity.Lifetime.LifetimeManager.Get
+  isSpec: "True"
+  fullName: Unity.Lifetime.LifetimeManager.Get
+  nameWithType: LifetimeManager.Get
 - uid: Unity.Lifetime.LifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)
   name: GetValue(ILifetimeContainer)
   href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_
@@ -2980,6 +3073,19 @@ references:
   isSpec: "True"
   fullName: Unity.Lifetime.LifetimeManager.RemoveValue
   nameWithType: LifetimeManager.RemoveValue
+- uid: Unity.Lifetime.LifetimeManager.Set
+  name: Set
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_Set
+  commentId: P:Unity.Lifetime.LifetimeManager.Set
+  fullName: Unity.Lifetime.LifetimeManager.Set
+  nameWithType: LifetimeManager.Set
+- uid: Unity.Lifetime.LifetimeManager.Set*
+  name: Set
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_Set_
+  commentId: Overload:Unity.Lifetime.LifetimeManager.Set
+  isSpec: "True"
+  fullName: Unity.Lifetime.LifetimeManager.Set
+  nameWithType: LifetimeManager.Set
 - uid: Unity.Lifetime.LifetimeManager.SetValue(System.Object,Unity.Lifetime.ILifetimeContainer)
   name: SetValue(Object, ILifetimeContainer)
   href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_
@@ -2993,6 +3099,32 @@ references:
   isSpec: "True"
   fullName: Unity.Lifetime.LifetimeManager.SetValue
   nameWithType: LifetimeManager.SetValue
+- uid: Unity.Lifetime.LifetimeManager.TryGet
+  name: TryGet
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_TryGet
+  commentId: P:Unity.Lifetime.LifetimeManager.TryGet
+  fullName: Unity.Lifetime.LifetimeManager.TryGet
+  nameWithType: LifetimeManager.TryGet
+- uid: Unity.Lifetime.LifetimeManager.TryGet*
+  name: TryGet
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_TryGet_
+  commentId: Overload:Unity.Lifetime.LifetimeManager.TryGet
+  isSpec: "True"
+  fullName: Unity.Lifetime.LifetimeManager.TryGet
+  nameWithType: LifetimeManager.TryGet
+- uid: Unity.Lifetime.LifetimeManager.TryGetValue(Unity.Lifetime.ILifetimeContainer)
+  name: TryGetValue(ILifetimeContainer)
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_TryGetValue_Unity_Lifetime_ILifetimeContainer_
+  commentId: M:Unity.Lifetime.LifetimeManager.TryGetValue(Unity.Lifetime.ILifetimeContainer)
+  fullName: Unity.Lifetime.LifetimeManager.TryGetValue(Unity.Lifetime.ILifetimeContainer)
+  nameWithType: LifetimeManager.TryGetValue(ILifetimeContainer)
+- uid: Unity.Lifetime.LifetimeManager.TryGetValue*
+  name: TryGetValue
+  href: api/Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_TryGetValue_
+  commentId: Overload:Unity.Lifetime.LifetimeManager.TryGetValue
+  isSpec: "True"
+  fullName: Unity.Lifetime.LifetimeManager.TryGetValue
+  nameWithType: LifetimeManager.TryGetValue
 - uid: Unity.Lifetime.PerResolveLifetimeManager
   name: PerResolveLifetimeManager
   href: api/Unity.Lifetime.PerResolveLifetimeManager.html
@@ -3108,71 +3240,6 @@ references:
   commentId: T:Unity.Lifetime.SingletonLifetimeManager
   fullName: Unity.Lifetime.SingletonLifetimeManager
   nameWithType: SingletonLifetimeManager
-- uid: Unity.Lifetime.SingletonLifetimeManager.Dispose(System.Boolean)
-  name: Dispose(Boolean)
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_Dispose_System_Boolean_
-  commentId: M:Unity.Lifetime.SingletonLifetimeManager.Dispose(System.Boolean)
-  fullName: Unity.Lifetime.SingletonLifetimeManager.Dispose(System.Boolean)
-  nameWithType: SingletonLifetimeManager.Dispose(Boolean)
-- uid: Unity.Lifetime.SingletonLifetimeManager.Dispose*
-  name: Dispose
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_Dispose_
-  commentId: Overload:Unity.Lifetime.SingletonLifetimeManager.Dispose
-  isSpec: "True"
-  fullName: Unity.Lifetime.SingletonLifetimeManager.Dispose
-  nameWithType: SingletonLifetimeManager.Dispose
-- uid: Unity.Lifetime.SingletonLifetimeManager.OnCreateLifetimeManager
-  name: OnCreateLifetimeManager()
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_OnCreateLifetimeManager
-  commentId: M:Unity.Lifetime.SingletonLifetimeManager.OnCreateLifetimeManager
-  fullName: Unity.Lifetime.SingletonLifetimeManager.OnCreateLifetimeManager()
-  nameWithType: SingletonLifetimeManager.OnCreateLifetimeManager()
-- uid: Unity.Lifetime.SingletonLifetimeManager.OnCreateLifetimeManager*
-  name: OnCreateLifetimeManager
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_OnCreateLifetimeManager_
-  commentId: Overload:Unity.Lifetime.SingletonLifetimeManager.OnCreateLifetimeManager
-  isSpec: "True"
-  fullName: Unity.Lifetime.SingletonLifetimeManager.OnCreateLifetimeManager
-  nameWithType: SingletonLifetimeManager.OnCreateLifetimeManager
-- uid: Unity.Lifetime.SingletonLifetimeManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)
-  name: RemoveValue(ILifetimeContainer)
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_RemoveValue_Unity_Lifetime_ILifetimeContainer_
-  commentId: M:Unity.Lifetime.SingletonLifetimeManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)
-  fullName: Unity.Lifetime.SingletonLifetimeManager.RemoveValue(Unity.Lifetime.ILifetimeContainer)
-  nameWithType: SingletonLifetimeManager.RemoveValue(ILifetimeContainer)
-- uid: Unity.Lifetime.SingletonLifetimeManager.RemoveValue*
-  name: RemoveValue
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_RemoveValue_
-  commentId: Overload:Unity.Lifetime.SingletonLifetimeManager.RemoveValue
-  isSpec: "True"
-  fullName: Unity.Lifetime.SingletonLifetimeManager.RemoveValue
-  nameWithType: SingletonLifetimeManager.RemoveValue
-- uid: Unity.Lifetime.SingletonLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)
-  name: SynchronizedGetValue(ILifetimeContainer)
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_SynchronizedGetValue_Unity_Lifetime_ILifetimeContainer_
-  commentId: M:Unity.Lifetime.SingletonLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)
-  fullName: Unity.Lifetime.SingletonLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)
-  nameWithType: SingletonLifetimeManager.SynchronizedGetValue(ILifetimeContainer)
-- uid: Unity.Lifetime.SingletonLifetimeManager.SynchronizedGetValue*
-  name: SynchronizedGetValue
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_SynchronizedGetValue_
-  commentId: Overload:Unity.Lifetime.SingletonLifetimeManager.SynchronizedGetValue
-  isSpec: "True"
-  fullName: Unity.Lifetime.SingletonLifetimeManager.SynchronizedGetValue
-  nameWithType: SingletonLifetimeManager.SynchronizedGetValue
-- uid: Unity.Lifetime.SingletonLifetimeManager.SynchronizedSetValue(System.Object,Unity.Lifetime.ILifetimeContainer)
-  name: SynchronizedSetValue(Object, ILifetimeContainer)
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_SynchronizedSetValue_System_Object_Unity_Lifetime_ILifetimeContainer_
-  commentId: M:Unity.Lifetime.SingletonLifetimeManager.SynchronizedSetValue(System.Object,Unity.Lifetime.ILifetimeContainer)
-  fullName: Unity.Lifetime.SingletonLifetimeManager.SynchronizedSetValue(System.Object, Unity.Lifetime.ILifetimeContainer)
-  nameWithType: SingletonLifetimeManager.SynchronizedSetValue(Object, ILifetimeContainer)
-- uid: Unity.Lifetime.SingletonLifetimeManager.SynchronizedSetValue*
-  name: SynchronizedSetValue
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_SynchronizedSetValue_
-  commentId: Overload:Unity.Lifetime.SingletonLifetimeManager.SynchronizedSetValue
-  isSpec: "True"
-  fullName: Unity.Lifetime.SingletonLifetimeManager.SynchronizedSetValue
-  nameWithType: SingletonLifetimeManager.SynchronizedSetValue
 - uid: Unity.Lifetime.SingletonLifetimeManager.ToString
   name: ToString()
   href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_ToString
@@ -3186,12 +3253,6 @@ references:
   isSpec: "True"
   fullName: Unity.Lifetime.SingletonLifetimeManager.ToString
   nameWithType: SingletonLifetimeManager.ToString
-- uid: Unity.Lifetime.SingletonLifetimeManager.Value
-  name: Value
-  href: api/Unity.Lifetime.SingletonLifetimeManager.html#Unity_Lifetime_SingletonLifetimeManager_Value
-  commentId: F:Unity.Lifetime.SingletonLifetimeManager.Value
-  fullName: Unity.Lifetime.SingletonLifetimeManager.Value
-  nameWithType: SingletonLifetimeManager.Value
 - uid: Unity.Lifetime.SynchronizedLifetimeManager
   name: SynchronizedLifetimeManager
   href: api/Unity.Lifetime.SynchronizedLifetimeManager.html
@@ -3301,6 +3362,19 @@ references:
   isSpec: "True"
   fullName: Unity.Lifetime.SynchronizedLifetimeManager.TryExit
   nameWithType: SynchronizedLifetimeManager.TryExit
+- uid: Unity.Lifetime.SynchronizedLifetimeManager.TryGetValue(Unity.Lifetime.ILifetimeContainer)
+  name: TryGetValue(ILifetimeContainer)
+  href: api/Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_TryGetValue_Unity_Lifetime_ILifetimeContainer_
+  commentId: M:Unity.Lifetime.SynchronizedLifetimeManager.TryGetValue(Unity.Lifetime.ILifetimeContainer)
+  fullName: Unity.Lifetime.SynchronizedLifetimeManager.TryGetValue(Unity.Lifetime.ILifetimeContainer)
+  nameWithType: SynchronizedLifetimeManager.TryGetValue(ILifetimeContainer)
+- uid: Unity.Lifetime.SynchronizedLifetimeManager.TryGetValue*
+  name: TryGetValue
+  href: api/Unity.Lifetime.SynchronizedLifetimeManager.html#Unity_Lifetime_SynchronizedLifetimeManager_TryGetValue_
+  commentId: Overload:Unity.Lifetime.SynchronizedLifetimeManager.TryGetValue
+  isSpec: "True"
+  fullName: Unity.Lifetime.SynchronizedLifetimeManager.TryGetValue
+  nameWithType: SynchronizedLifetimeManager.TryGetValue
 - uid: Unity.Lifetime.TransientLifetimeManager
   name: TransientLifetimeManager
   href: api/Unity.Lifetime.TransientLifetimeManager.html
@@ -4030,6 +4104,12 @@ references:
   commentId: M:Unity.Resolution.NamedType.GetHashCode
   fullName: Unity.Resolution.NamedType.GetHashCode()
   nameWithType: NamedType.GetHashCode()
+- uid: Unity.Resolution.NamedType.GetHashCode(System.Int32,System.Int32)
+  name: GetHashCode(Int32, Int32)
+  href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_GetHashCode_System_Int32_System_Int32_
+  commentId: M:Unity.Resolution.NamedType.GetHashCode(System.Int32,System.Int32)
+  fullName: Unity.Resolution.NamedType.GetHashCode(System.Int32, System.Int32)
+  nameWithType: NamedType.GetHashCode(Int32, Int32)
 - uid: Unity.Resolution.NamedType.GetHashCode(System.Type,System.String)
   name: GetHashCode(Type, String)
   href: api/Unity.Resolution.NamedType.html#Unity_Resolution_NamedType_GetHashCode_System_Type_System_String_
@@ -4739,6 +4819,19 @@ references:
   isSpec: "True"
   fullName: Unity.TypeLifetime.ContainerControlled
   nameWithType: TypeLifetime.ContainerControlled
+- uid: Unity.TypeLifetime.External
+  name: External
+  href: api/Unity.TypeLifetime.html#Unity_TypeLifetime_External
+  commentId: P:Unity.TypeLifetime.External
+  fullName: Unity.TypeLifetime.External
+  nameWithType: TypeLifetime.External
+- uid: Unity.TypeLifetime.External*
+  name: External
+  href: api/Unity.TypeLifetime.html#Unity_TypeLifetime_External_
+  commentId: Overload:Unity.TypeLifetime.External
+  isSpec: "True"
+  fullName: Unity.TypeLifetime.External
+  nameWithType: TypeLifetime.External
 - uid: Unity.TypeLifetime.Hierarchical
   name: Hierarchical
   href: api/Unity.TypeLifetime.html#Unity_TypeLifetime_Hierarchical
@@ -5241,40 +5334,40 @@ references:
   fullName.vb: Unity.UnityContainerAsyncExtensions.RegisterType(Of TFrom, TTo)(Unity.IUnityContainerAsync, Unity.Lifetime.ITypeLifetimeManager, Unity.Injection.InjectionMember())
   nameWithType: UnityContainerAsyncExtensions.RegisterType<TFrom, TTo>(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember[])
   nameWithType.vb: UnityContainerAsyncExtensions.RegisterType(Of TFrom, TTo)(IUnityContainerAsync, ITypeLifetimeManager, InjectionMember())
-- uid: Unity.UnityContainerAsyncExtensions.Resolve(Unity.IUnityContainerAsync,System.Type,Unity.Resolution.ResolverOverride[])
-  name: Resolve(IUnityContainerAsync, Type, ResolverOverride[])
-  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve_Unity_IUnityContainerAsync_System_Type_Unity_Resolution_ResolverOverride___
-  commentId: M:Unity.UnityContainerAsyncExtensions.Resolve(Unity.IUnityContainerAsync,System.Type,Unity.Resolution.ResolverOverride[])
-  name.vb: Resolve(IUnityContainerAsync, Type, ResolverOverride())
-  fullName: Unity.UnityContainerAsyncExtensions.Resolve(Unity.IUnityContainerAsync, System.Type, Unity.Resolution.ResolverOverride[])
-  fullName.vb: Unity.UnityContainerAsyncExtensions.Resolve(Unity.IUnityContainerAsync, System.Type, Unity.Resolution.ResolverOverride())
-  nameWithType: UnityContainerAsyncExtensions.Resolve(IUnityContainerAsync, Type, ResolverOverride[])
-  nameWithType.vb: UnityContainerAsyncExtensions.Resolve(IUnityContainerAsync, Type, ResolverOverride())
-- uid: Unity.UnityContainerAsyncExtensions.Resolve*
-  name: Resolve
-  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve_
-  commentId: Overload:Unity.UnityContainerAsyncExtensions.Resolve
+- uid: Unity.UnityContainerAsyncExtensions.ResolveAsync(Unity.IUnityContainerAsync,System.Type,Unity.Resolution.ResolverOverride[])
+  name: ResolveAsync(IUnityContainerAsync, Type, ResolverOverride[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_ResolveAsync_Unity_IUnityContainerAsync_System_Type_Unity_Resolution_ResolverOverride___
+  commentId: M:Unity.UnityContainerAsyncExtensions.ResolveAsync(Unity.IUnityContainerAsync,System.Type,Unity.Resolution.ResolverOverride[])
+  name.vb: ResolveAsync(IUnityContainerAsync, Type, ResolverOverride())
+  fullName: Unity.UnityContainerAsyncExtensions.ResolveAsync(Unity.IUnityContainerAsync, System.Type, Unity.Resolution.ResolverOverride[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.ResolveAsync(Unity.IUnityContainerAsync, System.Type, Unity.Resolution.ResolverOverride())
+  nameWithType: UnityContainerAsyncExtensions.ResolveAsync(IUnityContainerAsync, Type, ResolverOverride[])
+  nameWithType.vb: UnityContainerAsyncExtensions.ResolveAsync(IUnityContainerAsync, Type, ResolverOverride())
+- uid: Unity.UnityContainerAsyncExtensions.ResolveAsync*
+  name: ResolveAsync
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_ResolveAsync_
+  commentId: Overload:Unity.UnityContainerAsyncExtensions.ResolveAsync
   isSpec: "True"
-  fullName: Unity.UnityContainerAsyncExtensions.Resolve
-  nameWithType: UnityContainerAsyncExtensions.Resolve
-- uid: Unity.UnityContainerAsyncExtensions.Resolve``1(Unity.IUnityContainerAsync,System.String,Unity.Resolution.ResolverOverride[])
-  name: Resolve<T>(IUnityContainerAsync, String, ResolverOverride[])
-  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve__1_Unity_IUnityContainerAsync_System_String_Unity_Resolution_ResolverOverride___
-  commentId: M:Unity.UnityContainerAsyncExtensions.Resolve``1(Unity.IUnityContainerAsync,System.String,Unity.Resolution.ResolverOverride[])
-  name.vb: Resolve(Of T)(IUnityContainerAsync, String, ResolverOverride())
-  fullName: Unity.UnityContainerAsyncExtensions.Resolve<T>(Unity.IUnityContainerAsync, System.String, Unity.Resolution.ResolverOverride[])
-  fullName.vb: Unity.UnityContainerAsyncExtensions.Resolve(Of T)(Unity.IUnityContainerAsync, System.String, Unity.Resolution.ResolverOverride())
-  nameWithType: UnityContainerAsyncExtensions.Resolve<T>(IUnityContainerAsync, String, ResolverOverride[])
-  nameWithType.vb: UnityContainerAsyncExtensions.Resolve(Of T)(IUnityContainerAsync, String, ResolverOverride())
-- uid: Unity.UnityContainerAsyncExtensions.Resolve``1(Unity.IUnityContainerAsync,Unity.Resolution.ResolverOverride[])
-  name: Resolve<T>(IUnityContainerAsync, ResolverOverride[])
-  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_Resolve__1_Unity_IUnityContainerAsync_Unity_Resolution_ResolverOverride___
-  commentId: M:Unity.UnityContainerAsyncExtensions.Resolve``1(Unity.IUnityContainerAsync,Unity.Resolution.ResolverOverride[])
-  name.vb: Resolve(Of T)(IUnityContainerAsync, ResolverOverride())
-  fullName: Unity.UnityContainerAsyncExtensions.Resolve<T>(Unity.IUnityContainerAsync, Unity.Resolution.ResolverOverride[])
-  fullName.vb: Unity.UnityContainerAsyncExtensions.Resolve(Of T)(Unity.IUnityContainerAsync, Unity.Resolution.ResolverOverride())
-  nameWithType: UnityContainerAsyncExtensions.Resolve<T>(IUnityContainerAsync, ResolverOverride[])
-  nameWithType.vb: UnityContainerAsyncExtensions.Resolve(Of T)(IUnityContainerAsync, ResolverOverride())
+  fullName: Unity.UnityContainerAsyncExtensions.ResolveAsync
+  nameWithType: UnityContainerAsyncExtensions.ResolveAsync
+- uid: Unity.UnityContainerAsyncExtensions.ResolveAsync``1(Unity.IUnityContainerAsync,System.String,Unity.Resolution.ResolverOverride[])
+  name: ResolveAsync<T>(IUnityContainerAsync, String, ResolverOverride[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_ResolveAsync__1_Unity_IUnityContainerAsync_System_String_Unity_Resolution_ResolverOverride___
+  commentId: M:Unity.UnityContainerAsyncExtensions.ResolveAsync``1(Unity.IUnityContainerAsync,System.String,Unity.Resolution.ResolverOverride[])
+  name.vb: ResolveAsync(Of T)(IUnityContainerAsync, String, ResolverOverride())
+  fullName: Unity.UnityContainerAsyncExtensions.ResolveAsync<T>(Unity.IUnityContainerAsync, System.String, Unity.Resolution.ResolverOverride[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.ResolveAsync(Of T)(Unity.IUnityContainerAsync, System.String, Unity.Resolution.ResolverOverride())
+  nameWithType: UnityContainerAsyncExtensions.ResolveAsync<T>(IUnityContainerAsync, String, ResolverOverride[])
+  nameWithType.vb: UnityContainerAsyncExtensions.ResolveAsync(Of T)(IUnityContainerAsync, String, ResolverOverride())
+- uid: Unity.UnityContainerAsyncExtensions.ResolveAsync``1(Unity.IUnityContainerAsync,Unity.Resolution.ResolverOverride[])
+  name: ResolveAsync<T>(IUnityContainerAsync, ResolverOverride[])
+  href: api/Unity.UnityContainerAsyncExtensions.html#Unity_UnityContainerAsyncExtensions_ResolveAsync__1_Unity_IUnityContainerAsync_Unity_Resolution_ResolverOverride___
+  commentId: M:Unity.UnityContainerAsyncExtensions.ResolveAsync``1(Unity.IUnityContainerAsync,Unity.Resolution.ResolverOverride[])
+  name.vb: ResolveAsync(Of T)(IUnityContainerAsync, ResolverOverride())
+  fullName: Unity.UnityContainerAsyncExtensions.ResolveAsync<T>(Unity.IUnityContainerAsync, Unity.Resolution.ResolverOverride[])
+  fullName.vb: Unity.UnityContainerAsyncExtensions.ResolveAsync(Of T)(Unity.IUnityContainerAsync, Unity.Resolution.ResolverOverride())
+  nameWithType: UnityContainerAsyncExtensions.ResolveAsync<T>(IUnityContainerAsync, ResolverOverride[])
+  nameWithType.vb: UnityContainerAsyncExtensions.ResolveAsync(Of T)(IUnityContainerAsync, ResolverOverride())
 - uid: Unity.UnityContainerExtensions
   name: UnityContainerExtensions
   href: api/Unity.UnityContainerExtensions.html

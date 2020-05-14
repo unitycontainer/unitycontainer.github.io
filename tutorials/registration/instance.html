@@ -8,7 +8,7 @@
     <title>Instance Registration | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Instance Registration | Unity Container ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -92,7 +92,7 @@ or
 container.RegisterInstance(typeof(IService), instance)
 container.RegisterInstance(typeof(IService), &quot;xyz&quot;, instance)
 </code></pre>
-<p>In this example Unity creates two registrations of type <strong>IService</strong>. When either is resolved it returns the instance of the <strong>Service</strong> object we registered with container. For more information see <a href="mapping.md">Type Mapping</a></p>
+<p>In this example Unity creates two registrations of type <strong>IService</strong>. When either is resolved it returns the instance of the <strong>Service</strong> object we registered with container. For more information see <a class="xref" href="../Composition/Mapping/mapping.html">Type Mapping</a></p>
 <h2 id="lifetime">Lifetime</h2>
 <p>Due to the fact that container does not create these instances, the instance registration only supports limited number of compatible lifetimes:</p>
 <h3 id="per-container"><a class="xref" href="../../api/Unity.InstanceLifetime.html#Unity_InstanceLifetime_PerContainer">Per Container</a></h3>
@@ -143,7 +143,7 @@ container.RegisterInstance&lt;IService&gt;(&quot;Name&quot;, instance, InstanceL
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright &copy; 2008–2019 <strong>Unity Container</strong> project</span>
+            <span>Copyright &copy; 2020 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
             
           </div>
         </div>

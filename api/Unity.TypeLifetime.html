@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TypeLifetime
    | Unity Container ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -150,6 +150,46 @@ the dependency mechanism injects the instance into other classes.</p>
 a scoped singleton in the container it was created or registered. In other words this
 instance is unique within the container it war registered with. Child or parent
 containers could have their own instances registered for the same contract.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_TypeLifetime_External.md&amp;value=---%0Auid%3A%20Unity.TypeLifetime.External%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/TypeLifetime.cs/#L183">View Source</a>
+  </span>
+  <a id="Unity_TypeLifetime_External_" data-uid="Unity.TypeLifetime.External*"></a>
+  <h4 id="Unity_TypeLifetime_External" data-uid="Unity.TypeLifetime.External">External</h4>
+  <div class="markdown level1 summary"><p>This lifetime keeps a weak reference to object it holds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ITypeLifetimeManager External { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.ITypeLifetimeManager.html">ITypeLifetimeManager</a></td>
+        <td><p>A new instance of a <see cref="!:WeakReferenceLifetimeManager"></see> lifetime manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Unity_TypeLifetime_External_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When no object is associated with the manager container creates and returns a new object. 
+It gets and holds a weak reference to the created object. As long as the object still exists and 
+has not been garbage collected the container will return the object when requested.</p>
+<p>If the object went out of scope and has been garbage collected the container will 
+create and return a new instance.</p>
+<p>This lifetime manager does not dispose an object when container is disposed</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -538,7 +578,7 @@ having transient lifetime is the same as having no lifetime manager at all.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright &copy; 2008–2019 <strong>Unity Container</strong> project</span>
+            <span>Copyright &copy; 2020 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
             
           </div>
         </div>

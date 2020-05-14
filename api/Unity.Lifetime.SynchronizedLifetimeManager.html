@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SynchronizedLifetimeManager
    | Unity Container ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,8 +83,8 @@
     <div class="level1"><a class="xref" href="Unity.Lifetime.LifetimeManager.html">LifetimeManager</a></div>
     <div class="level2"><span class="xref">SynchronizedLifetimeManager</span></div>
       <div class="level3"><a class="xref" href="Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a></div>
+      <div class="level3"><a class="xref" href="Unity.Lifetime.ExternallyControlledLifetimeManager.html">ExternallyControlledLifetimeManager</a></div>
       <div class="level3"><a class="xref" href="Unity.Lifetime.HierarchicalLifetimeManager.html">HierarchicalLifetimeManager</a></div>
-      <div class="level3"><a class="xref" href="Unity.Lifetime.SingletonLifetimeManager.html">SingletonLifetimeManager</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -97,6 +97,15 @@
     </div>
     <div>
       <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_InUse">LifetimeManager.InUse</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_TryGet">LifetimeManager.TryGet</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_Get">LifetimeManager.Get</a>
+    </div>
+    <div>
+      <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_Set">LifetimeManager.Set</a>
     </div>
     <div>
       <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_RemoveValue_Unity_Lifetime_ILifetimeContainer_">LifetimeManager.RemoveValue(ILifetimeContainer)</a>
@@ -156,7 +165,7 @@ the build request which resulted in the call to the GetValue method fails.
     <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L34">View Source</a>
   </span>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_ResolveTimeout" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.ResolveTimeout">ResolveTimeout</h4>
-  <div class="markdown level1 summary"><p>This field controlls how long the monitor will wait to
+  <div class="markdown level1 summary"><p>This field controls how long the monitor will wait to
 enter the lock. It is <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.timeout.infinite">Infinite</a> by default or number of
 milliseconds from 0 to 2147483647.</p>
 </div>
@@ -187,7 +196,7 @@ milliseconds from 0 to 2147483647.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_SynchronizedLifetimeManager_Dispose.md&amp;value=---%0Auid%3A%20Unity.Lifetime.SynchronizedLifetimeManager.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L117">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L131">View Source</a>
   </span>
   <a id="Unity_Lifetime_SynchronizedLifetimeManager_Dispose_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.Dispose*"></a>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_Dispose" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.Dispose">Dispose()</h4>
@@ -203,7 +212,7 @@ milliseconds from 0 to 2147483647.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_SynchronizedLifetimeManager_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.SynchronizedLifetimeManager.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L127">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L141">View Source</a>
   </span>
   <a id="Unity_Lifetime_SynchronizedLifetimeManager_Dispose_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.Dispose*"></a>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_Dispose_System_Boolean_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -237,7 +246,7 @@ milliseconds from 0 to 2147483647.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_SynchronizedLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.SynchronizedLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L39">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L53">View Source</a>
   </span>
   <a id="Unity_Lifetime_SynchronizedLifetimeManager_GetValue_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.GetValue*"></a>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_GetValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.GetValue(Unity.Lifetime.ILifetimeContainer)">GetValue(ILifetimeContainer)</h4>
@@ -289,7 +298,7 @@ milliseconds from 0 to 2147483647.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_SynchronizedLifetimeManager_Recover.md&amp;value=---%0Auid%3A%20Unity.Lifetime.SynchronizedLifetimeManager.Recover%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L90">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L104">View Source</a>
   </span>
   <a id="Unity_Lifetime_SynchronizedLifetimeManager_Recover_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.Recover*"></a>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_Recover" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.Recover">Recover()</h4>
@@ -311,7 +320,7 @@ and play real havoc with the stack trace.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_SynchronizedLifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.SynchronizedLifetimeManager.SetValue(System.Object%2CUnity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L66">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L80">View Source</a>
   </span>
   <a id="Unity_Lifetime_SynchronizedLifetimeManager_SetValue_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.SetValue*"></a>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_SetValue_System_Object_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.SetValue(System.Object,Unity.Lifetime.ILifetimeContainer)">SetValue(Object, ILifetimeContainer)</h4>
@@ -353,7 +362,7 @@ and play real havoc with the stack trace.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedGetValue_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.SynchronizedLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L62">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L76">View Source</a>
   </span>
   <a id="Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedGetValue_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.SynchronizedGetValue*"></a>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedGetValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.SynchronizedGetValue(Unity.Lifetime.ILifetimeContainer)">SynchronizedGetValue(ILifetimeContainer)</h4>
@@ -408,7 +417,7 @@ after it has acquired its lock.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedSetValue_System_Object_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.SynchronizedLifetimeManager.SynchronizedSetValue(System.Object%2CUnity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L79">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L93">View Source</a>
   </span>
   <a id="Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedSetValue_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.SynchronizedSetValue*"></a>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_SynchronizedSetValue_System_Object_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.SynchronizedSetValue(System.Object,Unity.Lifetime.ILifetimeContainer)">SynchronizedSetValue(Object, ILifetimeContainer)</h4>
@@ -452,7 +461,7 @@ before releasing its lock.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_SynchronizedLifetimeManager_TryExit.md&amp;value=---%0Auid%3A%20Unity.Lifetime.SynchronizedLifetimeManager.TryExit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L95">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L109">View Source</a>
   </span>
   <a id="Unity_Lifetime_SynchronizedLifetimeManager_TryExit_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.TryExit*"></a>
   <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_TryExit" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.TryExit">TryExit()</h4>
@@ -462,6 +471,62 @@ before releasing its lock.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void TryExit()</code></pre>
   </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_Lifetime_SynchronizedLifetimeManager_TryGetValue_Unity_Lifetime_ILifetimeContainer_.md&amp;value=---%0Auid%3A%20Unity.Lifetime.SynchronizedLifetimeManager.TryGetValue(Unity.Lifetime.ILifetimeContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Lifetime/Abstracts/SynchronizedLifetimeManager.cs/#L39">View Source</a>
+  </span>
+  <a id="Unity_Lifetime_SynchronizedLifetimeManager_TryGetValue_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.TryGetValue*"></a>
+  <h4 id="Unity_Lifetime_SynchronizedLifetimeManager_TryGetValue_Unity_Lifetime_ILifetimeContainer_" data-uid="Unity.Lifetime.SynchronizedLifetimeManager.TryGetValue(Unity.Lifetime.ILifetimeContainer)">TryGetValue(ILifetimeContainer)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a value from the backing store associated with this Lifetime policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object TryGetValue(ILifetimeContainer container = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unity.Lifetime.ILifetimeContainer.html">ILifetimeContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td><p>The container this lifetime is associated with</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>the object desired, or null if no such object is currently stored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_TryGetValue_Unity_Lifetime_ILifetimeContainer_">LifetimeManager.TryGetValue(ILifetimeContainer)</a></div>
+  <h5 id="Unity_Lifetime_SynchronizedLifetimeManager_TryGetValue_Unity_Lifetime_ILifetimeContainer__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not block and does not acquire a lock on synchronization
+primitives.</p>
+</div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
@@ -503,7 +568,7 @@ before releasing its lock.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright &copy; 2008–2019 <strong>Unity Container</strong> project</span>
+            <span>Copyright &copy; 2020 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
             
           </div>
         </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ResolutionFailedException
    | Unity Container ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -167,7 +167,7 @@ the exception for the given type and name.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResolutionFailedException(Type typeRequested, string nameRequested, string message, Exception innerException = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ResolutionFailedException(Type type, string name, string message, Exception innerException = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,13 +181,13 @@ the exception for the given type and name.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">typeRequested</span></td>
+        <td><span class="parametername">type</span></td>
         <td><p>Type requested from the container.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">nameRequested</span></td>
+        <td><span class="parametername">name</span></td>
         <td><p>Name requested from the container.</p>
 </td>
       </tr>
@@ -310,7 +310,7 @@ the exception for the given type and name.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright &copy; 2008–2019 <strong>Unity Container</strong> project</span>
+            <span>Copyright &copy; 2020 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
             
           </div>
         </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InstanceLifetime
    | Unity Container ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -117,11 +117,12 @@
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_InstanceLifetime_External.md&amp;value=---%0Auid%3A%20Unity.InstanceLifetime.External%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/InstanceLifetime.cs/#L7">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/InstanceLifetime.cs/#L19">View Source</a>
   </span>
   <a id="Unity_InstanceLifetime_External_" data-uid="Unity.InstanceLifetime.External*"></a>
   <h4 id="Unity_InstanceLifetime_External" data-uid="Unity.InstanceLifetime.External">External</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This lifetime stores a weak reference to an instance and returns an instance while it is available.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -138,16 +139,25 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Unity.Lifetime.IInstanceLifetimeManager.html">IInstanceLifetimeManager</a></td>
-        <td></td>
+        <td><p>A new instance of a <a class="xref" href="Unity.Lifetime.ExternallyControlledLifetimeManager.html">ExternallyControlledLifetimeManager</a> lifetime manager.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Unity_InstanceLifetime_External_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Container gets a hold of a weak reference to the object and as long as the object 
+still exists and has not been garbage collected the container will return the object when
+requested.</p>
+<p>If the object went out of scope and has been garbage collected the container will 
+return <a class="xref" href="Unity.Lifetime.LifetimeManager.html#Unity_Lifetime_LifetimeManager_NoValue">NoValue</a>.</p>
+<p>This lifetime manager does not dispose an object when container is disposed</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_InstanceLifetime_PerContainer.md&amp;value=---%0Auid%3A%20Unity.InstanceLifetime.PerContainer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/InstanceLifetime.cs/#L36">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/InstanceLifetime.cs/#L48">View Source</a>
   </span>
   <a id="Unity_InstanceLifetime_PerContainer_" data-uid="Unity.InstanceLifetime.PerContainer*"></a>
   <h4 id="Unity_InstanceLifetime_PerContainer" data-uid="Unity.InstanceLifetime.PerContainer">PerContainer</h4>
@@ -186,7 +196,7 @@ containers could have their own instances registered for the same contract.</p>
     <a href="https://github.com/unitycontainer/abstractions/new/master/apiSpec/new?filename=Unity_InstanceLifetime_Singleton.md&amp;value=---%0Auid%3A%20Unity.InstanceLifetime.Singleton%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/InstanceLifetime.cs/#L23">View Source</a>
+    <a href="https://github.com/unitycontainer/abstractions/blob/master/src/Extensions/Lifetime/InstanceLifetime.cs/#L35">View Source</a>
   </span>
   <a id="Unity_InstanceLifetime_Singleton_" data-uid="Unity.InstanceLifetime.Singleton*"></a>
   <h4 id="Unity_InstanceLifetime_Singleton" data-uid="Unity.InstanceLifetime.Singleton">Singleton</h4>
@@ -253,7 +263,7 @@ will always override the root registration.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright &copy; 2008–2019 <strong>Unity Container</strong> project</span>
+            <span>Copyright &copy; 2020 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
             
           </div>
         </div>

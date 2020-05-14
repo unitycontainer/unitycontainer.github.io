@@ -8,7 +8,7 @@
     <title>Type Registration | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Type Registration | Unity Container ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.png">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -105,7 +105,7 @@
 container.RegisterType&lt;IService, WebService&gt;(&quot;WebMail&quot;);
 container.RegisterType&lt;IService, SecureService&gt;(&quot;Encrypted&quot;);
 </code></pre>
-<p>For more information see &lt;xref:Tutorial.Registration.Mapping&gt;</p>
+<p>For more information see <a class="xref" href="../../Composition/Mapping/mapping.html">Type Mapping</a></p>
 <h2 id="lifetime-management">Lifetime Management</h2>
 <p>Unity provides wide variety of lifetime managers <a class="xref" href="../../../api/Unity.TypeLifetime.html">compatible</a> with type registrations. Each of these managers provide unique algorithm for instance management.</p>
 <p>In example above services are created on each request. In most cases it is desireable to create services only once. To create singleton services appropriate lifetime managers must be added to the registration:</p>
@@ -152,7 +152,7 @@ container.RegisterType&lt;IService, SecureService&gt;(&quot;Encrypted&quot;, Typ
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright &copy; 2008–2019 <strong>Unity Container</strong> project</span>
+            <span>Copyright &copy; 2020 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>
             
           </div>
         </div>
