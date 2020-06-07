@@ -69,27 +69,27 @@
             <article class="content wrap" id="_content" data-uid="Tutorial.Mapping.Implementation">
 <h1 id="service-to-implementation-mapping">Service to Implementation Mapping</h1>
 
-<p>Service to Implementation mapping is done during the service registration.</p>
+<p>Service to Implementation Mapping is done during the service registration.</p>
 <h2 id="the-service-itself">The Service Itself</h2>
-<p>The simplest type of registration is when service is registered by its own type. For Type and Instance registration you could do so by simply registering the type or the instance:</p>
+<p>The simplest type of registration is when the service is registered by its own type. For Type and Instance registration, you can do so by simply registering the type or the instance:</p>
 <pre><code class="lang-cs">container.RegisterType&lt;Foo&gt;();
 container.RegisterInstance(new Foo());
 </code></pre>
-<p>A factory has to specify type it is registered under:</p>
+<p>For example, a factory has to specify the type it is registered under:</p>
 <pre><code class="lang-cs">container.RegisterFactory&lt;Foo&gt;((c, t, n) =&gt; new Foo());
 </code></pre>
 <h2 id="mapping-contract-to-implementation">Mapping Contract to Implementation</h2>
-<p>When you map Registered type to implementation type you specify an service type first and implementation type second:</p>
+<p>When you map Registered type to Implementation type, you specify a service type first and then the implementation type:</p>
 <pre><code class="lang-cs">container.RegisterType&lt;IFoo, Foo&gt;();
 container.RegisterInstance&lt;IFoo&gt;(new Foo());
 </code></pre>
-<p>In case of factory registration the container does not care how it is implemented by the factory, all it cares is how it is registered:</p>
+<p>In this case of the factory registration, the container does not care how it is implemented by the factory, but rather how it is registered:</p>
 <pre><code class="lang-cs">container.RegisterFactory&lt;IFoo&gt;((c, t, n) =&gt; new Foo());
 </code></pre>
 <h2 id="building-and-mapping-to-implementation">Building and Mapping to Implementation</h2>
-<p>Mapping allows redirection to existing registrations and services as well as building new instances of implementation types.</p>
+<p>Mapping allows redirection to the existing registrations and services, as well as building new instances of implementation types.</p>
 <h3 id="mapping-to-existing-service">Mapping to Existing Service</h3>
-<p>The Unity container supports a scenario where a mapping does not crate type itself but rather references existing service registered with the container. Consider the following:</p>
+<p>The Unity container supports a scenario where a mapping does not create a type itself but rather references existing services registered with the container. Consider the following:</p>
 <pre><code class="lang-cs">public class Foo : IFoo1, IFoo2
 {
     public Foo()
@@ -105,14 +105,14 @@ container.RegisterInstance&lt;IFoo&gt;(new Foo(), InstanceLifetime.Singleton);
 
 container.RegisterType&lt;IFoo1, Foo&gt;();
 </code></pre>
-<p>The container has a registration for type <code>Foo</code>. When interface <code>IFoo1</code> is mapped to <code>Foo</code> it instructs the container to resolve the default implementation for the type <code>Foo</code>. Because the mapping does not provide any instructions how the type should be built, the default implementation, or existing registration should be used.</p>
-<p>So, when the container will be resolving <code>IFoo1</code> it will first check if <code>Foo</code> is already registered and will used the registration to satisfy the request.</p>
-<p>If a mapping references non existing service the container will try to build the service from the implementation type.</p>
-<h3 id="building-implementation-type">Building Implementation Type</h3>
-<p>If the implementation type points to no existing registration or if an instance has to be created using certain rules, the container will create a new, independent pipeline and execute. So if you register <code>IFoo2</code> like this:</p>
+<p>The container has a registration for type <code>Foo</code>. When the interface <code>IFoo1</code> is mapped to <code>Foo</code> it instructs the container to resolve the default implementation for the type <code>Foo</code>. Because the mapping does not provide any instructions about how the type should be built, the default implementation or existing registration should be used.</p>
+<p>So, when the container is resolving <code>IFoo1</code> it will first check if <code>Foo</code> is already registered and it will use the registration to satisfy the request.</p>
+<p>If a mapping references a non existing service, the container will try to build the service from the implementation type.</p>
+<h3 id="building-an-implementation-type">Building an Implementation Type</h3>
+<p>If the implementation type points to no existing registration or if an instance has to be created using certain rules, the container will create a new, independent pipeline and execute it. So if you register <code>IFoo2</code> it will look like this:</p>
 <pre><code class="lang-cs">container.RegisterType&lt;IFoo2, Foo&gt;(Invoke.Constructor());
 </code></pre>
-<p>the Unity container will not redirect to <code>Foo</code> but will create a new instance of <code>Foo</code> and call default constructor.</p>
+<p>The Unity container will not redirect to <code>Foo</code>. Instead, it will create a new instance of <code>Foo</code> and call the default constructor.</p>
 </article>
           </div>
           
