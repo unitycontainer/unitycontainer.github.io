@@ -1561,12 +1561,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/Composition/composition.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/Composition/composition.html",
-          "hash": "lxqdNsuNh5S5om4Yukdkqg=="
+          "hash": "CexNbUKZAsh57J3ByYJ35g=="
         }
       },
       "is_incremental": false,
