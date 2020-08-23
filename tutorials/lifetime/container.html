@@ -8,7 +8,7 @@
     <title>Per Container Lifetime | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Per Container Lifetime | Unity Container ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -69,7 +69,7 @@
             <article class="content wrap" id="_content" data-uid="Tutorial.Lifetime.Container">
 <h1 id="per-container-lifetime">Per Container Lifetime</h1>
 
-<p>Per Container lifetime allows a registration of an existing or resolved object as a scoped singleton in the container it was created or registered. In other words this instance is unique within the container it war registered with. Child or parent containers could have their own instances registered for the same contract.</p>
+<p>Per Container lifetime allows a registration of an existing or resolved object as a scoped singleton in the container it was created or registered. In other words this instance is unique within the container it was registered with. Child or parent containers could have their own instances registered for the same contract.</p>
 <p>Unity returns the same instance each time the <code>Resolve</code> method is called or when the dependency mechanism injects the instance into other classes.</p>
 <h2 id="the-lifetime-manager">The Lifetime Manager</h2>
 <p>Per container lifetime is controlled by <a class="xref" href="../../api/Unity.Lifetime.ContainerControlledLifetimeManager.html">ContainerControlledLifetimeManager</a> type. This lifetime manager effectively implements a singleton behavior for objects registered with a particular container.</p>
