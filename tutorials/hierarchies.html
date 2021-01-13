@@ -8,7 +8,7 @@
     <title>Container Hierarchy | Unity Container </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Container Hierarchy | Unity Container ">
-    <meta name="generator" content="docfx 2.56.2.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,7 +71,7 @@
 
 <p>Unity container provides a way to create child containers (other systems refer to it as resolution scopes) and allows building sophisticated scope trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies:</p>
 <ul>
-<li><p>Types registered in predecessor containers always available in descendant containers. This is a very simple concept, each registration is like a public virtual declaration in cs types. Every descendant inherits it and can use at will.</p>
+<li><p>Types registered in predecessor containers are always available in descendant containers. This is a very simple concept, each registration is like a public virtual declaration in cs types. Every descendant inherits it and can use at will.</p>
 </li>
 <li><p>Types registered in descendant containers override the same registration of predecessors. Following the same analogy with public virtual declarations, each override registration installs its own declaration and hides the one in predecessor containers.</p>
 </li>
@@ -110,6 +110,7 @@
 <h3 id="controlling-object-scope-and-lifetime">Controlling Object Scope and Lifetime</h3>
 <p>When the container creates singleton objects, it manages the lifetime of these singletons. They remain in scope until you (or the garbage collector) dispose the container. At this point, it disposes the registered singleton instances it contains. In addition, if you dispose the parent container in a nested container hierarchy, it automatically disposes all child containers and the registered singletons they contain.</p>
 <p>Therefore, if you require two separate sets of such objects that must have different lifetimes, you can use hierarchical containers to store and manage each set. Register instances that you want to be able to dispose separately in one or more child containers that you can dispose without disposing the parent container.</p>
+<p>Note that due to possibility of child container disposal, resolution of singletons (registered with <code>Singleton</code> or <code>PerContainer</code> lifetime) will only be using registrations available in the container they were registered in and its ancestors, but not child containers, to satisfy their dependencies, even if the resolution is requested through a child container. It's Unity's way of making sure it is not storing an instance that references potentially disposed objects.</p>
 <p>The following code demonstrates the use of a child container to manage the lifetime of specific singleton instances while maintaining the singleton instances in the parent container.</p>
 <pre><code class="lang-cs">
 // Create parent container
@@ -192,7 +193,8 @@ parentCtr.Dispose();
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
